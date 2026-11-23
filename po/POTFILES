@@ -141,6 +141,7 @@ apps/screenshot/src/shortcuts.rs
 apps/screenshot/src/ui.rs
 apps/settings/src/agents.rs
 apps/settings/src/bluez.rs
+apps/settings/src/cups.rs
 apps/settings/src/defaults.rs
 apps/settings/src/displays.rs
 apps/settings/src/extensions.rs
@@ -166,6 +167,7 @@ apps/settings/src/ui/network.rs
 apps/settings/src/ui/notifications.rs
 apps/settings/src/ui/picker.rs
 apps/settings/src/ui/power.rs
+apps/settings/src/ui/printers.rs
 apps/settings/src/ui/privacy.rs
 apps/settings/src/ui/shortcuts.rs
 apps/settings/src/ui/sound.rs

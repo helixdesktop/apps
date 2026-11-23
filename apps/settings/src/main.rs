@@ -4,6 +4,7 @@ mod accounts;
 mod agents;
 mod bluez;
 mod bus;
+mod cups;
 mod dbus;
 mod defaults;
 mod displays;

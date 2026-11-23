@@ -22,6 +22,7 @@ Primary configuration UI for the desktop and system.
 ## Contracts used
 - GSettings schemas under `org.gnome.desktop.*`, `org.gnome.settings-daemon.*`, NetworkManager, etc.
 - XDG portals: Settings, Background, Lockdown.
+- CUPS over IPP, and cups-pk-helper (`org.opensuse.CupsPkHelper.Mechanism`) for changes (Printers).
 - Session D-Bus: SessionManager, Shell, DisplayConfig, IdleMonitor, NetworkManager, UPower, etc.
 - Helix: `org.helixdesktop.agent-access` (GSettings) and `org.helixdesktop.AgentAccess1` (the shell), helixdesktop/spec `contracts/agent-access/`.
 - Helix greeter: `/etc/helix/greeter.toml`, `helix-login-config` and
@@ -1074,6 +1075,66 @@ adapter (by object path, normally `hci0`).
   of input devices (mouse and keyboard settings links), device-specific
   audio profiles (those belong in Sound).
 
+#### Printers
+CUPS's printers, their jobs and default options, as in GNOME Settings'
+Printers panel. Reading goes to CUPS over IPP (`CUPS_SERVER`, else
+`/run/cups/cups.sock`, else `localhost:631`; `cups.rs`): CUPS-Get-Printers,
+CUPS-Get-Default, Get-Jobs, Get-Printer-Attributes and Print-Job. Changes
+go through cups-pk-helper (`org.opensuse.CupsPkHelper.Mechanism` at `/` on
+the system bus, every call interactive so polkit can ask): `PrinterSetDefault`,
+`PrinterSetEnabled`, `PrinterAdd` (model `everywhere`, IPP Everywhere),
+`PrinterDelete`, `PrinterAddOptionDefault`, `JobCancelPurge` (not
+purged), `JobSetHoldUntil` (`indefinite` / `no-hold`) and `DevicesGet`.
+
+- Until the first reading the page shows *Loading Printers…*. Then one of:
+  *Printing Is Not Installed* (no `/usr/sbin/cupsd`), *Printing Is Not
+  Available* (CUPS does not answer), or the list. CUPS sends plain clients
+  no change signals: the page reads it again every 3 s while it or a
+  printer's dialog is on screen, and when it is shown.
+- *Printers*, with *Add Printer…* in the header: each printer by its
+  description (`printer-info`, else its queue name), with a status
+  ("Ready", "Printing", "Paused", or the first state reason people can
+  act on: out of paper, paper jam, out of or low on toner or ink, door or
+  cover open, offline, connecting; `-report` reasons are not shown), "·
+  Location" when it has one, and "Default" on the default printer. "No
+  printers are set up yet." when there are none.
+- Activating a printer opens its dialog: *Status*, *Model*, *Location*,
+  *Address* (the device URI); *Default Printer* (*Make Default*, "Default"
+  and insensitive when it is); *Paused* (a switch: `PrinterSetEnabled`);
+  *Default Options*, a row for each of paper size (`media`, PWG names
+  shown as their size: "A4", "Letter"), two-sided (`sides`), color
+  (`print-color-mode`) and quality (`print-quality`: Draft, Normal,
+  High) that offers more than one choice, set as the printer's default
+  for that option; *Jobs*, the jobs not yet completed with their state
+  (Waiting, Held, Printing, Stopped) and owner, each with *Hold* / *Resume*
+  and *Cancel Job* buttons ("No jobs are waiting." when there are none);
+  *Test Page* (*Print*: CUPS's own `/usr/share/cups/data/testprint`, typed
+  by CUPS, then a toast "Test page sent to NAME"); *Remove Printer*
+  (confirmed, then `PrinterDelete`). The dialog follows the printer and
+  closes when it goes away.
+- *Add Printer*: *Printers Found*, the printers CUPS finds within 10 s
+  (`DevicesGet`) that need no driver (`ipp://`, `ipps://` and `dnssd://`
+  URIs: network printers and IPP-over-USB ones) and are not set up yet,
+  with a spinner while it looks ("No other printers were found. Make sure
+  the printer is on and connected." when none); and *Add by Address*: a
+  host name or IP address (`ipp://HOST/ipp/print`) or an `ipp://` /
+  `ipps://` URI. Adding names the queue after the printer (characters
+  CUPS does not allow become `_`, unique among the queues), says "Adding
+  NAME…" and then "Added NAME".
+- Errors of user actions are toasts ("Could not pause NAME: …"); polkit or
+  user refusals are not reported. Without cups-pk-helper, changes say
+  "Changing printers needs cups-pk-helper, which is not installed".
+- Tested against a fake IPP server and a fake cups-pk-helper on a private
+  bus (`cups.rs`); also against a private, scratch `cupsd` with a virtual
+  IPP Everywhere printer (`ippeveprinter`), and through the real
+  cups-pk-helper on a private bus with polkit faked to allow
+  (`against_a_real_cups`, `through_the_real_helper`, both `--ignored`).
+  Not yet tried with a real printer.
+- Not yet: printers that need a driver (a PPD to choose: plain `usb://`
+  ones and older network printers), classes, sharing, renaming, ink
+  levels (`marker-levels`), and jobs of all users needing authentication
+  to cancel (cups-pk-helper asks polkit for those).
+
 #### Date & Time
 - Reads `org.freedesktop.timedate1` (`Timezone`, `NTP`, `CanNTP`,
   `NTPSynchronized`) on a worker thread. A change of the sync status on
@@ -1148,7 +1209,7 @@ registered accelerators.
 - `-h` / `--help` prints usage.
 
 ### Follow-up panels
-- Not listed yet: Region & Language, Online Accounts, Sharing, Printers,
+- Not listed yet: Region & Language, Online Accounts, Sharing,
   Search, Color, Wacom, power mode (`org.freedesktop.UPower.PowerProfiles`).
 
 ## Decisions

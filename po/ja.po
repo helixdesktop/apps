@@ -324,7 +324,7 @@ msgstr "オーディオプレーヤーについて(_A)"
 #: apps/logs/src/ui.rs:310 apps/maps/src/ui.rs:492 apps/maps/src/ui.rs:494
 #: apps/music/src/ui.rs:480 apps/music/src/ui.rs:482
 #: apps/screenshot/src/ui.rs:290 apps/screenshot/src/ui.rs:292
-#: apps/settings/src/ui/mod.rs:218 apps/settings/src/ui/mod.rs:220
+#: apps/settings/src/ui/mod.rs:220 apps/settings/src/ui/mod.rs:222
 #: apps/system-monitor/src/ui.rs:260 apps/system-monitor/src/ui.rs:262
 #: apps/terminal/src/window.rs:301 apps/terminal/src/window.rs:305
 #: apps/text-editor/src/window.rs:149 apps/text-editor/src/window.rs:151
@@ -352,7 +352,7 @@ msgid "Unable to Play File"
 msgstr "ファイルを再生できません"
 
 #: apps/audio-player/src/ui.rs:297 apps/audio-player/src/ui.rs:304
-#: apps/music/src/ui.rs:2583 apps/music/src/ui.rs:2584
+#: apps/music/src/ui.rs:2585 apps/music/src/ui.rs:2586
 #: apps/video-player/src/ui.rs:464
 msgid "Position"
 msgstr "位置"
@@ -368,15 +368,15 @@ msgstr "再生速度 (ピッチは保持されません)"
 #: apps/audio-player/src/ui.rs:348 apps/audio-player/src/ui.rs:351
 #: apps/audio-player/src/ui.rs:1283 apps/music/src/pages.rs:825
 #: apps/music/src/pages.rs:1175 apps/music/src/pages.rs:1503
-#: apps/music/src/ui.rs:1351 apps/music/src/ui.rs:2559
-#: apps/music/src/ui.rs:2563 apps/video-player/src/ui.rs:443
+#: apps/music/src/ui.rs:1353 apps/music/src/ui.rs:2561
+#: apps/music/src/ui.rs:2565 apps/video-player/src/ui.rs:443
 #: apps/video-player/src/ui.rs:1460
 msgid "Play"
 msgstr "再生"
 
 #: apps/audio-player/src/ui.rs:368 apps/audio-player/src/ui.rs:371
 #: apps/calendar/src/editor.rs:551 apps/clocks/src/ui.rs:1422
-#: apps/music/src/ui.rs:2606 apps/music/src/ui.rs:2610
+#: apps/music/src/ui.rs:2608 apps/music/src/ui.rs:2612
 msgid "Repeat"
 msgstr "リピート"
 
@@ -387,8 +387,8 @@ msgid "Mute"
 msgstr "ミュート"
 
 #: apps/audio-player/src/ui.rs:386 apps/audio-player/src/ui.rs:394
-#: apps/audio-player/src/ui.rs:397 apps/music/src/ui.rs:2615
-#: apps/music/src/ui.rs:2622 apps/music/src/ui.rs:2627
+#: apps/audio-player/src/ui.rs:397 apps/music/src/ui.rs:2617
+#: apps/music/src/ui.rs:2624 apps/music/src/ui.rs:2629
 #: apps/settings/src/ui/sound.rs:168 apps/video-player/src/ui.rs:158
 #: apps/video-player/src/ui.rs:491 apps/video-player/src/ui.rs:497
 #: apps/video-player/src/ui.rs:503
@@ -429,7 +429,7 @@ msgid "{position} of {duration}"
 msgstr "{position} / {duration}"
 
 #: apps/audio-player/src/ui.rs:1281 apps/clocks/src/ui.rs:1758
-#: apps/clocks/src/ui.rs:2241 apps/music/src/ui.rs:1351
+#: apps/clocks/src/ui.rs:2241 apps/music/src/ui.rs:1353
 #: apps/video-player/src/ui.rs:1460
 msgid "Pause"
 msgstr "一時停止"
@@ -731,8 +731,8 @@ msgstr "{} はこれらの値では未定義です"
 
 #: apps/calculator/src/format.rs:33 apps/document-scanner/src/settings.rs:29
 #: apps/document-scanner/src/ui.rs:1728 apps/document-scanner/src/ui.rs:1795
-#: apps/settings/src/ui/greeter.rs:27 apps/settings/src/ui/netedit.rs:32
-#: apps/settings/src/ui/network.rs:28
+#: apps/settings/src/cups.rs:814 apps/settings/src/ui/greeter.rs:27
+#: apps/settings/src/ui/netedit.rs:32 apps/settings/src/ui/network.rs:28
 msgid "Automatic"
 msgstr "自動"
 
@@ -1141,8 +1141,8 @@ msgstr "計算(_A)"
 #: apps/settings/src/ui/agent_access.rs:280
 #: apps/settings/src/ui/agent_access.rs:996 apps/settings/src/ui/apps.rs:553
 #: apps/settings/src/ui/bluetooth.rs:647 apps/settings/src/ui/netedit.rs:389
-#: apps/settings/src/ui/users.rs:642 apps/settings/src/ui/wifi.rs:587
-#: apps/system-monitor/src/dialogs.rs:142
+#: apps/settings/src/ui/printers.rs:606 apps/settings/src/ui/users.rs:642
+#: apps/settings/src/ui/wifi.rs:587 apps/system-monitor/src/dialogs.rs:142
 #: apps/system-monitor/src/dialogs.rs:290 apps/terminal/src/window.rs:1306
 #: apps/text-editor/src/window.rs:973 apps/web/src/app.rs:954
 #: apps/web/src/dialogs.rs:426 apps/web/src/dialogs.rs:464
@@ -1421,8 +1421,8 @@ msgstr "カレンダー"
 
 #: apps/calendar/src/editor.rs:504 apps/document-viewer/src/dialogs.rs:112
 #: apps/files/src/ui/window.rs:211 apps/image-viewer/src/ui.rs:592
-#: apps/settings/src/permissions.rs:45 apps/settings/src/ui/privacy.rs:155
-#: apps/web/src/permissions.rs:24
+#: apps/settings/src/permissions.rs:45 apps/settings/src/ui/printers.rs:269
+#: apps/settings/src/ui/privacy.rs:155 apps/web/src/permissions.rs:24
 msgid "Location"
 msgstr "場所"
 
@@ -1684,7 +1684,7 @@ msgid "The calendar and all its events will be deleted. This cannot be undone."
 msgstr "カレンダーとそのすべての予定が削除されます。元に戻すことはできません。"
 
 #: apps/calendar/src/manage.rs:375 apps/settings/src/ui/netedit.rs:390
-#: apps/web/src/dialogs.rs:941
+#: apps/settings/src/ui/printers.rs:607 apps/web/src/dialogs.rs:941
 msgid "_Remove"
 msgstr "削除(_R)"
 
@@ -1829,7 +1829,7 @@ msgstr "インポート"
 #: apps/logs/src/ui.rs:278 apps/maps/src/shortcuts.rs:48
 #: apps/music/src/shortcuts.rs:32 apps/music/src/ui.rs:452
 #: apps/music/src/ui.rs:454 apps/settings/src/ui/apps.rs:439
-#: apps/settings/src/ui/mod.rs:203 apps/settings/src/ui/mod.rs:205
+#: apps/settings/src/ui/mod.rs:205 apps/settings/src/ui/mod.rs:207
 #: apps/settings/src/ui/shortcuts.rs:8 apps/system-monitor/src/shortcuts.rs:31
 #: apps/system-monitor/src/ui.rs:223 apps/system-monitor/src/ui.rs:225
 #: apps/web/src/dialogs.rs:142 apps/web/src/window.rs:48
@@ -1953,13 +1953,13 @@ msgstr "今日"
 
 #: apps/calendar/src/ui.rs:257 apps/calendar/src/ui.rs:259
 #: apps/calendar/src/ui.rs:511 apps/calendar/src/ui.rs:513
-#: apps/music/src/ui.rs:2556 apps/tour/src/ui.rs:283 apps/tour/src/ui.rs:289
+#: apps/music/src/ui.rs:2558 apps/tour/src/ui.rs:283 apps/tour/src/ui.rs:289
 msgid "Previous"
 msgstr "前へ"
 
 #: apps/calendar/src/ui.rs:263 apps/calendar/src/ui.rs:265
 #: apps/calendar/src/ui.rs:517 apps/calendar/src/ui.rs:519
-#: apps/music/src/ui.rs:1159 apps/music/src/ui.rs:2564 apps/tour/src/ui.rs:292
+#: apps/music/src/ui.rs:1161 apps/music/src/ui.rs:2566 apps/tour/src/ui.rs:292
 #: apps/tour/src/ui.rs:298
 msgid "Next"
 msgstr "次へ"
@@ -1982,7 +1982,7 @@ msgstr "インポート(_I)…"
 
 #: apps/calendar/src/ui.rs:291 apps/contacts/src/ui.rs:206
 #: apps/files/src/ui/window.rs:232 apps/maps/src/ui.rs:486
-#: apps/settings/src/ui/mod.rs:212 apps/terminal/src/window.rs:296
+#: apps/settings/src/ui/mod.rs:214 apps/terminal/src/window.rs:296
 #: apps/text-editor/src/window.rs:65 apps/web/src/window.rs:222
 #: apps/web/src/window.rs:265 crates/helix-app-common/src/shortcuts.rs:25
 msgid "_Keyboard Shortcuts"
@@ -2001,7 +2001,7 @@ msgid "Search Events"
 msgstr "予定を検索"
 
 #: apps/calendar/src/ui.rs:371 apps/files/src/ui/dialogs.rs:429
-#: apps/files/src/ui/tab.rs:1125 apps/settings/src/ui/mod.rs:244
+#: apps/files/src/ui/tab.rs:1125 apps/settings/src/ui/mod.rs:246
 #: apps/settings/src/ui/picker.rs:115 apps/web/src/dialogs.rs:752
 #: apps/web/src/window.rs:2378
 msgid "No Results Found"
@@ -2009,7 +2009,7 @@ msgstr "結果が見つかりません"
 
 #: apps/calendar/src/ui.rs:372 apps/characters/src/ui.rs:456
 #: apps/files/src/ui/dialogs.rs:434 apps/fonts/src/ui.rs:436
-#: apps/music/src/pages.rs:1687 apps/settings/src/ui/mod.rs:245
+#: apps/music/src/pages.rs:1687 apps/settings/src/ui/mod.rs:247
 #: apps/settings/src/ui/picker.rs:116 apps/web/src/dialogs.rs:753
 #: apps/web/src/window.rs:2379
 msgid "Try a different search"
@@ -2304,9 +2304,10 @@ msgid "Take pictures and videos"
 msgstr "写真やビデオを撮影します"
 
 #: apps/camera/src/ui.rs:162 apps/disks/src/ui.rs:937
-#: apps/music/src/player.rs:54 apps/settings/src/extensions.rs:155
-#: apps/settings/src/ui/network.rs:26 apps/settings/src/ui/network.rs:188
-#: apps/settings/src/ui/network.rs:467 apps/settings/src/ui/privacy.rs:198
+#: apps/music/src/player.rs:54 apps/settings/src/cups.rs:809
+#: apps/settings/src/extensions.rs:155 apps/settings/src/ui/network.rs:26
+#: apps/settings/src/ui/network.rs:188 apps/settings/src/ui/network.rs:467
+#: apps/settings/src/ui/privacy.rs:198
 msgid "Off"
 msgstr "オフ"
 
@@ -3184,6 +3185,7 @@ msgid "Lap {}  {}"
 msgstr "ラップ {}  {}"
 
 #: apps/clocks/src/ui.rs:1759 apps/clocks/src/ui.rs:2242
+#: apps/settings/src/ui/printers.rs:498
 msgid "Resume"
 msgstr "再開"
 
@@ -3777,7 +3779,8 @@ msgid "Phone"
 msgstr "電話"
 
 #: apps/contacts/src/ui.rs:1286 apps/maps/src/nominatim.rs:248
-#: apps/settings/src/ui/bluetooth.rs:515 apps/web/src/window.rs:49
+#: apps/settings/src/ui/bluetooth.rs:515 apps/settings/src/ui/printers.rs:270
+#: apps/settings/src/ui/printers.rs:643 apps/web/src/window.rs:49
 msgid "Address"
 msgstr "住所"
 
@@ -4996,7 +4999,7 @@ msgstr "経年劣化"
 msgid "Online"
 msgstr "オンライン"
 
-#: apps/disks/src/smart.rs:140
+#: apps/disks/src/smart.rs:140 apps/settings/src/cups.rs:555
 msgid "Offline"
 msgstr "オフライン"
 
@@ -5114,7 +5117,7 @@ msgstr "ドライブのオプション"
 msgid "Eject"
 msgstr "取り出し"
 
-#: apps/disks/src/ui.rs:356
+#: apps/disks/src/ui.rs:356 apps/settings/src/ui/printers.rs:268
 msgid "Model"
 msgstr "モデル"
 
@@ -5824,11 +5827,13 @@ msgstr "スキャナーとの通信エラー: {e}"
 msgid "Unsupported frame format {}"
 msgstr "サポートされていないフレーム形式 {}"
 
-#: apps/document-scanner/src/settings.rs:30 apps/settings/src/ui/access.rs:546
+#: apps/document-scanner/src/settings.rs:30 apps/settings/src/cups.rs:744
+#: apps/settings/src/cups.rs:812 apps/settings/src/ui/access.rs:546
 msgid "Color"
 msgstr "カラー"
 
-#: apps/document-scanner/src/settings.rs:31 apps/settings/src/ui/access.rs:547
+#: apps/document-scanner/src/settings.rs:31 apps/settings/src/cups.rs:813
+#: apps/settings/src/ui/access.rs:547
 msgid "Grayscale"
 msgstr "グレースケール"
 
@@ -5866,7 +5871,7 @@ msgstr "ページをコピー"
 
 #: apps/document-scanner/src/shortcuts.rs:23
 #: apps/document-viewer/src/shortcuts.rs:12 apps/help/src/shortcuts.rs:51
-#: apps/web/src/shortcuts.rs:51
+#: apps/settings/src/ui/printers.rs:300 apps/web/src/shortcuts.rs:51
 msgid "Print"
 msgstr "印刷"
 
@@ -6774,7 +6779,7 @@ msgid "Searching page {page} of {n_pages}… {total} found"
 msgstr "{n_pages} ページ中 {page} ページ目を検索中… {total} 件見つかりました"
 
 #: apps/document-viewer/src/ui.rs:1644 apps/maps/src/ui.rs:1260
-#: apps/maps/src/ui.rs:1263 apps/settings/src/ui/mod.rs:461
+#: apps/maps/src/ui.rs:1263 apps/settings/src/ui/mod.rs:463
 #: apps/settings/src/ui/picker.rs:34
 msgid "No results found"
 msgstr "結果が見つかりません"
@@ -7002,7 +7007,7 @@ msgstr "最近使用したもの"
 
 #: apps/files/src/pathbar.rs:110 apps/files/src/ui/sidebar.rs:122
 #: apps/files/src/ui/tab.rs:1434 apps/settings/src/bluez.rs:235
-#: apps/settings/src/panels.rs:63 apps/system-monitor/src/res_view.rs:385
+#: apps/settings/src/panels.rs:64 apps/system-monitor/src/res_view.rs:385
 msgid "Network"
 msgstr "ネットワーク"
 
@@ -7127,6 +7132,7 @@ msgid "Applications"
 msgstr "アプリケーション"
 
 #: apps/files/src/ui/dialogs.rs:364 apps/settings/src/ui/appearance.rs:107
+#: apps/settings/src/ui/printers.rs:237 apps/settings/src/ui/printers.rs:433
 #: apps/settings/src/ui/sound.rs:928 apps/settings/src/values.rs:204
 msgid "Default"
 msgstr "デフォルト"
@@ -7806,7 +7812,9 @@ msgstr[0] "{n} 個の項目をゴミ箱に移動できません"
 msgid ""
 "This location has no Trash. Delete permanently instead? Deleted items will "
 "be permanently lost."
-msgstr "この場所にはゴミ箱がありません。代わりに完全に削除しますか？削除した項目は完全に失われます。"
+msgstr ""
+"この場所にはゴミ箱がありません。代わりに完全に削除しますか？削除した項目は完"
+"全に失われます。"
 
 #: apps/files/src/ui/window.rs:1463
 msgid "Permanently Delete “{}”?"
@@ -9577,13 +9585,13 @@ msgstr[0] "{n} 件の場所が見つかりました"
 msgid "Selected place: {}"
 msgstr "選択した場所: {}"
 
-#: apps/maps/src/ui.rs:1365 apps/music/src/ui.rs:2344
+#: apps/maps/src/ui.rs:1365 apps/music/src/ui.rs:2346
 msgid "Remove from Favorites"
 msgstr "お気に入りから削除"
 
 #: apps/maps/src/ui.rs:1367 apps/maps/src/ui.rs:2266
-#: apps/music/src/pages.rs:726 apps/music/src/ui.rs:2346
-#: apps/music/src/ui.rs:2596
+#: apps/music/src/pages.rs:726 apps/music/src/ui.rs:2348
+#: apps/music/src/ui.rs:2598
 msgid "Add to Favorites"
 msgstr "お気に入りに追加"
 
@@ -10091,8 +10099,8 @@ msgid "Clear Queue"
 msgstr "キューを消去"
 
 #: apps/music/src/nowplaying.rs:203 apps/music/src/shortcuts.rs:31
-#: apps/music/src/ui.rs:2323 apps/music/src/ui.rs:2641
-#: apps/music/src/ui.rs:2646
+#: apps/music/src/ui.rs:2325 apps/music/src/ui.rs:2643
+#: apps/music/src/ui.rs:2648
 msgid "Now Playing"
 msgstr "再生中の曲"
 
@@ -10184,8 +10192,8 @@ msgid_plural "{n} albums"
 msgstr[0] "{n} 枚のアルバム"
 
 #: apps/music/src/pages.rs:1176 apps/music/src/pages.rs:1504
-#: apps/music/src/shortcuts.rs:14 apps/music/src/ui.rs:2599
-#: apps/music/src/ui.rs:2603
+#: apps/music/src/shortcuts.rs:14 apps/music/src/ui.rs:2601
+#: apps/music/src/ui.rs:2605
 msgid "Shuffle"
 msgstr "シャッフル"
 
@@ -10364,7 +10372,7 @@ msgstr "ReplayGain"
 msgid "Even out loudness using the volume tags of songs or albums"
 msgstr "曲やアルバムの音量タグを使って音の大きさを揃えます"
 
-#: apps/music/src/pages.rs:2436 apps/settings/src/panels.rs:159
+#: apps/music/src/pages.rs:2436 apps/settings/src/panels.rs:160
 #: apps/settings/src/permissions.rs:38 apps/settings/src/ui/apps.rs:419
 #: apps/web/src/permissions.rs:25
 msgid "Notifications"
@@ -10474,7 +10482,7 @@ msgstr "不正な列数 {n}"
 msgid "Play and organize your music collection"
 msgstr "音楽コレクションを再生して整理します"
 
-#: apps/music/src/ui.rs:275 apps/music/src/ui.rs:2312
+#: apps/music/src/ui.rs:275 apps/music/src/ui.rs:2314
 msgid "Now playing"
 msgstr "再生中"
 
@@ -10510,77 +10518,77 @@ msgstr "曲、アルバム、アーティストを検索"
 msgid "No Music Found"
 msgstr "音楽が見つかりません"
 
-#: apps/music/src/ui.rs:577 apps/music/src/ui.rs:588 apps/music/src/ui.rs:590
+#: apps/music/src/ui.rs:577 apps/music/src/ui.rs:590 apps/music/src/ui.rs:592
 msgid "Scanning Library…"
 msgstr "ライブラリをスキャン中…"
 
-#: apps/music/src/ui.rs:737
+#: apps/music/src/ui.rs:739
 msgid "Playback is unavailable (GStreamer could not be initialised)"
 msgstr "再生できません (GStreamer を初期化できませんでした)"
 
-#: apps/music/src/ui.rs:936
+#: apps/music/src/ui.rs:938
 msgid "{n} song found"
 msgid_plural "{n} songs found"
 msgstr[0] "{n} 曲が見つかりました"
 
-#: apps/music/src/ui.rs:958
+#: apps/music/src/ui.rs:960
 msgid "Library updated: {n} song"
 msgid_plural "Library updated: {n} songs"
 msgstr[0] "ライブラリを更新しました: {n} 曲"
 
-#: apps/music/src/ui.rs:969
+#: apps/music/src/ui.rs:971
 msgid "No changes found"
 msgstr "変更は見つかりませんでした"
 
-#: apps/music/src/ui.rs:1115
+#: apps/music/src/ui.rs:1117
 msgid "Will play next"
 msgstr "次に再生します"
 
-#: apps/music/src/ui.rs:1117
+#: apps/music/src/ui.rs:1119
 msgid "Added to queue"
 msgstr "キューに追加しました"
 
-#: apps/music/src/ui.rs:1315
+#: apps/music/src/ui.rs:1317
 msgid "Cannot play “{name}”"
 msgstr "「{name}」を再生できません"
 
-#: apps/music/src/ui.rs:1400
+#: apps/music/src/ui.rs:1402
 msgid "Playing music"
 msgstr "音楽を再生中"
 
-#: apps/music/src/ui.rs:1486
+#: apps/music/src/ui.rs:1488
 msgid "Now playing: {}"
 msgstr "再生中: {}"
 
-#: apps/music/src/ui.rs:1488
+#: apps/music/src/ui.rs:1490
 msgid "Now playing: {title} by {artist}"
 msgstr "再生中: {title} ({artist})"
 
-#: apps/music/src/ui.rs:1569
+#: apps/music/src/ui.rs:1571
 msgid "Repeat: Off"
 msgstr "リピート: オフ"
 
-#: apps/music/src/ui.rs:1570
+#: apps/music/src/ui.rs:1572
 msgid "Repeat: All"
 msgstr "リピート: すべて"
 
-#: apps/music/src/ui.rs:1571
+#: apps/music/src/ui.rs:1573
 msgid "Repeat: Song"
 msgstr "リピート: 1 曲"
 
-#: apps/music/src/ui.rs:2184
+#: apps/music/src/ui.rs:2186
 msgid "Music files in {} will appear here."
 msgstr "{} 内の音楽ファイルがここに表示されます。"
 
-#: apps/music/src/ui.rs:2277
+#: apps/music/src/ui.rs:2279
 msgid "Add Music Folder"
 msgstr "ミュージックフォルダーを追加"
 
-#: apps/music/src/ui.rs:2551 apps/music/src/ui.rs:2554
+#: apps/music/src/ui.rs:2553 apps/music/src/ui.rs:2556
 msgid "Show Now Playing"
 msgstr "再生中の曲を表示"
 
-#: apps/music/src/ui.rs:2660 apps/music/src/ui.rs:2666
+#: apps/music/src/ui.rs:2662 apps/music/src/ui.rs:2668
 msgid "More Controls"
 msgstr "その他のコントロール"
 
@@ -11824,8 +11832,8 @@ msgid "Part of the desktop"
 msgstr "デスクトップの一部"
 
 #: apps/settings/src/agents.rs:1015 apps/settings/src/agents.rs:1125
-#: apps/settings/src/ui/mod.rs:174 apps/settings/src/ui/mod.rs:257
-#: apps/settings/src/ui/mod.rs:552
+#: apps/settings/src/ui/mod.rs:176 apps/settings/src/ui/mod.rs:259
+#: apps/settings/src/ui/mod.rs:554
 msgid "Settings"
 msgstr "設定"
 
@@ -11994,7 +12002,7 @@ msgstr "ヘッドフォン"
 msgid "Speaker"
 msgstr "スピーカー"
 
-#: apps/settings/src/bluez.rs:224 apps/settings/src/panels.rs:195
+#: apps/settings/src/bluez.rs:224 apps/settings/src/panels.rs:196
 msgid "Keyboard"
 msgstr "キーボード"
 
@@ -12035,6 +12043,107 @@ msgstr "メディアプレーヤー"
 #: apps/settings/src/bluez.rs:243
 msgid "Other Device"
 msgstr "その他のデバイス"
+
+#: apps/settings/src/cups.rs:536 apps/settings/src/cups.rs:557
+#: apps/settings/src/ui/printers.rs:283
+msgid "Paused"
+msgstr "一時停止中"
+
+#: apps/settings/src/cups.rs:537 apps/settings/src/cups.rs:666
+msgid "Printing"
+msgstr "印刷中"
+
+#: apps/settings/src/cups.rs:538
+msgid "Ready"
+msgstr "準備完了"
+
+#: apps/settings/src/cups.rs:546 apps/settings/src/cups.rs:547
+msgid "Out of paper"
+msgstr "用紙切れ"
+
+#: apps/settings/src/cups.rs:548
+msgid "Paper jam"
+msgstr "紙詰まり"
+
+#: apps/settings/src/cups.rs:549
+msgid "Out of toner"
+msgstr "トナー切れ"
+
+#: apps/settings/src/cups.rs:550
+msgid "Out of ink"
+msgstr "インク切れ"
+
+#: apps/settings/src/cups.rs:551
+msgid "Low on toner"
+msgstr "トナー残量が少ない"
+
+#: apps/settings/src/cups.rs:552
+msgid "Low on ink"
+msgstr "インク残量が少ない"
+
+#: apps/settings/src/cups.rs:553
+msgid "Door open"
+msgstr "ドアが開いています"
+
+#: apps/settings/src/cups.rs:554
+msgid "Cover open"
+msgstr "カバーが開いています"
+
+#: apps/settings/src/cups.rs:556 apps/settings/src/ui/network.rs:184
+#: apps/settings/src/ui/network.rs:465 apps/settings/src/ui/wifi.rs:472
+msgid "Connecting…"
+msgstr "接続中…"
+
+#: apps/settings/src/cups.rs:664
+msgid "Waiting"
+msgstr "待機中"
+
+#: apps/settings/src/cups.rs:665
+msgid "Held"
+msgstr "保留中"
+
+#: apps/settings/src/cups.rs:667 apps/system-monitor/src/format.rs:99
+msgid "Stopped"
+msgstr "停止"
+
+#: apps/settings/src/cups.rs:742
+msgid "Paper Size"
+msgstr "用紙サイズ"
+
+#: apps/settings/src/cups.rs:743
+msgid "Two-Sided"
+msgstr "両面"
+
+#: apps/settings/src/cups.rs:745
+msgid "Quality"
+msgstr "品質"
+
+#: apps/settings/src/cups.rs:810
+msgid "Long Edge (Standard)"
+msgstr "長辺綴じ（標準）"
+
+#: apps/settings/src/cups.rs:811
+msgid "Short Edge (Flip)"
+msgstr "短辺綴じ（反転）"
+
+#: apps/settings/src/cups.rs:815
+msgctxt "print quality"
+msgid "Draft"
+msgstr "下書き"
+
+#: apps/settings/src/cups.rs:816
+msgctxt "print quality"
+msgid "Normal"
+msgstr "標準"
+
+#: apps/settings/src/cups.rs:817
+msgctxt "print quality"
+msgid "High"
+msgstr "高品質"
+
+#: apps/settings/src/cups.rs:856 apps/settings/src/ui/printers.rs:298
+msgid "Test Page"
+msgstr "テストページ"
 
 #: apps/settings/src/defaults.rs:15 apps/web/src/app.rs:128
 #: apps/web/src/app.rs:152 apps/web/src/app.rs:988 apps/web/src/window.rs:320
@@ -12254,117 +12363,117 @@ msgstr "非常に良好な信号"
 msgid "Hotspot"
 msgstr "ホットスポット"
 
-#: apps/settings/src/panels.rs:51 apps/settings/src/ui/wifi.rs:106
+#: apps/settings/src/panels.rs:52 apps/settings/src/ui/wifi.rs:106
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:55
+#: apps/settings/src/panels.rs:56
 msgid "network;wireless;wlan;hotspot;internet;airplane;"
 msgstr ""
 "network;wireless;wlan;hotspot;internet;airplane;ネットワーク;無線;ワイヤレス;"
 "ホットスポット;インターネット;機内モード;"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:67
+#: apps/settings/src/panels.rs:68
 msgid "ethernet;wired;vpn;proxy;ip;dns;internet;"
 msgstr ""
 "ethernet;wired;vpn;proxy;ip;dns;internet;イーサネット;有線;プロキシ;ネット"
 "ワーク;インターネット;"
 
-#: apps/settings/src/panels.rs:75 apps/settings/src/ui/bluetooth.rs:102
+#: apps/settings/src/panels.rs:76 apps/settings/src/ui/bluetooth.rs:102
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:79
+#: apps/settings/src/panels.rs:80
 msgid "share;devices;pair;headset;wireless;"
 msgstr ""
 "share;devices;pair;headset;wireless;共有;デバイス;ペアリング;ヘッドセット;ワ"
 "イヤレス;無線;"
 
-#: apps/settings/src/panels.rs:87 apps/settings/src/ui/greeter.rs:124
+#: apps/settings/src/panels.rs:88 apps/settings/src/ui/greeter.rs:124
 msgid "Displays"
 msgstr "ディスプレイ"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:91
+#: apps/settings/src/panels.rs:92
 msgid "monitor;screen;resolution;refresh;scale;night light;projector;rotation;"
 msgstr ""
 "monitor;screen;resolution;refresh;scale;night light;projector;rotation;モニ"
 "ター;画面;解像度;リフレッシュレート;拡大率;スケール;夜間モード;プロジェク"
 "ター;回転;"
 
-#: apps/settings/src/panels.rs:99
+#: apps/settings/src/panels.rs:100
 msgid "Sound"
 msgstr "サウンド"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:103
+#: apps/settings/src/panels.rs:104
 msgid "volume;speaker;microphone;audio;output;input;alert;mute;"
 msgstr ""
 "volume;speaker;microphone;audio;output;input;alert;mute;音量;スピーカー;マイ"
 "ク;オーディオ;出力;入力;警告音;ミュート;"
 
-#: apps/settings/src/panels.rs:111
+#: apps/settings/src/panels.rs:112
 msgid "Power"
 msgstr "電源"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:115
+#: apps/settings/src/panels.rs:116
 msgid "battery;suspend;sleep;dim;blank;power button;hibernate;energy;"
 msgstr ""
 "battery;suspend;sleep;dim;blank;power button;hibernate;energy;バッテリー;サス"
 "ペンド;スリープ;減光;ブランク;電源ボタン;ハイバネート;省電力;"
 
-#: apps/settings/src/panels.rs:123
+#: apps/settings/src/panels.rs:124
 msgid "Multitasking"
 msgstr "マルチタスク"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:127
+#: apps/settings/src/panels.rs:128
 msgid "hot corner;workspace;screen edges;tiling;app switching;multi-monitor;"
 msgstr ""
 "hot corner;workspace;screen edges;tiling;app switching;multi-monitor;ホット"
 "コーナー;ワークスペース;画面の端;タイリング;アプリの切り替え;マルチモニター;"
 
-#: apps/settings/src/panels.rs:135 apps/terminal/src/prefs_dialog.rs:24
+#: apps/settings/src/panels.rs:136 apps/terminal/src/prefs_dialog.rs:24
 #: apps/text-editor/src/prefs.rs:58
 msgid "Appearance"
 msgstr "外観"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:139
+#: apps/settings/src/panels.rs:140
 msgid "dark;light;style;theme;icon;icons;accent;color;colour;wallpaper;background;"
 msgstr ""
 "dark;light;style;theme;icon;icons;accent;color;colour;wallpaper;background;"
 "ダーク;ライト;スタイル;テーマ;アイコン;アクセントカラー;色;壁紙;背景;"
 
-#: apps/settings/src/panels.rs:147 apps/settings/src/ui/notifications.rs:100
+#: apps/settings/src/panels.rs:148 apps/settings/src/ui/notifications.rs:100
 #: apps/settings/src/ui/sound.rs:288
 msgid "Apps"
 msgstr "アプリ"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:151
+#: apps/settings/src/panels.rs:152
 msgid "default;applications;permissions;browser;storage;"
 msgstr ""
 "default;applications;permissions;browser;storage;デフォルト;アプリケーション;"
 "アプリ;権限;ブラウザー;ストレージ;"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:163
+#: apps/settings/src/panels.rs:164
 msgid "do not disturb;dnd;banner;alerts;lock screen;messages;"
 msgstr ""
 "do not disturb;dnd;banner;alerts;lock screen;messages;通知;応答不可;バナー;ア"
 "ラート;ロック画面;メッセージ;"
 
-#: apps/settings/src/panels.rs:171
+#: apps/settings/src/panels.rs:172
 msgid "Extensions"
 msgstr "拡張機能"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:175
+#: apps/settings/src/panels.rs:176
 msgid ""
 "add-on;plugin;panel item;indicator;quick settings;dock;sandbox;permissions;"
 msgstr ""
@@ -12372,12 +12481,12 @@ msgstr ""
 "ドオン;プラグイン;パネル;インジケーター;クイック設定;ドック;サンドボックス;権"
 "限;"
 
-#: apps/settings/src/panels.rs:183
+#: apps/settings/src/panels.rs:184
 msgid "Mouse & Touchpad"
 msgstr "マウスとタッチパッド"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:187
+#: apps/settings/src/panels.rs:188
 msgid ""
 "touchpad;pointer;speed;scroll;natural;tap;click;trackpad;primary "
 "button;acceleration;"
@@ -12387,18 +12496,29 @@ msgstr ""
 "プ;クリック;トラックパッド;主ボタン;加速;"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:199
+#: apps/settings/src/panels.rs:200
 msgid "layout;input source;language;repeat;delay;typing;xkb;"
 msgstr ""
 "layout;input source;language;repeat;delay;typing;xkb;レイアウト;入力ソース;言"
 "語;リピート;遅延;入力;"
 
-#: apps/settings/src/panels.rs:207 apps/settings/src/ui/access.rs:119
+#: apps/settings/src/panels.rs:208 apps/settings/src/ui/printers.rs:67
+msgid "Printers"
+msgstr "プリンター"
+
+#. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
+#: apps/settings/src/panels.rs:212
+msgid "printer;print;cups;queue;jobs;paper;ink;toner;"
+msgstr ""
+"printer;print;cups;queue;jobs;paper;ink;toner;プリンター;印刷;キュー;ジョブ;"
+"用紙;インク;トナー;"
+
+#: apps/settings/src/panels.rs:220 apps/settings/src/ui/access.rs:119
 msgid "Accessibility"
 msgstr "アクセシビリティ"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:211
+#: apps/settings/src/panels.rs:224
 msgid ""
 "high contrast;large text;zoom;magnifier;screen reader;cursor size;reduce "
 "animation;sticky keys;slow keys;bounce keys;mouse keys;scrollbars;screen "
@@ -12411,12 +12531,12 @@ msgstr ""
 "ウンスキー;マウスキー;スクロールバー;スクリーンキーボード;ダブルクリック;ポイ"
 "ンターの位置;"
 
-#: apps/settings/src/panels.rs:219 apps/settings/src/ui/privacy.rs:226
+#: apps/settings/src/panels.rs:232 apps/settings/src/ui/privacy.rs:226
 msgid "Privacy & Security"
 msgstr "プライバシーとセキュリティ"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:223
+#: apps/settings/src/panels.rs:236
 msgid ""
 "screen lock;lock;blank;idle;recent files;file "
 "history;trash;temporary;location;camera;microphone;problem "
@@ -12428,34 +12548,34 @@ msgstr ""
 "イル;位置情報;カメラ;マイク;問題の報告;エージェント;AI;アシスタント;自動"
 "化;agent;ai;assistant;automation;"
 
-#: apps/settings/src/panels.rs:231
+#: apps/settings/src/panels.rs:244
 msgid "Date & Time"
 msgstr "日付と時刻"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:235
+#: apps/settings/src/panels.rs:248
 msgid "clock;time zone;timezone;ntp;24-hour;am/pm;week numbers;calendar;"
 msgstr ""
 "clock;time zone;timezone;ntp;24-hour;am/pm;week numbers;calendar;時計;タイム"
 "ゾーン;時刻;24 時間;午前/午後;週番号;カレンダー;"
 
-#: apps/settings/src/panels.rs:243 apps/settings/src/ui/greeter.rs:64
+#: apps/settings/src/panels.rs:256 apps/settings/src/ui/greeter.rs:64
 msgid "Users"
 msgstr "ユーザー"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:247
+#: apps/settings/src/panels.rs:260
 msgid "account;password;login;avatar;administrator;"
 msgstr ""
 "account;password;login;avatar;administrator;アカウント;パスワード;ログイン;ア"
 "バター;管理者;"
 
-#: apps/settings/src/panels.rs:255 apps/settings/src/ui/displays.rs:252
+#: apps/settings/src/panels.rs:268 apps/settings/src/ui/displays.rs:252
 msgid "Login Screen"
 msgstr "ログイン画面"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:259
+#: apps/settings/src/panels.rs:272
 msgid ""
 "login;greeter;lock;banner;user list;sign in;display "
 "manager;greetd;accent;clock;"
@@ -12464,12 +12584,12 @@ msgstr ""
 "manager;greetd;accent;clock;ログイン;ログイン画面;ロック;バナー;ユーザー一覧;"
 "アクセント;時計;"
 
-#: apps/settings/src/panels.rs:267
+#: apps/settings/src/panels.rs:280
 msgid "About"
 msgstr "このシステムについて"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:271
+#: apps/settings/src/panels.rs:284
 msgid ""
 "device name;hostname;memory;processor;cpu;disk;os;version;kernel;hardware;"
 msgstr ""
@@ -12477,12 +12597,12 @@ msgstr ""
 "バイス名;ホスト名;メモリ;プロセッサー;ディスク;バージョン;カーネル;ハードウェ"
 "ア;"
 
-#: apps/settings/src/panels.rs:296 apps/settings/src/ui/agent_access.rs:70
+#: apps/settings/src/panels.rs:309 apps/settings/src/ui/agent_access.rs:70
 #: apps/settings/src/ui/agent_access.rs:183 apps/settings/src/ui/privacy.rs:189
 msgid "Agent Access"
 msgstr "エージェントのアクセス"
 
-#: apps/settings/src/panels.rs:304 apps/settings/src/ui/agent_access.rs:1025
+#: apps/settings/src/panels.rs:317 apps/settings/src/ui/agent_access.rs:1025
 msgid "Agent Activity"
 msgstr "エージェントのアクティビティ"
 
@@ -14439,40 +14559,40 @@ msgstr "{source} を下へ移動"
 msgid "Remove {source}"
 msgstr "{source} を削除"
 
-#: apps/settings/src/ui/mod.rs:192
+#: apps/settings/src/ui/mod.rs:194
 msgid "Search settings"
 msgstr "設定を検索"
 
-#: apps/settings/src/ui/mod.rs:195 apps/settings/src/ui/shortcuts.rs:10
+#: apps/settings/src/ui/mod.rs:197 apps/settings/src/ui/shortcuts.rs:10
 msgid "Search Settings"
 msgstr "設定を検索"
 
-#: apps/settings/src/ui/mod.rs:213
+#: apps/settings/src/ui/mod.rs:215
 msgid "_About Settings"
 msgstr "設定について(_A)"
 
-#: apps/settings/src/ui/mod.rs:385 apps/settings/src/ui/mod.rs:398
+#: apps/settings/src/ui/mod.rs:387 apps/settings/src/ui/mod.rs:400
 msgid "Not yet available"
 msgstr "まだ利用できません"
 
-#: apps/settings/src/ui/mod.rs:419
+#: apps/settings/src/ui/mod.rs:421
 msgid "Not Yet Available"
 msgstr "まだ利用できません"
 
-#: apps/settings/src/ui/mod.rs:462
+#: apps/settings/src/ui/mod.rs:464
 msgid "{n} panel found"
 msgid_plural "{n} panels found"
 msgstr[0] "{n} 個のパネルが見つかりました"
 
-#: apps/settings/src/ui/mod.rs:521
+#: apps/settings/src/ui/mod.rs:523
 msgid "{} Is Not Yet Available"
 msgstr "{} はまだ利用できません"
 
-#: apps/settings/src/ui/mod.rs:522
+#: apps/settings/src/ui/mod.rs:524
 msgid "This panel will be added in a later version of Helix Settings."
 msgstr "このパネルは Helix 設定の今後のバージョンで追加されます。"
 
-#: apps/settings/src/ui/mod.rs:553
+#: apps/settings/src/ui/mod.rs:555
 msgid "Configure the Helix desktop"
 msgstr "Helix デスクトップを設定します"
 
@@ -14652,7 +14772,8 @@ msgstr "IPv4"
 msgid "IPv6"
 msgstr "IPv6"
 
-#: apps/settings/src/ui/netedit.rs:277 apps/settings/src/ui/users.rs:593
+#: apps/settings/src/ui/netedit.rs:277 apps/settings/src/ui/printers.rs:307
+#: apps/settings/src/ui/users.rs:593
 msgid "Remove…"
 msgstr "削除…"
 
@@ -14660,7 +14781,8 @@ msgstr "削除…"
 msgid "Could not save the changes: {e}"
 msgstr "変更を保存できませんでした: {e}"
 
-#: apps/settings/src/ui/netedit.rs:384 apps/settings/src/ui/users.rs:637
+#: apps/settings/src/ui/netedit.rs:384 apps/settings/src/ui/printers.rs:603
+#: apps/settings/src/ui/users.rs:637
 msgid "Remove {name}?"
 msgstr "{name} を削除しますか?"
 
@@ -14689,11 +14811,6 @@ msgstr ""
 #: apps/settings/src/ui/network.rs:179
 msgid "Connected — {speed} Mb/s"
 msgstr "接続済み — {speed} Mb/s"
-
-#: apps/settings/src/ui/network.rs:184 apps/settings/src/ui/network.rs:465
-#: apps/settings/src/ui/wifi.rs:472
-msgid "Connecting…"
-msgstr "接続中…"
 
 #: apps/settings/src/ui/network.rs:186
 msgid "Cable unplugged"
@@ -14965,6 +15082,216 @@ msgstr "トップバーに正確な充電レベルを表示します"
 #: apps/settings/src/ui/power.rs:195
 msgid "Power Button Behavior"
 msgstr "電源ボタンの動作"
+
+#: apps/settings/src/ui/printers.rs:49
+msgid "Loading Printers…"
+msgstr "プリンターを読み込んでいます…"
+
+#: apps/settings/src/ui/printers.rs:53
+msgid "Printing Is Not Available"
+msgstr "印刷を利用できません"
+
+#: apps/settings/src/ui/printers.rs:54
+msgid "The printing service (CUPS) is not running."
+msgstr "印刷サービス（CUPS）が実行されていません。"
+
+#: apps/settings/src/ui/printers.rs:61
+msgid "Printing Is Not Installed"
+msgstr "印刷機能がインストールされていません"
+
+#: apps/settings/src/ui/printers.rs:62
+msgid "Install CUPS to set up printers."
+msgstr "プリンターを設定するには CUPS をインストールしてください。"
+
+#: apps/settings/src/ui/printers.rs:69
+msgid "Add Printer…"
+msgstr "プリンターを追加…"
+
+#: apps/settings/src/ui/printers.rs:142
+msgid "Changing printers needs cups-pk-helper, which is not installed"
+msgstr ""
+"プリンターの変更には cups-pk-helper が必要ですが、インストールされていません"
+
+#: apps/settings/src/ui/printers.rs:189
+msgid "No printers are set up yet."
+msgstr "まだプリンターが設定されていません。"
+
+#: apps/settings/src/ui/printers.rs:214
+msgid "{status} · {location}"
+msgstr "{status} · {location}"
+
+#: apps/settings/src/ui/printers.rs:266 apps/system-monitor/src/dialogs.rs:30
+msgid "Status"
+msgstr "状態"
+
+#: apps/settings/src/ui/printers.rs:275
+msgid "Default Printer"
+msgstr "既定のプリンター"
+
+#: apps/settings/src/ui/printers.rs:276
+msgid "Apps print here unless another printer is chosen"
+msgstr "別のプリンターを選ばない限り、アプリはここに印刷します"
+
+#: apps/settings/src/ui/printers.rs:277 apps/settings/src/ui/printers.rs:435
+msgid "Make Default"
+msgstr "既定にする"
+
+#: apps/settings/src/ui/printers.rs:284
+msgid "Jobs wait until printing is resumed"
+msgstr "印刷が再開されるまでジョブは待機します"
+
+#: apps/settings/src/ui/printers.rs:289
+msgid "Default Options"
+msgstr "既定のオプション"
+
+#: apps/settings/src/ui/printers.rs:293
+msgid "Jobs"
+msgstr "ジョブ"
+
+#: apps/settings/src/ui/printers.rs:299
+msgid "Print a page to check that the printer works"
+msgstr "プリンターが動作するか確認するためにページを印刷します"
+
+#: apps/settings/src/ui/printers.rs:305
+msgid "Remove Printer"
+msgstr "プリンターを削除"
+
+#: apps/settings/src/ui/printers.rs:306
+msgid "Apps will no longer be able to print to it"
+msgstr "アプリはこのプリンターに印刷できなくなります"
+
+#: apps/settings/src/ui/printers.rs:325
+msgid "Could not make {name} the default printer: {e}"
+msgstr "{name} を既定のプリンターにできませんでした: {e}"
+
+#: apps/settings/src/ui/printers.rs:346
+msgid "Could not resume {name}: {e}"
+msgstr "{name} を再開できませんでした: {e}"
+
+#: apps/settings/src/ui/printers.rs:348
+msgid "Could not pause {name}: {e}"
+msgstr "{name} を一時停止できませんでした: {e}"
+
+#: apps/settings/src/ui/printers.rs:370
+msgid "Test page sent to {name}"
+msgstr "テストページを {name} に送信しました"
+
+#: apps/settings/src/ui/printers.rs:371
+msgid "Could not print a test page on {name}: {e}"
+msgstr "{name} でテストページを印刷できませんでした: {e}"
+
+#: apps/settings/src/ui/printers.rs:466
+msgid "No jobs are waiting."
+msgstr "待機中のジョブはありません。"
+
+#: apps/settings/src/ui/printers.rs:477
+msgid "Job {id}"
+msgstr "ジョブ {id}"
+
+#: apps/settings/src/ui/printers.rs:484
+msgid "{status} · {user}"
+msgstr "{status} · {user}"
+
+#: apps/settings/src/ui/printers.rs:498
+msgid "Hold"
+msgstr "保留"
+
+#: apps/settings/src/ui/printers.rs:505
+msgid "Resume {job}"
+msgstr "{job} を再開"
+
+#: apps/settings/src/ui/printers.rs:507
+msgid "Hold {job}"
+msgstr "{job} を保留"
+
+#: apps/settings/src/ui/printers.rs:512
+msgid "Cancel Job"
+msgstr "ジョブをキャンセル"
+
+#: apps/settings/src/ui/printers.rs:516
+msgid "Cancel {job}"
+msgstr "{job} をキャンセル"
+
+#: apps/settings/src/ui/printers.rs:527
+msgid "Could not change {job}: {e}"
+msgstr "{job} を変更できませんでした: {e}"
+
+#: apps/settings/src/ui/printers.rs:537
+msgid "Could not cancel {job}: {e}"
+msgstr "{job} をキャンセルできませんでした: {e}"
+
+#: apps/settings/src/ui/printers.rs:594
+msgid "Could not change {option}: {e}"
+msgstr "{option} を変更できませんでした: {e}"
+
+#: apps/settings/src/ui/printers.rs:604
+msgid "It will have to be added again before it can be used."
+msgstr "使用するには再度追加する必要があります。"
+
+#: apps/settings/src/ui/printers.rs:622
+msgid "Could not remove {name}: {e}"
+msgstr "{name} を削除できませんでした: {e}"
+
+#: apps/settings/src/ui/printers.rs:631
+msgid "Printers Found"
+msgstr "見つかったプリンター"
+
+#: apps/settings/src/ui/printers.rs:633
+msgid "Searching for Printers"
+msgstr "プリンターを検索中"
+
+#: apps/settings/src/ui/printers.rs:635
+msgid "Searching for printers on the network…"
+msgstr "ネットワーク上のプリンターを検索しています…"
+
+#: apps/settings/src/ui/printers.rs:637
+msgid "Add by Address"
+msgstr "アドレスで追加"
+
+#: apps/settings/src/ui/printers.rs:638
+msgid ""
+"The printer's host name or IP address, for printers that support driverless "
+"printing (IPP Everywhere)"
+msgstr ""
+"ドライバー不要の印刷（IPP Everywhere）に対応したプリンターのホスト名または "
+"IP アドレス"
+
+#: apps/settings/src/ui/printers.rs:648
+msgid "Add Printer"
+msgstr "プリンターを追加"
+
+#: apps/settings/src/ui/printers.rs:659
+msgid "Enter a host name, an IP address, or an ipp:// address"
+msgstr "ホスト名、IP アドレス、または ipp:// アドレスを入力してください"
+
+#: apps/settings/src/ui/printers.rs:686
+msgid "Finding printers needs cups-pk-helper, which is not installed."
+msgstr ""
+"プリンターの検索には cups-pk-helper が必要ですが、インストールされていませ"
+"ん。"
+
+#: apps/settings/src/ui/printers.rs:692
+msgid "Could not search for printers: {e}"
+msgstr "プリンターを検索できませんでした: {e}"
+
+#: apps/settings/src/ui/printers.rs:697
+msgid ""
+"No other printers were found. Make sure the printer is on and connected."
+msgstr ""
+"ほかのプリンターは見つかりませんでした。プリンターの電源が入っていて接続され"
+"ていることを確認してください。"
+
+#: apps/settings/src/ui/printers.rs:745
+msgid "Adding {name}…"
+msgstr "{name} を追加しています…"
+
+#: apps/settings/src/ui/printers.rs:751
+msgid "Added {name}"
+msgstr "{name} を追加しました"
+
+#: apps/settings/src/ui/printers.rs:754
+msgid "Could not add {name}: {e}"
+msgstr "{name} を追加できませんでした: {e}"
 
 #: apps/settings/src/ui/privacy.rs:55
 msgid "Screen Lock"
@@ -15860,10 +16187,6 @@ msgstr "プロセス名"
 msgid "User"
 msgstr "ユーザー"
 
-#: apps/system-monitor/src/dialogs.rs:30
-msgid "Status"
-msgstr "状態"
-
 #: apps/system-monitor/src/dialogs.rs:32
 msgid "Virtual Memory"
 msgstr "仮想メモリ"
@@ -16045,10 +16368,6 @@ msgstr "スリープ中"
 #: apps/system-monitor/src/format.rs:98
 msgid "Uninterruptible"
 msgstr "割り込み不可"
-
-#: apps/system-monitor/src/format.rs:99
-msgid "Stopped"
-msgstr "停止"
 
 #: apps/system-monitor/src/format.rs:100
 msgid "Tracing Stop"

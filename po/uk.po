@@ -325,7 +325,7 @@ msgstr "_Про програму"
 #: apps/logs/src/ui.rs:310 apps/maps/src/ui.rs:492 apps/maps/src/ui.rs:494
 #: apps/music/src/ui.rs:480 apps/music/src/ui.rs:482
 #: apps/screenshot/src/ui.rs:290 apps/screenshot/src/ui.rs:292
-#: apps/settings/src/ui/mod.rs:218 apps/settings/src/ui/mod.rs:220
+#: apps/settings/src/ui/mod.rs:220 apps/settings/src/ui/mod.rs:222
 #: apps/system-monitor/src/ui.rs:260 apps/system-monitor/src/ui.rs:262
 #: apps/terminal/src/window.rs:301 apps/terminal/src/window.rs:305
 #: apps/text-editor/src/window.rs:149 apps/text-editor/src/window.rs:151
@@ -353,7 +353,7 @@ msgid "Unable to Play File"
 msgstr "Не вдалося відтворити файл"
 
 #: apps/audio-player/src/ui.rs:297 apps/audio-player/src/ui.rs:304
-#: apps/music/src/ui.rs:2583 apps/music/src/ui.rs:2584
+#: apps/music/src/ui.rs:2585 apps/music/src/ui.rs:2586
 #: apps/video-player/src/ui.rs:464
 msgid "Position"
 msgstr "Позиція"
@@ -369,15 +369,15 @@ msgstr "Швидкість відтворення (висота тону не з
 #: apps/audio-player/src/ui.rs:348 apps/audio-player/src/ui.rs:351
 #: apps/audio-player/src/ui.rs:1283 apps/music/src/pages.rs:825
 #: apps/music/src/pages.rs:1175 apps/music/src/pages.rs:1503
-#: apps/music/src/ui.rs:1351 apps/music/src/ui.rs:2559
-#: apps/music/src/ui.rs:2563 apps/video-player/src/ui.rs:443
+#: apps/music/src/ui.rs:1353 apps/music/src/ui.rs:2561
+#: apps/music/src/ui.rs:2565 apps/video-player/src/ui.rs:443
 #: apps/video-player/src/ui.rs:1460
 msgid "Play"
 msgstr "Відтворити"
 
 #: apps/audio-player/src/ui.rs:368 apps/audio-player/src/ui.rs:371
 #: apps/calendar/src/editor.rs:551 apps/clocks/src/ui.rs:1422
-#: apps/music/src/ui.rs:2606 apps/music/src/ui.rs:2610
+#: apps/music/src/ui.rs:2608 apps/music/src/ui.rs:2612
 msgid "Repeat"
 msgstr "Повторювати"
 
@@ -388,8 +388,8 @@ msgid "Mute"
 msgstr "Вимкнути звук"
 
 #: apps/audio-player/src/ui.rs:386 apps/audio-player/src/ui.rs:394
-#: apps/audio-player/src/ui.rs:397 apps/music/src/ui.rs:2615
-#: apps/music/src/ui.rs:2622 apps/music/src/ui.rs:2627
+#: apps/audio-player/src/ui.rs:397 apps/music/src/ui.rs:2617
+#: apps/music/src/ui.rs:2624 apps/music/src/ui.rs:2629
 #: apps/settings/src/ui/sound.rs:168 apps/video-player/src/ui.rs:158
 #: apps/video-player/src/ui.rs:491 apps/video-player/src/ui.rs:497
 #: apps/video-player/src/ui.rs:503
@@ -430,7 +430,7 @@ msgid "{position} of {duration}"
 msgstr "{position} з {duration}"
 
 #: apps/audio-player/src/ui.rs:1281 apps/clocks/src/ui.rs:1758
-#: apps/clocks/src/ui.rs:2241 apps/music/src/ui.rs:1351
+#: apps/clocks/src/ui.rs:2241 apps/music/src/ui.rs:1353
 #: apps/video-player/src/ui.rs:1460
 msgid "Pause"
 msgstr "Призупинити"
@@ -736,8 +736,8 @@ msgstr "{} не визначено для цих значень"
 
 #: apps/calculator/src/format.rs:33 apps/document-scanner/src/settings.rs:29
 #: apps/document-scanner/src/ui.rs:1728 apps/document-scanner/src/ui.rs:1795
-#: apps/settings/src/ui/greeter.rs:27 apps/settings/src/ui/netedit.rs:32
-#: apps/settings/src/ui/network.rs:28
+#: apps/settings/src/cups.rs:814 apps/settings/src/ui/greeter.rs:27
+#: apps/settings/src/ui/netedit.rs:32 apps/settings/src/ui/network.rs:28
 msgid "Automatic"
 msgstr "Автоматично"
 
@@ -1147,8 +1147,8 @@ msgstr "_Обчислити"
 #: apps/settings/src/ui/agent_access.rs:280
 #: apps/settings/src/ui/agent_access.rs:996 apps/settings/src/ui/apps.rs:553
 #: apps/settings/src/ui/bluetooth.rs:647 apps/settings/src/ui/netedit.rs:389
-#: apps/settings/src/ui/users.rs:642 apps/settings/src/ui/wifi.rs:587
-#: apps/system-monitor/src/dialogs.rs:142
+#: apps/settings/src/ui/printers.rs:606 apps/settings/src/ui/users.rs:642
+#: apps/settings/src/ui/wifi.rs:587 apps/system-monitor/src/dialogs.rs:142
 #: apps/system-monitor/src/dialogs.rs:290 apps/terminal/src/window.rs:1306
 #: apps/text-editor/src/window.rs:973 apps/web/src/app.rs:954
 #: apps/web/src/dialogs.rs:426 apps/web/src/dialogs.rs:464
@@ -1428,8 +1428,8 @@ msgstr "Календар"
 
 #: apps/calendar/src/editor.rs:504 apps/document-viewer/src/dialogs.rs:112
 #: apps/files/src/ui/window.rs:211 apps/image-viewer/src/ui.rs:592
-#: apps/settings/src/permissions.rs:45 apps/settings/src/ui/privacy.rs:155
-#: apps/web/src/permissions.rs:24
+#: apps/settings/src/permissions.rs:45 apps/settings/src/ui/printers.rs:269
+#: apps/settings/src/ui/privacy.rs:155 apps/web/src/permissions.rs:24
 msgid "Location"
 msgstr "Місце"
 
@@ -1693,7 +1693,7 @@ msgid "The calendar and all its events will be deleted. This cannot be undone."
 msgstr "Календар і всі його події буде вилучено. Цю дію не можна скасувати."
 
 #: apps/calendar/src/manage.rs:375 apps/settings/src/ui/netedit.rs:390
-#: apps/web/src/dialogs.rs:941
+#: apps/settings/src/ui/printers.rs:607 apps/web/src/dialogs.rs:941
 msgid "_Remove"
 msgstr "_Вилучити"
 
@@ -1846,7 +1846,7 @@ msgstr "Імпорт"
 #: apps/logs/src/ui.rs:278 apps/maps/src/shortcuts.rs:48
 #: apps/music/src/shortcuts.rs:32 apps/music/src/ui.rs:452
 #: apps/music/src/ui.rs:454 apps/settings/src/ui/apps.rs:439
-#: apps/settings/src/ui/mod.rs:203 apps/settings/src/ui/mod.rs:205
+#: apps/settings/src/ui/mod.rs:205 apps/settings/src/ui/mod.rs:207
 #: apps/settings/src/ui/shortcuts.rs:8 apps/system-monitor/src/shortcuts.rs:31
 #: apps/system-monitor/src/ui.rs:223 apps/system-monitor/src/ui.rs:225
 #: apps/web/src/dialogs.rs:142 apps/web/src/window.rs:48
@@ -1970,13 +1970,13 @@ msgstr "Сьогодні"
 
 #: apps/calendar/src/ui.rs:257 apps/calendar/src/ui.rs:259
 #: apps/calendar/src/ui.rs:511 apps/calendar/src/ui.rs:513
-#: apps/music/src/ui.rs:2556 apps/tour/src/ui.rs:283 apps/tour/src/ui.rs:289
+#: apps/music/src/ui.rs:2558 apps/tour/src/ui.rs:283 apps/tour/src/ui.rs:289
 msgid "Previous"
 msgstr "Попередній"
 
 #: apps/calendar/src/ui.rs:263 apps/calendar/src/ui.rs:265
 #: apps/calendar/src/ui.rs:517 apps/calendar/src/ui.rs:519
-#: apps/music/src/ui.rs:1159 apps/music/src/ui.rs:2564 apps/tour/src/ui.rs:292
+#: apps/music/src/ui.rs:1161 apps/music/src/ui.rs:2566 apps/tour/src/ui.rs:292
 #: apps/tour/src/ui.rs:298
 msgid "Next"
 msgstr "Наступний"
@@ -1999,7 +1999,7 @@ msgstr "_Імпортувати…"
 
 #: apps/calendar/src/ui.rs:291 apps/contacts/src/ui.rs:206
 #: apps/files/src/ui/window.rs:232 apps/maps/src/ui.rs:486
-#: apps/settings/src/ui/mod.rs:212 apps/terminal/src/window.rs:296
+#: apps/settings/src/ui/mod.rs:214 apps/terminal/src/window.rs:296
 #: apps/text-editor/src/window.rs:65 apps/web/src/window.rs:222
 #: apps/web/src/window.rs:265 crates/helix-app-common/src/shortcuts.rs:25
 msgid "_Keyboard Shortcuts"
@@ -2018,7 +2018,7 @@ msgid "Search Events"
 msgstr "Пошук подій"
 
 #: apps/calendar/src/ui.rs:371 apps/files/src/ui/dialogs.rs:429
-#: apps/files/src/ui/tab.rs:1125 apps/settings/src/ui/mod.rs:244
+#: apps/files/src/ui/tab.rs:1125 apps/settings/src/ui/mod.rs:246
 #: apps/settings/src/ui/picker.rs:115 apps/web/src/dialogs.rs:752
 #: apps/web/src/window.rs:2378
 msgid "No Results Found"
@@ -2026,7 +2026,7 @@ msgstr "Нічого не знайдено"
 
 #: apps/calendar/src/ui.rs:372 apps/characters/src/ui.rs:456
 #: apps/files/src/ui/dialogs.rs:434 apps/fonts/src/ui.rs:436
-#: apps/music/src/pages.rs:1687 apps/settings/src/ui/mod.rs:245
+#: apps/music/src/pages.rs:1687 apps/settings/src/ui/mod.rs:247
 #: apps/settings/src/ui/picker.rs:116 apps/web/src/dialogs.rs:753
 #: apps/web/src/window.rs:2379
 msgid "Try a different search"
@@ -2328,9 +2328,10 @@ msgid "Take pictures and videos"
 msgstr "Фотографування та відеозапис"
 
 #: apps/camera/src/ui.rs:162 apps/disks/src/ui.rs:937
-#: apps/music/src/player.rs:54 apps/settings/src/extensions.rs:155
-#: apps/settings/src/ui/network.rs:26 apps/settings/src/ui/network.rs:188
-#: apps/settings/src/ui/network.rs:467 apps/settings/src/ui/privacy.rs:198
+#: apps/music/src/player.rs:54 apps/settings/src/cups.rs:809
+#: apps/settings/src/extensions.rs:155 apps/settings/src/ui/network.rs:26
+#: apps/settings/src/ui/network.rs:188 apps/settings/src/ui/network.rs:467
+#: apps/settings/src/ui/privacy.rs:198
 msgid "Off"
 msgstr "Вимкнено"
 
@@ -3221,6 +3222,7 @@ msgid "Lap {}  {}"
 msgstr "Коло {}  {}"
 
 #: apps/clocks/src/ui.rs:1759 apps/clocks/src/ui.rs:2242
+#: apps/settings/src/ui/printers.rs:498
 msgid "Resume"
 msgstr "Продовжити"
 
@@ -3826,7 +3828,8 @@ msgid "Phone"
 msgstr "Телефон"
 
 #: apps/contacts/src/ui.rs:1286 apps/maps/src/nominatim.rs:248
-#: apps/settings/src/ui/bluetooth.rs:515 apps/web/src/window.rs:49
+#: apps/settings/src/ui/bluetooth.rs:515 apps/settings/src/ui/printers.rs:270
+#: apps/settings/src/ui/printers.rs:643 apps/web/src/window.rs:49
 msgid "Address"
 msgstr "Адреса"
 
@@ -5067,7 +5070,7 @@ msgstr "Старіння"
 msgid "Online"
 msgstr "Онлайн"
 
-#: apps/disks/src/smart.rs:140
+#: apps/disks/src/smart.rs:140 apps/settings/src/cups.rs:555
 msgid "Offline"
 msgstr "Офлайн"
 
@@ -5187,7 +5190,7 @@ msgstr "Параметри накопичувача"
 msgid "Eject"
 msgstr "Виштовхнути"
 
-#: apps/disks/src/ui.rs:356
+#: apps/disks/src/ui.rs:356 apps/settings/src/ui/printers.rs:268
 msgid "Model"
 msgstr "Модель"
 
@@ -5893,11 +5896,13 @@ msgstr "Помилка обміну даними зі сканером: {e}"
 msgid "Unsupported frame format {}"
 msgstr "Непідтримуваний формат кадру {}"
 
-#: apps/document-scanner/src/settings.rs:30 apps/settings/src/ui/access.rs:546
+#: apps/document-scanner/src/settings.rs:30 apps/settings/src/cups.rs:744
+#: apps/settings/src/cups.rs:812 apps/settings/src/ui/access.rs:546
 msgid "Color"
 msgstr "Кольоровий"
 
-#: apps/document-scanner/src/settings.rs:31 apps/settings/src/ui/access.rs:547
+#: apps/document-scanner/src/settings.rs:31 apps/settings/src/cups.rs:813
+#: apps/settings/src/ui/access.rs:547
 msgid "Grayscale"
 msgstr "Відтінки сірого"
 
@@ -5935,7 +5940,7 @@ msgstr "Копіювати сторінку"
 
 #: apps/document-scanner/src/shortcuts.rs:23
 #: apps/document-viewer/src/shortcuts.rs:12 apps/help/src/shortcuts.rs:51
-#: apps/web/src/shortcuts.rs:51
+#: apps/settings/src/ui/printers.rs:300 apps/web/src/shortcuts.rs:51
 msgid "Print"
 msgstr "Друк"
 
@@ -6845,7 +6850,7 @@ msgid "Searching page {page} of {n_pages}… {total} found"
 msgstr "Пошук на сторінці {page} з {n_pages}… знайдено: {total}"
 
 #: apps/document-viewer/src/ui.rs:1644 apps/maps/src/ui.rs:1260
-#: apps/maps/src/ui.rs:1263 apps/settings/src/ui/mod.rs:461
+#: apps/maps/src/ui.rs:1263 apps/settings/src/ui/mod.rs:463
 #: apps/settings/src/ui/picker.rs:34
 msgid "No results found"
 msgstr "Нічого не знайдено"
@@ -7099,7 +7104,7 @@ msgstr "Нещодавні"
 
 #: apps/files/src/pathbar.rs:110 apps/files/src/ui/sidebar.rs:122
 #: apps/files/src/ui/tab.rs:1434 apps/settings/src/bluez.rs:235
-#: apps/settings/src/panels.rs:63 apps/system-monitor/src/res_view.rs:385
+#: apps/settings/src/panels.rs:64 apps/system-monitor/src/res_view.rs:385
 msgid "Network"
 msgstr "Мережа"
 
@@ -7225,6 +7230,7 @@ msgid "Applications"
 msgstr "Програми"
 
 #: apps/files/src/ui/dialogs.rs:364 apps/settings/src/ui/appearance.rs:107
+#: apps/settings/src/ui/printers.rs:237 apps/settings/src/ui/printers.rs:433
 #: apps/settings/src/ui/sound.rs:928 apps/settings/src/values.rs:204
 msgid "Default"
 msgstr "Типово"
@@ -7920,7 +7926,9 @@ msgstr[2] "Неможливо перемістити {n} елементів до
 msgid ""
 "This location has no Trash. Delete permanently instead? Deleted items will "
 "be permanently lost."
-msgstr "У цьому розташуванні немає смітника. Вилучити остаточно? Вилучені елементи буде втрачено назавжди."
+msgstr ""
+"У цьому розташуванні немає смітника. Вилучити остаточно? Вилучені елементи "
+"буде втрачено назавжди."
 
 #: apps/files/src/ui/window.rs:1463
 msgid "Permanently Delete “{}”?"
@@ -9689,13 +9697,13 @@ msgstr[2] "Знайдено {n} місць"
 msgid "Selected place: {}"
 msgstr "Вибране місце: {}"
 
-#: apps/maps/src/ui.rs:1365 apps/music/src/ui.rs:2344
+#: apps/maps/src/ui.rs:1365 apps/music/src/ui.rs:2346
 msgid "Remove from Favorites"
 msgstr "Вилучити з улюблених"
 
 #: apps/maps/src/ui.rs:1367 apps/maps/src/ui.rs:2266
-#: apps/music/src/pages.rs:726 apps/music/src/ui.rs:2346
-#: apps/music/src/ui.rs:2596
+#: apps/music/src/pages.rs:726 apps/music/src/ui.rs:2348
+#: apps/music/src/ui.rs:2598
 msgid "Add to Favorites"
 msgstr "Додати до улюблених"
 
@@ -10210,8 +10218,8 @@ msgid "Clear Queue"
 msgstr "Очистити чергу"
 
 #: apps/music/src/nowplaying.rs:203 apps/music/src/shortcuts.rs:31
-#: apps/music/src/ui.rs:2323 apps/music/src/ui.rs:2641
-#: apps/music/src/ui.rs:2646
+#: apps/music/src/ui.rs:2325 apps/music/src/ui.rs:2643
+#: apps/music/src/ui.rs:2648
 msgid "Now Playing"
 msgstr "Зараз відтворюється"
 
@@ -10309,8 +10317,8 @@ msgstr[1] "{n} альбоми"
 msgstr[2] "{n} альбомів"
 
 #: apps/music/src/pages.rs:1176 apps/music/src/pages.rs:1504
-#: apps/music/src/shortcuts.rs:14 apps/music/src/ui.rs:2599
-#: apps/music/src/ui.rs:2603
+#: apps/music/src/shortcuts.rs:14 apps/music/src/ui.rs:2601
+#: apps/music/src/ui.rs:2605
 msgid "Shuffle"
 msgstr "Перемішати"
 
@@ -10493,7 +10501,7 @@ msgstr "ReplayGain"
 msgid "Even out loudness using the volume tags of songs or albums"
 msgstr "Вирівнювати гучність за допомогою міток гучності пісень або альбомів"
 
-#: apps/music/src/pages.rs:2436 apps/settings/src/panels.rs:159
+#: apps/music/src/pages.rs:2436 apps/settings/src/panels.rs:160
 #: apps/settings/src/permissions.rs:38 apps/settings/src/ui/apps.rs:419
 #: apps/web/src/permissions.rs:25
 msgid "Notifications"
@@ -10603,7 +10611,7 @@ msgstr "неправильна кількість стовпців {n}"
 msgid "Play and organize your music collection"
 msgstr "Відтворення та впорядкування вашої музичної колекції"
 
-#: apps/music/src/ui.rs:275 apps/music/src/ui.rs:2312
+#: apps/music/src/ui.rs:275 apps/music/src/ui.rs:2314
 msgid "Now playing"
 msgstr "Зараз відтворюється"
 
@@ -10639,81 +10647,81 @@ msgstr "Шукати пісні, альбоми та виконавців"
 msgid "No Music Found"
 msgstr "Музики не знайдено"
 
-#: apps/music/src/ui.rs:577 apps/music/src/ui.rs:588 apps/music/src/ui.rs:590
+#: apps/music/src/ui.rs:577 apps/music/src/ui.rs:590 apps/music/src/ui.rs:592
 msgid "Scanning Library…"
 msgstr "Сканування фонотеки…"
 
-#: apps/music/src/ui.rs:737
+#: apps/music/src/ui.rs:739
 msgid "Playback is unavailable (GStreamer could not be initialised)"
 msgstr "Відтворення недоступне (не вдалося ініціалізувати GStreamer)"
 
-#: apps/music/src/ui.rs:936
+#: apps/music/src/ui.rs:938
 msgid "{n} song found"
 msgid_plural "{n} songs found"
 msgstr[0] "Знайдено {n} пісню"
 msgstr[1] "Знайдено {n} пісні"
 msgstr[2] "Знайдено {n} пісень"
 
-#: apps/music/src/ui.rs:958
+#: apps/music/src/ui.rs:960
 msgid "Library updated: {n} song"
 msgid_plural "Library updated: {n} songs"
 msgstr[0] "Фонотеку оновлено: {n} композиція"
 msgstr[1] "Фонотеку оновлено: {n} композиції"
 msgstr[2] "Фонотеку оновлено: {n} композицій"
 
-#: apps/music/src/ui.rs:969
+#: apps/music/src/ui.rs:971
 msgid "No changes found"
 msgstr "Змін не знайдено"
 
-#: apps/music/src/ui.rs:1115
+#: apps/music/src/ui.rs:1117
 msgid "Will play next"
 msgstr "Буде відтворено наступною"
 
-#: apps/music/src/ui.rs:1117
+#: apps/music/src/ui.rs:1119
 msgid "Added to queue"
 msgstr "Додано до черги"
 
-#: apps/music/src/ui.rs:1315
+#: apps/music/src/ui.rs:1317
 msgid "Cannot play “{name}”"
 msgstr "Неможливо відтворити «{name}»"
 
-#: apps/music/src/ui.rs:1400
+#: apps/music/src/ui.rs:1402
 msgid "Playing music"
 msgstr "Відтворення музики"
 
-#: apps/music/src/ui.rs:1486
+#: apps/music/src/ui.rs:1488
 msgid "Now playing: {}"
 msgstr "Зараз відтворюється: {}"
 
-#: apps/music/src/ui.rs:1488
+#: apps/music/src/ui.rs:1490
 msgid "Now playing: {title} by {artist}"
 msgstr "Зараз відтворюється: {title} — {artist}"
 
-#: apps/music/src/ui.rs:1569
+#: apps/music/src/ui.rs:1571
 msgid "Repeat: Off"
 msgstr "Повтор: вимкнено"
 
-#: apps/music/src/ui.rs:1570
+#: apps/music/src/ui.rs:1572
 msgid "Repeat: All"
 msgstr "Повтор: усі"
 
-#: apps/music/src/ui.rs:1571
+#: apps/music/src/ui.rs:1573
 msgid "Repeat: Song"
 msgstr "Повтор: пісня"
 
-#: apps/music/src/ui.rs:2184
+#: apps/music/src/ui.rs:2186
 msgid "Music files in {} will appear here."
 msgstr "Музичні файли з {} з'являтимуться тут."
 
-#: apps/music/src/ui.rs:2277
+#: apps/music/src/ui.rs:2279
 msgid "Add Music Folder"
 msgstr "Додати теку з музикою"
 
-#: apps/music/src/ui.rs:2551 apps/music/src/ui.rs:2554
+#: apps/music/src/ui.rs:2553 apps/music/src/ui.rs:2556
 msgid "Show Now Playing"
 msgstr "Показати поточне відтворення"
 
-#: apps/music/src/ui.rs:2660 apps/music/src/ui.rs:2666
+#: apps/music/src/ui.rs:2662 apps/music/src/ui.rs:2668
 msgid "More Controls"
 msgstr "Інші елементи керування"
 
@@ -11975,8 +11983,8 @@ msgid "Part of the desktop"
 msgstr "Частина робочого столу"
 
 #: apps/settings/src/agents.rs:1015 apps/settings/src/agents.rs:1125
-#: apps/settings/src/ui/mod.rs:174 apps/settings/src/ui/mod.rs:257
-#: apps/settings/src/ui/mod.rs:552
+#: apps/settings/src/ui/mod.rs:176 apps/settings/src/ui/mod.rs:259
+#: apps/settings/src/ui/mod.rs:554
 msgid "Settings"
 msgstr "Параметри"
 
@@ -12147,7 +12155,7 @@ msgstr "Навушники"
 msgid "Speaker"
 msgstr "Динамік"
 
-#: apps/settings/src/bluez.rs:224 apps/settings/src/panels.rs:195
+#: apps/settings/src/bluez.rs:224 apps/settings/src/panels.rs:196
 msgid "Keyboard"
 msgstr "Клавіатура"
 
@@ -12188,6 +12196,107 @@ msgstr "Медіапрогравач"
 #: apps/settings/src/bluez.rs:243
 msgid "Other Device"
 msgstr "Інший пристрій"
+
+#: apps/settings/src/cups.rs:536 apps/settings/src/cups.rs:557
+#: apps/settings/src/ui/printers.rs:283
+msgid "Paused"
+msgstr "Призупинено"
+
+#: apps/settings/src/cups.rs:537 apps/settings/src/cups.rs:666
+msgid "Printing"
+msgstr "Друк"
+
+#: apps/settings/src/cups.rs:538
+msgid "Ready"
+msgstr "Готовий"
+
+#: apps/settings/src/cups.rs:546 apps/settings/src/cups.rs:547
+msgid "Out of paper"
+msgstr "Закінчився папір"
+
+#: apps/settings/src/cups.rs:548
+msgid "Paper jam"
+msgstr "Зминання паперу"
+
+#: apps/settings/src/cups.rs:549
+msgid "Out of toner"
+msgstr "Закінчився тонер"
+
+#: apps/settings/src/cups.rs:550
+msgid "Out of ink"
+msgstr "Закінчилося чорнило"
+
+#: apps/settings/src/cups.rs:551
+msgid "Low on toner"
+msgstr "Мало тонера"
+
+#: apps/settings/src/cups.rs:552
+msgid "Low on ink"
+msgstr "Мало чорнила"
+
+#: apps/settings/src/cups.rs:553
+msgid "Door open"
+msgstr "Дверцята відчинені"
+
+#: apps/settings/src/cups.rs:554
+msgid "Cover open"
+msgstr "Кришка відкрита"
+
+#: apps/settings/src/cups.rs:556 apps/settings/src/ui/network.rs:184
+#: apps/settings/src/ui/network.rs:465 apps/settings/src/ui/wifi.rs:472
+msgid "Connecting…"
+msgstr "З'єднання…"
+
+#: apps/settings/src/cups.rs:664
+msgid "Waiting"
+msgstr "Очікує"
+
+#: apps/settings/src/cups.rs:665
+msgid "Held"
+msgstr "Утримується"
+
+#: apps/settings/src/cups.rs:667 apps/system-monitor/src/format.rs:99
+msgid "Stopped"
+msgstr "Зупинений"
+
+#: apps/settings/src/cups.rs:742
+msgid "Paper Size"
+msgstr "Розмір паперу"
+
+#: apps/settings/src/cups.rs:743
+msgid "Two-Sided"
+msgstr "Двобічний"
+
+#: apps/settings/src/cups.rs:745
+msgid "Quality"
+msgstr "Якість"
+
+#: apps/settings/src/cups.rs:810
+msgid "Long Edge (Standard)"
+msgstr "По довгому краю (стандарт)"
+
+#: apps/settings/src/cups.rs:811
+msgid "Short Edge (Flip)"
+msgstr "По короткому краю (переворот)"
+
+#: apps/settings/src/cups.rs:815
+msgctxt "print quality"
+msgid "Draft"
+msgstr "Чернетка"
+
+#: apps/settings/src/cups.rs:816
+msgctxt "print quality"
+msgid "Normal"
+msgstr "Звичайна"
+
+#: apps/settings/src/cups.rs:817
+msgctxt "print quality"
+msgid "High"
+msgstr "Висока"
+
+#: apps/settings/src/cups.rs:856 apps/settings/src/ui/printers.rs:298
+msgid "Test Page"
+msgstr "Пробна сторінка"
 
 #: apps/settings/src/defaults.rs:15 apps/web/src/app.rs:128
 #: apps/web/src/app.rs:152 apps/web/src/app.rs:988 apps/web/src/window.rs:320
@@ -12406,115 +12515,115 @@ msgstr "Відмінний сигнал"
 msgid "Hotspot"
 msgstr "Точка доступу"
 
-#: apps/settings/src/panels.rs:51 apps/settings/src/ui/wifi.rs:106
+#: apps/settings/src/panels.rs:52 apps/settings/src/ui/wifi.rs:106
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:55
+#: apps/settings/src/panels.rs:56
 msgid "network;wireless;wlan;hotspot;internet;airplane;"
 msgstr ""
 "мережа;бездротова;wlan;точка доступу;інтернет;режим "
 "польоту;network;wireless;hotspot;internet;airplane;"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:67
+#: apps/settings/src/panels.rs:68
 msgid "ethernet;wired;vpn;proxy;ip;dns;internet;"
 msgstr "ethernet;дротова;vpn;проксі;ip;dns;інтернет;мережа;wired;proxy;internet;"
 
-#: apps/settings/src/panels.rs:75 apps/settings/src/ui/bluetooth.rs:102
+#: apps/settings/src/panels.rs:76 apps/settings/src/ui/bluetooth.rs:102
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:79
+#: apps/settings/src/panels.rs:80
 msgid "share;devices;pair;headset;wireless;"
 msgstr ""
 "спільний "
 "доступ;пристрої;сполучення;гарнітура;бездротовий;share;devices;pair;headset;wireless;"
 
-#: apps/settings/src/panels.rs:87 apps/settings/src/ui/greeter.rs:124
+#: apps/settings/src/panels.rs:88 apps/settings/src/ui/greeter.rs:124
 msgid "Displays"
 msgstr "Екрани"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:91
+#: apps/settings/src/panels.rs:92
 msgid "monitor;screen;resolution;refresh;scale;night light;projector;rotation;"
 msgstr ""
 "монітор;екран;роздільність;частота оновлення;масштаб;нічне "
 "світло;проєктор;обертання;monitor;screen;resolution;refresh;scale;night "
 "light;projector;rotation;"
 
-#: apps/settings/src/panels.rs:99
+#: apps/settings/src/panels.rs:100
 msgid "Sound"
 msgstr "Звук"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:103
+#: apps/settings/src/panels.rs:104
 msgid "volume;speaker;microphone;audio;output;input;alert;mute;"
 msgstr ""
 "гучність;динамік;мікрофон;аудіо;звук;вихід;вхід;сигнал;вимкнути "
 "звук;volume;speaker;microphone;audio;output;input;alert;mute;"
 
-#: apps/settings/src/panels.rs:111
+#: apps/settings/src/panels.rs:112
 msgid "Power"
 msgstr "Живлення"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:115
+#: apps/settings/src/panels.rs:116
 msgid "battery;suspend;sleep;dim;blank;power button;hibernate;energy;"
 msgstr ""
 "акумулятор;батарея;присипляння;сон;затемнення;вимкнення екрана;кнопка "
 "живлення;приспання;енергія;battery;suspend;sleep;dim;blank;power "
 "button;hibernate;energy;"
 
-#: apps/settings/src/panels.rs:123
+#: apps/settings/src/panels.rs:124
 msgid "Multitasking"
 msgstr "Багатозадачність"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:127
+#: apps/settings/src/panels.rs:128
 msgid "hot corner;workspace;screen edges;tiling;app switching;multi-monitor;"
 msgstr ""
 "гарячий кут;робочий простір;краї екрана;розташування плиткою;перемикання "
 "програм;кілька моніторів;hot corner;workspace;screen edges;tiling;app "
 "switching;multi-monitor;"
 
-#: apps/settings/src/panels.rs:135 apps/terminal/src/prefs_dialog.rs:24
+#: apps/settings/src/panels.rs:136 apps/terminal/src/prefs_dialog.rs:24
 #: apps/text-editor/src/prefs.rs:58
 msgid "Appearance"
 msgstr "Вигляд"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:139
+#: apps/settings/src/panels.rs:140
 msgid "dark;light;style;theme;icon;icons;accent;color;colour;wallpaper;background;"
 msgstr "темний;світлий;стиль;тема;піктограма;піктограми;акцент;колір;шпалери;тло;dark;light;style;theme;icon;icons;accent;color;colour;wallpaper;background;"
 
-#: apps/settings/src/panels.rs:147 apps/settings/src/ui/notifications.rs:100
+#: apps/settings/src/panels.rs:148 apps/settings/src/ui/notifications.rs:100
 #: apps/settings/src/ui/sound.rs:288
 msgid "Apps"
 msgstr "Програми"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:151
+#: apps/settings/src/panels.rs:152
 msgid "default;applications;permissions;browser;storage;"
 msgstr ""
 "типові;програми;права "
 "доступу;браузер;сховище;default;applications;permissions;browser;storage;"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:163
+#: apps/settings/src/panels.rs:164
 msgid "do not disturb;dnd;banner;alerts;lock screen;messages;"
 msgstr ""
 "не турбувати;банер;сповіщення;попередження;екран блокування;повідомлення;do "
 "not disturb;dnd;banner;alerts;lock screen;messages;"
 
-#: apps/settings/src/panels.rs:171
+#: apps/settings/src/panels.rs:172
 msgid "Extensions"
 msgstr "Розширення"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:175
+#: apps/settings/src/panels.rs:176
 msgid ""
 "add-on;plugin;panel item;indicator;quick settings;dock;sandbox;permissions;"
 msgstr ""
@@ -12522,12 +12631,12 @@ msgstr ""
 "налаштування;док;пісочниця;права доступу;add-on;plugin;panel "
 "item;indicator;quick settings;dock;sandbox;permissions;"
 
-#: apps/settings/src/panels.rs:183
+#: apps/settings/src/panels.rs:184
 msgid "Mouse & Touchpad"
 msgstr "Миша і сенсорна панель"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:187
+#: apps/settings/src/panels.rs:188
 msgid ""
 "touchpad;pointer;speed;scroll;natural;tap;click;trackpad;primary "
 "button;acceleration;"
@@ -12538,18 +12647,27 @@ msgstr ""
 "button;acceleration;"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:199
+#: apps/settings/src/panels.rs:200
 msgid "layout;input source;language;repeat;delay;typing;xkb;"
 msgstr ""
 "розкладка;джерело введення;мова;повтор;затримка;набір;xkb;layout;input "
 "source;language;repeat;delay;typing;"
 
-#: apps/settings/src/panels.rs:207 apps/settings/src/ui/access.rs:119
+#: apps/settings/src/panels.rs:208 apps/settings/src/ui/printers.rs:67
+msgid "Printers"
+msgstr "Принтери"
+
+#. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
+#: apps/settings/src/panels.rs:212
+msgid "printer;print;cups;queue;jobs;paper;ink;toner;"
+msgstr "printer;print;cups;queue;jobs;paper;ink;toner;принтер;друк;черга;завдання;папір;чорнило;тонер;"
+
+#: apps/settings/src/panels.rs:220 apps/settings/src/ui/access.rs:119
 msgid "Accessibility"
 msgstr "Спеціальні можливості"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:211
+#: apps/settings/src/panels.rs:224
 msgid ""
 "high contrast;large text;zoom;magnifier;screen reader;cursor size;reduce "
 "animation;sticky keys;slow keys;bounce keys;mouse keys;scrollbars;screen "
@@ -12562,12 +12680,12 @@ msgstr ""
 "text;zoom;magnifier;screen reader;cursor size;sticky keys;slow keys;bounce "
 "keys;mouse keys;"
 
-#: apps/settings/src/panels.rs:219 apps/settings/src/ui/privacy.rs:226
+#: apps/settings/src/panels.rs:232 apps/settings/src/ui/privacy.rs:226
 msgid "Privacy & Security"
 msgstr "Приватність і безпека"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:223
+#: apps/settings/src/panels.rs:236
 msgid ""
 "screen lock;lock;blank;idle;recent files;file "
 "history;trash;temporary;location;camera;microphone;problem "
@@ -12578,34 +12696,34 @@ msgstr ""
 "про проблеми;screen lock;lock;idle;recent "
 "files;trash;location;camera;microphone;агент;ші;асистент;автоматизація;agent;ai;"
 
-#: apps/settings/src/panels.rs:231
+#: apps/settings/src/panels.rs:244
 msgid "Date & Time"
 msgstr "Дата й час"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:235
+#: apps/settings/src/panels.rs:248
 msgid "clock;time zone;timezone;ntp;24-hour;am/pm;week numbers;calendar;"
 msgstr ""
 "годинник;часовий пояс;ntp;24-годинний;am/pm;номери "
 "тижнів;календар;clock;time zone;timezone;24-hour;week numbers;calendar;"
 
-#: apps/settings/src/panels.rs:243 apps/settings/src/ui/greeter.rs:64
+#: apps/settings/src/panels.rs:256 apps/settings/src/ui/greeter.rs:64
 msgid "Users"
 msgstr "Користувачі"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:247
+#: apps/settings/src/panels.rs:260
 msgid "account;password;login;avatar;administrator;"
 msgstr ""
 "обліковий "
 "запис;пароль;вхід;аватар;адміністратор;account;password;login;avatar;administrator;"
 
-#: apps/settings/src/panels.rs:255 apps/settings/src/ui/displays.rs:252
+#: apps/settings/src/panels.rs:268 apps/settings/src/ui/displays.rs:252
 msgid "Login Screen"
 msgstr "Екран входу"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:259
+#: apps/settings/src/panels.rs:272
 msgid ""
 "login;greeter;lock;banner;user list;sign in;display "
 "manager;greetd;accent;clock;"
@@ -12614,12 +12732,12 @@ msgstr ""
 "manager;greetd;accent;clock;вхід;екран входу;блокування;банер;список "
 "користувачів;акцент;годинник;"
 
-#: apps/settings/src/panels.rs:267
+#: apps/settings/src/panels.rs:280
 msgid "About"
 msgstr "Про систему"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:271
+#: apps/settings/src/panels.rs:284
 msgid ""
 "device name;hostname;memory;processor;cpu;disk;os;version;kernel;hardware;"
 msgstr ""
@@ -12627,12 +12745,12 @@ msgstr ""
 "вузла;пам'ять;процесор;cpu;диск;ос;версія;ядро;обладнання;device "
 "name;hostname;memory;processor;disk;os;version;kernel;hardware;"
 
-#: apps/settings/src/panels.rs:296 apps/settings/src/ui/agent_access.rs:70
+#: apps/settings/src/panels.rs:309 apps/settings/src/ui/agent_access.rs:70
 #: apps/settings/src/ui/agent_access.rs:183 apps/settings/src/ui/privacy.rs:189
 msgid "Agent Access"
 msgstr "Доступ агентів"
 
-#: apps/settings/src/panels.rs:304 apps/settings/src/ui/agent_access.rs:1025
+#: apps/settings/src/panels.rs:317 apps/settings/src/ui/agent_access.rs:1025
 msgid "Agent Activity"
 msgstr "Активність агентів"
 
@@ -14607,42 +14725,42 @@ msgstr "Пересунути {source} вниз"
 msgid "Remove {source}"
 msgstr "Вилучити {source}"
 
-#: apps/settings/src/ui/mod.rs:192
+#: apps/settings/src/ui/mod.rs:194
 msgid "Search settings"
 msgstr "Шукати параметри"
 
-#: apps/settings/src/ui/mod.rs:195 apps/settings/src/ui/shortcuts.rs:10
+#: apps/settings/src/ui/mod.rs:197 apps/settings/src/ui/shortcuts.rs:10
 msgid "Search Settings"
 msgstr "Пошук параметрів"
 
-#: apps/settings/src/ui/mod.rs:213
+#: apps/settings/src/ui/mod.rs:215
 msgid "_About Settings"
 msgstr "_Про програму"
 
-#: apps/settings/src/ui/mod.rs:385 apps/settings/src/ui/mod.rs:398
+#: apps/settings/src/ui/mod.rs:387 apps/settings/src/ui/mod.rs:400
 msgid "Not yet available"
 msgstr "Ще недоступно"
 
-#: apps/settings/src/ui/mod.rs:419
+#: apps/settings/src/ui/mod.rs:421
 msgid "Not Yet Available"
 msgstr "Ще недоступно"
 
-#: apps/settings/src/ui/mod.rs:462
+#: apps/settings/src/ui/mod.rs:464
 msgid "{n} panel found"
 msgid_plural "{n} panels found"
 msgstr[0] "Знайдено {n} панель"
 msgstr[1] "Знайдено {n} панелі"
 msgstr[2] "Знайдено {n} панелей"
 
-#: apps/settings/src/ui/mod.rs:521
+#: apps/settings/src/ui/mod.rs:523
 msgid "{} Is Not Yet Available"
 msgstr "{} ще недоступно"
 
-#: apps/settings/src/ui/mod.rs:522
+#: apps/settings/src/ui/mod.rs:524
 msgid "This panel will be added in a later version of Helix Settings."
 msgstr "Цю панель буде додано в одній з наступних версій Параметрів Helix."
 
-#: apps/settings/src/ui/mod.rs:553
+#: apps/settings/src/ui/mod.rs:555
 msgid "Configure the Helix desktop"
 msgstr "Налаштування стільниці Helix"
 
@@ -14823,7 +14941,8 @@ msgstr "IPv4"
 msgid "IPv6"
 msgstr "IPv6"
 
-#: apps/settings/src/ui/netedit.rs:277 apps/settings/src/ui/users.rs:593
+#: apps/settings/src/ui/netedit.rs:277 apps/settings/src/ui/printers.rs:307
+#: apps/settings/src/ui/users.rs:593
 msgid "Remove…"
 msgstr "Вилучити…"
 
@@ -14831,7 +14950,8 @@ msgstr "Вилучити…"
 msgid "Could not save the changes: {e}"
 msgstr "Не вдалося зберегти зміни: {e}"
 
-#: apps/settings/src/ui/netedit.rs:384 apps/settings/src/ui/users.rs:637
+#: apps/settings/src/ui/netedit.rs:384 apps/settings/src/ui/printers.rs:603
+#: apps/settings/src/ui/users.rs:637
 msgid "Remove {name}?"
 msgstr "Вилучити {name}?"
 
@@ -14860,11 +14980,6 @@ msgstr ""
 #: apps/settings/src/ui/network.rs:179
 msgid "Connected — {speed} Mb/s"
 msgstr "З'єднано — {speed} Мб/с"
-
-#: apps/settings/src/ui/network.rs:184 apps/settings/src/ui/network.rs:465
-#: apps/settings/src/ui/wifi.rs:472
-msgid "Connecting…"
-msgstr "З'єднання…"
 
 #: apps/settings/src/ui/network.rs:186
 msgid "Cable unplugged"
@@ -15137,6 +15252,213 @@ msgstr "Показувати точний рівень заряду на вер�
 #: apps/settings/src/ui/power.rs:195
 msgid "Power Button Behavior"
 msgstr "Поведінка кнопки живлення"
+
+#: apps/settings/src/ui/printers.rs:49
+msgid "Loading Printers…"
+msgstr "Завантаження принтерів…"
+
+#: apps/settings/src/ui/printers.rs:53
+msgid "Printing Is Not Available"
+msgstr "Друк недоступний"
+
+#: apps/settings/src/ui/printers.rs:54
+msgid "The printing service (CUPS) is not running."
+msgstr "Службу друку (CUPS) не запущено."
+
+#: apps/settings/src/ui/printers.rs:61
+msgid "Printing Is Not Installed"
+msgstr "Друк не встановлено"
+
+#: apps/settings/src/ui/printers.rs:62
+msgid "Install CUPS to set up printers."
+msgstr "Встановіть CUPS, щоб налаштувати принтери."
+
+#: apps/settings/src/ui/printers.rs:69
+msgid "Add Printer…"
+msgstr "Додати принтер…"
+
+#: apps/settings/src/ui/printers.rs:142
+msgid "Changing printers needs cups-pk-helper, which is not installed"
+msgstr "Для зміни принтерів потрібен cups-pk-helper, але його не встановлено"
+
+#: apps/settings/src/ui/printers.rs:189
+msgid "No printers are set up yet."
+msgstr "Принтери ще не налаштовано."
+
+#: apps/settings/src/ui/printers.rs:214
+msgid "{status} · {location}"
+msgstr "{status} · {location}"
+
+#: apps/settings/src/ui/printers.rs:266 apps/system-monitor/src/dialogs.rs:30
+msgid "Status"
+msgstr "Стан"
+
+#: apps/settings/src/ui/printers.rs:275
+msgid "Default Printer"
+msgstr "Типовий принтер"
+
+#: apps/settings/src/ui/printers.rs:276
+msgid "Apps print here unless another printer is chosen"
+msgstr "Застосунки друкують тут, якщо не вибрано інший принтер"
+
+#: apps/settings/src/ui/printers.rs:277 apps/settings/src/ui/printers.rs:435
+msgid "Make Default"
+msgstr "Зробити типовим"
+
+#: apps/settings/src/ui/printers.rs:284
+msgid "Jobs wait until printing is resumed"
+msgstr "Завдання чекають, доки друк не буде відновлено"
+
+#: apps/settings/src/ui/printers.rs:289
+msgid "Default Options"
+msgstr "Типові параметри"
+
+#: apps/settings/src/ui/printers.rs:293
+msgid "Jobs"
+msgstr "Завдання"
+
+#: apps/settings/src/ui/printers.rs:299
+msgid "Print a page to check that the printer works"
+msgstr "Надрукувати сторінку, щоб перевірити роботу принтера"
+
+#: apps/settings/src/ui/printers.rs:305
+msgid "Remove Printer"
+msgstr "Вилучити принтер"
+
+#: apps/settings/src/ui/printers.rs:306
+msgid "Apps will no longer be able to print to it"
+msgstr "Застосунки більше не зможуть друкувати на ньому"
+
+#: apps/settings/src/ui/printers.rs:325
+msgid "Could not make {name} the default printer: {e}"
+msgstr "Не вдалося зробити {name} типовим принтером: {e}"
+
+#: apps/settings/src/ui/printers.rs:346
+msgid "Could not resume {name}: {e}"
+msgstr "Не вдалося відновити {name}: {e}"
+
+#: apps/settings/src/ui/printers.rs:348
+msgid "Could not pause {name}: {e}"
+msgstr "Не вдалося призупинити {name}: {e}"
+
+#: apps/settings/src/ui/printers.rs:370
+msgid "Test page sent to {name}"
+msgstr "Пробну сторінку надіслано на {name}"
+
+#: apps/settings/src/ui/printers.rs:371
+msgid "Could not print a test page on {name}: {e}"
+msgstr "Не вдалося надрукувати пробну сторінку на {name}: {e}"
+
+#: apps/settings/src/ui/printers.rs:466
+msgid "No jobs are waiting."
+msgstr "Немає завдань в очікуванні."
+
+#: apps/settings/src/ui/printers.rs:477
+msgid "Job {id}"
+msgstr "Завдання {id}"
+
+#: apps/settings/src/ui/printers.rs:484
+msgid "{status} · {user}"
+msgstr "{status} · {user}"
+
+#: apps/settings/src/ui/printers.rs:498
+msgid "Hold"
+msgstr "Утримати"
+
+#: apps/settings/src/ui/printers.rs:505
+msgid "Resume {job}"
+msgstr "Відновити {job}"
+
+#: apps/settings/src/ui/printers.rs:507
+msgid "Hold {job}"
+msgstr "Утримати {job}"
+
+#: apps/settings/src/ui/printers.rs:512
+msgid "Cancel Job"
+msgstr "Скасувати завдання"
+
+#: apps/settings/src/ui/printers.rs:516
+msgid "Cancel {job}"
+msgstr "Скасувати {job}"
+
+#: apps/settings/src/ui/printers.rs:527
+msgid "Could not change {job}: {e}"
+msgstr "Не вдалося змінити {job}: {e}"
+
+#: apps/settings/src/ui/printers.rs:537
+msgid "Could not cancel {job}: {e}"
+msgstr "Не вдалося скасувати {job}: {e}"
+
+#: apps/settings/src/ui/printers.rs:594
+msgid "Could not change {option}: {e}"
+msgstr "Не вдалося змінити параметр «{option}»: {e}"
+
+#: apps/settings/src/ui/printers.rs:604
+msgid "It will have to be added again before it can be used."
+msgstr "Перед використанням його доведеться додати знову."
+
+#: apps/settings/src/ui/printers.rs:622
+msgid "Could not remove {name}: {e}"
+msgstr "Не вдалося вилучити {name}: {e}"
+
+#: apps/settings/src/ui/printers.rs:631
+msgid "Printers Found"
+msgstr "Знайдені принтери"
+
+#: apps/settings/src/ui/printers.rs:633
+msgid "Searching for Printers"
+msgstr "Пошук принтерів"
+
+#: apps/settings/src/ui/printers.rs:635
+msgid "Searching for printers on the network…"
+msgstr "Пошук принтерів у мережі…"
+
+#: apps/settings/src/ui/printers.rs:637
+msgid "Add by Address"
+msgstr "Додати за адресою"
+
+#: apps/settings/src/ui/printers.rs:638
+msgid ""
+"The printer's host name or IP address, for printers that support driverless "
+"printing (IPP Everywhere)"
+msgstr ""
+"Назва вузла або IP-адреса принтера, для принтерів із друком без драйвера "
+"(IPP Everywhere)"
+
+#: apps/settings/src/ui/printers.rs:648
+msgid "Add Printer"
+msgstr "Додати принтер"
+
+#: apps/settings/src/ui/printers.rs:659
+msgid "Enter a host name, an IP address, or an ipp:// address"
+msgstr "Введіть назву вузла, IP-адресу або адресу ipp://"
+
+#: apps/settings/src/ui/printers.rs:686
+msgid "Finding printers needs cups-pk-helper, which is not installed."
+msgstr "Для пошуку принтерів потрібен cups-pk-helper, але його не встановлено."
+
+#: apps/settings/src/ui/printers.rs:692
+msgid "Could not search for printers: {e}"
+msgstr "Не вдалося знайти принтери: {e}"
+
+#: apps/settings/src/ui/printers.rs:697
+msgid ""
+"No other printers were found. Make sure the printer is on and connected."
+msgstr ""
+"Інших принтерів не знайдено. Переконайтеся, що принтер увімкнено й "
+"під'єднано."
+
+#: apps/settings/src/ui/printers.rs:745
+msgid "Adding {name}…"
+msgstr "Додавання {name}…"
+
+#: apps/settings/src/ui/printers.rs:751
+msgid "Added {name}"
+msgstr "{name} додано"
+
+#: apps/settings/src/ui/printers.rs:754
+msgid "Could not add {name}: {e}"
+msgstr "Не вдалося додати {name}: {e}"
 
 #: apps/settings/src/ui/privacy.rs:55
 msgid "Screen Lock"
@@ -16031,10 +16353,6 @@ msgstr "Назва процесу"
 msgid "User"
 msgstr "Користувач"
 
-#: apps/system-monitor/src/dialogs.rs:30
-msgid "Status"
-msgstr "Стан"
-
 #: apps/system-monitor/src/dialogs.rs:32
 msgid "Virtual Memory"
 msgstr "Віртуальна пам'ять"
@@ -16215,10 +16533,6 @@ msgstr "Сплячий"
 #: apps/system-monitor/src/format.rs:98
 msgid "Uninterruptible"
 msgstr "Непереривний"
-
-#: apps/system-monitor/src/format.rs:99
-msgid "Stopped"
-msgstr "Зупинений"
 
 #: apps/system-monitor/src/format.rs:100
 msgid "Tracing Stop"
