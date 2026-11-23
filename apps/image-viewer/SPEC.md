@@ -156,6 +156,12 @@ View images.
   last image or on Esc / F5.
 
 ### Properties panel (F9 / Alt+Return / header toggle)
+- Shown or hidden only by the user (the toggle, its shortcuts, or
+  dismissing it while it overlays the image): it stays as left across
+  image changes, resizes, the collapse breakpoint (below 640 sp it
+  overlays the image instead of sitting beside it), maximizing and
+  minimizing. The split view's sidebar is pinned, so collapsing does not
+  hide it nor expanding show it.
 - Image: dimensions (`W × H` and megapixels), format, file size
   (`glib::format_size`), folder (with a button that opens it),
   created/modified dates (file system).
