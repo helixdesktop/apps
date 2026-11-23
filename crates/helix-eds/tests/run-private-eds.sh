@@ -24,6 +24,9 @@ if busctl --address="$DBUS_SESSION_BUS_ADDRESS" list --activatable --no-legend 2
 fi
 
 S=$(mktemp -d "${TMPDIR:-/tmp}/helix-eds-test.XXXXXX")
+# A crashing daemon leaves a core file where the kernel's core_pattern says
+# (CI points it at $EDS_CORES.*); a backtrace is printed from it below.
+ulimit -c unlimited 2>/dev/null
 export CARGO_HOME=${CARGO_HOME:-$HOME/.cargo} RUSTUP_HOME=${RUSTUP_HOME:-$HOME/.rustup}
 export HOME=$S/home XDG_DATA_HOME=$S/data XDG_CONFIG_HOME=$S/config XDG_CACHE_HOME=$S/cache
 export GSETTINGS_BACKEND=memory GIO_USE_VFS=local GVFS_DISABLE_FUSE=1 HELIX_EDS_PRIVATE_BUS=1
@@ -53,6 +56,18 @@ if [ $rc -ne 0 ]; then
     for log in "$S"/registry.log "$S"/addressbook.log "$S"/calendar.log; do
         echo "--- ${log##*/}"; tail -n 40 "$log"
     done
+    # A daemon that crashed: its backtrace (needs gdb; CI sets EDS_CORES).
+    if [ -n "${EDS_CORES:-}" ] && command -v gdb >/dev/null; then
+        for core in "$EDS_CORES".*; do
+            [ -e "$core" ] || continue
+            # The kernel cuts the name to 15 characters (%e).
+            name=${core#"$EDS_CORES".}; name=${name%.*}
+            daemon=$(ls -d "$LIBEXEC/$name"* 2>/dev/null | head -n 1)
+            echo "--- backtrace of ${daemon:-$name} ($core)"
+            gdb -q -batch -ex "set debuginfod enabled on" -ex "thread apply all bt" \
+                ${daemon:+"$daemon"} "$core" 2>&1 | tail -n 200
+        done
+    fi
 fi
 rm -rf "$S"
 exit $rc
