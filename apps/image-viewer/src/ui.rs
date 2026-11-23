@@ -2203,7 +2203,6 @@ mod tests {
         std::env::set_var("XDG_CACHE_HOME", dir.path().join("cache"));
         std::env::set_var("GDK_DEBUG", "no-portals");
         let Some(_display) = helix_app_common::testing::headless_gtk() else {
-            eprintln!("no headless GTK display (gtk4-broadwayd); skipping");
             return;
         };
         adw::init().unwrap();

@@ -28,7 +28,6 @@ fn run_until(main: &glib::MainLoop, done: impl Fn() -> bool + 'static) {
 #[test]
 fn a_monitored_folder_loads_once_and_follows_changes() {
     let Some(_display) = helix_app_common::testing::headless_gtk() else {
-        eprintln!("no headless GTK display (gtk4-broadwayd); skipping");
         return;
     };
     let dir = std::env::temp_dir().join(format!("helix-files-loads-once-{}", std::process::id()));

@@ -20,7 +20,8 @@ jobs:
       # fonts, glib-compile-schemas, PipeWire with the PulseAudio tools for
       # the fake audio session (crates/helix-test-audio), and GTK's IBus
       # module for the input-method tests (crates/helix-test-ime; the
-      # IBus daemon itself is a fake on a private bus).
+      # IBus daemon itself is a fake on a private bus), and gtk4-broadwayd
+      # (libgtk-4-bin), the private headless display of the GTK UI tests.
       - name: Install system packages
         run: |
           sudo apt-get update
@@ -33,7 +34,7 @@ jobs:
             gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
             libsane1 tracker evolution-data-server \
             pipewire-bin libpipewire-0.3-modules libspa-0.2-modules pulseaudio-utils \
-            ibus-gtk4 \
+            ibus-gtk4 libgtk-4-bin \
             fontconfig fonts-dejavu-core \
             gdb
 
@@ -53,8 +54,11 @@ jobs:
 
       # Headless, on a private session bus that can start no services, with
       # in-memory GSettings, so no test can reach a display, a user bus, a
-      # real service or real settings.
+      # real service or real settings. HELIX_REQUIRE_GTK makes a GTK UI test
+      # that can't start its Broadway display fail instead of skipping (#201).
       - name: Test
+        env:
+          HELIX_REQUIRE_GTK: "1"
         run: tools/testing/run-tests.sh cargo test --workspace --locked
 
       # The helix-eds tests against real Evolution Data Server daemons on a

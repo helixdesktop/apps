@@ -8,7 +8,6 @@ use gtk::prelude::*;
 #[test]
 fn clears_a_list_with_headers_and_a_placeholder() {
     let Some(_display) = helix_app_common::testing::headless_gtk() else {
-        eprintln!("no headless GTK display (gtk4-broadwayd); skipping");
         return;
     };
     let list = gtk::ListBox::new();
