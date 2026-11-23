@@ -737,6 +737,8 @@ fn build(app: &adw::Application) -> Ui {
         .xalign(1.0)
         .css_classes(["error", "caption"])
         .wrap(true)
+        // Breaks inside a long token too, so it never widens the window.
+        .wrap_mode(gtk::pango::WrapMode::WordChar)
         .visible(false)
         .build();
 
@@ -1303,8 +1305,18 @@ impl Ui {
             &e.expression,
             &e.result,
         ))]);
+        // A long expression or result is cut at its start, so it never
+        // widens the window (#198) and its end stays in view; the row's
+        // accessible name keeps the whole text.
+        let ellipsized = |text: &str| {
+            gtk::Label::builder()
+                .label(text)
+                .ellipsize(gtk::pango::EllipsizeMode::Start)
+                .xalign(1.0)
+                .build()
+        };
         let expr = gtk::Button::builder()
-            .label(&e.expression)
+            .child(&ellipsized(&e.expression))
             .css_classes(["flat"])
             .hexpand(true)
             .halign(gtk::Align::End)
@@ -1312,7 +1324,7 @@ impl Ui {
             .build();
         let eq = gtk::Label::new(Some("="));
         let res = gtk::Button::builder()
-            .label(&e.result)
+            .child(&ellipsized(&e.result))
             .css_classes(["flat", "calc-history-result"])
             .tooltip_text(tr("Insert result"))
             .build();
@@ -1805,5 +1817,123 @@ mod key_name_tests {
                 assert!(!n.is_empty());
             }
         }
+    }
+}
+
+#[cfg(test)]
+mod layout_tests {
+    use super::*;
+    use std::time::{Duration, Instant};
+
+    fn wait_for(what: &str, done: impl Fn() -> bool) {
+        let deadline = Instant::now() + Duration::from_secs(20);
+        let ctx = glib::MainContext::default();
+        while !done() {
+            assert!(Instant::now() < deadline, "timed out waiting for {what}");
+            if !ctx.iteration(false) {
+                std::thread::sleep(Duration::from_millis(10));
+            }
+        }
+    }
+
+    /// Runs the main loop for a few frames, so the window is laid out
+    /// again.
+    fn settle() {
+        let until = Instant::now() + Duration::from_millis(300);
+        let ctx = glib::MainContext::default();
+        while Instant::now() < until {
+            if !ctx.iteration(false) {
+                std::thread::sleep(Duration::from_millis(10));
+            }
+        }
+    }
+
+    fn min_width(w: &impl IsA<gtk::Widget>) -> i32 {
+        w.measure(gtk::Orientation::Horizontal, -1).0
+    }
+
+    /// A long expression or result never widens the window (#198: adding
+    /// up `584+455+…+3` pushed the keypad past the right edge): the
+    /// window's minimum width stays what it is with an empty display, and
+    /// the newest history row, the entry and the keypad stay inside it.
+    #[test]
+    fn long_expressions_do_not_widen_the_window() {
+        // History and window state go to a scratch home.
+        let home =
+            std::env::temp_dir().join(format!("helix-calculator-test-{}", std::process::id()));
+        for (var, dir) in [
+            ("XDG_DATA_HOME", "data"),
+            ("XDG_CONFIG_HOME", "config"),
+            ("XDG_STATE_HOME", "state"),
+            ("XDG_CACHE_HOME", "cache"),
+        ] {
+            std::env::set_var(var, home.join(dir));
+        }
+        let Some(_display) = helix_app_common::testing::headless_gtk() else {
+            eprintln!("no headless GTK display (gtk4-broadwayd); skipping");
+            return;
+        };
+        adw::init().unwrap();
+        let app = adw::Application::builder()
+            .application_id("org.helixdesktop.Calculator.Test")
+            .flags(gio::ApplicationFlags::NON_UNIQUE)
+            .build();
+        app.register(gio::Cancellable::NONE).unwrap();
+        load_css();
+        let ui = build(&app);
+        ui.window.set_default_size(360, 600);
+        ui.window.present();
+        let content = ui.window.content().unwrap();
+        // The narrow layout applies once the window has its width.
+        wait_for("the narrow layout", || {
+            ui.window.width() == 360 && min_width(&content) <= 360
+        });
+        settle();
+        let empty = min_width(&content);
+        let long = format!("{}+1", "9".repeat(200));
+        for expr in ["584+455+79+64+48+42+38+25+13+14+8+4+3", long.as_str()] {
+            ui.entry.set_text(expr);
+            ui.evaluate();
+            let result = ui.state.borrow().history.last().unwrap().result.clone();
+            assert_eq!(
+                ui.entry.text(),
+                result,
+                "{expr}: the result is in the entry"
+            );
+            let now = min_width(&content);
+            assert!(
+                now <= empty,
+                "{expr}: the window needs {now} px, not {empty}"
+            );
+
+            // Laid out at the window's width, the history row, the entry
+            // and the keypad end inside the window.
+            let width = ui.window.width() as f32;
+            let row = ui.history.last_child().unwrap();
+            wait_for("the new history row", || row.width() > 0);
+            settle();
+            for (what, w) in [
+                ("history row", row.clone()),
+                ("entry", ui.entry.clone().upcast()),
+                ("keypad", ui.keypad.clone().upcast()),
+            ] {
+                let b = w.compute_bounds(&ui.window).unwrap();
+                assert!(
+                    b.x() >= 0.0 && b.x() + b.width() <= width,
+                    "{expr}: the {what} spans {}..{} of {width}",
+                    b.x(),
+                    b.x() + b.width()
+                );
+            }
+            ui.entry.set_text("");
+        }
+        // Nor does an error that quotes a long name.
+        ui.entry.set_text(&"x".repeat(200));
+        ui.evaluate();
+        assert!(ui.error.is_visible());
+        let now = min_width(&content);
+        assert!(now <= empty, "an error needs {now} px, not {empty}");
+        ui.window.destroy();
+        let _ = std::fs::remove_dir_all(&home);
     }
 }

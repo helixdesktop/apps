@@ -36,6 +36,11 @@ Basic, advanced, financial, and programming calculator.
   then the button panel for the current mode.
 - Clicking a history row's expression inserts it into the entry; clicking its
   result inserts the result.
+- A long expression or result never widens the window: the entry scrolls
+  to keep the cursor in view (the end after evaluating), a history row's
+  expression and result are ellipsized at the start so their ends stay
+  visible, and an error message wraps even inside a long name. The keypad
+  always stays inside the window.
 - Window size and the current mode persist across runs.
 - Narrow windows (an `AdwBreakpoint` below 500sp; minimum 360×500): in
   Advanced, Financial and Programming mode a linked *Numbers* /
