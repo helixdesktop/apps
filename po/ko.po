@@ -318,7 +318,7 @@ msgstr "오디오 플레이어 정보(_A)"
 #: apps/logs/src/ui.rs:310 apps/maps/src/ui.rs:492 apps/maps/src/ui.rs:494
 #: apps/music/src/ui.rs:480 apps/music/src/ui.rs:482
 #: apps/screenshot/src/ui.rs:290 apps/screenshot/src/ui.rs:292
-#: apps/settings/src/ui/mod.rs:218 apps/settings/src/ui/mod.rs:220
+#: apps/settings/src/ui/mod.rs:220 apps/settings/src/ui/mod.rs:222
 #: apps/system-monitor/src/ui.rs:260 apps/system-monitor/src/ui.rs:262
 #: apps/terminal/src/window.rs:301 apps/terminal/src/window.rs:305
 #: apps/text-editor/src/window.rs:149 apps/text-editor/src/window.rs:151
@@ -346,7 +346,7 @@ msgid "Unable to Play File"
 msgstr "파일을 재생할 수 없습니다"
 
 #: apps/audio-player/src/ui.rs:297 apps/audio-player/src/ui.rs:304
-#: apps/music/src/ui.rs:2583 apps/music/src/ui.rs:2584
+#: apps/music/src/ui.rs:2585 apps/music/src/ui.rs:2586
 #: apps/video-player/src/ui.rs:464
 msgid "Position"
 msgstr "위치"
@@ -362,15 +362,15 @@ msgstr "재생 속도(음높이 유지 안 함)"
 #: apps/audio-player/src/ui.rs:348 apps/audio-player/src/ui.rs:351
 #: apps/audio-player/src/ui.rs:1283 apps/music/src/pages.rs:825
 #: apps/music/src/pages.rs:1175 apps/music/src/pages.rs:1503
-#: apps/music/src/ui.rs:1351 apps/music/src/ui.rs:2559
-#: apps/music/src/ui.rs:2563 apps/video-player/src/ui.rs:443
+#: apps/music/src/ui.rs:1353 apps/music/src/ui.rs:2561
+#: apps/music/src/ui.rs:2565 apps/video-player/src/ui.rs:443
 #: apps/video-player/src/ui.rs:1460
 msgid "Play"
 msgstr "재생"
 
 #: apps/audio-player/src/ui.rs:368 apps/audio-player/src/ui.rs:371
 #: apps/calendar/src/editor.rs:551 apps/clocks/src/ui.rs:1422
-#: apps/music/src/ui.rs:2606 apps/music/src/ui.rs:2610
+#: apps/music/src/ui.rs:2608 apps/music/src/ui.rs:2612
 msgid "Repeat"
 msgstr "반복"
 
@@ -381,8 +381,8 @@ msgid "Mute"
 msgstr "음소거"
 
 #: apps/audio-player/src/ui.rs:386 apps/audio-player/src/ui.rs:394
-#: apps/audio-player/src/ui.rs:397 apps/music/src/ui.rs:2615
-#: apps/music/src/ui.rs:2622 apps/music/src/ui.rs:2627
+#: apps/audio-player/src/ui.rs:397 apps/music/src/ui.rs:2617
+#: apps/music/src/ui.rs:2624 apps/music/src/ui.rs:2629
 #: apps/settings/src/ui/sound.rs:168 apps/video-player/src/ui.rs:158
 #: apps/video-player/src/ui.rs:491 apps/video-player/src/ui.rs:497
 #: apps/video-player/src/ui.rs:503
@@ -423,7 +423,7 @@ msgid "{position} of {duration}"
 msgstr "{position} / {duration}"
 
 #: apps/audio-player/src/ui.rs:1281 apps/clocks/src/ui.rs:1758
-#: apps/clocks/src/ui.rs:2241 apps/music/src/ui.rs:1351
+#: apps/clocks/src/ui.rs:2241 apps/music/src/ui.rs:1353
 #: apps/video-player/src/ui.rs:1460
 msgid "Pause"
 msgstr "일시 정지"
@@ -726,8 +726,8 @@ msgstr "{}은(는) 이 값에서 정의되지 않습니다"
 
 #: apps/calculator/src/format.rs:33 apps/document-scanner/src/settings.rs:29
 #: apps/document-scanner/src/ui.rs:1728 apps/document-scanner/src/ui.rs:1795
-#: apps/settings/src/ui/greeter.rs:27 apps/settings/src/ui/netedit.rs:32
-#: apps/settings/src/ui/network.rs:28
+#: apps/settings/src/cups.rs:814 apps/settings/src/ui/greeter.rs:27
+#: apps/settings/src/ui/netedit.rs:32 apps/settings/src/ui/network.rs:28
 msgid "Automatic"
 msgstr "자동"
 
@@ -1136,8 +1136,8 @@ msgstr "계산(_A)"
 #: apps/settings/src/ui/agent_access.rs:280
 #: apps/settings/src/ui/agent_access.rs:996 apps/settings/src/ui/apps.rs:553
 #: apps/settings/src/ui/bluetooth.rs:647 apps/settings/src/ui/netedit.rs:389
-#: apps/settings/src/ui/users.rs:642 apps/settings/src/ui/wifi.rs:587
-#: apps/system-monitor/src/dialogs.rs:142
+#: apps/settings/src/ui/printers.rs:606 apps/settings/src/ui/users.rs:642
+#: apps/settings/src/ui/wifi.rs:587 apps/system-monitor/src/dialogs.rs:142
 #: apps/system-monitor/src/dialogs.rs:290 apps/terminal/src/window.rs:1306
 #: apps/text-editor/src/window.rs:973 apps/web/src/app.rs:954
 #: apps/web/src/dialogs.rs:426 apps/web/src/dialogs.rs:464
@@ -1414,8 +1414,8 @@ msgstr "캘린더"
 
 #: apps/calendar/src/editor.rs:504 apps/document-viewer/src/dialogs.rs:112
 #: apps/files/src/ui/window.rs:211 apps/image-viewer/src/ui.rs:592
-#: apps/settings/src/permissions.rs:45 apps/settings/src/ui/privacy.rs:155
-#: apps/web/src/permissions.rs:24
+#: apps/settings/src/permissions.rs:45 apps/settings/src/ui/printers.rs:269
+#: apps/settings/src/ui/privacy.rs:155 apps/web/src/permissions.rs:24
 msgid "Location"
 msgstr "장소"
 
@@ -1676,7 +1676,7 @@ msgid "The calendar and all its events will be deleted. This cannot be undone."
 msgstr "캘린더와 모든 일정이 삭제됩니다. 되돌릴 수 없습니다."
 
 #: apps/calendar/src/manage.rs:375 apps/settings/src/ui/netedit.rs:390
-#: apps/web/src/dialogs.rs:941
+#: apps/settings/src/ui/printers.rs:607 apps/web/src/dialogs.rs:941
 msgid "_Remove"
 msgstr "제거(_R)"
 
@@ -1821,7 +1821,7 @@ msgstr "가져오기"
 #: apps/logs/src/ui.rs:278 apps/maps/src/shortcuts.rs:48
 #: apps/music/src/shortcuts.rs:32 apps/music/src/ui.rs:452
 #: apps/music/src/ui.rs:454 apps/settings/src/ui/apps.rs:439
-#: apps/settings/src/ui/mod.rs:203 apps/settings/src/ui/mod.rs:205
+#: apps/settings/src/ui/mod.rs:205 apps/settings/src/ui/mod.rs:207
 #: apps/settings/src/ui/shortcuts.rs:8 apps/system-monitor/src/shortcuts.rs:31
 #: apps/system-monitor/src/ui.rs:223 apps/system-monitor/src/ui.rs:225
 #: apps/web/src/dialogs.rs:142 apps/web/src/window.rs:48
@@ -1945,13 +1945,13 @@ msgstr "오늘"
 
 #: apps/calendar/src/ui.rs:257 apps/calendar/src/ui.rs:259
 #: apps/calendar/src/ui.rs:511 apps/calendar/src/ui.rs:513
-#: apps/music/src/ui.rs:2556 apps/tour/src/ui.rs:283 apps/tour/src/ui.rs:289
+#: apps/music/src/ui.rs:2558 apps/tour/src/ui.rs:283 apps/tour/src/ui.rs:289
 msgid "Previous"
 msgstr "이전"
 
 #: apps/calendar/src/ui.rs:263 apps/calendar/src/ui.rs:265
 #: apps/calendar/src/ui.rs:517 apps/calendar/src/ui.rs:519
-#: apps/music/src/ui.rs:1159 apps/music/src/ui.rs:2564 apps/tour/src/ui.rs:292
+#: apps/music/src/ui.rs:1161 apps/music/src/ui.rs:2566 apps/tour/src/ui.rs:292
 #: apps/tour/src/ui.rs:298
 msgid "Next"
 msgstr "다음"
@@ -1974,7 +1974,7 @@ msgstr "가져오기(_I)…"
 
 #: apps/calendar/src/ui.rs:291 apps/contacts/src/ui.rs:206
 #: apps/files/src/ui/window.rs:232 apps/maps/src/ui.rs:486
-#: apps/settings/src/ui/mod.rs:212 apps/terminal/src/window.rs:296
+#: apps/settings/src/ui/mod.rs:214 apps/terminal/src/window.rs:296
 #: apps/text-editor/src/window.rs:65 apps/web/src/window.rs:222
 #: apps/web/src/window.rs:265 crates/helix-app-common/src/shortcuts.rs:25
 msgid "_Keyboard Shortcuts"
@@ -1993,7 +1993,7 @@ msgid "Search Events"
 msgstr "일정 검색"
 
 #: apps/calendar/src/ui.rs:371 apps/files/src/ui/dialogs.rs:429
-#: apps/files/src/ui/tab.rs:1125 apps/settings/src/ui/mod.rs:244
+#: apps/files/src/ui/tab.rs:1125 apps/settings/src/ui/mod.rs:246
 #: apps/settings/src/ui/picker.rs:115 apps/web/src/dialogs.rs:752
 #: apps/web/src/window.rs:2378
 msgid "No Results Found"
@@ -2001,7 +2001,7 @@ msgstr "결과 없음"
 
 #: apps/calendar/src/ui.rs:372 apps/characters/src/ui.rs:456
 #: apps/files/src/ui/dialogs.rs:434 apps/fonts/src/ui.rs:436
-#: apps/music/src/pages.rs:1687 apps/settings/src/ui/mod.rs:245
+#: apps/music/src/pages.rs:1687 apps/settings/src/ui/mod.rs:247
 #: apps/settings/src/ui/picker.rs:116 apps/web/src/dialogs.rs:753
 #: apps/web/src/window.rs:2379
 msgid "Try a different search"
@@ -2294,9 +2294,10 @@ msgid "Take pictures and videos"
 msgstr "사진과 동영상을 찍습니다"
 
 #: apps/camera/src/ui.rs:162 apps/disks/src/ui.rs:937
-#: apps/music/src/player.rs:54 apps/settings/src/extensions.rs:155
-#: apps/settings/src/ui/network.rs:26 apps/settings/src/ui/network.rs:188
-#: apps/settings/src/ui/network.rs:467 apps/settings/src/ui/privacy.rs:198
+#: apps/music/src/player.rs:54 apps/settings/src/cups.rs:809
+#: apps/settings/src/extensions.rs:155 apps/settings/src/ui/network.rs:26
+#: apps/settings/src/ui/network.rs:188 apps/settings/src/ui/network.rs:467
+#: apps/settings/src/ui/privacy.rs:198
 msgid "Off"
 msgstr "끔"
 
@@ -3173,6 +3174,7 @@ msgid "Lap {}  {}"
 msgstr "랩 {}  {}"
 
 #: apps/clocks/src/ui.rs:1759 apps/clocks/src/ui.rs:2242
+#: apps/settings/src/ui/printers.rs:498
 msgid "Resume"
 msgstr "계속"
 
@@ -3765,7 +3767,8 @@ msgid "Phone"
 msgstr "전화"
 
 #: apps/contacts/src/ui.rs:1286 apps/maps/src/nominatim.rs:248
-#: apps/settings/src/ui/bluetooth.rs:515 apps/web/src/window.rs:49
+#: apps/settings/src/ui/bluetooth.rs:515 apps/settings/src/ui/printers.rs:270
+#: apps/settings/src/ui/printers.rs:643 apps/web/src/window.rs:49
 msgid "Address"
 msgstr "주소"
 
@@ -4980,7 +4983,7 @@ msgstr "노후"
 msgid "Online"
 msgstr "온라인"
 
-#: apps/disks/src/smart.rs:140
+#: apps/disks/src/smart.rs:140 apps/settings/src/cups.rs:555
 msgid "Offline"
 msgstr "오프라인"
 
@@ -5098,7 +5101,7 @@ msgstr "드라이브 옵션"
 msgid "Eject"
 msgstr "꺼내기"
 
-#: apps/disks/src/ui.rs:356
+#: apps/disks/src/ui.rs:356 apps/settings/src/ui/printers.rs:268
 msgid "Model"
 msgstr "모델"
 
@@ -5803,11 +5806,13 @@ msgstr "스캐너와 통신하는 중 오류: {e}"
 msgid "Unsupported frame format {}"
 msgstr "지원하지 않는 프레임 형식 {}"
 
-#: apps/document-scanner/src/settings.rs:30 apps/settings/src/ui/access.rs:546
+#: apps/document-scanner/src/settings.rs:30 apps/settings/src/cups.rs:744
+#: apps/settings/src/cups.rs:812 apps/settings/src/ui/access.rs:546
 msgid "Color"
 msgstr "컬러"
 
-#: apps/document-scanner/src/settings.rs:31 apps/settings/src/ui/access.rs:547
+#: apps/document-scanner/src/settings.rs:31 apps/settings/src/cups.rs:813
+#: apps/settings/src/ui/access.rs:547
 msgid "Grayscale"
 msgstr "회색조"
 
@@ -5845,7 +5850,7 @@ msgstr "페이지 복사"
 
 #: apps/document-scanner/src/shortcuts.rs:23
 #: apps/document-viewer/src/shortcuts.rs:12 apps/help/src/shortcuts.rs:51
-#: apps/web/src/shortcuts.rs:51
+#: apps/settings/src/ui/printers.rs:300 apps/web/src/shortcuts.rs:51
 msgid "Print"
 msgstr "인쇄"
 
@@ -6746,7 +6751,7 @@ msgid "Searching page {page} of {n_pages}… {total} found"
 msgstr "{n_pages}페이지 중 {page}페이지 검색 중… {total}개 찾음"
 
 #: apps/document-viewer/src/ui.rs:1644 apps/maps/src/ui.rs:1260
-#: apps/maps/src/ui.rs:1263 apps/settings/src/ui/mod.rs:461
+#: apps/maps/src/ui.rs:1263 apps/settings/src/ui/mod.rs:463
 #: apps/settings/src/ui/picker.rs:34
 msgid "No results found"
 msgstr "결과 없음"
@@ -6972,7 +6977,7 @@ msgstr "최근"
 
 #: apps/files/src/pathbar.rs:110 apps/files/src/ui/sidebar.rs:122
 #: apps/files/src/ui/tab.rs:1434 apps/settings/src/bluez.rs:235
-#: apps/settings/src/panels.rs:63 apps/system-monitor/src/res_view.rs:385
+#: apps/settings/src/panels.rs:64 apps/system-monitor/src/res_view.rs:385
 msgid "Network"
 msgstr "네트워크"
 
@@ -7097,6 +7102,7 @@ msgid "Applications"
 msgstr "프로그램"
 
 #: apps/files/src/ui/dialogs.rs:364 apps/settings/src/ui/appearance.rs:107
+#: apps/settings/src/ui/printers.rs:237 apps/settings/src/ui/printers.rs:433
 #: apps/settings/src/ui/sound.rs:928 apps/settings/src/values.rs:204
 msgid "Default"
 msgstr "기본값"
@@ -7776,7 +7782,9 @@ msgstr[0] "항목 {n}개를 휴지통으로 옮길 수 없습니다"
 msgid ""
 "This location has no Trash. Delete permanently instead? Deleted items will "
 "be permanently lost."
-msgstr "이 위치에는 휴지통이 없습니다. 대신 영구적으로 삭제할까요? 삭제한 항목은 영구적으로 사라집니다."
+msgstr ""
+"이 위치에는 휴지통이 없습니다. 대신 영구적으로 삭제할까요? 삭제한 항목은 영구"
+"적으로 사라집니다."
 
 #: apps/files/src/ui/window.rs:1463
 msgid "Permanently Delete “{}”?"
@@ -9534,13 +9542,13 @@ msgstr[0] "장소 {n}곳을 찾았습니다"
 msgid "Selected place: {}"
 msgstr "선택한 장소: {}"
 
-#: apps/maps/src/ui.rs:1365 apps/music/src/ui.rs:2344
+#: apps/maps/src/ui.rs:1365 apps/music/src/ui.rs:2346
 msgid "Remove from Favorites"
 msgstr "즐겨찾기에서 제거"
 
 #: apps/maps/src/ui.rs:1367 apps/maps/src/ui.rs:2266
-#: apps/music/src/pages.rs:726 apps/music/src/ui.rs:2346
-#: apps/music/src/ui.rs:2596
+#: apps/music/src/pages.rs:726 apps/music/src/ui.rs:2348
+#: apps/music/src/ui.rs:2598
 msgid "Add to Favorites"
 msgstr "즐겨찾기에 추가"
 
@@ -10047,8 +10055,8 @@ msgid "Clear Queue"
 msgstr "대기열 비우기"
 
 #: apps/music/src/nowplaying.rs:203 apps/music/src/shortcuts.rs:31
-#: apps/music/src/ui.rs:2323 apps/music/src/ui.rs:2641
-#: apps/music/src/ui.rs:2646
+#: apps/music/src/ui.rs:2325 apps/music/src/ui.rs:2643
+#: apps/music/src/ui.rs:2648
 msgid "Now Playing"
 msgstr "지금 재생 중"
 
@@ -10140,8 +10148,8 @@ msgid_plural "{n} albums"
 msgstr[0] "앨범 {n}개"
 
 #: apps/music/src/pages.rs:1176 apps/music/src/pages.rs:1504
-#: apps/music/src/shortcuts.rs:14 apps/music/src/ui.rs:2599
-#: apps/music/src/ui.rs:2603
+#: apps/music/src/shortcuts.rs:14 apps/music/src/ui.rs:2601
+#: apps/music/src/ui.rs:2605
 msgid "Shuffle"
 msgstr "무작위 재생"
 
@@ -10320,7 +10328,7 @@ msgstr "ReplayGain"
 msgid "Even out loudness using the volume tags of songs or albums"
 msgstr "노래나 앨범의 음량 태그를 사용하여 소리 크기를 고르게 합니다"
 
-#: apps/music/src/pages.rs:2436 apps/settings/src/panels.rs:159
+#: apps/music/src/pages.rs:2436 apps/settings/src/panels.rs:160
 #: apps/settings/src/permissions.rs:38 apps/settings/src/ui/apps.rs:419
 #: apps/web/src/permissions.rs:25
 msgid "Notifications"
@@ -10430,7 +10438,7 @@ msgstr "잘못된 열 개수 {n}"
 msgid "Play and organize your music collection"
 msgstr "음악 모음을 재생하고 정리합니다"
 
-#: apps/music/src/ui.rs:275 apps/music/src/ui.rs:2312
+#: apps/music/src/ui.rs:275 apps/music/src/ui.rs:2314
 msgid "Now playing"
 msgstr "지금 재생 중"
 
@@ -10466,77 +10474,77 @@ msgstr "노래, 앨범, 아티스트 검색"
 msgid "No Music Found"
 msgstr "음악을 찾을 수 없습니다"
 
-#: apps/music/src/ui.rs:577 apps/music/src/ui.rs:588 apps/music/src/ui.rs:590
+#: apps/music/src/ui.rs:577 apps/music/src/ui.rs:590 apps/music/src/ui.rs:592
 msgid "Scanning Library…"
 msgstr "보관함 검사 중…"
 
-#: apps/music/src/ui.rs:737
+#: apps/music/src/ui.rs:739
 msgid "Playback is unavailable (GStreamer could not be initialised)"
 msgstr "재생할 수 없습니다(GStreamer를 초기화할 수 없습니다)"
 
-#: apps/music/src/ui.rs:936
+#: apps/music/src/ui.rs:938
 msgid "{n} song found"
 msgid_plural "{n} songs found"
 msgstr[0] "노래 {n}곡 찾음"
 
-#: apps/music/src/ui.rs:958
+#: apps/music/src/ui.rs:960
 msgid "Library updated: {n} song"
 msgid_plural "Library updated: {n} songs"
 msgstr[0] "라이브러리 업데이트됨: {n}곡"
 
-#: apps/music/src/ui.rs:969
+#: apps/music/src/ui.rs:971
 msgid "No changes found"
 msgstr "변경 사항 없음"
 
-#: apps/music/src/ui.rs:1115
+#: apps/music/src/ui.rs:1117
 msgid "Will play next"
 msgstr "다음에 재생합니다"
 
-#: apps/music/src/ui.rs:1117
+#: apps/music/src/ui.rs:1119
 msgid "Added to queue"
 msgstr "대기열에 추가했습니다"
 
-#: apps/music/src/ui.rs:1315
+#: apps/music/src/ui.rs:1317
 msgid "Cannot play “{name}”"
 msgstr "“{name}”을(를) 재생할 수 없습니다"
 
-#: apps/music/src/ui.rs:1400
+#: apps/music/src/ui.rs:1402
 msgid "Playing music"
 msgstr "음악 재생 중"
 
-#: apps/music/src/ui.rs:1486
+#: apps/music/src/ui.rs:1488
 msgid "Now playing: {}"
 msgstr "지금 재생 중: {}"
 
-#: apps/music/src/ui.rs:1488
+#: apps/music/src/ui.rs:1490
 msgid "Now playing: {title} by {artist}"
 msgstr "지금 재생 중: {artist}의 {title}"
 
-#: apps/music/src/ui.rs:1569
+#: apps/music/src/ui.rs:1571
 msgid "Repeat: Off"
 msgstr "반복: 끔"
 
-#: apps/music/src/ui.rs:1570
+#: apps/music/src/ui.rs:1572
 msgid "Repeat: All"
 msgstr "반복: 전체"
 
-#: apps/music/src/ui.rs:1571
+#: apps/music/src/ui.rs:1573
 msgid "Repeat: Song"
 msgstr "반복: 한 곡"
 
-#: apps/music/src/ui.rs:2184
+#: apps/music/src/ui.rs:2186
 msgid "Music files in {} will appear here."
 msgstr "{}의 음악 파일이 여기에 나타납니다."
 
-#: apps/music/src/ui.rs:2277
+#: apps/music/src/ui.rs:2279
 msgid "Add Music Folder"
 msgstr "음악 폴더 추가"
 
-#: apps/music/src/ui.rs:2551 apps/music/src/ui.rs:2554
+#: apps/music/src/ui.rs:2553 apps/music/src/ui.rs:2556
 msgid "Show Now Playing"
 msgstr "지금 재생 중 표시"
 
-#: apps/music/src/ui.rs:2660 apps/music/src/ui.rs:2666
+#: apps/music/src/ui.rs:2662 apps/music/src/ui.rs:2668
 msgid "More Controls"
 msgstr "추가 컨트롤"
 
@@ -11775,8 +11783,8 @@ msgid "Part of the desktop"
 msgstr "데스크톱의 일부"
 
 #: apps/settings/src/agents.rs:1015 apps/settings/src/agents.rs:1125
-#: apps/settings/src/ui/mod.rs:174 apps/settings/src/ui/mod.rs:257
-#: apps/settings/src/ui/mod.rs:552
+#: apps/settings/src/ui/mod.rs:176 apps/settings/src/ui/mod.rs:259
+#: apps/settings/src/ui/mod.rs:554
 msgid "Settings"
 msgstr "설정"
 
@@ -11945,7 +11953,7 @@ msgstr "헤드폰"
 msgid "Speaker"
 msgstr "스피커"
 
-#: apps/settings/src/bluez.rs:224 apps/settings/src/panels.rs:195
+#: apps/settings/src/bluez.rs:224 apps/settings/src/panels.rs:196
 msgid "Keyboard"
 msgstr "키보드"
 
@@ -11986,6 +11994,107 @@ msgstr "미디어 플레이어"
 #: apps/settings/src/bluez.rs:243
 msgid "Other Device"
 msgstr "기타 장치"
+
+#: apps/settings/src/cups.rs:536 apps/settings/src/cups.rs:557
+#: apps/settings/src/ui/printers.rs:283
+msgid "Paused"
+msgstr "일시 정지됨"
+
+#: apps/settings/src/cups.rs:537 apps/settings/src/cups.rs:666
+msgid "Printing"
+msgstr "인쇄 중"
+
+#: apps/settings/src/cups.rs:538
+msgid "Ready"
+msgstr "준비됨"
+
+#: apps/settings/src/cups.rs:546 apps/settings/src/cups.rs:547
+msgid "Out of paper"
+msgstr "용지 없음"
+
+#: apps/settings/src/cups.rs:548
+msgid "Paper jam"
+msgstr "용지 걸림"
+
+#: apps/settings/src/cups.rs:549
+msgid "Out of toner"
+msgstr "토너 없음"
+
+#: apps/settings/src/cups.rs:550
+msgid "Out of ink"
+msgstr "잉크 없음"
+
+#: apps/settings/src/cups.rs:551
+msgid "Low on toner"
+msgstr "토너 부족"
+
+#: apps/settings/src/cups.rs:552
+msgid "Low on ink"
+msgstr "잉크 부족"
+
+#: apps/settings/src/cups.rs:553
+msgid "Door open"
+msgstr "문 열림"
+
+#: apps/settings/src/cups.rs:554
+msgid "Cover open"
+msgstr "덮개 열림"
+
+#: apps/settings/src/cups.rs:556 apps/settings/src/ui/network.rs:184
+#: apps/settings/src/ui/network.rs:465 apps/settings/src/ui/wifi.rs:472
+msgid "Connecting…"
+msgstr "연결하는 중…"
+
+#: apps/settings/src/cups.rs:664
+msgid "Waiting"
+msgstr "대기 중"
+
+#: apps/settings/src/cups.rs:665
+msgid "Held"
+msgstr "보류됨"
+
+#: apps/settings/src/cups.rs:667 apps/system-monitor/src/format.rs:99
+msgid "Stopped"
+msgstr "중지됨"
+
+#: apps/settings/src/cups.rs:742
+msgid "Paper Size"
+msgstr "용지 크기"
+
+#: apps/settings/src/cups.rs:743
+msgid "Two-Sided"
+msgstr "양면"
+
+#: apps/settings/src/cups.rs:745
+msgid "Quality"
+msgstr "품질"
+
+#: apps/settings/src/cups.rs:810
+msgid "Long Edge (Standard)"
+msgstr "긴 가장자리(표준)"
+
+#: apps/settings/src/cups.rs:811
+msgid "Short Edge (Flip)"
+msgstr "짧은 가장자리(뒤집기)"
+
+#: apps/settings/src/cups.rs:815
+msgctxt "print quality"
+msgid "Draft"
+msgstr "초안"
+
+#: apps/settings/src/cups.rs:816
+msgctxt "print quality"
+msgid "Normal"
+msgstr "보통"
+
+#: apps/settings/src/cups.rs:817
+msgctxt "print quality"
+msgid "High"
+msgstr "높음"
+
+#: apps/settings/src/cups.rs:856 apps/settings/src/ui/printers.rs:298
+msgid "Test Page"
+msgstr "테스트 페이지"
 
 #: apps/settings/src/defaults.rs:15 apps/web/src/app.rs:128
 #: apps/web/src/app.rs:152 apps/web/src/app.rs:988 apps/web/src/window.rs:320
@@ -12204,125 +12313,125 @@ msgstr "매우 좋은 신호"
 msgid "Hotspot"
 msgstr "핫스팟"
 
-#: apps/settings/src/panels.rs:51 apps/settings/src/ui/wifi.rs:106
+#: apps/settings/src/panels.rs:52 apps/settings/src/ui/wifi.rs:106
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:55
+#: apps/settings/src/panels.rs:56
 msgid "network;wireless;wlan;hotspot;internet;airplane;"
 msgstr ""
 "network;wireless;wlan;hotspot;internet;airplane;네트워크;무선;와이파이;핫스"
 "팟;인터넷;비행기;"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:67
+#: apps/settings/src/panels.rs:68
 msgid "ethernet;wired;vpn;proxy;ip;dns;internet;"
 msgstr "ethernet;wired;vpn;proxy;ip;dns;internet;이더넷;유선;프록시;인터넷;"
 
-#: apps/settings/src/panels.rs:75 apps/settings/src/ui/bluetooth.rs:102
+#: apps/settings/src/panels.rs:76 apps/settings/src/ui/bluetooth.rs:102
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:79
+#: apps/settings/src/panels.rs:80
 msgid "share;devices;pair;headset;wireless;"
 msgstr ""
 "share;devices;pair;headset;wireless;블루투스;공유;장치;페어링;헤드셋;무선;"
 
-#: apps/settings/src/panels.rs:87 apps/settings/src/ui/greeter.rs:124
+#: apps/settings/src/panels.rs:88 apps/settings/src/ui/greeter.rs:124
 msgid "Displays"
 msgstr "디스플레이"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:91
+#: apps/settings/src/panels.rs:92
 msgid "monitor;screen;resolution;refresh;scale;night light;projector;rotation;"
 msgstr ""
 "monitor;screen;resolution;refresh;scale;night light;projector;rotation;모니"
 "터;화면;해상도;주사율;배율;야간 조명;프로젝터;회전;"
 
-#: apps/settings/src/panels.rs:99
+#: apps/settings/src/panels.rs:100
 msgid "Sound"
 msgstr "소리"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:103
+#: apps/settings/src/panels.rs:104
 msgid "volume;speaker;microphone;audio;output;input;alert;mute;"
 msgstr ""
 "volume;speaker;microphone;audio;output;input;alert;mute;음량;스피커;마이크;오"
 "디오;출력;입력;경고음;음소거;"
 
-#: apps/settings/src/panels.rs:111
+#: apps/settings/src/panels.rs:112
 msgid "Power"
 msgstr "전원"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:115
+#: apps/settings/src/panels.rs:116
 msgid "battery;suspend;sleep;dim;blank;power button;hibernate;energy;"
 msgstr ""
 "battery;suspend;sleep;dim;blank;power button;hibernate;energy;배터리;대기 모"
 "드;절전;어둡게;화면 끄기;전원 단추;최대 절전;에너지;"
 
-#: apps/settings/src/panels.rs:123
+#: apps/settings/src/panels.rs:124
 msgid "Multitasking"
 msgstr "멀티태스킹"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:127
+#: apps/settings/src/panels.rs:128
 msgid "hot corner;workspace;screen edges;tiling;app switching;multi-monitor;"
 msgstr ""
 "hot corner;workspace;screen edges;tiling;app switching;multi-monitor;핫 코너;"
 "작업 공간;화면 가장자리;타일링;앱 전환;다중 모니터;"
 
-#: apps/settings/src/panels.rs:135 apps/terminal/src/prefs_dialog.rs:24
+#: apps/settings/src/panels.rs:136 apps/terminal/src/prefs_dialog.rs:24
 #: apps/text-editor/src/prefs.rs:58
 msgid "Appearance"
 msgstr "모양"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:139
+#: apps/settings/src/panels.rs:140
 msgid "dark;light;style;theme;icon;icons;accent;color;colour;wallpaper;background;"
 msgstr ""
 "dark;light;style;theme;icon;icons;accent;color;colour;wallpaper;background;어"
 "둡게;밝게;스타일;테마;아이콘;강조;색;배경 화면;배경;"
 
-#: apps/settings/src/panels.rs:147 apps/settings/src/ui/notifications.rs:100
+#: apps/settings/src/panels.rs:148 apps/settings/src/ui/notifications.rs:100
 #: apps/settings/src/ui/sound.rs:288
 msgid "Apps"
 msgstr "앱"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:151
+#: apps/settings/src/panels.rs:152
 msgid "default;applications;permissions;browser;storage;"
 msgstr ""
 "default;applications;permissions;browser;storage;기본;프로그램;앱;권한;브라우"
 "저;저장소;"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:163
+#: apps/settings/src/panels.rs:164
 msgid "do not disturb;dnd;banner;alerts;lock screen;messages;"
 msgstr ""
 "do not disturb;dnd;banner;alerts;lock screen;messages;방해 금지;배너;알림;잠"
 "금 화면;메시지;"
 
-#: apps/settings/src/panels.rs:171
+#: apps/settings/src/panels.rs:172
 msgid "Extensions"
 msgstr "확장"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:175
+#: apps/settings/src/panels.rs:176
 msgid ""
 "add-on;plugin;panel item;indicator;quick settings;dock;sandbox;permissions;"
 msgstr ""
 "add-on;plugin;panel item;indicator;quick settings;dock;sandbox;permissions;부"
 "가 기능;플러그인;패널 항목;표시기;빠른 설정;독;샌드박스;권한;"
 
-#: apps/settings/src/panels.rs:183
+#: apps/settings/src/panels.rs:184
 msgid "Mouse & Touchpad"
 msgstr "마우스 및 터치패드"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:187
+#: apps/settings/src/panels.rs:188
 msgid ""
 "touchpad;pointer;speed;scroll;natural;tap;click;trackpad;primary "
 "button;acceleration;"
@@ -12332,18 +12441,29 @@ msgstr ""
 "주 단추;가속;"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:199
+#: apps/settings/src/panels.rs:200
 msgid "layout;input source;language;repeat;delay;typing;xkb;"
 msgstr ""
 "layout;input source;language;repeat;delay;typing;xkb;배치;입력 소스;언어;반"
 "복;지연;입력;한글;"
 
-#: apps/settings/src/panels.rs:207 apps/settings/src/ui/access.rs:119
+#: apps/settings/src/panels.rs:208 apps/settings/src/ui/printers.rs:67
+msgid "Printers"
+msgstr "프린터"
+
+#. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
+#: apps/settings/src/panels.rs:212
+msgid "printer;print;cups;queue;jobs;paper;ink;toner;"
+msgstr ""
+"printer;print;cups;queue;jobs;paper;ink;toner;프린터;인쇄;대기열;작업;용지;잉"
+"크;토너;"
+
+#: apps/settings/src/panels.rs:220 apps/settings/src/ui/access.rs:119
 msgid "Accessibility"
 msgstr "접근성"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:211
+#: apps/settings/src/panels.rs:224
 msgid ""
 "high contrast;large text;zoom;magnifier;screen reader;cursor size;reduce "
 "animation;sticky keys;slow keys;bounce keys;mouse keys;scrollbars;screen "
@@ -12355,12 +12475,12 @@ msgstr ""
 "서 크기;애니메이션 줄이기;고정 키;느린 키;튕김 키;마우스 키;스크롤 막대;화면 "
 "키보드;두 번 누르기;포인터 위치;"
 
-#: apps/settings/src/panels.rs:219 apps/settings/src/ui/privacy.rs:226
+#: apps/settings/src/panels.rs:232 apps/settings/src/ui/privacy.rs:226
 msgid "Privacy & Security"
 msgstr "개인 정보 및 보안"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:223
+#: apps/settings/src/panels.rs:236
 msgid ""
 "screen lock;lock;blank;idle;recent files;file "
 "history;trash;temporary;location;camera;microphone;problem "
@@ -12371,34 +12491,34 @@ msgstr ""
 "금;잠금;화면 끄기;유휴;최근 파일;파일 기록;휴지통;임시;위치;카메라;마이크;문"
 "제 보고;에이전트;인공지능;어시스턴트;자동화;agent;ai;assistant;automation;"
 
-#: apps/settings/src/panels.rs:231
+#: apps/settings/src/panels.rs:244
 msgid "Date & Time"
 msgstr "날짜 및 시각"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:235
+#: apps/settings/src/panels.rs:248
 msgid "clock;time zone;timezone;ntp;24-hour;am/pm;week numbers;calendar;"
 msgstr ""
 "clock;time zone;timezone;ntp;24-hour;am/pm;week numbers;calendar;시계;시간"
 "대;24시간;오전/오후;주 번호;달력;"
 
-#: apps/settings/src/panels.rs:243 apps/settings/src/ui/greeter.rs:64
+#: apps/settings/src/panels.rs:256 apps/settings/src/ui/greeter.rs:64
 msgid "Users"
 msgstr "사용자"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:247
+#: apps/settings/src/panels.rs:260
 msgid "account;password;login;avatar;administrator;"
 msgstr ""
 "account;password;login;avatar;administrator;계정;암호;비밀번호;로그인;아바타;"
 "관리자;"
 
-#: apps/settings/src/panels.rs:255 apps/settings/src/ui/displays.rs:252
+#: apps/settings/src/panels.rs:268 apps/settings/src/ui/displays.rs:252
 msgid "Login Screen"
 msgstr "로그인 화면"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:259
+#: apps/settings/src/panels.rs:272
 msgid ""
 "login;greeter;lock;banner;user list;sign in;display "
 "manager;greetd;accent;clock;"
@@ -12407,24 +12527,24 @@ msgstr ""
 "manager;greetd;accent;clock;로그인;로그인 화면;잠금;배너;사용자 목록;강조;시"
 "계;"
 
-#: apps/settings/src/panels.rs:267
+#: apps/settings/src/panels.rs:280
 msgid "About"
 msgstr "정보"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:271
+#: apps/settings/src/panels.rs:284
 msgid ""
 "device name;hostname;memory;processor;cpu;disk;os;version;kernel;hardware;"
 msgstr ""
 "device name;hostname;memory;processor;cpu;disk;os;version;kernel;hardware;장"
 "치 이름;호스트 이름;메모리;프로세서;디스크;운영 체제;버전;커널;하드웨어;"
 
-#: apps/settings/src/panels.rs:296 apps/settings/src/ui/agent_access.rs:70
+#: apps/settings/src/panels.rs:309 apps/settings/src/ui/agent_access.rs:70
 #: apps/settings/src/ui/agent_access.rs:183 apps/settings/src/ui/privacy.rs:189
 msgid "Agent Access"
 msgstr "에이전트 접근"
 
-#: apps/settings/src/panels.rs:304 apps/settings/src/ui/agent_access.rs:1025
+#: apps/settings/src/panels.rs:317 apps/settings/src/ui/agent_access.rs:1025
 msgid "Agent Activity"
 msgstr "에이전트 활동"
 
@@ -14369,40 +14489,40 @@ msgstr "{source} 아래로 이동"
 msgid "Remove {source}"
 msgstr "{source} 제거"
 
-#: apps/settings/src/ui/mod.rs:192
+#: apps/settings/src/ui/mod.rs:194
 msgid "Search settings"
 msgstr "설정 검색"
 
-#: apps/settings/src/ui/mod.rs:195 apps/settings/src/ui/shortcuts.rs:10
+#: apps/settings/src/ui/mod.rs:197 apps/settings/src/ui/shortcuts.rs:10
 msgid "Search Settings"
 msgstr "설정 검색"
 
-#: apps/settings/src/ui/mod.rs:213
+#: apps/settings/src/ui/mod.rs:215
 msgid "_About Settings"
 msgstr "설정 정보(_A)"
 
-#: apps/settings/src/ui/mod.rs:385 apps/settings/src/ui/mod.rs:398
+#: apps/settings/src/ui/mod.rs:387 apps/settings/src/ui/mod.rs:400
 msgid "Not yet available"
 msgstr "아직 사용할 수 없음"
 
-#: apps/settings/src/ui/mod.rs:419
+#: apps/settings/src/ui/mod.rs:421
 msgid "Not Yet Available"
 msgstr "아직 사용할 수 없음"
 
-#: apps/settings/src/ui/mod.rs:462
+#: apps/settings/src/ui/mod.rs:464
 msgid "{n} panel found"
 msgid_plural "{n} panels found"
 msgstr[0] "패널 {n}개를 찾았습니다"
 
-#: apps/settings/src/ui/mod.rs:521
+#: apps/settings/src/ui/mod.rs:523
 msgid "{} Is Not Yet Available"
 msgstr "{}은(는) 아직 사용할 수 없습니다"
 
-#: apps/settings/src/ui/mod.rs:522
+#: apps/settings/src/ui/mod.rs:524
 msgid "This panel will be added in a later version of Helix Settings."
 msgstr "이 패널은 Helix 설정의 이후 버전에서 추가됩니다."
 
-#: apps/settings/src/ui/mod.rs:553
+#: apps/settings/src/ui/mod.rs:555
 msgid "Configure the Helix desktop"
 msgstr "Helix 데스크톱을 설정합니다"
 
@@ -14581,7 +14701,8 @@ msgstr "IPv4"
 msgid "IPv6"
 msgstr "IPv6"
 
-#: apps/settings/src/ui/netedit.rs:277 apps/settings/src/ui/users.rs:593
+#: apps/settings/src/ui/netedit.rs:277 apps/settings/src/ui/printers.rs:307
+#: apps/settings/src/ui/users.rs:593
 msgid "Remove…"
 msgstr "제거…"
 
@@ -14589,7 +14710,8 @@ msgstr "제거…"
 msgid "Could not save the changes: {e}"
 msgstr "바뀐 사항을 저장할 수 없습니다: {e}"
 
-#: apps/settings/src/ui/netedit.rs:384 apps/settings/src/ui/users.rs:637
+#: apps/settings/src/ui/netedit.rs:384 apps/settings/src/ui/printers.rs:603
+#: apps/settings/src/ui/users.rs:637
 msgid "Remove {name}?"
 msgstr "{name}을(를) 제거하시겠습니까?"
 
@@ -14618,11 +14740,6 @@ msgstr ""
 #: apps/settings/src/ui/network.rs:179
 msgid "Connected — {speed} Mb/s"
 msgstr "연결됨 — {speed} Mb/s"
-
-#: apps/settings/src/ui/network.rs:184 apps/settings/src/ui/network.rs:465
-#: apps/settings/src/ui/wifi.rs:472
-msgid "Connecting…"
-msgstr "연결하는 중…"
 
 #: apps/settings/src/ui/network.rs:186
 msgid "Cable unplugged"
@@ -14894,6 +15011,212 @@ msgstr "상단 표시줄에 정확한 충전량을 표시합니다"
 #: apps/settings/src/ui/power.rs:195
 msgid "Power Button Behavior"
 msgstr "전원 단추 동작"
+
+#: apps/settings/src/ui/printers.rs:49
+msgid "Loading Printers…"
+msgstr "프린터 불러오는 중…"
+
+#: apps/settings/src/ui/printers.rs:53
+msgid "Printing Is Not Available"
+msgstr "인쇄를 사용할 수 없습니다"
+
+#: apps/settings/src/ui/printers.rs:54
+msgid "The printing service (CUPS) is not running."
+msgstr "인쇄 서비스(CUPS)가 실행 중이 아닙니다."
+
+#: apps/settings/src/ui/printers.rs:61
+msgid "Printing Is Not Installed"
+msgstr "인쇄 기능이 설치되어 있지 않습니다"
+
+#: apps/settings/src/ui/printers.rs:62
+msgid "Install CUPS to set up printers."
+msgstr "프린터를 설정하려면 CUPS를 설치하세요."
+
+#: apps/settings/src/ui/printers.rs:69
+msgid "Add Printer…"
+msgstr "프린터 추가…"
+
+#: apps/settings/src/ui/printers.rs:142
+msgid "Changing printers needs cups-pk-helper, which is not installed"
+msgstr "프린터를 변경하려면 cups-pk-helper가 필요하지만 설치되어 있지 않습니다"
+
+#: apps/settings/src/ui/printers.rs:189
+msgid "No printers are set up yet."
+msgstr "아직 설정된 프린터가 없습니다."
+
+#: apps/settings/src/ui/printers.rs:214
+msgid "{status} · {location}"
+msgstr "{status} · {location}"
+
+#: apps/settings/src/ui/printers.rs:266 apps/system-monitor/src/dialogs.rs:30
+msgid "Status"
+msgstr "상태"
+
+#: apps/settings/src/ui/printers.rs:275
+msgid "Default Printer"
+msgstr "기본 프린터"
+
+#: apps/settings/src/ui/printers.rs:276
+msgid "Apps print here unless another printer is chosen"
+msgstr "다른 프린터를 고르지 않으면 앱이 여기로 인쇄합니다"
+
+#: apps/settings/src/ui/printers.rs:277 apps/settings/src/ui/printers.rs:435
+msgid "Make Default"
+msgstr "기본값으로 설정"
+
+#: apps/settings/src/ui/printers.rs:284
+msgid "Jobs wait until printing is resumed"
+msgstr "인쇄가 다시 시작될 때까지 작업이 대기합니다"
+
+#: apps/settings/src/ui/printers.rs:289
+msgid "Default Options"
+msgstr "기본 옵션"
+
+#: apps/settings/src/ui/printers.rs:293
+msgid "Jobs"
+msgstr "작업"
+
+#: apps/settings/src/ui/printers.rs:299
+msgid "Print a page to check that the printer works"
+msgstr "프린터가 작동하는지 확인하기 위해 페이지를 인쇄합니다"
+
+#: apps/settings/src/ui/printers.rs:305
+msgid "Remove Printer"
+msgstr "프린터 제거"
+
+#: apps/settings/src/ui/printers.rs:306
+msgid "Apps will no longer be able to print to it"
+msgstr "앱에서 더 이상 이 프린터로 인쇄할 수 없습니다"
+
+#: apps/settings/src/ui/printers.rs:325
+msgid "Could not make {name} the default printer: {e}"
+msgstr "{name}을(를) 기본 프린터로 설정할 수 없습니다: {e}"
+
+#: apps/settings/src/ui/printers.rs:346
+msgid "Could not resume {name}: {e}"
+msgstr "{name}을(를) 다시 시작할 수 없습니다: {e}"
+
+#: apps/settings/src/ui/printers.rs:348
+msgid "Could not pause {name}: {e}"
+msgstr "{name}을(를) 일시 정지할 수 없습니다: {e}"
+
+#: apps/settings/src/ui/printers.rs:370
+msgid "Test page sent to {name}"
+msgstr "테스트 페이지를 {name}(으)로 보냈습니다"
+
+#: apps/settings/src/ui/printers.rs:371
+msgid "Could not print a test page on {name}: {e}"
+msgstr "{name}에서 테스트 페이지를 인쇄할 수 없습니다: {e}"
+
+#: apps/settings/src/ui/printers.rs:466
+msgid "No jobs are waiting."
+msgstr "대기 중인 작업이 없습니다."
+
+#: apps/settings/src/ui/printers.rs:477
+msgid "Job {id}"
+msgstr "작업 {id}"
+
+#: apps/settings/src/ui/printers.rs:484
+msgid "{status} · {user}"
+msgstr "{status} · {user}"
+
+#: apps/settings/src/ui/printers.rs:498
+msgid "Hold"
+msgstr "보류"
+
+#: apps/settings/src/ui/printers.rs:505
+msgid "Resume {job}"
+msgstr "{job} 다시 시작"
+
+#: apps/settings/src/ui/printers.rs:507
+msgid "Hold {job}"
+msgstr "{job} 보류"
+
+#: apps/settings/src/ui/printers.rs:512
+msgid "Cancel Job"
+msgstr "작업 취소"
+
+#: apps/settings/src/ui/printers.rs:516
+msgid "Cancel {job}"
+msgstr "{job} 취소"
+
+#: apps/settings/src/ui/printers.rs:527
+msgid "Could not change {job}: {e}"
+msgstr "{job}을(를) 변경할 수 없습니다: {e}"
+
+#: apps/settings/src/ui/printers.rs:537
+msgid "Could not cancel {job}: {e}"
+msgstr "{job}을(를) 취소할 수 없습니다: {e}"
+
+#: apps/settings/src/ui/printers.rs:594
+msgid "Could not change {option}: {e}"
+msgstr "{option}을(를) 변경할 수 없습니다: {e}"
+
+#: apps/settings/src/ui/printers.rs:604
+msgid "It will have to be added again before it can be used."
+msgstr "사용하려면 다시 추가해야 합니다."
+
+#: apps/settings/src/ui/printers.rs:622
+msgid "Could not remove {name}: {e}"
+msgstr "{name}을(를) 제거할 수 없습니다: {e}"
+
+#: apps/settings/src/ui/printers.rs:631
+msgid "Printers Found"
+msgstr "찾은 프린터"
+
+#: apps/settings/src/ui/printers.rs:633
+msgid "Searching for Printers"
+msgstr "프린터 검색 중"
+
+#: apps/settings/src/ui/printers.rs:635
+msgid "Searching for printers on the network…"
+msgstr "네트워크에서 프린터를 검색하는 중…"
+
+#: apps/settings/src/ui/printers.rs:637
+msgid "Add by Address"
+msgstr "주소로 추가"
+
+#: apps/settings/src/ui/printers.rs:638
+msgid ""
+"The printer's host name or IP address, for printers that support driverless "
+"printing (IPP Everywhere)"
+msgstr ""
+"드라이버 없는 인쇄(IPP Everywhere)를 지원하는 프린터의 호스트 이름 또는 IP 주"
+"소"
+
+#: apps/settings/src/ui/printers.rs:648
+msgid "Add Printer"
+msgstr "프린터 추가"
+
+#: apps/settings/src/ui/printers.rs:659
+msgid "Enter a host name, an IP address, or an ipp:// address"
+msgstr "호스트 이름, IP 주소 또는 ipp:// 주소를 입력하세요"
+
+#: apps/settings/src/ui/printers.rs:686
+msgid "Finding printers needs cups-pk-helper, which is not installed."
+msgstr "프린터를 찾으려면 cups-pk-helper가 필요하지만 설치되어 있지 않습니다."
+
+#: apps/settings/src/ui/printers.rs:692
+msgid "Could not search for printers: {e}"
+msgstr "프린터를 검색할 수 없습니다: {e}"
+
+#: apps/settings/src/ui/printers.rs:697
+msgid ""
+"No other printers were found. Make sure the printer is on and connected."
+msgstr ""
+"다른 프린터를 찾지 못했습니다. 프린터가 켜져 있고 연결되어 있는지 확인하세요."
+
+#: apps/settings/src/ui/printers.rs:745
+msgid "Adding {name}…"
+msgstr "{name} 추가 중…"
+
+#: apps/settings/src/ui/printers.rs:751
+msgid "Added {name}"
+msgstr "{name} 추가됨"
+
+#: apps/settings/src/ui/printers.rs:754
+msgid "Could not add {name}: {e}"
+msgstr "{name}을(를) 추가할 수 없습니다: {e}"
 
 #: apps/settings/src/ui/privacy.rs:55
 msgid "Screen Lock"
@@ -15787,10 +16110,6 @@ msgstr "프로세스 이름"
 msgid "User"
 msgstr "사용자"
 
-#: apps/system-monitor/src/dialogs.rs:30
-msgid "Status"
-msgstr "상태"
-
 #: apps/system-monitor/src/dialogs.rs:32
 msgid "Virtual Memory"
 msgstr "가상 메모리"
@@ -15971,10 +16290,6 @@ msgstr "대기 중"
 #: apps/system-monitor/src/format.rs:98
 msgid "Uninterruptible"
 msgstr "인터럽트 불가"
-
-#: apps/system-monitor/src/format.rs:99
-msgid "Stopped"
-msgstr "중지됨"
 
 #: apps/system-monitor/src/format.rs:100
 msgid "Tracing Stop"

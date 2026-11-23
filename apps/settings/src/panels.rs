@@ -17,6 +17,7 @@ pub enum PanelId {
     Extensions,
     Mouse,
     Keyboard,
+    Printers,
     Accessibility,
     Privacy,
     DateTime,
@@ -197,6 +198,18 @@ pub const PANELS: &[PanelInfo] = &[
         // Translators: search keywords for this Settings panel, separated
         // by semicolons; add words people would search for in your language.
         keywords: n_("layout;input source;language;repeat;delay;typing;xkb;"),
+        group: 3,
+        available: true,
+    },
+    PanelInfo {
+        id: PanelId::Printers,
+        name: "printers",
+        aliases: &["printer", "printing"],
+        title: n_("Printers"),
+        icon: "printer-symbolic",
+        // Translators: search keywords for this Settings panel, separated
+        // by semicolons; add words people would search for in your language.
+        keywords: n_("printer;print;cups;queue;jobs;paper;ink;toner;"),
         group: 3,
         available: true,
     },
@@ -415,6 +428,7 @@ mod tests {
             PanelId::Extensions,
             PanelId::Mouse,
             PanelId::Keyboard,
+            PanelId::Printers,
             PanelId::Accessibility,
             PanelId::Privacy,
             PanelId::DateTime,
@@ -467,6 +481,7 @@ mod tests {
         assert_eq!(lookup(" datetime "), Some(PanelId::DateTime));
         assert_eq!(lookup("display"), Some(PanelId::Display));
         assert_eq!(lookup("add-ons"), Some(PanelId::Extensions));
+        assert_eq!(lookup("printer"), Some(PanelId::Printers));
         assert_eq!(lookup("nonsense"), None);
     }
 

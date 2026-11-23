@@ -21,6 +21,7 @@ mod network;
 mod notifications;
 mod picker;
 mod power;
+mod printers;
 mod privacy;
 mod shortcuts;
 mod sound;
@@ -79,6 +80,7 @@ fn panel_impl(id: PanelId) -> Option<&'static dyn Panel> {
         PanelId::Apps => &apps::AppsPanel,
         PanelId::Users => &users::UsersPanel,
         PanelId::LoginScreen => &greeter::LoginScreenPanel,
+        PanelId::Printers => &printers::PrintersPanel,
     })
 }
 

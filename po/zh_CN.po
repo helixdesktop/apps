@@ -317,7 +317,7 @@ msgstr "关于音频播放器(_A)"
 #: apps/logs/src/ui.rs:310 apps/maps/src/ui.rs:492 apps/maps/src/ui.rs:494
 #: apps/music/src/ui.rs:480 apps/music/src/ui.rs:482
 #: apps/screenshot/src/ui.rs:290 apps/screenshot/src/ui.rs:292
-#: apps/settings/src/ui/mod.rs:218 apps/settings/src/ui/mod.rs:220
+#: apps/settings/src/ui/mod.rs:220 apps/settings/src/ui/mod.rs:222
 #: apps/system-monitor/src/ui.rs:260 apps/system-monitor/src/ui.rs:262
 #: apps/terminal/src/window.rs:301 apps/terminal/src/window.rs:305
 #: apps/text-editor/src/window.rs:149 apps/text-editor/src/window.rs:151
@@ -345,7 +345,7 @@ msgid "Unable to Play File"
 msgstr "无法播放文件"
 
 #: apps/audio-player/src/ui.rs:297 apps/audio-player/src/ui.rs:304
-#: apps/music/src/ui.rs:2583 apps/music/src/ui.rs:2584
+#: apps/music/src/ui.rs:2585 apps/music/src/ui.rs:2586
 #: apps/video-player/src/ui.rs:464
 msgid "Position"
 msgstr "位置"
@@ -361,15 +361,15 @@ msgstr "播放速度（不保持音调）"
 #: apps/audio-player/src/ui.rs:348 apps/audio-player/src/ui.rs:351
 #: apps/audio-player/src/ui.rs:1283 apps/music/src/pages.rs:825
 #: apps/music/src/pages.rs:1175 apps/music/src/pages.rs:1503
-#: apps/music/src/ui.rs:1351 apps/music/src/ui.rs:2559
-#: apps/music/src/ui.rs:2563 apps/video-player/src/ui.rs:443
+#: apps/music/src/ui.rs:1353 apps/music/src/ui.rs:2561
+#: apps/music/src/ui.rs:2565 apps/video-player/src/ui.rs:443
 #: apps/video-player/src/ui.rs:1460
 msgid "Play"
 msgstr "播放"
 
 #: apps/audio-player/src/ui.rs:368 apps/audio-player/src/ui.rs:371
 #: apps/calendar/src/editor.rs:551 apps/clocks/src/ui.rs:1422
-#: apps/music/src/ui.rs:2606 apps/music/src/ui.rs:2610
+#: apps/music/src/ui.rs:2608 apps/music/src/ui.rs:2612
 msgid "Repeat"
 msgstr "重复"
 
@@ -380,8 +380,8 @@ msgid "Mute"
 msgstr "静音"
 
 #: apps/audio-player/src/ui.rs:386 apps/audio-player/src/ui.rs:394
-#: apps/audio-player/src/ui.rs:397 apps/music/src/ui.rs:2615
-#: apps/music/src/ui.rs:2622 apps/music/src/ui.rs:2627
+#: apps/audio-player/src/ui.rs:397 apps/music/src/ui.rs:2617
+#: apps/music/src/ui.rs:2624 apps/music/src/ui.rs:2629
 #: apps/settings/src/ui/sound.rs:168 apps/video-player/src/ui.rs:158
 #: apps/video-player/src/ui.rs:491 apps/video-player/src/ui.rs:497
 #: apps/video-player/src/ui.rs:503
@@ -422,7 +422,7 @@ msgid "{position} of {duration}"
 msgstr "{position} / {duration}"
 
 #: apps/audio-player/src/ui.rs:1281 apps/clocks/src/ui.rs:1758
-#: apps/clocks/src/ui.rs:2241 apps/music/src/ui.rs:1351
+#: apps/clocks/src/ui.rs:2241 apps/music/src/ui.rs:1353
 #: apps/video-player/src/ui.rs:1460
 msgid "Pause"
 msgstr "暂停"
@@ -721,8 +721,8 @@ msgstr "{} 对这些值无定义"
 
 #: apps/calculator/src/format.rs:33 apps/document-scanner/src/settings.rs:29
 #: apps/document-scanner/src/ui.rs:1728 apps/document-scanner/src/ui.rs:1795
-#: apps/settings/src/ui/greeter.rs:27 apps/settings/src/ui/netedit.rs:32
-#: apps/settings/src/ui/network.rs:28
+#: apps/settings/src/cups.rs:814 apps/settings/src/ui/greeter.rs:27
+#: apps/settings/src/ui/netedit.rs:32 apps/settings/src/ui/network.rs:28
 msgid "Automatic"
 msgstr "自动"
 
@@ -1131,8 +1131,8 @@ msgstr "计算(_A)"
 #: apps/settings/src/ui/agent_access.rs:280
 #: apps/settings/src/ui/agent_access.rs:996 apps/settings/src/ui/apps.rs:553
 #: apps/settings/src/ui/bluetooth.rs:647 apps/settings/src/ui/netedit.rs:389
-#: apps/settings/src/ui/users.rs:642 apps/settings/src/ui/wifi.rs:587
-#: apps/system-monitor/src/dialogs.rs:142
+#: apps/settings/src/ui/printers.rs:606 apps/settings/src/ui/users.rs:642
+#: apps/settings/src/ui/wifi.rs:587 apps/system-monitor/src/dialogs.rs:142
 #: apps/system-monitor/src/dialogs.rs:290 apps/terminal/src/window.rs:1306
 #: apps/text-editor/src/window.rs:973 apps/web/src/app.rs:954
 #: apps/web/src/dialogs.rs:426 apps/web/src/dialogs.rs:464
@@ -1408,8 +1408,8 @@ msgstr "日历"
 
 #: apps/calendar/src/editor.rs:504 apps/document-viewer/src/dialogs.rs:112
 #: apps/files/src/ui/window.rs:211 apps/image-viewer/src/ui.rs:592
-#: apps/settings/src/permissions.rs:45 apps/settings/src/ui/privacy.rs:155
-#: apps/web/src/permissions.rs:24
+#: apps/settings/src/permissions.rs:45 apps/settings/src/ui/printers.rs:269
+#: apps/settings/src/ui/privacy.rs:155 apps/web/src/permissions.rs:24
 msgid "Location"
 msgstr "地点"
 
@@ -1669,7 +1669,7 @@ msgid "The calendar and all its events will be deleted. This cannot be undone."
 msgstr "该日历及其所有事件都将被删除。此操作无法撤消。"
 
 #: apps/calendar/src/manage.rs:375 apps/settings/src/ui/netedit.rs:390
-#: apps/web/src/dialogs.rs:941
+#: apps/settings/src/ui/printers.rs:607 apps/web/src/dialogs.rs:941
 msgid "_Remove"
 msgstr "移除(_R)"
 
@@ -1814,7 +1814,7 @@ msgstr "导入"
 #: apps/logs/src/ui.rs:278 apps/maps/src/shortcuts.rs:48
 #: apps/music/src/shortcuts.rs:32 apps/music/src/ui.rs:452
 #: apps/music/src/ui.rs:454 apps/settings/src/ui/apps.rs:439
-#: apps/settings/src/ui/mod.rs:203 apps/settings/src/ui/mod.rs:205
+#: apps/settings/src/ui/mod.rs:205 apps/settings/src/ui/mod.rs:207
 #: apps/settings/src/ui/shortcuts.rs:8 apps/system-monitor/src/shortcuts.rs:31
 #: apps/system-monitor/src/ui.rs:223 apps/system-monitor/src/ui.rs:225
 #: apps/web/src/dialogs.rs:142 apps/web/src/window.rs:48
@@ -1938,13 +1938,13 @@ msgstr "今天"
 
 #: apps/calendar/src/ui.rs:257 apps/calendar/src/ui.rs:259
 #: apps/calendar/src/ui.rs:511 apps/calendar/src/ui.rs:513
-#: apps/music/src/ui.rs:2556 apps/tour/src/ui.rs:283 apps/tour/src/ui.rs:289
+#: apps/music/src/ui.rs:2558 apps/tour/src/ui.rs:283 apps/tour/src/ui.rs:289
 msgid "Previous"
 msgstr "上一个"
 
 #: apps/calendar/src/ui.rs:263 apps/calendar/src/ui.rs:265
 #: apps/calendar/src/ui.rs:517 apps/calendar/src/ui.rs:519
-#: apps/music/src/ui.rs:1159 apps/music/src/ui.rs:2564 apps/tour/src/ui.rs:292
+#: apps/music/src/ui.rs:1161 apps/music/src/ui.rs:2566 apps/tour/src/ui.rs:292
 #: apps/tour/src/ui.rs:298
 msgid "Next"
 msgstr "下一个"
@@ -1967,7 +1967,7 @@ msgstr "导入(_I)…"
 
 #: apps/calendar/src/ui.rs:291 apps/contacts/src/ui.rs:206
 #: apps/files/src/ui/window.rs:232 apps/maps/src/ui.rs:486
-#: apps/settings/src/ui/mod.rs:212 apps/terminal/src/window.rs:296
+#: apps/settings/src/ui/mod.rs:214 apps/terminal/src/window.rs:296
 #: apps/text-editor/src/window.rs:65 apps/web/src/window.rs:222
 #: apps/web/src/window.rs:265 crates/helix-app-common/src/shortcuts.rs:25
 msgid "_Keyboard Shortcuts"
@@ -1986,7 +1986,7 @@ msgid "Search Events"
 msgstr "搜索事件"
 
 #: apps/calendar/src/ui.rs:371 apps/files/src/ui/dialogs.rs:429
-#: apps/files/src/ui/tab.rs:1125 apps/settings/src/ui/mod.rs:244
+#: apps/files/src/ui/tab.rs:1125 apps/settings/src/ui/mod.rs:246
 #: apps/settings/src/ui/picker.rs:115 apps/web/src/dialogs.rs:752
 #: apps/web/src/window.rs:2378
 msgid "No Results Found"
@@ -1994,7 +1994,7 @@ msgstr "未找到结果"
 
 #: apps/calendar/src/ui.rs:372 apps/characters/src/ui.rs:456
 #: apps/files/src/ui/dialogs.rs:434 apps/fonts/src/ui.rs:436
-#: apps/music/src/pages.rs:1687 apps/settings/src/ui/mod.rs:245
+#: apps/music/src/pages.rs:1687 apps/settings/src/ui/mod.rs:247
 #: apps/settings/src/ui/picker.rs:116 apps/web/src/dialogs.rs:753
 #: apps/web/src/window.rs:2379
 msgid "Try a different search"
@@ -2286,9 +2286,10 @@ msgid "Take pictures and videos"
 msgstr "拍摄照片和视频"
 
 #: apps/camera/src/ui.rs:162 apps/disks/src/ui.rs:937
-#: apps/music/src/player.rs:54 apps/settings/src/extensions.rs:155
-#: apps/settings/src/ui/network.rs:26 apps/settings/src/ui/network.rs:188
-#: apps/settings/src/ui/network.rs:467 apps/settings/src/ui/privacy.rs:198
+#: apps/music/src/player.rs:54 apps/settings/src/cups.rs:809
+#: apps/settings/src/extensions.rs:155 apps/settings/src/ui/network.rs:26
+#: apps/settings/src/ui/network.rs:188 apps/settings/src/ui/network.rs:467
+#: apps/settings/src/ui/privacy.rs:198
 msgid "Off"
 msgstr "关"
 
@@ -3159,6 +3160,7 @@ msgid "Lap {}  {}"
 msgstr "第 {} 圈  {}"
 
 #: apps/clocks/src/ui.rs:1759 apps/clocks/src/ui.rs:2242
+#: apps/settings/src/ui/printers.rs:498
 msgid "Resume"
 msgstr "继续"
 
@@ -3751,7 +3753,8 @@ msgid "Phone"
 msgstr "电话"
 
 #: apps/contacts/src/ui.rs:1286 apps/maps/src/nominatim.rs:248
-#: apps/settings/src/ui/bluetooth.rs:515 apps/web/src/window.rs:49
+#: apps/settings/src/ui/bluetooth.rs:515 apps/settings/src/ui/printers.rs:270
+#: apps/settings/src/ui/printers.rs:643 apps/web/src/window.rs:49
 msgid "Address"
 msgstr "地址"
 
@@ -4961,7 +4964,7 @@ msgstr "老化"
 msgid "Online"
 msgstr "在线"
 
-#: apps/disks/src/smart.rs:140
+#: apps/disks/src/smart.rs:140 apps/settings/src/cups.rs:555
 msgid "Offline"
 msgstr "离线"
 
@@ -5079,7 +5082,7 @@ msgstr "驱动器选项"
 msgid "Eject"
 msgstr "弹出"
 
-#: apps/disks/src/ui.rs:356
+#: apps/disks/src/ui.rs:356 apps/settings/src/ui/printers.rs:268
 msgid "Model"
 msgstr "型号"
 
@@ -5777,11 +5780,13 @@ msgstr "与扫描仪通信时出错：{e}"
 msgid "Unsupported frame format {}"
 msgstr "不支持的帧格式 {}"
 
-#: apps/document-scanner/src/settings.rs:30 apps/settings/src/ui/access.rs:546
+#: apps/document-scanner/src/settings.rs:30 apps/settings/src/cups.rs:744
+#: apps/settings/src/cups.rs:812 apps/settings/src/ui/access.rs:546
 msgid "Color"
 msgstr "彩色"
 
-#: apps/document-scanner/src/settings.rs:31 apps/settings/src/ui/access.rs:547
+#: apps/document-scanner/src/settings.rs:31 apps/settings/src/cups.rs:813
+#: apps/settings/src/ui/access.rs:547
 msgid "Grayscale"
 msgstr "灰度"
 
@@ -5819,7 +5824,7 @@ msgstr "复制页面"
 
 #: apps/document-scanner/src/shortcuts.rs:23
 #: apps/document-viewer/src/shortcuts.rs:12 apps/help/src/shortcuts.rs:51
-#: apps/web/src/shortcuts.rs:51
+#: apps/settings/src/ui/printers.rs:300 apps/web/src/shortcuts.rs:51
 msgid "Print"
 msgstr "打印"
 
@@ -6716,7 +6721,7 @@ msgid "Searching page {page} of {n_pages}… {total} found"
 msgstr "正在搜索第 {page} 页，共 {n_pages} 页… 已找到 {total} 个"
 
 #: apps/document-viewer/src/ui.rs:1644 apps/maps/src/ui.rs:1260
-#: apps/maps/src/ui.rs:1263 apps/settings/src/ui/mod.rs:461
+#: apps/maps/src/ui.rs:1263 apps/settings/src/ui/mod.rs:463
 #: apps/settings/src/ui/picker.rs:34
 msgid "No results found"
 msgstr "未找到结果"
@@ -6940,7 +6945,7 @@ msgstr "最近使用"
 
 #: apps/files/src/pathbar.rs:110 apps/files/src/ui/sidebar.rs:122
 #: apps/files/src/ui/tab.rs:1434 apps/settings/src/bluez.rs:235
-#: apps/settings/src/panels.rs:63 apps/system-monitor/src/res_view.rs:385
+#: apps/settings/src/panels.rs:64 apps/system-monitor/src/res_view.rs:385
 msgid "Network"
 msgstr "网络"
 
@@ -7063,6 +7068,7 @@ msgid "Applications"
 msgstr "应用"
 
 #: apps/files/src/ui/dialogs.rs:364 apps/settings/src/ui/appearance.rs:107
+#: apps/settings/src/ui/printers.rs:237 apps/settings/src/ui/printers.rs:433
 #: apps/settings/src/ui/sound.rs:928 apps/settings/src/values.rs:204
 msgid "Default"
 msgstr "默认"
@@ -9491,13 +9497,13 @@ msgstr[0] "找到 {n} 个地点"
 msgid "Selected place: {}"
 msgstr "选定的地点：{}"
 
-#: apps/maps/src/ui.rs:1365 apps/music/src/ui.rs:2344
+#: apps/maps/src/ui.rs:1365 apps/music/src/ui.rs:2346
 msgid "Remove from Favorites"
 msgstr "从收藏中移除"
 
 #: apps/maps/src/ui.rs:1367 apps/maps/src/ui.rs:2266
-#: apps/music/src/pages.rs:726 apps/music/src/ui.rs:2346
-#: apps/music/src/ui.rs:2596
+#: apps/music/src/pages.rs:726 apps/music/src/ui.rs:2348
+#: apps/music/src/ui.rs:2598
 msgid "Add to Favorites"
 msgstr "添加到收藏"
 
@@ -9999,8 +10005,8 @@ msgid "Clear Queue"
 msgstr "清空队列"
 
 #: apps/music/src/nowplaying.rs:203 apps/music/src/shortcuts.rs:31
-#: apps/music/src/ui.rs:2323 apps/music/src/ui.rs:2641
-#: apps/music/src/ui.rs:2646
+#: apps/music/src/ui.rs:2325 apps/music/src/ui.rs:2643
+#: apps/music/src/ui.rs:2648
 msgid "Now Playing"
 msgstr "正在播放"
 
@@ -10092,8 +10098,8 @@ msgid_plural "{n} albums"
 msgstr[0] "{n} 张专辑"
 
 #: apps/music/src/pages.rs:1176 apps/music/src/pages.rs:1504
-#: apps/music/src/shortcuts.rs:14 apps/music/src/ui.rs:2599
-#: apps/music/src/ui.rs:2603
+#: apps/music/src/shortcuts.rs:14 apps/music/src/ui.rs:2601
+#: apps/music/src/ui.rs:2605
 msgid "Shuffle"
 msgstr "随机播放"
 
@@ -10272,7 +10278,7 @@ msgstr "回放增益"
 msgid "Even out loudness using the volume tags of songs or albums"
 msgstr "使用歌曲或专辑的音量标签均衡响度"
 
-#: apps/music/src/pages.rs:2436 apps/settings/src/panels.rs:159
+#: apps/music/src/pages.rs:2436 apps/settings/src/panels.rs:160
 #: apps/settings/src/permissions.rs:38 apps/settings/src/ui/apps.rs:419
 #: apps/web/src/permissions.rs:25
 msgid "Notifications"
@@ -10382,7 +10388,7 @@ msgstr "错误的列数 {n}"
 msgid "Play and organize your music collection"
 msgstr "播放和整理您的音乐收藏"
 
-#: apps/music/src/ui.rs:275 apps/music/src/ui.rs:2312
+#: apps/music/src/ui.rs:275 apps/music/src/ui.rs:2314
 msgid "Now playing"
 msgstr "正在播放"
 
@@ -10418,77 +10424,77 @@ msgstr "搜索歌曲、专辑和艺人"
 msgid "No Music Found"
 msgstr "未找到音乐"
 
-#: apps/music/src/ui.rs:577 apps/music/src/ui.rs:588 apps/music/src/ui.rs:590
+#: apps/music/src/ui.rs:577 apps/music/src/ui.rs:590 apps/music/src/ui.rs:592
 msgid "Scanning Library…"
 msgstr "正在扫描音乐库…"
 
-#: apps/music/src/ui.rs:737
+#: apps/music/src/ui.rs:739
 msgid "Playback is unavailable (GStreamer could not be initialised)"
 msgstr "无法播放（GStreamer 无法初始化）"
 
-#: apps/music/src/ui.rs:936
+#: apps/music/src/ui.rs:938
 msgid "{n} song found"
 msgid_plural "{n} songs found"
 msgstr[0] "找到 {n} 首歌曲"
 
-#: apps/music/src/ui.rs:958
+#: apps/music/src/ui.rs:960
 msgid "Library updated: {n} song"
 msgid_plural "Library updated: {n} songs"
 msgstr[0] "音乐库已更新：{n} 首歌曲"
 
-#: apps/music/src/ui.rs:969
+#: apps/music/src/ui.rs:971
 msgid "No changes found"
 msgstr "未发现更改"
 
-#: apps/music/src/ui.rs:1115
+#: apps/music/src/ui.rs:1117
 msgid "Will play next"
 msgstr "将在下一首播放"
 
-#: apps/music/src/ui.rs:1117
+#: apps/music/src/ui.rs:1119
 msgid "Added to queue"
 msgstr "已添加到队列"
 
-#: apps/music/src/ui.rs:1315
+#: apps/music/src/ui.rs:1317
 msgid "Cannot play “{name}”"
 msgstr "无法播放“{name}”"
 
-#: apps/music/src/ui.rs:1400
+#: apps/music/src/ui.rs:1402
 msgid "Playing music"
 msgstr "正在播放音乐"
 
-#: apps/music/src/ui.rs:1486
+#: apps/music/src/ui.rs:1488
 msgid "Now playing: {}"
 msgstr "正在播放：{}"
 
-#: apps/music/src/ui.rs:1488
+#: apps/music/src/ui.rs:1490
 msgid "Now playing: {title} by {artist}"
 msgstr "正在播放：{artist} 的 {title}"
 
-#: apps/music/src/ui.rs:1569
+#: apps/music/src/ui.rs:1571
 msgid "Repeat: Off"
 msgstr "重复：关"
 
-#: apps/music/src/ui.rs:1570
+#: apps/music/src/ui.rs:1572
 msgid "Repeat: All"
 msgstr "重复：全部"
 
-#: apps/music/src/ui.rs:1571
+#: apps/music/src/ui.rs:1573
 msgid "Repeat: Song"
 msgstr "重复：单曲"
 
-#: apps/music/src/ui.rs:2184
+#: apps/music/src/ui.rs:2186
 msgid "Music files in {} will appear here."
 msgstr "{} 中的音乐文件将显示在此处。"
 
-#: apps/music/src/ui.rs:2277
+#: apps/music/src/ui.rs:2279
 msgid "Add Music Folder"
 msgstr "添加音乐文件夹"
 
-#: apps/music/src/ui.rs:2551 apps/music/src/ui.rs:2554
+#: apps/music/src/ui.rs:2553 apps/music/src/ui.rs:2556
 msgid "Show Now Playing"
 msgstr "显示正在播放"
 
-#: apps/music/src/ui.rs:2660 apps/music/src/ui.rs:2666
+#: apps/music/src/ui.rs:2662 apps/music/src/ui.rs:2668
 msgid "More Controls"
 msgstr "更多控件"
 
@@ -11720,8 +11726,8 @@ msgid "Part of the desktop"
 msgstr "桌面的一部分"
 
 #: apps/settings/src/agents.rs:1015 apps/settings/src/agents.rs:1125
-#: apps/settings/src/ui/mod.rs:174 apps/settings/src/ui/mod.rs:257
-#: apps/settings/src/ui/mod.rs:552
+#: apps/settings/src/ui/mod.rs:176 apps/settings/src/ui/mod.rs:259
+#: apps/settings/src/ui/mod.rs:554
 msgid "Settings"
 msgstr "设置"
 
@@ -11890,7 +11896,7 @@ msgstr "耳机"
 msgid "Speaker"
 msgstr "扬声器"
 
-#: apps/settings/src/bluez.rs:224 apps/settings/src/panels.rs:195
+#: apps/settings/src/bluez.rs:224 apps/settings/src/panels.rs:196
 msgid "Keyboard"
 msgstr "键盘"
 
@@ -11931,6 +11937,107 @@ msgstr "媒体播放器"
 #: apps/settings/src/bluez.rs:243
 msgid "Other Device"
 msgstr "其他设备"
+
+#: apps/settings/src/cups.rs:536 apps/settings/src/cups.rs:557
+#: apps/settings/src/ui/printers.rs:283
+msgid "Paused"
+msgstr "已暂停"
+
+#: apps/settings/src/cups.rs:537 apps/settings/src/cups.rs:666
+msgid "Printing"
+msgstr "正在打印"
+
+#: apps/settings/src/cups.rs:538
+msgid "Ready"
+msgstr "就绪"
+
+#: apps/settings/src/cups.rs:546 apps/settings/src/cups.rs:547
+msgid "Out of paper"
+msgstr "缺纸"
+
+#: apps/settings/src/cups.rs:548
+msgid "Paper jam"
+msgstr "卡纸"
+
+#: apps/settings/src/cups.rs:549
+msgid "Out of toner"
+msgstr "碳粉已用完"
+
+#: apps/settings/src/cups.rs:550
+msgid "Out of ink"
+msgstr "墨水已用完"
+
+#: apps/settings/src/cups.rs:551
+msgid "Low on toner"
+msgstr "碳粉不足"
+
+#: apps/settings/src/cups.rs:552
+msgid "Low on ink"
+msgstr "墨水不足"
+
+#: apps/settings/src/cups.rs:553
+msgid "Door open"
+msgstr "门打开"
+
+#: apps/settings/src/cups.rs:554
+msgid "Cover open"
+msgstr "盖板打开"
+
+#: apps/settings/src/cups.rs:556 apps/settings/src/ui/network.rs:184
+#: apps/settings/src/ui/network.rs:465 apps/settings/src/ui/wifi.rs:472
+msgid "Connecting…"
+msgstr "正在连接…"
+
+#: apps/settings/src/cups.rs:664
+msgid "Waiting"
+msgstr "等待中"
+
+#: apps/settings/src/cups.rs:665
+msgid "Held"
+msgstr "已挂起"
+
+#: apps/settings/src/cups.rs:667 apps/system-monitor/src/format.rs:99
+msgid "Stopped"
+msgstr "已停止"
+
+#: apps/settings/src/cups.rs:742
+msgid "Paper Size"
+msgstr "纸张尺寸"
+
+#: apps/settings/src/cups.rs:743
+msgid "Two-Sided"
+msgstr "双面"
+
+#: apps/settings/src/cups.rs:745
+msgid "Quality"
+msgstr "质量"
+
+#: apps/settings/src/cups.rs:810
+msgid "Long Edge (Standard)"
+msgstr "长边（标准）"
+
+#: apps/settings/src/cups.rs:811
+msgid "Short Edge (Flip)"
+msgstr "短边（翻转）"
+
+#: apps/settings/src/cups.rs:815
+msgctxt "print quality"
+msgid "Draft"
+msgstr "草稿"
+
+#: apps/settings/src/cups.rs:816
+msgctxt "print quality"
+msgid "Normal"
+msgstr "普通"
+
+#: apps/settings/src/cups.rs:817
+msgctxt "print quality"
+msgid "High"
+msgstr "高"
+
+#: apps/settings/src/cups.rs:856 apps/settings/src/ui/printers.rs:298
+msgid "Test Page"
+msgstr "测试页"
 
 #: apps/settings/src/defaults.rs:15 apps/web/src/app.rs:128
 #: apps/web/src/app.rs:152 apps/web/src/app.rs:988 apps/web/src/window.rs:320
@@ -12146,108 +12253,108 @@ msgstr "信号极佳"
 msgid "Hotspot"
 msgstr "热点"
 
-#: apps/settings/src/panels.rs:51 apps/settings/src/ui/wifi.rs:106
+#: apps/settings/src/panels.rs:52 apps/settings/src/ui/wifi.rs:106
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:55
+#: apps/settings/src/panels.rs:56
 msgid "network;wireless;wlan;hotspot;internet;airplane;"
 msgstr "网络;无线;wlan;热点;互联网;飞行模式;network;wireless;wifi;"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:67
+#: apps/settings/src/panels.rs:68
 msgid "ethernet;wired;vpn;proxy;ip;dns;internet;"
 msgstr "以太网;有线;vpn;代理;ip;dns;互联网;ethernet;wired;proxy;"
 
-#: apps/settings/src/panels.rs:75 apps/settings/src/ui/bluetooth.rs:102
+#: apps/settings/src/panels.rs:76 apps/settings/src/ui/bluetooth.rs:102
 msgid "Bluetooth"
 msgstr "蓝牙"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:79
+#: apps/settings/src/panels.rs:80
 msgid "share;devices;pair;headset;wireless;"
 msgstr "共享;设备;配对;耳机;无线;蓝牙;bluetooth;pair;"
 
-#: apps/settings/src/panels.rs:87 apps/settings/src/ui/greeter.rs:124
+#: apps/settings/src/panels.rs:88 apps/settings/src/ui/greeter.rs:124
 msgid "Displays"
 msgstr "显示器"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:91
+#: apps/settings/src/panels.rs:92
 msgid "monitor;screen;resolution;refresh;scale;night light;projector;rotation;"
 msgstr "显示器;屏幕;分辨率;刷新率;缩放;夜灯;投影仪;旋转;monitor;display;"
 
-#: apps/settings/src/panels.rs:99
+#: apps/settings/src/panels.rs:100
 msgid "Sound"
 msgstr "声音"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:103
+#: apps/settings/src/panels.rs:104
 msgid "volume;speaker;microphone;audio;output;input;alert;mute;"
 msgstr "音量;扬声器;麦克风;音频;输出;输入;提示音;静音;volume;sound;audio;"
 
-#: apps/settings/src/panels.rs:111
+#: apps/settings/src/panels.rs:112
 msgid "Power"
 msgstr "电源"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:115
+#: apps/settings/src/panels.rs:116
 msgid "battery;suspend;sleep;dim;blank;power button;hibernate;energy;"
 msgstr "电池;挂起;睡眠;变暗;黑屏;电源按钮;休眠;能耗;battery;power;suspend;"
 
-#: apps/settings/src/panels.rs:123
+#: apps/settings/src/panels.rs:124
 msgid "Multitasking"
 msgstr "多任务"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:127
+#: apps/settings/src/panels.rs:128
 msgid "hot corner;workspace;screen edges;tiling;app switching;multi-monitor;"
 msgstr "热区;工作区;屏幕边缘;平铺;应用切换;多显示器;workspace;"
 
-#: apps/settings/src/panels.rs:135 apps/terminal/src/prefs_dialog.rs:24
+#: apps/settings/src/panels.rs:136 apps/terminal/src/prefs_dialog.rs:24
 #: apps/text-editor/src/prefs.rs:58
 msgid "Appearance"
 msgstr "外观"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:139
+#: apps/settings/src/panels.rs:140
 msgid "dark;light;style;theme;icon;icons;accent;color;colour;wallpaper;background;"
 msgstr ""
 "深色;浅色;样式;主题;图标;强调色;颜色;壁纸;背景;dark;light;theme;wallpaper;"
 
-#: apps/settings/src/panels.rs:147 apps/settings/src/ui/notifications.rs:100
+#: apps/settings/src/panels.rs:148 apps/settings/src/ui/notifications.rs:100
 #: apps/settings/src/ui/sound.rs:288
 msgid "Apps"
 msgstr "应用"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:151
+#: apps/settings/src/panels.rs:152
 msgid "default;applications;permissions;browser;storage;"
 msgstr "默认;应用;程序;权限;浏览器;存储;default;applications;"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:163
+#: apps/settings/src/panels.rs:164
 msgid "do not disturb;dnd;banner;alerts;lock screen;messages;"
 msgstr "请勿打扰;勿扰;横幅;提醒;锁屏;消息;notifications;dnd;"
 
-#: apps/settings/src/panels.rs:171
+#: apps/settings/src/panels.rs:172
 msgid "Extensions"
 msgstr "扩展"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:175
+#: apps/settings/src/panels.rs:176
 msgid ""
 "add-on;plugin;panel item;indicator;quick settings;dock;sandbox;permissions;"
 msgstr ""
 "附加组件;插件;面板项目;指示器;快速设置;程序坞;沙盒;权限;extension;plugin;"
 
-#: apps/settings/src/panels.rs:183
+#: apps/settings/src/panels.rs:184
 msgid "Mouse & Touchpad"
 msgstr "鼠标和触摸板"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:187
+#: apps/settings/src/panels.rs:188
 msgid ""
 "touchpad;pointer;speed;scroll;natural;tap;click;trackpad;primary "
 "button;acceleration;"
@@ -12255,16 +12362,27 @@ msgstr ""
 "触摸板;指针;速度;滚动;自然滚动;轻触;点击;触控板;主按钮;加速;touchpad;mouse;"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:199
+#: apps/settings/src/panels.rs:200
 msgid "layout;input source;language;repeat;delay;typing;xkb;"
 msgstr "布局;输入源;语言;重复;延迟;打字;输入法;xkb;keyboard;"
 
-#: apps/settings/src/panels.rs:207 apps/settings/src/ui/access.rs:119
+#: apps/settings/src/panels.rs:208 apps/settings/src/ui/printers.rs:67
+msgid "Printers"
+msgstr "打印机"
+
+#. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
+#: apps/settings/src/panels.rs:212
+msgid "printer;print;cups;queue;jobs;paper;ink;toner;"
+msgstr ""
+"printer;print;cups;queue;jobs;paper;ink;toner;打印机;打印;队列;任务;纸张;墨"
+"水;碳粉;"
+
+#: apps/settings/src/panels.rs:220 apps/settings/src/ui/access.rs:119
 msgid "Accessibility"
 msgstr "无障碍"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:211
+#: apps/settings/src/panels.rs:224
 msgid ""
 "high contrast;large text;zoom;magnifier;screen reader;cursor size;reduce "
 "animation;sticky keys;slow keys;bounce keys;mouse keys;scrollbars;screen "
@@ -12273,12 +12391,12 @@ msgstr ""
 "高对比度;大号文本;缩放;放大镜;屏幕阅读器;光标大小;减少动画;粘滞键;慢速键;回弹"
 "键;鼠标键;滚动条;屏幕键盘;双击;定位指针;accessibility;"
 
-#: apps/settings/src/panels.rs:219 apps/settings/src/ui/privacy.rs:226
+#: apps/settings/src/panels.rs:232 apps/settings/src/ui/privacy.rs:226
 msgid "Privacy & Security"
 msgstr "隐私与安全"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:223
+#: apps/settings/src/panels.rs:236
 msgid ""
 "screen lock;lock;blank;idle;recent files;file "
 "history;trash;temporary;location;camera;microphone;problem "
@@ -12287,30 +12405,30 @@ msgstr ""
 "锁屏;锁定;黑屏;空闲;最近文件;文件历史;回收站;临时文件;位置;相机;麦克风;问题报"
 "告;privacy;代理;智能体;人工智能;助手;自动化;agent;ai;assistant;automation;"
 
-#: apps/settings/src/panels.rs:231
+#: apps/settings/src/panels.rs:244
 msgid "Date & Time"
 msgstr "日期和时间"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:235
+#: apps/settings/src/panels.rs:248
 msgid "clock;time zone;timezone;ntp;24-hour;am/pm;week numbers;calendar;"
 msgstr "时钟;时区;ntp;24 小时制;上午/下午;周数;日历;clock;timezone;"
 
-#: apps/settings/src/panels.rs:243 apps/settings/src/ui/greeter.rs:64
+#: apps/settings/src/panels.rs:256 apps/settings/src/ui/greeter.rs:64
 msgid "Users"
 msgstr "用户"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:247
+#: apps/settings/src/panels.rs:260
 msgid "account;password;login;avatar;administrator;"
 msgstr "账户;密码;登录;头像;管理员;account;user;"
 
-#: apps/settings/src/panels.rs:255 apps/settings/src/ui/displays.rs:252
+#: apps/settings/src/panels.rs:268 apps/settings/src/ui/displays.rs:252
 msgid "Login Screen"
 msgstr "登录屏幕"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:259
+#: apps/settings/src/panels.rs:272
 msgid ""
 "login;greeter;lock;banner;user list;sign in;display "
 "manager;greetd;accent;clock;"
@@ -12318,23 +12436,23 @@ msgstr ""
 "login;greeter;lock;banner;user list;sign in;display "
 "manager;greetd;accent;clock;登录;登录界面;锁定;横幅;用户列表;强调色;时钟;"
 
-#: apps/settings/src/panels.rs:267
+#: apps/settings/src/panels.rs:280
 msgid "About"
 msgstr "关于"
 
 #. Translators: search keywords for this Settings panel, separated by semicolons; add words people would search for in your language.
-#: apps/settings/src/panels.rs:271
+#: apps/settings/src/panels.rs:284
 msgid ""
 "device name;hostname;memory;processor;cpu;disk;os;version;kernel;hardware;"
 msgstr ""
 "设备名称;主机名;内存;处理器;cpu;磁盘;操作系统;版本;内核;硬件;hostname;os;"
 
-#: apps/settings/src/panels.rs:296 apps/settings/src/ui/agent_access.rs:70
+#: apps/settings/src/panels.rs:309 apps/settings/src/ui/agent_access.rs:70
 #: apps/settings/src/ui/agent_access.rs:183 apps/settings/src/ui/privacy.rs:189
 msgid "Agent Access"
 msgstr "智能体访问"
 
-#: apps/settings/src/panels.rs:304 apps/settings/src/ui/agent_access.rs:1025
+#: apps/settings/src/panels.rs:317 apps/settings/src/ui/agent_access.rs:1025
 msgid "Agent Activity"
 msgstr "智能体活动"
 
@@ -14263,40 +14381,40 @@ msgstr "下移 {source}"
 msgid "Remove {source}"
 msgstr "移除 {source}"
 
-#: apps/settings/src/ui/mod.rs:192
+#: apps/settings/src/ui/mod.rs:194
 msgid "Search settings"
 msgstr "搜索设置"
 
-#: apps/settings/src/ui/mod.rs:195 apps/settings/src/ui/shortcuts.rs:10
+#: apps/settings/src/ui/mod.rs:197 apps/settings/src/ui/shortcuts.rs:10
 msgid "Search Settings"
 msgstr "搜索设置"
 
-#: apps/settings/src/ui/mod.rs:213
+#: apps/settings/src/ui/mod.rs:215
 msgid "_About Settings"
 msgstr "关于设置(_A)"
 
-#: apps/settings/src/ui/mod.rs:385 apps/settings/src/ui/mod.rs:398
+#: apps/settings/src/ui/mod.rs:387 apps/settings/src/ui/mod.rs:400
 msgid "Not yet available"
 msgstr "尚不可用"
 
-#: apps/settings/src/ui/mod.rs:419
+#: apps/settings/src/ui/mod.rs:421
 msgid "Not Yet Available"
 msgstr "尚不可用"
 
-#: apps/settings/src/ui/mod.rs:462
+#: apps/settings/src/ui/mod.rs:464
 msgid "{n} panel found"
 msgid_plural "{n} panels found"
 msgstr[0] "找到 {n} 个面板"
 
-#: apps/settings/src/ui/mod.rs:521
+#: apps/settings/src/ui/mod.rs:523
 msgid "{} Is Not Yet Available"
 msgstr "{}尚不可用"
 
-#: apps/settings/src/ui/mod.rs:522
+#: apps/settings/src/ui/mod.rs:524
 msgid "This panel will be added in a later version of Helix Settings."
 msgstr "此面板将在 Helix 设置的后续版本中添加。"
 
-#: apps/settings/src/ui/mod.rs:553
+#: apps/settings/src/ui/mod.rs:555
 msgid "Configure the Helix desktop"
 msgstr "配置 Helix 桌面"
 
@@ -14473,7 +14591,8 @@ msgstr "IPv4"
 msgid "IPv6"
 msgstr "IPv6"
 
-#: apps/settings/src/ui/netedit.rs:277 apps/settings/src/ui/users.rs:593
+#: apps/settings/src/ui/netedit.rs:277 apps/settings/src/ui/printers.rs:307
+#: apps/settings/src/ui/users.rs:593
 msgid "Remove…"
 msgstr "移除…"
 
@@ -14481,7 +14600,8 @@ msgstr "移除…"
 msgid "Could not save the changes: {e}"
 msgstr "无法保存更改：{e}"
 
-#: apps/settings/src/ui/netedit.rs:384 apps/settings/src/ui/users.rs:637
+#: apps/settings/src/ui/netedit.rs:384 apps/settings/src/ui/printers.rs:603
+#: apps/settings/src/ui/users.rs:637
 msgid "Remove {name}?"
 msgstr "移除 {name}？"
 
@@ -14509,11 +14629,6 @@ msgstr "NetworkManager 未运行，因此无法显示有线连接和 VPN。"
 #: apps/settings/src/ui/network.rs:179
 msgid "Connected — {speed} Mb/s"
 msgstr "已连接 — {speed} Mb/s"
-
-#: apps/settings/src/ui/network.rs:184 apps/settings/src/ui/network.rs:465
-#: apps/settings/src/ui/wifi.rs:472
-msgid "Connecting…"
-msgstr "正在连接…"
 
 #: apps/settings/src/ui/network.rs:186
 msgid "Cable unplugged"
@@ -14780,6 +14895,210 @@ msgstr "在顶栏中显示准确的电量"
 #: apps/settings/src/ui/power.rs:195
 msgid "Power Button Behavior"
 msgstr "电源按钮行为"
+
+#: apps/settings/src/ui/printers.rs:49
+msgid "Loading Printers…"
+msgstr "正在加载打印机…"
+
+#: apps/settings/src/ui/printers.rs:53
+msgid "Printing Is Not Available"
+msgstr "打印不可用"
+
+#: apps/settings/src/ui/printers.rs:54
+msgid "The printing service (CUPS) is not running."
+msgstr "打印服务（CUPS）未运行。"
+
+#: apps/settings/src/ui/printers.rs:61
+msgid "Printing Is Not Installed"
+msgstr "未安装打印功能"
+
+#: apps/settings/src/ui/printers.rs:62
+msgid "Install CUPS to set up printers."
+msgstr "请安装 CUPS 以设置打印机。"
+
+#: apps/settings/src/ui/printers.rs:69
+msgid "Add Printer…"
+msgstr "添加打印机…"
+
+#: apps/settings/src/ui/printers.rs:142
+msgid "Changing printers needs cups-pk-helper, which is not installed"
+msgstr "更改打印机需要 cups-pk-helper，但它尚未安装"
+
+#: apps/settings/src/ui/printers.rs:189
+msgid "No printers are set up yet."
+msgstr "尚未设置打印机。"
+
+#: apps/settings/src/ui/printers.rs:214
+msgid "{status} · {location}"
+msgstr "{status} · {location}"
+
+#: apps/settings/src/ui/printers.rs:266 apps/system-monitor/src/dialogs.rs:30
+msgid "Status"
+msgstr "状态"
+
+#: apps/settings/src/ui/printers.rs:275
+msgid "Default Printer"
+msgstr "默认打印机"
+
+#: apps/settings/src/ui/printers.rs:276
+msgid "Apps print here unless another printer is chosen"
+msgstr "除非选择其他打印机，应用都会在此打印"
+
+#: apps/settings/src/ui/printers.rs:277 apps/settings/src/ui/printers.rs:435
+msgid "Make Default"
+msgstr "设为默认"
+
+#: apps/settings/src/ui/printers.rs:284
+msgid "Jobs wait until printing is resumed"
+msgstr "任务会等待，直到恢复打印"
+
+#: apps/settings/src/ui/printers.rs:289
+msgid "Default Options"
+msgstr "默认选项"
+
+#: apps/settings/src/ui/printers.rs:293
+msgid "Jobs"
+msgstr "任务"
+
+#: apps/settings/src/ui/printers.rs:299
+msgid "Print a page to check that the printer works"
+msgstr "打印一页以检查打印机是否正常工作"
+
+#: apps/settings/src/ui/printers.rs:305
+msgid "Remove Printer"
+msgstr "移除打印机"
+
+#: apps/settings/src/ui/printers.rs:306
+msgid "Apps will no longer be able to print to it"
+msgstr "应用将无法再使用它打印"
+
+#: apps/settings/src/ui/printers.rs:325
+msgid "Could not make {name} the default printer: {e}"
+msgstr "无法将 {name} 设为默认打印机：{e}"
+
+#: apps/settings/src/ui/printers.rs:346
+msgid "Could not resume {name}: {e}"
+msgstr "无法恢复 {name}：{e}"
+
+#: apps/settings/src/ui/printers.rs:348
+msgid "Could not pause {name}: {e}"
+msgstr "无法暂停 {name}：{e}"
+
+#: apps/settings/src/ui/printers.rs:370
+msgid "Test page sent to {name}"
+msgstr "测试页已发送到 {name}"
+
+#: apps/settings/src/ui/printers.rs:371
+msgid "Could not print a test page on {name}: {e}"
+msgstr "无法在 {name} 上打印测试页：{e}"
+
+#: apps/settings/src/ui/printers.rs:466
+msgid "No jobs are waiting."
+msgstr "没有等待中的任务。"
+
+#: apps/settings/src/ui/printers.rs:477
+msgid "Job {id}"
+msgstr "任务 {id}"
+
+#: apps/settings/src/ui/printers.rs:484
+msgid "{status} · {user}"
+msgstr "{status} · {user}"
+
+#: apps/settings/src/ui/printers.rs:498
+msgid "Hold"
+msgstr "挂起"
+
+#: apps/settings/src/ui/printers.rs:505
+msgid "Resume {job}"
+msgstr "恢复 {job}"
+
+#: apps/settings/src/ui/printers.rs:507
+msgid "Hold {job}"
+msgstr "挂起 {job}"
+
+#: apps/settings/src/ui/printers.rs:512
+msgid "Cancel Job"
+msgstr "取消任务"
+
+#: apps/settings/src/ui/printers.rs:516
+msgid "Cancel {job}"
+msgstr "取消 {job}"
+
+#: apps/settings/src/ui/printers.rs:527
+msgid "Could not change {job}: {e}"
+msgstr "无法更改 {job}：{e}"
+
+#: apps/settings/src/ui/printers.rs:537
+msgid "Could not cancel {job}: {e}"
+msgstr "无法取消 {job}：{e}"
+
+#: apps/settings/src/ui/printers.rs:594
+msgid "Could not change {option}: {e}"
+msgstr "无法更改 {option}：{e}"
+
+#: apps/settings/src/ui/printers.rs:604
+msgid "It will have to be added again before it can be used."
+msgstr "需要重新添加后才能使用。"
+
+#: apps/settings/src/ui/printers.rs:622
+msgid "Could not remove {name}: {e}"
+msgstr "无法移除 {name}：{e}"
+
+#: apps/settings/src/ui/printers.rs:631
+msgid "Printers Found"
+msgstr "找到的打印机"
+
+#: apps/settings/src/ui/printers.rs:633
+msgid "Searching for Printers"
+msgstr "正在搜索打印机"
+
+#: apps/settings/src/ui/printers.rs:635
+msgid "Searching for printers on the network…"
+msgstr "正在网络上搜索打印机…"
+
+#: apps/settings/src/ui/printers.rs:637
+msgid "Add by Address"
+msgstr "按地址添加"
+
+#: apps/settings/src/ui/printers.rs:638
+msgid ""
+"The printer's host name or IP address, for printers that support driverless "
+"printing (IPP Everywhere)"
+msgstr ""
+"打印机的主机名或 IP 地址，适用于支持免驱动打印（IPP Everywhere）的打印机"
+
+#: apps/settings/src/ui/printers.rs:648
+msgid "Add Printer"
+msgstr "添加打印机"
+
+#: apps/settings/src/ui/printers.rs:659
+msgid "Enter a host name, an IP address, or an ipp:// address"
+msgstr "请输入主机名、IP 地址或 ipp:// 地址"
+
+#: apps/settings/src/ui/printers.rs:686
+msgid "Finding printers needs cups-pk-helper, which is not installed."
+msgstr "查找打印机需要 cups-pk-helper，但它尚未安装。"
+
+#: apps/settings/src/ui/printers.rs:692
+msgid "Could not search for printers: {e}"
+msgstr "无法搜索打印机：{e}"
+
+#: apps/settings/src/ui/printers.rs:697
+msgid ""
+"No other printers were found. Make sure the printer is on and connected."
+msgstr "未找到其他打印机。请确保打印机已开启并已连接。"
+
+#: apps/settings/src/ui/printers.rs:745
+msgid "Adding {name}…"
+msgstr "正在添加 {name}…"
+
+#: apps/settings/src/ui/printers.rs:751
+msgid "Added {name}"
+msgstr "已添加 {name}"
+
+#: apps/settings/src/ui/printers.rs:754
+msgid "Could not add {name}: {e}"
+msgstr "无法添加 {name}：{e}"
 
 #: apps/settings/src/ui/privacy.rs:55
 msgid "Screen Lock"
@@ -15668,10 +15987,6 @@ msgstr "进程名称"
 msgid "User"
 msgstr "用户"
 
-#: apps/system-monitor/src/dialogs.rs:30
-msgid "Status"
-msgstr "状态"
-
 #: apps/system-monitor/src/dialogs.rs:32
 msgid "Virtual Memory"
 msgstr "虚拟内存"
@@ -15848,10 +16163,6 @@ msgstr "睡眠"
 #: apps/system-monitor/src/format.rs:98
 msgid "Uninterruptible"
 msgstr "不可中断"
-
-#: apps/system-monitor/src/format.rs:99
-msgid "Stopped"
-msgstr "已停止"
 
 #: apps/system-monitor/src/format.rs:100
 msgid "Tracing Stop"

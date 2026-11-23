@@ -53,6 +53,7 @@ impl From<zbus::Error> for Error {
                 } else if name == "org.freedesktop.DBus.Error.AccessDenied"
                     || name.ends_with(".PermissionDenied")
                     || name.ends_with(".NotAuthorized")
+                    || name.ends_with(".NotPrivileged")
                     || name.ends_with(".AuthenticationCanceled")
                     || name.ends_with(".Error.Canceled")
                 {
