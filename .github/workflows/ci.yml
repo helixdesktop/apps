@@ -34,7 +34,8 @@ jobs:
             libsane1 tracker evolution-data-server \
             pipewire-bin libpipewire-0.3-modules libspa-0.2-modules pulseaudio-utils \
             ibus-gtk4 \
-            fontconfig fonts-dejavu-core
+            fontconfig fonts-dejavu-core \
+            gdb
 
       - uses: dtolnay/rust-toolchain@stable
         with:
@@ -57,9 +58,18 @@ jobs:
         run: tools/testing/run-tests.sh cargo test --workspace --locked
 
       # The helix-eds tests against real Evolution Data Server daemons on a
-      # private bus with scratch data.
+      # private bus with scratch data, one test at a time: Ubuntu 24.04's
+      # evolution-source-registry (3.52) has crashed with the tests sharing
+      # it in parallel. If a daemon still crashes, its core file is kept in
+      # /tmp and the script prints a backtrace (symbols from Ubuntu's
+      # debuginfod).
       - name: Test against Evolution Data Server
-        run: crates/helix-eds/tests/run-private-eds.sh cargo test -p helix-eds --test private_bus --locked
+        env:
+          EDS_CORES: /tmp/eds-core
+          DEBUGINFOD_URLS: https://debuginfod.ubuntu.com
+        run: |
+          sudo sysctl -w kernel.core_pattern=/tmp/eds-core.%e.%p
+          crates/helix-eds/tests/run-private-eds.sh cargo test -p helix-eds --test private_bus --locked -- --test-threads=1
 
       # The extractor leaves test-only strings out and keeps the rest.
       - name: Test the i18n tools
