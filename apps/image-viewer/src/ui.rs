@@ -620,6 +620,12 @@ impl Viewer {
         let split = adw::OverlaySplitView::builder()
             .sidebar_position(gtk::PackType::End)
             .show_sidebar(false)
+            // Unpinned, it shows the sidebar whenever it stops being
+            // collapsed (the window grows past the breakpoint below: a
+            // new image sizes the window to it, so do maximizing and
+            // unmaximizing) and hides it when it collapses. The sidebar
+            // only changes when the user toggles it (#197).
+            .pin_sidebar(true)
             .sidebar(&sidebar_toolbar)
             .content(&toolbar)
             .min_sidebar_width(f64::from(MIN_SIDEBAR))
@@ -2109,4 +2115,151 @@ fn smoke_script(viewer: &Rc<Viewer>) {
 
 fn v_current(weak: &Weak<Viewer>) -> Option<PathBuf> {
     weak.upgrade().and_then(|v| v.current())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// Runs the main context until `done` or 10 s.
+    fn wait_for(what: &str, done: impl Fn() -> bool) {
+        let ctx = glib::MainContext::default();
+        let end = std::time::Instant::now() + Duration::from_secs(10);
+        while !done() {
+            assert!(
+                std::time::Instant::now() < end,
+                "timed out waiting for {what}"
+            );
+            ctx.iteration(false);
+            std::thread::sleep(Duration::from_millis(2));
+        }
+    }
+
+    /// Runs the main context for `ms` milliseconds.
+    fn settle(ms: u64) {
+        let ctx = glib::MainContext::default();
+        let end = std::time::Instant::now() + Duration::from_millis(ms);
+        while std::time::Instant::now() < end {
+            ctx.iteration(false);
+            std::thread::sleep(Duration::from_millis(2));
+        }
+    }
+
+    fn write_png(path: &Path, w: i32, h: i32) {
+        let pb =
+            gtk::gdk_pixbuf::Pixbuf::new(gtk::gdk_pixbuf::Colorspace::Rgb, false, 8, w, h).unwrap();
+        pb.fill(0x3366_99ff);
+        pb.savev(path, "png", &[]).unwrap();
+    }
+
+    /// Opens `path` and waits until it is shown and the window has had
+    /// time to take its size.
+    fn show(viewer: &Viewer, path: &Path) {
+        viewer.open(vec![path.to_path_buf()]);
+        wait_for("the image", || {
+            viewer.current().as_deref() == Some(path) && !viewer.state.borrow().textures.is_empty()
+        });
+        settle(300);
+        let w = &viewer.window;
+        wait_for("the window to take the image's size", || {
+            w.width() == w.default_size().0
+        });
+    }
+
+    /// Resizes across the collapse breakpoint (640 sp) and back, and
+    /// minimizes, maximizes and unmaximizes the window.
+    fn shake(viewer: &Viewer) {
+        let w = &viewer.window;
+        for _ in 0..3 {
+            w.set_default_size(400, 400);
+            wait_for("a narrow window", || w.width() == 400);
+            settle(50);
+            w.set_default_size(1000, 700);
+            wait_for("a wide window", || w.width() == 1000);
+            settle(50);
+        }
+        for _ in 0..3 {
+            w.minimize();
+            settle(50);
+            w.maximize();
+            settle(100);
+            w.unmaximize();
+            settle(100);
+        }
+        settle(200);
+    }
+
+    /// The properties sidebar only changes when asked for (#197): it used
+    /// to show by itself whenever the window grew past the collapse
+    /// breakpoint (opening an image sizes the window to it; so does
+    /// minimizing and maximizing), as `AdwOverlaySplitView` sets
+    /// `show-sidebar` to `!collapsed` on every collapse change unless its
+    /// sidebar is pinned.
+    #[test]
+    fn properties_sidebar_stays_as_the_user_left_it() {
+        let dir = tempfile::tempdir().unwrap();
+        // Window state and thumbnails go to scratch directories.
+        std::env::set_var("XDG_STATE_HOME", dir.path().join("state"));
+        std::env::set_var("XDG_CACHE_HOME", dir.path().join("cache"));
+        std::env::set_var("GDK_DEBUG", "no-portals");
+        let Some(_display) = helix_app_common::testing::headless_gtk() else {
+            eprintln!("no headless GTK display (gtk4-broadwayd); skipping");
+            return;
+        };
+        adw::init().unwrap();
+        let small = dir.path().join("small.png");
+        let large = dir.path().join("large.png");
+        write_png(&small, 400, 300);
+        write_png(&large, 900, 600);
+        let app = adw::Application::builder()
+            .application_id("org.helixdesktop.ImageViewer.Test")
+            .flags(gio::ApplicationFlags::NON_UNIQUE)
+            .build();
+        app.register(gio::Cancellable::NONE).unwrap();
+        let viewer = Viewer::new(&app);
+        viewer.window.present();
+        settle(200);
+        let changes = Rc::new(Cell::new(0u32));
+        let c = changes.clone();
+        viewer
+            .split
+            .connect_show_sidebar_notify(move |_| c.set(c.get() + 1));
+
+        // Closed: opening images (which resize the window across the
+        // breakpoint) and window changes leave it closed.
+        assert!(!viewer.split.shows_sidebar());
+        for path in [&small, &large, &small, &large] {
+            show(&viewer, path);
+            assert!(
+                !viewer.split.shows_sidebar(),
+                "shown after opening {path:?}"
+            );
+        }
+        shake(&viewer);
+        assert!(!viewer.split.shows_sidebar(), "shown after resizing");
+        assert_eq!(changes.get(), 0, "show-sidebar changed by itself");
+
+        // Opened by the user: it stays open.
+        WidgetExt::activate_action(&viewer.window, "win.properties", None).unwrap();
+        settle(100);
+        assert!(viewer.split.shows_sidebar());
+        assert!(viewer.props_btn.is_active());
+        changes.set(0);
+        for path in [&small, &large, &small, &large] {
+            show(&viewer, path);
+            assert!(
+                viewer.split.shows_sidebar(),
+                "hidden after opening {path:?}"
+            );
+        }
+        shake(&viewer);
+        assert!(viewer.split.shows_sidebar(), "hidden after resizing");
+        assert_eq!(changes.get(), 0, "show-sidebar changed by itself");
+
+        // And the user closes it again.
+        WidgetExt::activate_action(&viewer.window, "win.properties", None).unwrap();
+        settle(100);
+        assert!(!viewer.split.shows_sidebar());
+        viewer.window.destroy();
+    }
 }
