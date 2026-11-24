@@ -79,6 +79,15 @@ fn start_headless() -> Result<Headless, String> {
     std::env::set_var("BROADWAY_DISPLAY", format!(":{display}"));
     std::env::set_var("GTK_A11Y", "test");
     gtk::init().map_err(|e| format!("GTK can't open Broadway display :{display}: {e}"))?;
+    // Broadway sets no font resolution, as a desktop session does; then
+    // libadwaita before 1.7 (Ubuntu 24.04's 1.5) takes `sp` lengths as 0
+    // and no breakpoint in `sp` ever applies (libadwaita commit 9759d3fd,
+    // "length-unit: Also fall back if gtk-xft-dpi is default value").
+    if let Some(settings) = gtk::Settings::default() {
+        if settings.gtk_xft_dpi() <= 0 {
+            settings.set_gtk_xft_dpi(96 * 1024);
+        }
+    }
     Ok(daemon)
 }
 
@@ -86,8 +95,9 @@ fn start_headless() -> Result<Headless, String> {
 /// size, as a compositor does when GTK asks for it. GTK's Broadway backend
 /// only does that itself from GTK 4.16 (GTK commit 9a8e5b07, "Add missed
 /// compute_size and request_layout vfunc to GdkBroadwaySurface"); before
-/// that (Ubuntu 24.04's 4.14) it sizes a window only when it is
-/// presented, so this presents it again. Does nothing from 4.16 on, or
+/// that (Ubuntu 24.04's 4.14) it sizes a window only when GTK presents
+/// it again, which `gtk_window_unmaximize` does (`gtk_window_present`
+/// only focuses a visible window). Does nothing from 4.16 on, or
 /// while the window is maximized or fullscreen. Call it while waiting for
 /// a resize.
 pub fn follow_default_size(window: &impl IsA<gtk::Window>) {
@@ -101,7 +111,7 @@ pub fn follow_default_size(window: &impl IsA<gtk::Window>) {
     }
     let (width, height) = window.default_size();
     if (width > 0 && window.width() != width) || (height > 0 && window.height() != height) {
-        window.present();
+        window.unmaximize();
     }
 }
 
