@@ -66,12 +66,14 @@ impl Helper {
 
     /// Run it with `layout` (from [`layout`]).
     pub fn run(&self, layout: &str) -> Outcome {
-        let child = Command::new(&self.pkexec)
-            .arg(&self.helper)
-            .stdin(Stdio::piped())
-            .stdout(Stdio::null())
-            .stderr(Stdio::piped())
-            .spawn();
+        let child = spawn_retrying_busy(|| {
+            Command::new(&self.pkexec)
+                .arg(&self.helper)
+                .stdin(Stdio::piped())
+                .stdout(Stdio::null())
+                .stderr(Stdio::piped())
+                .spawn()
+        });
         let mut child = match child {
             Ok(child) => child,
             Err(e) => return Outcome::Failed(e.to_string()),
@@ -108,6 +110,26 @@ impl Helper {
             }
         }
     }
+}
+
+/// `spawn()`, tried again for a moment while the program is busy
+/// (ETXTBSY): it is being replaced (pkexec during an upgrade), or a
+/// thread forked while it was being written, and the child still has
+/// it open until its exec.
+fn spawn_retrying_busy(
+    mut spawn: impl FnMut() -> std::io::Result<std::process::Child>,
+) -> std::io::Result<std::process::Child> {
+    let mut delay = std::time::Duration::from_millis(5);
+    for _ in 0..8 {
+        match spawn() {
+            Err(e) if e.kind() == std::io::ErrorKind::ExecutableFileBusy => {
+                std::thread::sleep(delay);
+                delay *= 2;
+            }
+            result => return result,
+        }
+    }
+    spawn()
 }
 
 /// A TOML basic string.
@@ -204,7 +226,7 @@ mod tests {
             match pkexec_status {
                 Some(s) => format!("exit {s}\n"),
                 None => format!(
-                    "echo \"$@\" > '{}'\nexec \"$@\"\n",
+                    "echo \"$@\" > '{}'\nexec /bin/sh \"$@\"\n",
                     dir.join("args").display()
                 ),
             },
