@@ -49,53 +49,6 @@ fn wait_source(eds: &Eds, uid: &str, present: bool) -> Option<helix_eds::Source>
     panic!("source {uid} presence != {present}");
 }
 
-/// Waits, after its book or calendar is closed, until the backend is done
-/// with `src`, so that it can be removed safely.
-///
-/// On close the backend sets the source's `ConnectionStatus` to
-/// "disconnected" (a `Properties.Set` on the registry's object) and calls
-/// `UnsetLastCredentialsRequiredArguments`. A `Remove` that arrives in
-/// between makes `evolution-source-registry` (EDS 3.52 and 3.56) crash in
-/// GDBus's `invoke_set_property_in_idle_cb`: the Set is dispatched from an
-/// idle after the object was unexported. An upstream bug; the tests wait
-/// it out (helixdesktop/apps#203).
-fn wait_backend_closed(eds: &Eds, src: &helix_eds::Source) {
-    let status = || -> Option<String> {
-        let p = zbus::blocking::Proxy::new(
-            eds.connection(),
-            "org.gnome.evolution.dataserver.Sources5",
-            src.object_path.as_str(),
-            "org.gnome.evolution.dataserver.Source",
-        )
-        .ok()?;
-        p.get_property::<String>("ConnectionStatus").ok()
-    };
-    // Done when "disconnected" has stood for a moment, or when nothing has
-    // changed for longer (a webcal backend closed while still connecting
-    // can stay "connecting").
-    let ms = std::time::Duration::from_millis;
-    let deadline = std::time::Instant::now() + std::time::Duration::from_secs(20);
-    let mut last = status();
-    let mut since = std::time::Instant::now();
-    loop {
-        let quiet = since.elapsed();
-        if quiet >= ms(1500) || (quiet >= ms(500) && last.as_deref() == Some("disconnected")) {
-            return;
-        }
-        assert!(
-            std::time::Instant::now() < deadline,
-            "{}: ConnectionStatus keeps changing ({last:?})",
-            src.uid
-        );
-        std::thread::sleep(ms(50));
-        let now = status();
-        if now != last {
-            last = now;
-            since = std::time::Instant::now();
-        }
-    }
-}
-
 #[test]
 fn contacts_round_trip() {
     let Some(eds) = private_eds() else { return };
@@ -175,7 +128,6 @@ fn contacts_round_trip() {
     drop(_view);
     drop(book);
 
-    wait_backend_closed(&eds, &src);
     eds.remove_source(&src).unwrap();
     wait_source(&eds, &uid, false);
 }
@@ -340,7 +292,6 @@ fn calendar_round_trip() {
     assert!(cal.events(&sexp::all_events()).unwrap().is_empty());
     drop(_view);
     drop(cal);
-    wait_backend_closed(&eds, &src);
     eds.remove_source(&src).unwrap();
     wait_source(&eds, &uid, false);
 }
@@ -418,7 +369,50 @@ END:VCALENDAR\r\n";
 
     drop(_view);
     drop(cal);
-    wait_backend_closed(&eds, &src);
     eds.remove_source(&src).unwrap();
     wait_source(&eds, &uid, false);
+}
+
+/// Removing a source right after closing its book or calendar must not
+/// crash `evolution-source-registry` (helixdesktop/apps#205): the Calendar
+/// app closes its client and then removes the calendar. `remove_source`
+/// waits for the closed backend to finish with the source first.
+#[test]
+fn remove_right_after_close() {
+    let Some(eds) = private_eds() else { return };
+    for round in 0..6 {
+        let uid = source::new_uid();
+        let book = round % 2 == 0;
+        let data = if book {
+            source::new_local_address_book("Helix Gone")
+        } else {
+            source::new_local_calendar("Helix Gone", "#62a0ea")
+        };
+        eds.create_source(&uid, &data).unwrap();
+        let src = wait_source(&eds, &uid, true).unwrap();
+        // The factory can learn of a new source a little after the
+        // registry lists it ("No such source for UID").
+        let mut tries = 0;
+        loop {
+            let opened = if book {
+                eds.open_book(&uid).map(drop)
+            } else {
+                eds.open_calendar(&uid).map(drop)
+            };
+            match opened {
+                Ok(()) => break,
+                Err(e) if tries < 50 && e.to_string().contains("No such source") => {
+                    tries += 1;
+                    std::thread::sleep(std::time::Duration::from_millis(100));
+                }
+                Err(e) => panic!("open {uid}: {e}"),
+            }
+        }
+        // Closed (dropped): remove it at once, as the Calendar app does.
+        eds.remove_source(&src).unwrap();
+        wait_source(&eds, &uid, false);
+        // Still serving: a crashed registry gives NoReply or "not provided".
+        eds.sources()
+            .unwrap_or_else(|e| panic!("registry gone after round {round}: {e}"));
+    }
 }
