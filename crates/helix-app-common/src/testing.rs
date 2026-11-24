@@ -57,22 +57,27 @@ fn start_headless() -> Result<Headless, String> {
         .spawn()
         .map_err(|e| format!("can't start gtk4-broadwayd (libgtk-4-bin): {e}"))?;
     let mut daemon = Headless(child);
-    // Its display socket is listening once the web one is.
+    // GTK connects to the display socket, which gtk4-broadwayd creates
+    // and listens on only after its web one: wait until it takes a
+    // connection (#209; GTK failed to start beside a busy CPU).
+    let socket = runtime.join(format!("broadway{}.socket", display + 1));
+    let mut ready = false;
     for _ in 0..100 {
-        if web.exists() {
+        if std::os::unix::net::UnixStream::connect(&socket).is_ok() {
+            ready = true;
             break;
         }
         if let Ok(Some(status)) = daemon.0.try_wait() {
+            std::fs::remove_file(&web).ok();
             return Err(format!("gtk4-broadwayd :{display} exited ({status})"));
         }
         std::thread::sleep(std::time::Duration::from_millis(50));
     }
-    let ready = web.exists();
     std::fs::remove_file(&web).ok();
     if !ready {
         return Err(format!(
-            "gtk4-broadwayd :{display} made no socket at {} in 5 s",
-            web.display()
+            "gtk4-broadwayd :{display} took no connection at {} in 5 s",
+            socket.display()
         ));
     }
     std::env::set_var("GDK_BACKEND", "broadway");
@@ -100,6 +105,15 @@ fn start_headless() -> Result<Headless, String> {
 /// only focuses a visible window). Does nothing from 4.16 on, or
 /// while the window is maximized or fullscreen. Call it while waiting for
 /// a resize.
+///
+/// It presents the window once for each new default size, and again only
+/// after [`REPRESENT_AFTER`]: presenting resizes the window's surface at
+/// once, but the window takes that size only when its frame clock lays it
+/// out. Every present makes `gtk4-broadwayd` answer with a configure event,
+/// which GLib dispatches at `G_PRIORITY_DEFAULT`, ahead of the frame clock
+/// (`GDK_PRIORITY_EVENTS + 1` and `GDK_PRIORITY_REDRAW`). Presenting on
+/// every turn of a waiting loop kept an answer ready on every turn, so the
+/// window never laid out and the wait ran out (#209).
 pub fn follow_default_size(window: &impl IsA<gtk::Window>) {
     let window = window.as_ref();
     if gtk::check_version(4, 16, 0).is_none()
@@ -110,9 +124,43 @@ pub fn follow_default_size(window: &impl IsA<gtk::Window>) {
         return;
     }
     let (width, height) = window.default_size();
-    if (width > 0 && window.width() != width) || (height > 0 && window.height() != height) {
+    if (width <= 0 || window.width() == width) && (height <= 0 || window.height() == height) {
+        return;
+    }
+    let now = std::time::Instant::now();
+    let due = PRESENTED.with_borrow_mut(|presented| {
+        presented.retain(|(w, _, _)| w.upgrade().is_some());
+        match presented
+            .iter_mut()
+            .find(|(w, _, _)| w.upgrade().as_ref() == Some(window))
+        {
+            Some((_, size, at)) if *size == (width, height) && now - *at < REPRESENT_AFTER => false,
+            Some((_, size, at)) => {
+                (*size, *at) = ((width, height), now);
+                true
+            }
+            None => {
+                presented.push((window.downgrade(), (width, height), now));
+                true
+            }
+        }
+    });
+    if due {
         window.unmaximize();
     }
+}
+
+/// How long [`follow_default_size`] lets a window lay out at a size it
+/// was presented at before presenting it again. Broadway paints at most
+/// once a second when no browser is connected to it.
+const REPRESENT_AFTER: std::time::Duration = std::time::Duration::from_millis(1500);
+
+/// A window [`follow_default_size`] presented, at which default size, and
+/// when.
+type Presented = (glib::WeakRef<gtk::Window>, (i32, i32), std::time::Instant);
+
+thread_local! {
+    static PRESENTED: std::cell::RefCell<Vec<Presented>> = const { std::cell::RefCell::new(Vec::new()) };
 }
 
 /// `None` when GTK's own accessible `property` of `widget` is the string
