@@ -112,7 +112,6 @@ fn preedit_and_commit_in_text_fields() {
     std::env::set_var("GTK_IM_MODULE", "ibus");
     std::env::set_var("IBUS_ADDRESS", ibus.address());
     let Some(_display) = helix_app_common::testing::headless_gtk() else {
-        eprintln!("no headless GTK display (gtk4-broadwayd); skipping");
         return;
     };
     adw::init().unwrap();
@@ -152,7 +151,7 @@ fn preedit_and_commit_in_text_fields() {
             ibus.events().iter().any(|e| matches!(e, Event::FocusIn(_)))
         });
         if i == 0 && !focused {
-            eprintln!("GTK's IBus module (ibus-gtk4) is not loaded; skipping");
+            helix_app_common::testing::skip_gtk_test("GTK's IBus module (ibus-gtk4) is not loaded");
             return;
         }
         assert!(focused, "{}: no FocusIn", field.name);

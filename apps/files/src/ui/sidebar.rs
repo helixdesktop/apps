@@ -717,7 +717,6 @@ mod tests {
     #[test]
     fn rows_are_named_by_their_labels() {
         let Some(_display) = headless_gtk() else {
-            eprintln!("no headless GTK display (gtk4-broadwayd); skipping");
             return;
         };
         let mut places = fixed_places(false);

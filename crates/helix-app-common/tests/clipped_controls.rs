@@ -8,7 +8,6 @@ use gtk::prelude::*;
 #[test]
 fn reports_cut_off_controls() {
     let Some(_display) = helix_app_common::testing::headless_gtk() else {
-        eprintln!("no headless GTK display (gtk4-broadwayd); skipping");
         return;
     };
     let window = gtk::Window::new();

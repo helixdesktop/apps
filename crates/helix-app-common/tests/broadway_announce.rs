@@ -16,7 +16,6 @@ use std::time::{Duration, Instant};
 #[test]
 fn announcements_and_toasts_without_at_spi() {
     let Some(_display) = helix_app_common::testing::headless_gtk() else {
-        eprintln!("no headless GTK display (gtk4-broadwayd); skipping");
         return;
     };
     adw::init().unwrap();

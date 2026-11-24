@@ -36,7 +36,6 @@ fn shortcut_is_not_part_of_the_name() {
         return;
     }
     let Some(_display) = headless_gtk() else {
-        eprintln!("no headless GTK display (gtk4-broadwayd); skipping");
         return;
     };
     let label = tr("Search");
