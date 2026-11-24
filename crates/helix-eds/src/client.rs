@@ -31,6 +31,14 @@ pub const CAL_FACTORY_IFACE: &str = "org.gnome.evolution.dataserver.CalendarFact
 pub const CAL_IFACE: &str = "org.gnome.evolution.dataserver.Calendar";
 pub const CAL_VIEW_IFACE: &str = "org.gnome.evolution.dataserver.CalendarView";
 
+const PROPERTIES_IFACE: &str = "org.freedesktop.DBus.Properties";
+
+/// The longest [`Eds::wait_backend_settled`] waits.
+pub const SETTLE_LIMIT: Duration = Duration::from_secs(5);
+/// How long a connection status other than "disconnected" must stay
+/// unchanged for [`Eds::wait_backend_settled`] to return.
+pub const SETTLE_QUIET: Duration = Duration::from_millis(1500);
+
 /// View flag: deliver existing matches as `ObjectsAdded` after `Start`.
 const VIEW_FLAGS_NOTIFY_INITIAL: u32 = 1;
 
@@ -286,10 +294,15 @@ impl Eds {
     }
 
     /// Deletes a source (and its data, for local sources).
+    ///
+    /// Waits first, up to a few seconds, for a book or calendar backend that
+    /// was just closed to finish with the source
+    /// ([`Eds::wait_backend_settled`]).
     pub fn remove_source(&self, source: &Source) -> Result<()> {
         if !source.removable {
             return Err(Error::NotRemovable(source.display_name()));
         }
+        self.wait_backend_settled(source);
         let p = proxy(
             &self.conn,
             SOURCES_BUS,
@@ -298,6 +311,67 @@ impl Eds {
         )?;
         p.call::<_, _, ()>("Remove", &())?;
         Ok(())
+    }
+
+    /// Waits until no backend is about to set `source`'s connection status,
+    /// so that the source can be removed safely. Blocks for up to
+    /// [`SETTLE_LIMIT`]; returns at once when the source is disconnected.
+    ///
+    /// A backend that is closed (its last client closed the book or
+    /// calendar) sets the source's `ConnectionStatus` to "disconnected" with
+    /// a `Properties.Set` on the registry's object, just after replying to
+    /// `Close`. If `Remove` unexports that object before the registry has
+    /// handled the Set, `evolution-source-registry` crashes: GLib runs the
+    /// queued Set on the freed object (GNOME/glib#2400, fixed on GLib's main
+    /// branch after 2.90.1; helixdesktop/apps#205).
+    ///
+    /// The registry handles calls to the object in order, so once it reports
+    /// "disconnected", in a reply to `Get` or in `PropertiesChanged`, the Set
+    /// has run. (The backend's other calls on close are method calls, which
+    /// GLib drops safely for an unexported object.) A source that stays
+    /// "connected" or "connecting" may be held open by another client (the
+    /// shell, say), or be a web calendar closed while still connecting, which
+    /// never reports "disconnected": then this waits until the status has
+    /// not changed for [`SETTLE_QUIET`].
+    pub fn wait_backend_settled(&self, source: &Source) {
+        let (tx, rx) = std::sync::mpsc::channel::<String>();
+        // Subscribe before reading, so that no change is missed.
+        let watch = watch_signals(
+            &self.conn,
+            Some(&source.object_path),
+            Some(PROPERTIES_IFACE),
+            move |msg| {
+                if let Some(status) = changed_connection_status(msg) {
+                    let _ = tx.send(status);
+                }
+            },
+        );
+        let Ok(_watch) = watch else { return };
+        let Ok(p) = proxy(&self.conn, SOURCES_BUS, &source.object_path, SOURCE_IFACE) else {
+            return;
+        };
+        // No such property (or source): nothing will set it.
+        let Ok(mut status) = p.get_property::<String>("ConnectionStatus") else {
+            return;
+        };
+        let start = std::time::Instant::now();
+        let mut since = start;
+        while status != "disconnected" {
+            let left = SETTLE_QUIET
+                .saturating_sub(since.elapsed())
+                .min(SETTLE_LIMIT.saturating_sub(start.elapsed()));
+            if left.is_zero() {
+                return;
+            }
+            match rx.recv_timeout(left) {
+                Ok(s) => {
+                    status = s;
+                    since = std::time::Instant::now();
+                }
+                Err(std::sync::mpsc::RecvTimeoutError::Timeout) => {}
+                Err(std::sync::mpsc::RecvTimeoutError::Disconnected) => return,
+            }
+        }
     }
 
     /// Calls `f` whenever sources are added, removed or changed.
@@ -377,6 +451,19 @@ fn source_from_ifaces(
     s.writable = writable;
     s.removable = removable;
     Some(s)
+}
+
+/// The new `ConnectionStatus` in a source's `PropertiesChanged` signal.
+fn changed_connection_status(msg: &zbus::Message) -> Option<String> {
+    if msg.header().member()?.as_str() != "PropertiesChanged" {
+        return None;
+    }
+    let (iface, changed, _): (String, HashMap<String, OwnedValue>, Vec<String>) =
+        msg.body().deserialize().ok()?;
+    if iface != SOURCE_IFACE {
+        return None;
+    }
+    String::try_from(changed.get("ConnectionStatus")?.try_clone().ok()?).ok()
 }
 
 /// A live query on a book or calendar. Dropping it stops and disposes the
