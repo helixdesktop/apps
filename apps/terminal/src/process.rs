@@ -288,8 +288,10 @@ mod tests {
         (master, child)
     }
 
+    /// Whether `f` comes true within a while (generous: CI runners can be
+    /// slow to fork and exec).
     fn wait_for(mut f: impl FnMut() -> bool) -> bool {
-        let end = Instant::now() + Duration::from_secs(3);
+        let end = Instant::now() + Duration::from_secs(20);
         while Instant::now() < end {
             if f() {
                 return true;
@@ -314,11 +316,21 @@ mod tests {
     fn foreground_job_is_busy() {
         // With job control on, the shell puts `sleep` in its own foreground
         // process group, like an interactive shell running a program.
-        let (fd, mut child) = spawn_on_pty("set -m; sleep 5; true");
+        let (fd, mut child) = spawn_on_pty("set -m; sleep 60; true");
         let pid = child.id() as i32;
         assert!(wait_for(|| is_busy(fd, pid)), "foreground never changed");
-        let pg = foreground_pgrp(fd).unwrap();
-        assert_eq!(command_name(pg).as_deref(), Some("sleep"));
+        // The new group's leader is the shell's fork until it has run
+        // `exec sleep`: wait for that rather than look once.
+        let mut pg = None;
+        let mut last = None;
+        let ran = wait_for(|| {
+            pg = foreground_pgrp(fd).filter(|&g| g != pid);
+            last = pg.and_then(command_name);
+            last.as_deref() == Some("sleep")
+        });
+        assert!(ran, "foreground {pg:?} is {last:?}, not sleep");
+        assert!(is_busy(fd, pid));
+        let pg = pg.unwrap();
         unsafe { libc::kill(-pg, libc::SIGKILL) };
         child.kill().ok();
         child.wait().ok();

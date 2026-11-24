@@ -64,7 +64,7 @@ if [ $rc -ne 0 ]; then
             name=${core#"$EDS_CORES".}; name=${name%.*}
             daemon=$(ls -d "$LIBEXEC/$name"* 2>/dev/null | head -n 1)
             echo "--- backtrace of ${daemon:-$name} ($core)"
-            gdb -q -batch -ex "set debuginfod enabled on" -ex "thread apply all bt" \
+            gdb -q -batch -iex "set debuginfod enabled on" -ex "thread apply all bt" \
                 ${daemon:+"$daemon"} "$core" 2>&1 | tail -n 200
         done
     fi

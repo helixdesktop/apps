@@ -490,7 +490,9 @@ clock-format = \"24h\"      # 12h or 24h; unset: see \"Clock\"
         assert_eq!(changes(&current, &twelve).check(), Ok(()));
     }
 
-    /// A fake `pkexec` (runs its arguments, or exits `pkexec_status`) and
+    /// A fake `pkexec` (runs its argument with `sh`, which reads it rather
+    /// than executing a file another test thread may still have open for
+    /// writing, or exits `pkexec_status`) and
     /// a fake `helix-login-config` (copies its input to `got`, prints
     /// `message`, exits `status`), in `dir`.
     pub fn fake_helper(
@@ -510,7 +512,7 @@ clock-format = \"24h\"      # 12h or 24h; unset: see \"Clock\"
             match pkexec_status {
                 Some(s) => format!("exit {s}\n"),
                 None => format!(
-                    "echo \"$#:$@\" > '{}'\nexec \"$@\"\n",
+                    "echo \"$#:$@\" > '{}'\nexec /bin/sh \"$@\"\n",
                     dir.join("args").display()
                 ),
             },
