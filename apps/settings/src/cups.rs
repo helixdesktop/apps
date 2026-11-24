@@ -1528,19 +1528,13 @@ pub mod tests {
     fn through_the_real_helper() {
         let bus = std::env::var("HELIX_TEST_BUS").expect("HELIX_TEST_BUS: a private bus");
         let server = Server::Tcp(std::env::var("HELIX_TEST_CUPS").expect("HELIX_TEST_CUPS"));
-        let connect = || {
-            zbus::blocking::connection::Builder::address(bus.as_str())
-                .unwrap()
-                .build()
-                .unwrap()
-        };
-        let polkit = connect();
+        let polkit = testbus::service_at(&bus);
         polkit
             .object_server()
             .at("/org/freedesktop/PolicyKit1/Authority", AllowAll)
             .unwrap();
         polkit.request_name("org.freedesktop.PolicyKit1").unwrap();
-        let c = connect();
+        let c = testbus::connect_at(&bus);
         let p = read(&server).unwrap().printers[0].name.clone();
         set_default(&c, &p).unwrap();
         assert_eq!(read(&server).unwrap().default.as_deref(), Some(p.as_str()));
@@ -1686,7 +1680,7 @@ pub mod tests {
         let Some(bus) = testbus::private_bus() else {
             return;
         };
-        let service = testbus::connect(&bus);
+        let service = testbus::service(&bus);
         let log = Log::default();
         serve_helper(&service, &log, "");
         let c = testbus::connect(&bus);
@@ -1730,7 +1724,7 @@ pub mod tests {
         };
         let c = testbus::connect(&bus);
         assert_eq!(set_default(&c, "office"), Err(bus::Error::Missing));
-        let service = testbus::connect(&bus);
+        let service = testbus::service(&bus);
         serve_helper(
             &service,
             &Log::default(),

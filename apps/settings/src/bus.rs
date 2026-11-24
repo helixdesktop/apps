@@ -249,11 +249,54 @@ pub mod testbus {
         Bus::start()
     }
 
+    /// How long a call to a fake may take before it fails (instead of
+    /// hanging the test).
+    pub const CALL_TIMEOUT: std::time::Duration = std::time::Duration::from_secs(30);
+
+    fn builder(address: &str) -> zbus::blocking::connection::Builder<'static> {
+        zbus::blocking::connection::Builder::address(address)
+            .unwrap()
+            .method_timeout(CALL_TIMEOUT)
+    }
+
+    /// A client connection to `bus`; its calls time out after
+    /// [`CALL_TIMEOUT`].
     pub fn connect(bus: &Bus) -> Connection {
-        zbus::blocking::connection::Builder::address(bus.address())
+        connect_at(bus.address())
+    }
+
+    /// [`connect`] to the bus at `address`.
+    pub fn connect_at(address: &str) -> Connection {
+        builder(address).build().unwrap()
+    }
+
+    /// A connection for a fake service on `bus`: one whose objects
+    /// answer calls as soon as they are added with
+    /// `object_server().at(…)`.
+    pub fn service(bus: &Bus) -> Connection {
+        service_at(bus.address())
+    }
+
+    /// [`service`] on the bus at `address`.
+    ///
+    /// zbus starts a connection's object-server task on the first
+    /// `object_server()` and does not wait for it, so a name requested
+    /// right after can bring a call before the task listens, and zbus
+    /// drops it: the caller waits for a reply forever (#206). A
+    /// connection built with an object waits for that task, so this one
+    /// is built with a placeholder object, which is then removed.
+    pub fn service_at(address: &str) -> Connection {
+        struct Starting;
+        #[zbus::interface(name = "org.helixdesktop.Test.Starting")]
+        impl Starting {}
+        const PATH: &str = "/org/helixdesktop/Test/Starting";
+        let conn = builder(address)
+            .serve_at(PATH, Starting)
             .unwrap()
             .build()
-            .unwrap()
+            .unwrap();
+        conn.object_server().remove::<Starting, _>(PATH).unwrap();
+        conn
     }
 
     /// Waits up to two seconds for `cond`.

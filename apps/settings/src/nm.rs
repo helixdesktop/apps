@@ -1504,7 +1504,7 @@ pub mod tests {
         assert_eq!(read(&app), Err(bus::Error::Missing));
         let changes = testbus::count_changes(&bus, &[NM]);
         let log: Log = Arc::default();
-        let service = testbus::connect(&bus);
+        let service = testbus::service(&bus);
         serve(&service, &log);
         assert!(testbus::eventually(|| changes.load(Ordering::SeqCst) > 0));
 

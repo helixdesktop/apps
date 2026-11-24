@@ -585,7 +585,7 @@ pub mod tests {
         let app = testbus::connect(&bus);
         assert!(matches!(read(&app, 4242), Err(bus::Error::Missing)));
         let log: Log = Arc::default();
-        let service = testbus::connect(&bus);
+        let service = testbus::service(&bus);
         serve(&service, 4242, true, &log);
         let changes = testbus::count_changes(&bus, &[ACCOUNTS]);
 

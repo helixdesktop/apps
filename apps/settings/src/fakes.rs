@@ -13,12 +13,7 @@
 #[ignore]
 fn serve_fakes() {
     let address = std::env::var("HELIX_FAKES_BUS").expect("HELIX_FAKES_BUS: a private bus");
-    let connect = || {
-        zbus::blocking::connection::Builder::address(address.as_str())
-            .unwrap()
-            .build()
-            .unwrap()
-    };
+    let connect = || crate::bus::testbus::service_at(&address);
     let log = crate::bluez::tests::Log::default();
     let bluez = connect();
     crate::bluez::tests::serve(&bluez, &log);

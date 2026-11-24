@@ -774,7 +774,7 @@ mod tests {
             return;
         };
         let log: Log = Default::default();
-        let service = testbus::connect(&bus);
+        let service = testbus::service(&bus);
         serve(&service, &log);
         let app = testbus::connect(&bus);
         let nm = nm::read(&app).unwrap();

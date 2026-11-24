@@ -245,7 +245,7 @@ pub mod tests {
         };
         let app = testbus::connect(&bus);
         assert_eq!(read(&app, "org.gnome.Maps"), Err(bus::Error::Missing));
-        let service = testbus::connect(&bus);
+        let service = testbus::service(&bus);
         serve(&service);
         let changes = testbus::count_changes(&bus, &[NAME]);
 
