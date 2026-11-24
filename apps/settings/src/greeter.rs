@@ -675,7 +675,7 @@ clock-format = \"24h\"      # 12h or 24h; unset: see \"Clock\"
             };
             let app = testbus::connect(&bus);
             assert_eq!(display_manager(&app), None, "no systemd");
-            let systemd = testbus::connect(&bus);
+            let systemd = testbus::service(&bus);
             serve_systemd(&systemd, unit);
             assert_eq!(display_manager(&app).as_deref(), answer, "{unit:?}");
         }

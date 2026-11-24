@@ -2872,7 +2872,7 @@ pub mod tests {
         });
         std::thread::sleep(std::time::Duration::from_millis(100));
 
-        let service = testbus::connect(&bus);
+        let service = testbus::service(&bus);
         let calls = serve(&service, sample_agents());
         assert!(
             testbus::eventually(|| changes.load(Ordering::SeqCst) >= 1),

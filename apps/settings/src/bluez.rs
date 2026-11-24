@@ -559,7 +559,7 @@ pub mod tests {
 
         let changes = testbus::count_changes(&bus, &[BLUEZ]);
         let log: Log = Arc::default();
-        let service = testbus::connect(&bus);
+        let service = testbus::service(&bus);
         serve(&service, &log);
         assert!(
             testbus::eventually(|| changes.load(Ordering::SeqCst) > 0),
@@ -648,7 +648,7 @@ pub mod tests {
             send_files(&app, "AA:BB:CC:00:00:02"),
             Err(bus::Error::Missing)
         );
-        let shell = testbus::connect(&bus);
+        let shell = testbus::service(&bus);
         serve_send_to(&shell, &log);
         send_files(&app, "AA:BB:CC:00:00:02").unwrap();
         assert_eq!(

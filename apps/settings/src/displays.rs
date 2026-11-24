@@ -774,7 +774,7 @@ pub mod tests {
         assert_eq!(read(&app), Err(bus::Error::Missing));
         let log: Log = Arc::default();
         let changes = testbus::count_changes(&bus, &[NAME]);
-        let service = testbus::connect(&bus);
+        let service = testbus::service(&bus);
         serve(&service, &log);
         let mut c = read(&app).unwrap();
         assert!(allowed(&app));

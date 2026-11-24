@@ -247,7 +247,7 @@ mod tests {
     /// The fake DisplayConfig's state, as the panel reads it.
     fn state() -> Option<State> {
         let bus = testbus::private_bus()?;
-        let service = testbus::connect(&bus);
+        let service = testbus::service(&bus);
         displays::tests::serve(&service, &Default::default());
         let app = testbus::connect(&bus);
         Some(displays::current_state(&app).unwrap())
