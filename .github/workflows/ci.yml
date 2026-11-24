@@ -56,10 +56,11 @@ jobs:
       # in-memory GSettings, so no test can reach a display, a user bus, a
       # real service or real settings. HELIX_REQUIRE_GTK makes a GTK UI test
       # that can't start its Broadway display fail instead of skipping (#201).
+      # --no-fail-fast reports every failing test binary, not just the first.
       - name: Test
         env:
           HELIX_REQUIRE_GTK: "1"
-        run: tools/testing/run-tests.sh cargo test --workspace --locked
+        run: tools/testing/run-tests.sh cargo test --workspace --locked --no-fail-fast
 
       # The helix-eds tests against real Evolution Data Server daemons on a
       # private bus with scratch data, one test at a time: Ubuntu 24.04's

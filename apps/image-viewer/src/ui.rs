@@ -2123,12 +2123,18 @@ mod tests {
 
     /// Runs the main context until `done` or 10 s.
     fn wait_for(what: &str, done: impl Fn() -> bool) {
+        wait_for_state(what, done, String::new);
+    }
+
+    /// [`wait_for`], saying what `state` is when it times out.
+    fn wait_for_state(what: &str, done: impl Fn() -> bool, state: impl Fn() -> String) {
         let ctx = glib::MainContext::default();
         let end = std::time::Instant::now() + Duration::from_secs(10);
         while !done() {
             assert!(
                 std::time::Instant::now() < end,
-                "timed out waiting for {what}"
+                "timed out waiting for {what} {}",
+                state()
             );
             ctx.iteration(false);
             std::thread::sleep(Duration::from_millis(2));
@@ -2161,9 +2167,25 @@ mod tests {
         });
         settle(300);
         let w = &viewer.window;
-        wait_for("the window to take the image's size", || {
-            w.width() == w.default_size().0
-        });
+        wait_for_state(
+            "the window to take the image's size",
+            || w.width() == w.default_size().0,
+            || window_state(w),
+        );
+    }
+
+    fn window_state(w: &adw::ApplicationWindow) -> String {
+        format!(
+            "(size {}x{}, default {:?}, maximized {}, min {:?})",
+            w.width(),
+            w.height(),
+            w.default_size(),
+            w.is_maximized(),
+            (
+                w.measure(gtk::Orientation::Horizontal, -1).0,
+                w.measure(gtk::Orientation::Vertical, -1).0
+            ),
+        )
     }
 
     /// Resizes across the collapse breakpoint (640 sp) and back, and
@@ -2172,10 +2194,10 @@ mod tests {
         let w = &viewer.window;
         for _ in 0..3 {
             w.set_default_size(400, 400);
-            wait_for("a narrow window", || w.width() == 400);
+            wait_for_state("a narrow window", || w.width() == 400, || window_state(w));
             settle(50);
             w.set_default_size(1000, 700);
-            wait_for("a wide window", || w.width() == 1000);
+            wait_for_state("a wide window", || w.width() == 1000, || window_state(w));
             settle(50);
         }
         for _ in 0..3 {
