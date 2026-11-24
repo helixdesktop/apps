@@ -2169,7 +2169,10 @@ mod tests {
         let w = &viewer.window;
         wait_for_state(
             "the window to take the image's size",
-            || w.width() == w.default_size().0,
+            || {
+                helix_app_common::testing::follow_default_size(w);
+                w.width() == w.default_size().0
+            },
             || window_state(w),
         );
     }
@@ -2194,10 +2197,24 @@ mod tests {
         let w = &viewer.window;
         for _ in 0..3 {
             w.set_default_size(400, 400);
-            wait_for_state("a narrow window", || w.width() == 400, || window_state(w));
+            wait_for_state(
+                "a narrow window",
+                || {
+                    helix_app_common::testing::follow_default_size(w);
+                    w.width() == 400
+                },
+                || window_state(w),
+            );
             settle(50);
             w.set_default_size(1000, 700);
-            wait_for_state("a wide window", || w.width() == 1000, || window_state(w));
+            wait_for_state(
+                "a wide window",
+                || {
+                    helix_app_common::testing::follow_default_size(w);
+                    w.width() == 1000
+                },
+                || window_state(w),
+            );
             settle(50);
         }
         for _ in 0..3 {

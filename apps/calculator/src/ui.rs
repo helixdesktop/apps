@@ -1826,10 +1826,19 @@ mod layout_tests {
     use std::time::{Duration, Instant};
 
     fn wait_for(what: &str, done: impl Fn() -> bool) {
+        wait_for_state(what, done, String::new);
+    }
+
+    /// [`wait_for`], saying what `state` is when it times out.
+    fn wait_for_state(what: &str, done: impl Fn() -> bool, state: impl Fn() -> String) {
         let deadline = Instant::now() + Duration::from_secs(20);
         let ctx = glib::MainContext::default();
         while !done() {
-            assert!(Instant::now() < deadline, "timed out waiting for {what}");
+            assert!(
+                Instant::now() < deadline,
+                "timed out waiting for {what} {}",
+                state()
+            );
             if !ctx.iteration(false) {
                 std::thread::sleep(Duration::from_millis(10));
             }
@@ -1870,7 +1879,6 @@ mod layout_tests {
             std::env::set_var(var, home.join(dir));
         }
         let Some(_display) = helix_app_common::testing::headless_gtk() else {
-            eprintln!("no headless GTK display (gtk4-broadwayd); skipping");
             return;
         };
         adw::init().unwrap();
@@ -1885,9 +1893,21 @@ mod layout_tests {
         ui.window.present();
         let content = ui.window.content().unwrap();
         // The narrow layout applies once the window has its width.
-        wait_for("the narrow layout", || {
-            ui.window.width() == 360 && min_width(&content) <= 360
-        });
+        wait_for_state(
+            "the narrow layout",
+            || {
+                helix_app_common::testing::follow_default_size(&ui.window);
+                ui.window.width() == 360 && min_width(&content) <= 360
+            },
+            || {
+                format!(
+                    "(width {}, default {:?}, content's minimum {})",
+                    ui.window.width(),
+                    ui.window.default_size(),
+                    min_width(&content)
+                )
+            },
+        );
         settle();
         let empty = min_width(&content);
         let long = format!("{}+1", "9".repeat(200));

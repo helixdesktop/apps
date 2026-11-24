@@ -82,6 +82,29 @@ fn start_headless() -> Result<Headless, String> {
     Ok(daemon)
 }
 
+/// Makes a mapped `window` on the [`Headless`] display take its default
+/// size, as a compositor does when GTK asks for it. GTK's Broadway backend
+/// only does that itself from GTK 4.16 (GTK commit 9a8e5b07, "Add missed
+/// compute_size and request_layout vfunc to GdkBroadwaySurface"); before
+/// that (Ubuntu 24.04's 4.14) it sizes a window only when it is
+/// presented, so this presents it again. Does nothing from 4.16 on, or
+/// while the window is maximized or fullscreen. Call it while waiting for
+/// a resize.
+pub fn follow_default_size(window: &impl IsA<gtk::Window>) {
+    let window = window.as_ref();
+    if gtk::check_version(4, 16, 0).is_none()
+        || !window.is_mapped()
+        || window.is_maximized()
+        || window.is_fullscreen()
+    {
+        return;
+    }
+    let (width, height) = window.default_size();
+    if (width > 0 && window.width() != width) || (height > 0 && window.height() != height) {
+        window.present();
+    }
+}
+
 /// `None` when GTK's own accessible `property` of `widget` is the string
 /// `expected`, else what GTK says about it.
 pub fn property_mismatch(
