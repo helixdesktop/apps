@@ -139,6 +139,28 @@ fn star_mark(tab: &Weak<Tab>, class: &str) -> gtk::Image {
     star
 }
 
+/// The file shown by a widget tagged with [`tag_widget`], while its list
+/// item is bound.
+fn tagged_file(widget: &gtk::Widget) -> Option<gio::File> {
+    let weak = unsafe { widget.data::<glib::WeakRef<glib::Object>>(ITEM_KEY) }?;
+    let obj = unsafe { weak.as_ref() }.upgrade()?;
+    let info = obj
+        .property::<Option<glib::Object>>("item")
+        .and_downcast::<gio::FileInfo>()?;
+    info_file(&info)
+}
+
+/// An item widget that can show the "cut" dimming, known to the tab so
+/// that the dimming follows the clipboard without new widgets.
+fn track_cut(tab: &Weak<Tab>, widget: &gtk::Widget) {
+    if let Some(t) = tab.upgrade() {
+        let mut marks = t.cut_marks.borrow_mut();
+        // Widgets of replaced factories are gone.
+        marks.retain(|w| w.upgrade().is_some());
+        marks.push(widget.downgrade());
+    }
+}
+
 /// Shows an item as cut (dimmed) and says so to assistive technology.
 fn mark_cut(item: &impl IsA<gtk::Widget>, cut: bool) {
     let item = item.as_ref();
@@ -170,6 +192,8 @@ pub struct Tab {
     starred_loading: Cell<bool>,
     /// The list's star marks (each knows its row's URI).
     star_marks: RefCell<Vec<glib::WeakRef<gtk::Image>>>,
+    /// The item widgets that show the "cut" dimming (see `track_cut`).
+    cut_marks: RefCell<Vec<glib::WeakRef<gtk::Widget>>>,
     filter: gtk::CustomFilter,
     filter_model: gtk::FilterListModel,
     sorter: gtk::CustomSorter,
@@ -327,6 +351,7 @@ impl Tab {
             starred_serial: Cell::new(0),
             starred_loading: Cell::new(false),
             star_marks: RefCell::default(),
+            cut_marks: RefCell::default(),
             filter,
             filter_model,
             sorter,
@@ -672,6 +697,22 @@ impl Tab {
             .is_some_and(|c| c.cut && c.files.iter().any(|f| f.equal(file)))
     }
 
+    /// The clipboard changed: the bound items whose cut state changed are
+    /// dimmed or undimmed in place. (New factories would make GTK
+    /// recreate every item widget, and the folder flashed as if reloaded.)
+    pub fn clipboard_changed(&self) {
+        self.cut_marks.borrow_mut().retain(|w| match w.upgrade() {
+            Some(widget) => {
+                let cut = tagged_file(&widget).is_some_and(|f| self.is_cut(&f));
+                if widget.has_css_class("cut-item") != cut {
+                    mark_cut(&widget, cut);
+                }
+                true
+            }
+            None => false,
+        });
+    }
+
     fn thumbnail_allowed(&self, file: &gio::File) -> bool {
         match self.settings.borrow().thumbnails.as_str() {
             "always" => true,
@@ -708,6 +749,7 @@ impl Tab {
             b.append(&label);
             item.set_child(Some(&b));
             tag_widget(b.upcast_ref(), obj);
+            track_cut(&weak, b.upcast_ref());
         });
         let weak = Rc::downgrade(self);
         f.connect_bind(move |_, obj| {
@@ -791,6 +833,9 @@ impl Tab {
             }
             obj.set_property("child", &b);
             tag_widget(b.upcast_ref(), obj);
+            if is_name {
+                track_cut(&weak, b.upcast_ref());
+            }
         });
         let weak = Rc::downgrade(self);
         let id = id.to_string();
@@ -1522,4 +1567,197 @@ fn hit_info(hit: search::Hit) -> gio::FileInfo {
     info.set_attribute_boolean("standard::is-backup", hit.name.ends_with('~'));
     info.set_attribute_object("standard::file", &file);
     info
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::ui::ClipState;
+    use helix_app_common::testing::{headless_gtk, property_mismatch};
+    use std::time::{Duration, Instant};
+
+    /// Runs the default main context until `done` or 20 seconds passed.
+    fn wait_for(what: &str, done: impl Fn() -> bool) {
+        let deadline = Instant::now() + Duration::from_secs(20);
+        let ctx = glib::MainContext::default();
+        while !done() {
+            assert!(Instant::now() < deadline, "timed out waiting for {what}");
+            if !ctx.iteration(false) {
+                std::thread::sleep(Duration::from_millis(10));
+            }
+        }
+    }
+
+    /// Runs the default main context for `ms` milliseconds.
+    fn settle(ms: u64) {
+        let deadline = Instant::now() + Duration::from_millis(ms);
+        let ctx = glib::MainContext::default();
+        while Instant::now() < deadline {
+            if !ctx.iteration(false) {
+                std::thread::sleep(Duration::from_millis(5));
+            }
+        }
+    }
+
+    /// The bound item widgets of `view` (grid or list) that can show the
+    /// cut dimming, by URI.
+    fn bound_items(tab: &Tab, view: &gtk::Widget) -> Vec<(String, gtk::Widget)> {
+        let mut items: Vec<(String, gtk::Widget)> = tab
+            .cut_marks
+            .borrow()
+            .iter()
+            .filter_map(|w| w.upgrade())
+            .filter(|w| w.is_ancestor(view) && w.is_mapped())
+            .filter_map(|w| Some((tagged_file(&w)?.uri().to_string(), w)))
+            .collect();
+        items.sort_by(|a, b| a.0.cmp(&b.0));
+        items
+    }
+
+    fn set_clip(tab: &Tab, clip: Option<ClipState>) {
+        *tab.shared.clipboard.borrow_mut() = clip;
+        tab.clipboard_changed();
+        settle(300);
+    }
+
+    fn assert_cut(items: &[(String, gtk::Widget)], cut: &[&gio::File], when: &str) {
+        for (uri, w) in items {
+            let want = cut.iter().any(|f| f.uri() == *uri);
+            assert_eq!(w.has_css_class("cut-item"), want, "{when}: {uri} dimmed");
+            if want {
+                assert_eq!(
+                    property_mismatch(w, gtk::AccessibleProperty::Description, tr("Cut")),
+                    None,
+                    "{when}: {uri} described as cut"
+                );
+            } else {
+                assert!(
+                    !gtk::test_accessible_has_property(w, gtk::AccessibleProperty::Description),
+                    "{when}: {uri} still described"
+                );
+            }
+        }
+    }
+
+    /// Cutting or copying dims or undims the items in place (#211): the
+    /// clipboard used to give every view new factories, and GTK then
+    /// recreated every item widget, so the folder flashed as if reloaded.
+    /// Runs [`cut_and_copy_keep_the_item_widgets_child`] in a child
+    /// process, as this binary's other GTK test needs GTK on its own.
+    #[test]
+    fn cut_and_copy_keep_the_item_widgets() {
+        let status = std::process::Command::new(std::env::current_exe().unwrap())
+            .args([
+                "--exact",
+                "ui::tab::tests::cut_and_copy_keep_the_item_widgets_child",
+            ])
+            .args(["--ignored", "--nocapture"])
+            .env("HELIX_FILES_CUT_CHILD", "1")
+            .env("GSETTINGS_BACKEND", "memory")
+            .env("GDK_DEBUG", "no-portals")
+            .status()
+            .unwrap();
+        assert!(status.success());
+    }
+
+    #[test]
+    #[ignore = "run by cut_and_copy_keep_the_item_widgets"]
+    fn cut_and_copy_keep_the_item_widgets_child() {
+        if std::env::var_os("HELIX_FILES_CUT_CHILD").is_none() {
+            return;
+        }
+        let Some(_display) = headless_gtk() else {
+            return;
+        };
+        adw::init().unwrap();
+        let dir = std::env::temp_dir().join(format!("helix-files-cut-{}", std::process::id()));
+        let _ = std::fs::remove_dir_all(&dir);
+        std::fs::create_dir_all(&dir).unwrap();
+        let files: Vec<gio::File> = ["a.txt", "b.txt", "c.txt"]
+            .iter()
+            .map(|n| {
+                std::fs::write(dir.join(n), "x").unwrap();
+                gio::File::for_path(dir.join(n))
+            })
+            .collect();
+        let shared = Rc::new(Shared {
+            app: adw::Application::builder()
+                .application_id("org.helixdesktop.Files.Test")
+                .flags(gio::ApplicationFlags::NON_UNIQUE)
+                .build(),
+            prefs: helix_app_common::Prefs::new(super::super::PREFS),
+            window_state: helix_app_common::Prefs::new(super::super::WINDOW_STATE),
+            list_prefs: helix_app_common::Prefs::new(super::super::LIST_VIEW),
+            icon_prefs: helix_app_common::Prefs::new(super::super::ICON_VIEW),
+            chooser_prefs: helix_app_common::Prefs::new(super::super::CHOOSER),
+            clipboard: RefCell::default(),
+            undo: RefCell::default(),
+            windows: RefCell::default(),
+            stars: super::super::starred::Stars::new(),
+        });
+        let tab = Tab::new(&shared, Weak::new(), &gio::File::for_path(&dir));
+        // No thumbnailing (nor a thumbnail cache) in the test.
+        tab.settings.borrow_mut().thumbnails = "never".into();
+        tab.load(&gio::File::for_path(&dir), false, Vec::new());
+        let window = gtk::Window::builder()
+            .default_width(800)
+            .default_height(600)
+            .child(&tab.root)
+            .build();
+        window.present();
+
+        for (name, view) in [
+            ("grid", tab.grid.clone().upcast::<gtk::Widget>()),
+            ("list", tab.list.clone().upcast::<gtk::Widget>()),
+        ] {
+            tab.stack.set_visible_child_name(name);
+            wait_for(&format!("the {name} items"), || {
+                helix_app_common::testing::follow_default_size(&window);
+                bound_items(&tab, &view).len() == files.len()
+            });
+            settle(300);
+            let before = bound_items(&tab, &view);
+            assert_cut(&before, &[], &format!("{name}, nothing cut"));
+
+            let steps: [(&str, Option<ClipState>, Vec<&gio::File>); 4] = [
+                (
+                    "cut a and b",
+                    Some(ClipState {
+                        files: vec![files[0].clone(), files[1].clone()],
+                        cut: true,
+                    }),
+                    vec![&files[0], &files[1]],
+                ),
+                (
+                    "copy c",
+                    Some(ClipState {
+                        files: vec![files[2].clone()],
+                        cut: false,
+                    }),
+                    vec![],
+                ),
+                (
+                    "cut c",
+                    Some(ClipState {
+                        files: vec![files[2].clone()],
+                        cut: true,
+                    }),
+                    vec![&files[2]],
+                ),
+                ("paste the cut", None, vec![]),
+            ];
+            for (step, clip, cut) in steps {
+                set_clip(&tab, clip);
+                let after = bound_items(&tab, &view);
+                let when = format!("{name}, {step}");
+                assert_eq!(after.len(), before.len(), "{when}: items shown");
+                for ((uri, a), (_, b)) in before.iter().zip(&after) {
+                    assert_eq!(a, b, "{when}: {uri}'s widget was recreated");
+                }
+                assert_cut(&after, &cut, &when);
+            }
+        }
+        drop(window);
+        let _ = std::fs::remove_dir_all(&dir);
+    }
 }

@@ -1216,10 +1216,14 @@ impl Window {
             .clipboard()
             .set_content(Some(&gdk::ContentProvider::new_union(&providers)));
         *self.shared.clipboard.borrow_mut() = Some(ClipState { files, cut });
-        // Re-render to show/clear the "cut" dimming.
+        self.cut_changed();
+    }
+
+    /// Shows or clears the "cut" dimming in every tab.
+    fn cut_changed(&self) {
         for w in self.shared.windows.borrow().iter() {
             for (_, t) in w.tabs.borrow().iter() {
-                t.rebuild_factories();
+                t.clipboard_changed();
             }
         }
     }
@@ -1290,6 +1294,7 @@ impl Window {
                     .set_content(None::<&gdk::ContentProvider>)
                     .ok();
                 *w.shared.clipboard.borrow_mut() = None;
+                w.cut_changed();
                 w.start_job(
                     Job::Move {
                         sources: clip.files,
@@ -1852,6 +1857,7 @@ impl Window {
                         .set_content(None::<&gdk::ContentProvider>)
                         .ok();
                     *w.shared.clipboard.borrow_mut() = None;
+                    w.cut_changed();
                     w.start_job(
                         Job::Move {
                             sources: clip.files,
