@@ -256,6 +256,54 @@ handle (`sftp://`, `smb://`, `dav://`, `mtp://`, `trash:///`, `recent:///`,
   again for every conflicting file inside. Escape always cancels.
 - Moving or copying a folder into itself or a descendant is refused.
 
+### Archives
+- The item menu has *Create Archive…* (not in the Trash; disabled in
+  search results, Starred, Recent and folders that can't be written to)
+  and, when every selected item is an archive Files extracts (by content
+  type: zip, tar, and tar compressed with gzip, xz, bzip2 or zstd; not
+  zip-based documents such as OpenDocument or EPUB), *Extract Here* and
+  *Extract To…*. Extract Here is disabled in a read-only folder; in
+  search results and Starred it extracts next to each archive.
+- *Create Archive…* opens "Create Archive": an *Archive Name* entry
+  (default: the item's name, without its extension for a file, or
+  "Archive" for several items) and an *Archive Format* drop-down
+  (`.zip`, `.tar.gz`, `.tar.xz`, `.tar.zst`). A name that is taken in
+  the folder disables *Create* and says so. The chosen format is
+  remembered in `$XDG_CONFIG_HOME/helix-files/archive-format`, and in
+  GNOME Files' `default-compression-format` when that key has it (zip,
+  tar.xz); that key is read when Helix has no record yet.
+- *Extract To…* asks for a folder with the GTK folder chooser (the
+  FileChooser portal). Extracting puts an archive's one top-level item
+  straight into the folder, and several items into a new folder named
+  after the archive without its extension (`naming::split_extension`).
+- Both run as file operations (progress, cancel, errors, toasts:
+  "Created “x.zip”", "Extracted 2 archives"). They are made in a hidden
+  work folder (`$XDG_CACHE_HOME/helix-files/work` when it is on the same
+  filesystem, else the destination) and moved into place in one step, so
+  cancelling or failing leaves nothing; a taken name becomes "name (2)",
+  never replacing anything. The views follow through the folder monitor.
+  (GTK's `GtkDirectoryList` stops following a folder once an entry it
+  was told about vanishes before it could read it, which a short-lived
+  staging folder in the destination would trigger.)
+- Permission bits and modification times are kept (zip also stores the
+  Unix timestamp); symbolic links are stored as links.
+- Archives are untrusted (`src/archive.rs`): an entry with an absolute
+  path or a `..` component, a symbolic link pointing outside the
+  destination (absolute, or climbing higher than its folder; `..` may
+  only come first, since after a link it climbs from wherever the link
+  leads), a hard link to anything but a file extracted before, or an
+  entry that would be written through a link stops the extraction with
+  an error naming the entry. Files are created with `O_EXCL`, so a link
+  is never followed. Device nodes and FIFOs are skipped; set-user-ID,
+  set-group-ID and sticky bits are dropped. Extraction stops before the
+  filesystem has less than 64 MiB left (a zip's sizes are checked up
+  front) and when the output passes 1000 times the archive's size above
+  1 GiB (a decompression bomb). Encrypted zips are refused ("Encrypted
+  archives are not supported.").
+- Crates: `zip`, `tar`, `flate2`, `lzma-rust2`, `bzip2` (libbz2-rs-sys),
+  all pure Rust, and `zstd` (its C library built in, statically); no
+  external archiver and no new runtime library.
+
 ### Search
 - `Ctrl+F` shows the search bar; typing searches recursively under the
   current folder on a worker thread, case-insensitive substring match on
@@ -337,6 +385,8 @@ show thumbnails, date format, always use location entry.
 `org.gnome.nautilus.icon-view`: `default-zoom-level` (enum
 `small|small-plus|medium|large|extra-large`).
 `org.gtk.gtk4.Settings.FileChooser`: `sort-directories-first` (b).
+`org.gnome.nautilus.compression`: `default-compression-format` (enum
+`zip|tar.xz|7z|encrypted_zip`; Helix writes only `zip` and `tar.xz`).
 Missing schemas fall back to in-memory defaults (`helix-app-common::Prefs`).
 `data/org.gnome.nautilus.gschema.xml` holds only these keys for systems
 without Nautilus installed.
@@ -397,8 +447,7 @@ Files" lives in the view menu (and the folder background menu), not in
 the main menu.
 
 ## Deferred
-- Tree (expandable) list view, compressing/extracting archives,
-  batch rename, scripts, "Open in Terminal", folder item counts in the
+- Tree (expandable) list view, batch rename, scripts, "Open in Terminal", folder item counts in the
   size column (`show-directory-item-counts`).
 
 ## Decisions

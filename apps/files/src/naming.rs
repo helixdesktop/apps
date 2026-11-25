@@ -94,6 +94,24 @@ pub fn link_name(name: &str, exists: impl Fn(&str) -> bool) -> String {
     }
 }
 
+/// Returns a free name based on `name`: `name` itself when it is free,
+/// else "name (2).ext", "name (3).ext", … (for archives extracted or
+/// created next to existing files). `exists` reports names already taken.
+pub fn numbered_name(name: &str, exists: impl Fn(&str) -> bool) -> String {
+    if !exists(name) {
+        return name.to_string();
+    }
+    let (stem, ext) = split_extension(name);
+    let mut n = 2;
+    loop {
+        let candidate = trf!("{stem} ({n}){ext}", stem = stem, n = n, ext = ext);
+        if !exists(&candidate) {
+            return candidate;
+        }
+        n += 1;
+    }
+}
+
 /// Checks a name typed for a new or renamed file.
 pub fn validate_name(name: &str) -> Result<(), &'static str> {
     if name.is_empty() {
@@ -174,6 +192,21 @@ mod tests {
         assert_eq!(
             link_name("a.txt", |n| taken.contains(&n)),
             "Link to a (2).txt"
+        );
+    }
+
+    #[test]
+    fn numbered_names() {
+        assert_eq!(numbered_name("Photos", |_| false), "Photos");
+        let taken = ["Photos", "Photos (2)"];
+        assert_eq!(
+            numbered_name("Photos", |n| taken.contains(&n)),
+            "Photos (3)"
+        );
+        let taken = ["a.tar.gz"];
+        assert_eq!(
+            numbered_name("a.tar.gz", |n| taken.contains(&n)),
+            "a (2).tar.gz"
         );
     }
 

@@ -220,8 +220,8 @@ msgstr "음소거 또는 음소거 해제"
 #: apps/calculator/src/ui.rs:523 apps/calendar/src/shortcuts.rs:51
 #: apps/clocks/src/shortcuts.rs:18 apps/contacts/src/shortcuts.rs:24
 #: apps/disk-usage/src/shortcuts.rs:47
-#: apps/document-scanner/src/shortcuts.rs:48 apps/files/src/ui/dialogs.rs:563
-#: apps/files/src/ui/dialogs.rs:617 apps/files/src/ui/shortcuts.rs:78
+#: apps/document-scanner/src/shortcuts.rs:48 apps/files/src/ui/dialogs.rs:673
+#: apps/files/src/ui/dialogs.rs:727 apps/files/src/ui/shortcuts.rs:78
 #: apps/help/src/shortcuts.rs:49 apps/maps/src/shortcuts.rs:11
 #: apps/maps/src/ui.rs:1863 apps/music/src/shortcuts.rs:37
 #: apps/settings/src/ui/access.rs:62 apps/settings/src/ui/extensions.rs:99
@@ -311,7 +311,7 @@ msgstr "오디오 플레이어 정보(_A)"
 #: apps/disks/src/ui.rs:273 apps/disks/src/ui.rs:275
 #: apps/document-scanner/src/ui.rs:317 apps/document-scanner/src/ui.rs:319
 #: apps/document-viewer/src/ui.rs:312 apps/document-viewer/src/ui.rs:315
-#: apps/files/src/ui/window.rs:238 apps/files/src/ui/window.rs:241
+#: apps/files/src/ui/window.rs:239 apps/files/src/ui/window.rs:242
 #: apps/fonts/src/ui.rs:123 apps/fonts/src/ui.rs:126 apps/help/src/ui.rs:403
 #: apps/help/src/ui.rs:405 apps/image-viewer/src/ui.rs:337
 #: apps/image-viewer/src/ui.rs:339 apps/logs/src/ui.rs:308
@@ -394,7 +394,7 @@ msgid "Audio Files"
 msgstr "오디오 파일"
 
 #: apps/audio-player/src/ui.rs:755 apps/disks/src/ui.rs:1988
-#: apps/document-viewer/src/ui.rs:1484 apps/files/src/ui/dialogs.rs:662
+#: apps/document-viewer/src/ui.rs:1484 apps/files/src/ui/dialogs.rs:772
 #: apps/video-player/src/ui.rs:1056
 msgid "All Files"
 msgstr "모든 파일"
@@ -955,7 +955,7 @@ msgstr "백분율"
 #: apps/calculator/src/ui.rs:450 apps/calculator/src/ui.rs:455
 #: apps/calculator/src/ui.rs:457 apps/calculator/src/ui.rs:463
 #: apps/calculator/src/ui.rs:469 apps/calculator/src/ui.rs:475
-#: apps/calculator/src/ui.rs:1627
+#: apps/calculator/src/ui.rs:1639
 msgid "Calculation"
 msgstr "계산"
 
@@ -1025,7 +1025,7 @@ msgstr "재무 모드"
 msgid "Programming mode"
 msgstr "프로그래밍 모드"
 
-#: apps/calculator/src/ui.rs:506 apps/calculator/src/ui.rs:1587
+#: apps/calculator/src/ui.rs:506 apps/calculator/src/ui.rs:1599
 #: apps/disk-usage/src/shortcuts.rs:49 apps/disk-usage/src/ui.rs:1773
 #: apps/document-scanner/src/shortcuts.rs:50 apps/files/src/ui/shortcuts.rs:80
 #: apps/maps/src/shortcuts.rs:13 apps/maps/src/ui.rs:1804
@@ -1063,7 +1063,7 @@ msgstr "기록 지우기(_C)"
 
 #: apps/calculator/src/ui.rs:699 apps/disk-usage/src/ui.rs:186
 #: apps/document-scanner/src/ui.rs:174 apps/document-scanner/src/ui.rs:190
-#: apps/files/src/ui/window.rs:231 apps/maps/src/ui.rs:485
+#: apps/files/src/ui/window.rs:232 apps/maps/src/ui.rs:485
 #: apps/music/src/ui.rs:467 apps/system-monitor/src/ui.rs:247
 #: apps/terminal/src/window.rs:295 apps/text-editor/src/window.rs:63
 #: apps/web/src/window.rs:263
@@ -1078,47 +1078,47 @@ msgstr "계산기 정보(_A)"
 msgid "Expression"
 msgstr "식"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Binary"
 msgstr "2진수"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Decimal"
 msgstr "10진수"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Hexadecimal"
 msgstr "16진수"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Octal"
 msgstr "8진수"
 
-#: apps/calculator/src/ui.rs:755 apps/calculator/src/ui.rs:756
+#: apps/calculator/src/ui.rs:757 apps/calculator/src/ui.rs:758
 msgid "Number base"
 msgstr "진법"
 
-#: apps/calculator/src/ui.rs:765 apps/calculator/src/ui.rs:766
+#: apps/calculator/src/ui.rs:767 apps/calculator/src/ui.rs:768
 msgid "Word size"
 msgstr "워드 크기"
 
-#: apps/calculator/src/ui.rs:1311
+#: apps/calculator/src/ui.rs:1323
 msgid "Insert expression"
 msgstr "식 넣기"
 
-#: apps/calculator/src/ui.rs:1317
+#: apps/calculator/src/ui.rs:1329
 msgid "Insert result"
 msgstr "결과 넣기"
 
-#: apps/calculator/src/ui.rs:1487 apps/calculator/src/ui.rs:1491
+#: apps/calculator/src/ui.rs:1499 apps/calculator/src/ui.rs:1503
 msgid "Bit {bit}"
 msgstr "비트 {bit}"
 
-#: apps/calculator/src/ui.rs:1558
+#: apps/calculator/src/ui.rs:1570
 msgid "C_alculate"
 msgstr "계산(_A)"
 
-#: apps/calculator/src/ui.rs:1558 apps/calendar/src/editor.rs:1039
+#: apps/calculator/src/ui.rs:1570 apps/calendar/src/editor.rs:1039
 #: apps/calendar/src/manage.rs:374 apps/calendar/src/ui.rs:2470
 #: apps/clocks/src/ui.rs:410 apps/clocks/src/ui.rs:1352
 #: apps/clocks/src/ui.rs:1907 apps/disk-usage/src/ui.rs:320
@@ -1129,11 +1129,11 @@ msgstr "계산(_A)"
 #: apps/disks/src/ui.rs:2022 apps/disks/src/ui.rs:2230
 #: apps/document-scanner/src/ui.rs:1264 apps/document-scanner/src/ui.rs:1379
 #: apps/document-scanner/src/ui.rs:1417 apps/document-viewer/src/dialogs.rs:169
-#: apps/files/src/ui/dialogs.rs:28 apps/files/src/ui/dialogs.rs:74
-#: apps/files/src/ui/dialogs.rs:220 apps/files/src/ui/sidebar.rs:684
-#: apps/help/src/ui.rs:196 apps/music/src/pages.rs:2129
-#: apps/music/src/pages.rs:2232 apps/music/src/pages.rs:2317
-#: apps/settings/src/ui/agent_access.rs:280
+#: apps/files/src/ui/dialogs.rs:30 apps/files/src/ui/dialogs.rs:76
+#: apps/files/src/ui/dialogs.rs:199 apps/files/src/ui/dialogs.rs:330
+#: apps/files/src/ui/sidebar.rs:684 apps/help/src/ui.rs:196
+#: apps/music/src/pages.rs:2129 apps/music/src/pages.rs:2232
+#: apps/music/src/pages.rs:2317 apps/settings/src/ui/agent_access.rs:280
 #: apps/settings/src/ui/agent_access.rs:996 apps/settings/src/ui/apps.rs:553
 #: apps/settings/src/ui/bluetooth.rs:647 apps/settings/src/ui/netedit.rs:389
 #: apps/settings/src/ui/printers.rs:606 apps/settings/src/ui/users.rs:642
@@ -1147,43 +1147,43 @@ msgstr "계산(_A)"
 msgid "_Cancel"
 msgstr "취소(_C)"
 
-#: apps/calculator/src/ui.rs:1591 apps/disk-usage/src/ui.rs:441
+#: apps/calculator/src/ui.rs:1603 apps/disk-usage/src/ui.rs:441
 msgid "Results"
 msgstr "결과"
 
-#: apps/calculator/src/ui.rs:1597
+#: apps/calculator/src/ui.rs:1609
 msgid "Number _Format"
 msgstr "숫자 형식(_F)"
 
-#: apps/calculator/src/ui.rs:1608
+#: apps/calculator/src/ui.rs:1620
 msgid "_Decimal Places"
 msgstr "소수 자릿수(_D)"
 
-#: apps/calculator/src/ui.rs:1612
+#: apps/calculator/src/ui.rs:1624
 msgid "_Thousands Separators"
 msgstr "천 단위 구분 기호(_T)"
 
-#: apps/calculator/src/ui.rs:1617
+#: apps/calculator/src/ui.rs:1629
 msgid "_Trailing Zeroes"
 msgstr "뒤쪽 0 표시(_T)"
 
-#: apps/calculator/src/ui.rs:1631
+#: apps/calculator/src/ui.rs:1643
 msgid "_Angle Units"
 msgstr "각도 단위(_A)"
 
-#: apps/calculator/src/ui.rs:1634
+#: apps/calculator/src/ui.rs:1646
 msgid "Degrees"
 msgstr "도"
 
-#: apps/calculator/src/ui.rs:1635
+#: apps/calculator/src/ui.rs:1647
 msgid "Radians"
 msgstr "라디안"
 
-#: apps/calculator/src/ui.rs:1636
+#: apps/calculator/src/ui.rs:1648
 msgid "Gradians"
 msgstr "그라디안"
 
-#: apps/calculator/src/ui.rs:1696
+#: apps/calculator/src/ui.rs:1708
 msgid "{} equals {}"
 msgstr "{}은(는) {}입니다"
 
@@ -1413,7 +1413,7 @@ msgid "Calendar"
 msgstr "캘린더"
 
 #: apps/calendar/src/editor.rs:504 apps/document-viewer/src/dialogs.rs:112
-#: apps/files/src/ui/window.rs:211 apps/image-viewer/src/ui.rs:592
+#: apps/files/src/ui/window.rs:212 apps/image-viewer/src/ui.rs:592
 #: apps/settings/src/permissions.rs:45 apps/settings/src/ui/printers.rs:269
 #: apps/settings/src/ui/privacy.rs:155 apps/web/src/permissions.rs:24
 msgid "Location"
@@ -1452,7 +1452,7 @@ msgid "Ends"
 msgstr "끝"
 
 #: apps/calendar/src/editor.rs:558 apps/disks/src/ui.rs:1863
-#: apps/files/src/ui/dialogs.rs:663 apps/files/src/ui/dialogs.rs:701
+#: apps/files/src/ui/dialogs.rs:773 apps/files/src/ui/dialogs.rs:811
 #: apps/settings/src/values.rs:61 apps/settings/src/values.rs:84
 #: apps/web/src/dialogs.rs:75
 msgid "Never"
@@ -1650,7 +1650,7 @@ msgstr "{display} 표시"
 #: apps/calendar/src/manage.rs:297 apps/clocks/src/ui.rs:1460
 #: apps/contacts/src/editor.rs:302 apps/disk-usage/src/ui.rs:1005
 #: apps/disks/src/ui.rs:1640 apps/files/src/sorting.rs:43
-#: apps/files/src/ui/tab.rs:245 apps/settings/src/ui/netedit.rs:235
+#: apps/files/src/ui/tab.rs:269 apps/settings/src/ui/netedit.rs:235
 #: apps/settings/src/ui/users.rs:81
 msgid "Name"
 msgstr "이름"
@@ -1812,8 +1812,8 @@ msgstr "가져오기"
 #: apps/characters/src/ui.rs:170 apps/characters/src/ui.rs:362
 #: apps/characters/src/ui.rs:364 apps/contacts/src/shortcuts.rs:19
 #: apps/document-viewer/src/ui.rs:372 apps/document-viewer/src/ui.rs:543
-#: apps/files/src/ui/dialogs.rs:694 apps/files/src/ui/shortcuts.rs:28
-#: apps/files/src/ui/window.rs:274 apps/files/src/ui/window.rs:276
+#: apps/files/src/ui/dialogs.rs:804 apps/files/src/ui/shortcuts.rs:28
+#: apps/files/src/ui/window.rs:275 apps/files/src/ui/window.rs:277
 #: apps/fonts/src/shortcuts.rs:17 apps/fonts/src/ui.rs:290
 #: apps/fonts/src/ui.rs:292 apps/help/src/shortcuts.rs:32
 #: apps/help/src/ui.rs:377 apps/help/src/ui.rs:379
@@ -1856,8 +1856,8 @@ msgid "Month View"
 msgstr "월 보기"
 
 #: apps/calendar/src/shortcuts.rs:23 apps/document-viewer/src/shortcuts.rs:14
-#: apps/files/src/ui/shortcuts.rs:50 apps/files/src/ui/window.rs:180
-#: apps/files/src/ui/window.rs:182 apps/help/src/shortcuts.rs:33
+#: apps/files/src/ui/shortcuts.rs:50 apps/files/src/ui/window.rs:181
+#: apps/files/src/ui/window.rs:183 apps/help/src/shortcuts.rs:33
 #: apps/help/src/ui.rs:371 apps/help/src/ui.rs:374
 msgid "Show Sidebar"
 msgstr "가장자리 창 표시"
@@ -1973,7 +1973,7 @@ msgid "_Import…"
 msgstr "가져오기(_I)…"
 
 #: apps/calendar/src/ui.rs:291 apps/contacts/src/ui.rs:206
-#: apps/files/src/ui/window.rs:232 apps/maps/src/ui.rs:486
+#: apps/files/src/ui/window.rs:233 apps/maps/src/ui.rs:486
 #: apps/settings/src/ui/mod.rs:214 apps/terminal/src/window.rs:296
 #: apps/text-editor/src/window.rs:65 apps/web/src/window.rs:222
 #: apps/web/src/window.rs:265 crates/helix-app-common/src/shortcuts.rs:25
@@ -1992,15 +1992,15 @@ msgstr "일정 검색"
 msgid "Search Events"
 msgstr "일정 검색"
 
-#: apps/calendar/src/ui.rs:371 apps/files/src/ui/dialogs.rs:429
-#: apps/files/src/ui/tab.rs:1125 apps/settings/src/ui/mod.rs:246
+#: apps/calendar/src/ui.rs:371 apps/files/src/ui/dialogs.rs:539
+#: apps/files/src/ui/tab.rs:1170 apps/settings/src/ui/mod.rs:246
 #: apps/settings/src/ui/picker.rs:115 apps/web/src/dialogs.rs:752
 #: apps/web/src/window.rs:2378
 msgid "No Results Found"
 msgstr "결과 없음"
 
 #: apps/calendar/src/ui.rs:372 apps/characters/src/ui.rs:456
-#: apps/files/src/ui/dialogs.rs:434 apps/fonts/src/ui.rs:436
+#: apps/files/src/ui/dialogs.rs:544 apps/fonts/src/ui.rs:436
 #: apps/music/src/pages.rs:1687 apps/settings/src/ui/mod.rs:247
 #: apps/settings/src/ui/picker.rs:116 apps/web/src/dialogs.rs:753
 #: apps/web/src/window.rs:2379
@@ -2375,8 +2375,8 @@ msgstr "사진 찍기를 지원하지 않습니다: JPEG 인코더가 없습니�
 msgid "Countdown cancelled"
 msgstr "카운트다운을 취소했습니다"
 
-#: apps/camera/src/ui.rs:859 apps/files/src/ui/dialogs.rs:455
-#: apps/files/src/ui/sidebar.rs:564 apps/files/src/ui/window.rs:1665
+#: apps/camera/src/ui.rs:859 apps/files/src/ui/dialogs.rs:565
+#: apps/files/src/ui/sidebar.rs:564 apps/files/src/ui/window.rs:1760
 #: apps/help/src/ui.rs:197 apps/text-editor/src/window.rs:131
 msgid "_Open"
 msgstr "열기(_O)"
@@ -2580,7 +2580,7 @@ msgid "Character map and emoji picker"
 msgstr "문자표 및 이모지 선택기"
 
 #: apps/characters/src/ui.rs:199 apps/contacts/src/ui.rs:1102
-#: apps/files/src/ui/tab.rs:1370 apps/logs/src/ui.rs:719
+#: apps/files/src/ui/tab.rs:1415 apps/logs/src/ui.rs:719
 #: apps/text-editor/src/doc.rs:866
 msgid "No results"
 msgstr "결과 없음"
@@ -2965,8 +2965,8 @@ msgstr "밤"
 #: apps/clocks/src/ui.rs:310 apps/clocks/src/ui.rs:311
 #: apps/document-scanner/src/ui.rs:1780
 #: apps/document-viewer/src/shortcuts.rs:33 apps/files/src/ui/shortcuts.rs:22
-#: apps/files/src/ui/window.rs:185 apps/files/src/ui/window.rs:188
-#: apps/files/src/ui/window.rs:379 apps/help/src/shortcuts.rs:29
+#: apps/files/src/ui/window.rs:186 apps/files/src/ui/window.rs:189
+#: apps/files/src/ui/window.rs:380 apps/help/src/shortcuts.rs:29
 #: apps/help/src/ui.rs:353 apps/help/src/ui.rs:356 apps/web/src/shortcuts.rs:37
 #: apps/web/src/window.rs:338
 msgid "Back"
@@ -3207,8 +3207,8 @@ msgstr "시작(_S)"
 msgid "{label} deleted"
 msgstr "{label}을(를) 삭제했습니다"
 
-#: apps/clocks/src/ui.rs:1871 apps/files/src/ui/window.rs:228
-#: apps/files/src/ui/window.rs:1361 apps/image-viewer/src/ui.rs:1662
+#: apps/clocks/src/ui.rs:1871 apps/files/src/ui/window.rs:229
+#: apps/files/src/ui/window.rs:1377 apps/image-viewer/src/ui.rs:1668
 msgid "_Undo"
 msgstr "실행 취소(_U)"
 
@@ -3963,8 +3963,8 @@ msgid "storage"
 msgstr "저장소"
 
 #: apps/disk-usage/src/mounts.rs:155 apps/files/src/pathbar.rs:25
-#: apps/files/src/pathbar.rs:112 apps/files/src/ui/tab.rs:1424
-#: apps/files/src/ui/window.rs:139 apps/settings/src/bluez.rs:229
+#: apps/files/src/pathbar.rs:112 apps/files/src/ui/tab.rs:1469
+#: apps/files/src/ui/window.rs:140 apps/settings/src/bluez.rs:229
 msgid "Computer"
 msgstr "컴퓨터"
 
@@ -4160,7 +4160,7 @@ msgstr[0] "항목 {n}개"
 
 #: apps/disk-usage/src/ui.rs:1006 apps/disks/src/ui.rs:358
 #: apps/disks/src/ui.rs:453 apps/files/src/sorting.rs:44
-#: apps/files/src/ui/properties.rs:185 apps/files/src/ui/tab.rs:246
+#: apps/files/src/ui/properties.rs:185 apps/files/src/ui/tab.rs:270
 #: apps/fonts/src/fontinfo.rs:314 apps/music/src/details.rs:137
 msgid "Size"
 msgstr "크기"
@@ -4173,7 +4173,7 @@ msgstr "내용"
 
 #: apps/disk-usage/src/ui.rs:1008 apps/document-viewer/src/dialogs.rs:104
 #: apps/files/src/sorting.rs:46 apps/files/src/ui/properties.rs:234
-#: apps/files/src/ui/tab.rs:248 apps/image-viewer/src/ui.rs:585
+#: apps/files/src/ui/tab.rs:272 apps/image-viewer/src/ui.rs:585
 msgid "Modified"
 msgstr "수정한 날짜"
 
@@ -4239,7 +4239,7 @@ msgstr "검사할 폴더 선택"
 msgid "Only local folders can be scanned"
 msgstr "로컬 폴더만 검사할 수 있습니다"
 
-#: apps/disk-usage/src/ui.rs:1642 apps/image-viewer/src/ui.rs:1019
+#: apps/disk-usage/src/ui.rs:1642 apps/image-viewer/src/ui.rs:1025
 msgid "Could not open folder: {}"
 msgstr "폴더를 열 수 없습니다: {}"
 
@@ -5275,7 +5275,7 @@ msgstr "볼륨 이름"
 
 #: apps/disks/src/ui.rs:1365 apps/disks/src/ui.rs:1634
 #: apps/disks/src/ui.rs:1906 apps/files/src/sorting.rs:45
-#: apps/files/src/ui/properties.rs:177 apps/files/src/ui/tab.rs:247
+#: apps/files/src/ui/properties.rs:177 apps/files/src/ui/tab.rs:271
 #: apps/settings/src/ui/bluetooth.rs:513 apps/settings/src/ui/network.rs:529
 #: apps/system-monitor/src/fs_view.rs:25
 msgid "Type"
@@ -5358,7 +5358,7 @@ msgid "Delete Partition?"
 msgstr "파티션을 삭제하시겠습니까?"
 
 #: apps/disks/src/ui.rs:1594 apps/document-scanner/src/ui.rs:228
-#: apps/files/src/ui/window.rs:1393 apps/files/src/ui/window.rs:1478
+#: apps/files/src/ui/window.rs:1409 apps/files/src/ui/window.rs:1494
 #: apps/music/src/pages.rs:2318
 msgid "_Delete"
 msgstr "삭제(_D)"
@@ -5990,8 +5990,8 @@ msgid "_Crop"
 msgstr "자르기(_C)"
 
 #: apps/document-scanner/src/ui.rs:227 apps/document-viewer/src/ui.rs:920
-#: apps/files/src/ui/window.rs:1691 apps/image-viewer/src/ui.rs:305
-#: apps/image-viewer/src/ui.rs:784 apps/terminal/src/window.rs:738
+#: apps/files/src/ui/window.rs:1786 apps/image-viewer/src/ui.rs:305
+#: apps/image-viewer/src/ui.rs:790 apps/terminal/src/window.rs:738
 msgid "_Copy"
 msgstr "복사(_C)"
 
@@ -6544,7 +6544,7 @@ msgstr "모두 선택"
 msgid "Caret Navigation"
 msgstr "커서 탐색"
 
-#: apps/document-viewer/src/shortcuts.rs:26 apps/files/src/ui/dialogs.rs:678
+#: apps/document-viewer/src/shortcuts.rs:26 apps/files/src/ui/dialogs.rs:788
 #: apps/system-monitor/src/shortcuts.rs:42 apps/terminal/src/shortcuts.rs:32
 msgid "Context Menu"
 msgstr "컨텍스트 메뉴"
@@ -6554,8 +6554,8 @@ msgid "Go to Page"
 msgstr "페이지로 이동"
 
 #: apps/document-viewer/src/shortcuts.rs:34 apps/files/src/ui/shortcuts.rs:23
-#: apps/files/src/ui/window.rs:191 apps/files/src/ui/window.rs:194
-#: apps/files/src/ui/window.rs:381 apps/help/src/shortcuts.rs:30
+#: apps/files/src/ui/window.rs:192 apps/files/src/ui/window.rs:195
+#: apps/files/src/ui/window.rs:382 apps/help/src/shortcuts.rs:30
 #: apps/help/src/ui.rs:359 apps/help/src/ui.rs:362 apps/web/src/shortcuts.rs:38
 #: apps/web/src/window.rs:339
 msgid "Forward"
@@ -6609,7 +6609,7 @@ msgstr "페이지로 이동"
 msgid "Current Page"
 msgstr "현재 페이지"
 
-#: apps/document-viewer/src/ui.rs:283 apps/files/src/ui/window.rs:224
+#: apps/document-viewer/src/ui.rs:283 apps/files/src/ui/window.rs:225
 #: apps/text-editor/src/window.rs:48 apps/web/src/window.rs:234
 msgid "New _Window"
 msgstr "새 창(_W)"
@@ -6709,8 +6709,8 @@ msgstr "커서 탐색 켬: 화살표 키로 커서를 옮기고 Shift+화살표�
 msgid "Caret navigation off"
 msgstr "커서 탐색 끔"
 
-#: apps/document-viewer/src/ui.rs:921 apps/files/src/ui/window.rs:1717
-#: apps/files/src/ui/window.rs:1724 apps/files/src/ui/window.rs:1733
+#: apps/document-viewer/src/ui.rs:921 apps/files/src/ui/window.rs:1819
+#: apps/files/src/ui/window.rs:1826 apps/files/src/ui/window.rs:1835
 #: apps/terminal/src/window.rs:740
 msgid "Select _All"
 msgstr "모두 선택(_A)"
@@ -6793,6 +6793,89 @@ msgstr "폴더"
 msgid "manager"
 msgstr "관리자"
 
+#: apps/files/src/archive.rs:184 apps/files/src/ops.rs:397
+#: apps/screenshot/src/shell.rs:79 apps/settings/src/agents.rs:1202
+#: apps/web/src/window.rs:2341
+msgid "Cancelled"
+msgstr "취소됨"
+
+#: apps/files/src/archive.rs:185
+msgid "“{file}”: {error}"
+msgstr "“{file}”: {error}"
+
+#: apps/files/src/archive.rs:193
+msgid "The archive is damaged or in an unsupported format ({detail})."
+msgstr "아카이브가 손상되었거나 지원하지 않는 형식입니다({detail})."
+
+#: apps/files/src/archive.rs:197
+msgid "This is not an archive Files can extract."
+msgstr "파일에서 풀 수 있는 아카이브가 아닙니다."
+
+#: apps/files/src/archive.rs:198
+msgid "Encrypted archives are not supported."
+msgstr "암호화된 아카이브는 지원하지 않습니다."
+
+#: apps/files/src/archive.rs:200
+msgid "“{entry}” has an absolute path, so the archive is unsafe to extract."
+msgstr ""
+"“{entry}”은(는) 절대 경로이므로 아카이브를 푸는 것이 안전하지 않습니다."
+
+#: apps/files/src/archive.rs:204
+msgid ""
+"“{entry}” points outside the destination folder, so the archive is unsafe to "
+"extract."
+msgstr ""
+"“{entry}”이(가) 대상 폴더 바깥을 가리키므로 아카이브를 푸는 것이 안전하지 않"
+"습니다."
+
+#: apps/files/src/archive.rs:208
+msgid ""
+"The link “{entry}” points outside the destination folder, so the archive is "
+"unsafe to extract."
+msgstr ""
+"링크 “{entry}”이(가) 대상 폴더 바깥을 가리키므로 아카이브를 푸는 것이 안전하"
+"지 않습니다."
+
+#: apps/files/src/archive.rs:212
+msgid ""
+"The hard link “{entry}” does not point to a file in the archive, so the "
+"archive is unsafe to extract."
+msgstr ""
+"하드 링크 “{entry}”이(가) 아카이브 안의 파일을 가리키지 않으므로 아카이브를 "
+"푸는 것이 안전하지 않습니다."
+
+#: apps/files/src/archive.rs:216
+msgid ""
+"“{entry}” would be written through a link, so the archive is unsafe to "
+"extract."
+msgstr ""
+"“{entry}”은(는) 링크를 거쳐 쓰이게 되므로 아카이브를 푸는 것이 안전하지 않습"
+"니다."
+
+#: apps/files/src/archive.rs:221
+msgid "“{entry}” clashes with another item in the archive."
+msgstr "“{entry}”이(가) 아카이브의 다른 항목과 충돌합니다."
+
+#: apps/files/src/archive.rs:225
+msgid "There is not enough free space: {needed} needed, {available} available."
+msgstr "여유 공간이 부족합니다: {needed} 필요, {available} 사용 가능."
+
+#: apps/files/src/archive.rs:230
+msgid ""
+"The archive expands to far more data than it holds, as a decompression bomb "
+"would, so it was not extracted."
+msgstr ""
+"아카이브가 압축 폭탄처럼 담긴 데이터보다 훨씬 많은 데이터로 풀리므로 풀지 않"
+"았습니다."
+
+#: apps/files/src/archive.rs:848
+msgid "“{entry}” is larger than it says"
+msgstr "“{entry}”이(가) 표시된 크기보다 큽니다"
+
+#: apps/files/src/archive.rs:1140
+msgid "The file changed while it was being archived."
+msgstr "아카이브하는 동안 파일이 바뀌었습니다."
+
 #: apps/files/src/cli.rs:37
 msgid "Unknown option {arg}"
 msgstr "알 수 없는 옵션 {arg}"
@@ -6813,182 +6896,215 @@ msgstr "{name}에 대한 링크"
 msgid "Link to {stem} ({n}){ext}"
 msgstr "{stem}에 대한 링크 ({n}){ext}"
 
-#: apps/files/src/naming.rs:100
+#: apps/files/src/naming.rs:107
+msgid "{stem} ({n}){ext}"
+msgstr "{stem} ({n}){ext}"
+
+#: apps/files/src/naming.rs:118
 msgid "The name cannot be empty."
 msgstr "이름은 비워 둘 수 없습니다."
 
-#: apps/files/src/naming.rs:103
+#: apps/files/src/naming.rs:121
 msgid "File names cannot contain “/”."
 msgstr "파일 이름에 “/”를 포함할 수 없습니다."
 
-#: apps/files/src/naming.rs:106
+#: apps/files/src/naming.rs:124
 msgid "A file cannot be called “.”."
 msgstr "파일 이름을 “.”으로 할 수 없습니다."
 
-#: apps/files/src/naming.rs:109
+#: apps/files/src/naming.rs:127
 msgid "A file cannot be called “..”."
 msgstr "파일 이름을 “..”으로 할 수 없습니다."
 
-#: apps/files/src/naming.rs:112
+#: apps/files/src/naming.rs:130
 msgid "The name is too long."
 msgstr "이름이 너무 깁니다."
 
-#: apps/files/src/ops.rs:44
+#: apps/files/src/ops.rs:56
 msgid "Copying {n} item to “{folder}”"
 msgid_plural "Copying {n} items to “{folder}”"
 msgstr[0] "항목 {n}개를 “{folder}”에 복사하는 중"
 
-#: apps/files/src/ops.rs:50
+#: apps/files/src/ops.rs:62
 msgid "Moving {n} item to “{folder}”"
 msgid_plural "Moving {n} items to “{folder}”"
 msgstr[0] "항목 {n}개를 “{folder}”(으)로 옮기는 중"
 
-#: apps/files/src/ops.rs:56
+#: apps/files/src/ops.rs:68
 msgid "Creating links to {n} item"
 msgid_plural "Creating links to {n} items"
 msgstr[0] "항목 {n}개의 링크를 만드는 중"
 
-#: apps/files/src/ops.rs:61
+#: apps/files/src/ops.rs:73
 msgid "Moving {n} item to Trash"
 msgid_plural "Moving {n} items to Trash"
 msgstr[0] "항목 {n}개를 휴지통에 버리는 중"
 
-#: apps/files/src/ops.rs:66
+#: apps/files/src/ops.rs:78
 msgid "Deleting {n} item"
 msgid_plural "Deleting {n} items"
 msgstr[0] "항목 {n}개를 삭제하는 중"
 
-#: apps/files/src/ops.rs:68
+#: apps/files/src/ops.rs:80
 msgid "Restoring {n} item"
 msgid_plural "Restoring {n} items"
 msgstr[0] "항목 {n}개를 복원하는 중"
 
-#: apps/files/src/ops.rs:70
+#: apps/files/src/ops.rs:82
 msgid "Emptying Trash"
 msgstr "휴지통 비우는 중"
 
-#: apps/files/src/ops.rs:82
+#: apps/files/src/ops.rs:84
+msgid "Creating “{archive}”"
+msgstr "“{archive}” 만드는 중"
+
+#: apps/files/src/ops.rs:87
+msgid "Extracting “{archive}”"
+msgstr "“{archive}” 푸는 중"
+
+#: apps/files/src/ops.rs:88
+msgid "Extracting {n} archive"
+msgid_plural "Extracting {n} archives"
+msgstr[0] "아카이브 {n}개를 푸는 중"
+
+#: apps/files/src/ops.rs:101
 msgid "Copied {n} item to “{folder}”"
 msgid_plural "Copied {n} items to “{folder}”"
 msgstr[0] "항목 {n}개를 “{folder}”에 복사했습니다"
 
-#: apps/files/src/ops.rs:88
+#: apps/files/src/ops.rs:107
 msgid "Moved {n} item to “{folder}”"
 msgid_plural "Moved {n} items to “{folder}”"
 msgstr[0] "항목 {n}개를 “{folder}”(으)로 옮겼습니다"
 
-#: apps/files/src/ops.rs:95
+#: apps/files/src/ops.rs:114
 msgid "Created {n} link"
 msgid_plural "Created {n} links"
 msgstr[0] "링크 {n}개를 만들었습니다"
 
-#: apps/files/src/ops.rs:98
+#: apps/files/src/ops.rs:117
 msgid "Restored {n} item"
 msgid_plural "Restored {n} items"
 msgstr[0] "항목 {n}개를 복원했습니다"
 
-#: apps/files/src/ops.rs:100
+#: apps/files/src/ops.rs:119
 msgid "Deleted {n} item"
 msgid_plural "Deleted {n} items"
 msgstr[0] "항목 {n}개를 삭제했습니다"
 
-#: apps/files/src/ops.rs:101
+#: apps/files/src/ops.rs:120
 msgid "Trash emptied"
 msgstr "휴지통을 비웠습니다"
 
-#: apps/files/src/ops.rs:119 apps/files/src/pathbar.rs:108
-#: apps/files/src/ui/sidebar.rs:93 apps/files/src/ui/window.rs:340
+#: apps/files/src/ops.rs:123
+msgid "Created “{archive}”"
+msgstr "“{archive}”을(를) 만들었습니다"
+
+#: apps/files/src/ops.rs:125
+msgid "Extracted {n} archive"
+msgid_plural "Extracted {n} archives"
+msgstr[0] "아카이브 {n}개를 풀었습니다"
+
+#: apps/files/src/ops.rs:146 apps/files/src/pathbar.rs:108
+#: apps/files/src/ui/sidebar.rs:93 apps/files/src/ui/window.rs:341
 msgid "Trash"
 msgstr "휴지통"
 
-#: apps/files/src/ops.rs:268
+#: apps/files/src/ops.rs:295
 msgid "Could not replace “{file}”: {error}"
 msgstr "“{file}”을(를) 바꿀 수 없습니다: {error}"
 
-#: apps/files/src/ops.rs:273
+#: apps/files/src/ops.rs:300
 msgid "Could not move “{file}”: {error}"
 msgstr "“{file}”을(를) 옮길 수 없습니다: {error}"
 
-#: apps/files/src/ops.rs:278
+#: apps/files/src/ops.rs:305
 msgid "Could not read “{file}”: {error}"
 msgstr "“{file}”을(를) 읽을 수 없습니다: {error}"
 
-#: apps/files/src/ops.rs:283
+#: apps/files/src/ops.rs:310
 msgid "Could not remove “{file}”: {error}"
 msgstr "“{file}”을(를) 제거할 수 없습니다: {error}"
 
-#: apps/files/src/ops.rs:288
+#: apps/files/src/ops.rs:315
 msgid "Could not link to “{file}”: {error}"
 msgstr "“{file}”에 링크를 만들 수 없습니다: {error}"
 
-#: apps/files/src/ops.rs:293
+#: apps/files/src/ops.rs:320
 msgid "Could not move “{file}” to the Trash: {error}"
 msgstr "“{file}”을(를) 휴지통에 버릴 수 없습니다: {error}"
 
-#: apps/files/src/ops.rs:298
+#: apps/files/src/ops.rs:325
 msgid "Could not delete “{file}”: {error}"
 msgstr "“{file}”을(를) 삭제할 수 없습니다: {error}"
 
-#: apps/files/src/ops.rs:303
+#: apps/files/src/ops.rs:330
 msgid "Could not restore “{file}”: {error}"
 msgstr "“{file}”을(를) 복원할 수 없습니다: {error}"
 
-#: apps/files/src/ops.rs:308
+#: apps/files/src/ops.rs:335
 msgid "Could not empty “{file}”: {error}"
 msgstr "“{file}”을(를) 비울 수 없습니다: {error}"
 
-#: apps/files/src/ops.rs:313
+#: apps/files/src/ops.rs:340
 msgid "Could not process “{file}”: {error}"
 msgstr "“{file}”을(를) 처리할 수 없습니다: {error}"
 
-#: apps/files/src/ops.rs:370 apps/screenshot/src/shell.rs:79
-#: apps/settings/src/agents.rs:1202 apps/web/src/window.rs:2341
-msgid "Cancelled"
-msgstr "취소됨"
-
-#: apps/files/src/ops.rs:392
+#: apps/files/src/ops.rs:419
 msgid "“{}” no longer exists"
 msgstr "“{}”이(가) 더 이상 없습니다"
 
-#: apps/files/src/ops.rs:398
+#: apps/files/src/ops.rs:425
 msgid "Cannot move “{}” into itself"
 msgstr "“{}”을(를) 자기 자신 안으로 옮길 수 없습니다"
 
-#: apps/files/src/ops.rs:400
+#: apps/files/src/ops.rs:427
 msgid "Cannot copy “{}” into itself"
 msgstr "“{}”을(를) 자기 자신 안으로 복사할 수 없습니다"
 
-#: apps/files/src/ops.rs:590
+#: apps/files/src/ops.rs:617
 msgid "Cannot create a link to “{}”: not a local file"
 msgstr "“{}”에 링크를 만들 수 없습니다: 로컬 파일이 아닙니다"
 
-#: apps/files/src/ops.rs:669
+#: apps/files/src/ops.rs:696
 msgid "“{}” has no original location"
 msgstr "“{}”에 원래 위치가 없습니다"
 
-#: apps/files/src/ops.rs:728
+#: apps/files/src/ops.rs:755
 msgid "{n} item could not be found in the Trash"
 msgid_plural "{n} items could not be found in the Trash"
 msgstr[0] "휴지통에서 항목 {n}개를 찾을 수 없습니다"
+
+#: apps/files/src/ops.rs:801
+msgid "“{file}” is not on this computer, so it can’t be archived or extracted"
+msgstr "“{file}”은(는) 이 컴퓨터에 있지 않아 아카이브하거나 풀 수 없습니다"
+
+#: apps/files/src/ops.rs:832
+msgid "Could not create “{file}”: {error}"
+msgstr "“{file}”을(를) 만들 수 없습니다: {error}"
+
+#: apps/files/src/ops.rs:875
+msgid "Could not extract “{file}”: {error}"
+msgstr "“{file}”을(를) 풀 수 없습니다: {error}"
 
 #: apps/files/src/pathbar.rs:109 apps/files/src/ui/sidebar.rs:81
 msgid "Recent"
 msgstr "최근"
 
 #: apps/files/src/pathbar.rs:110 apps/files/src/ui/sidebar.rs:122
-#: apps/files/src/ui/tab.rs:1434 apps/settings/src/bluez.rs:235
+#: apps/files/src/ui/tab.rs:1479 apps/settings/src/bluez.rs:235
 #: apps/settings/src/panels.rs:64 apps/system-monitor/src/res_view.rs:385
 msgid "Network"
 msgstr "네트워크"
 
 #: apps/files/src/pathbar.rs:111 apps/files/src/ui/properties.rs:95
 #: apps/files/src/ui/sidebar.rs:87 apps/files/src/ui/tab.rs:135
-#: apps/files/src/ui/window.rs:748
+#: apps/files/src/ui/window.rs:759
 msgid "Starred"
 msgstr "별표"
 
 #: apps/files/src/pathbar.rs:113 apps/files/src/ui/sidebar.rs:128
-#: apps/files/src/ui/window.rs:132
+#: apps/files/src/ui/window.rs:133
 msgid "Other Locations"
 msgstr "다른 위치"
 
@@ -7004,43 +7120,60 @@ msgstr "(as, s)가 필요합니다"
 msgid "Unknown method"
 msgstr "알 수 없는 메서드"
 
-#: apps/files/src/ui/dialogs.rs:51
+#: apps/files/src/ui/dialogs.rs:53
 msgid "Folder _Name"
 msgstr "폴더 이름(_N)"
 
-#: apps/files/src/ui/dialogs.rs:53
+#: apps/files/src/ui/dialogs.rs:55
 msgid "File _Name"
 msgstr "파일 이름(_N)"
 
-#: apps/files/src/ui/dialogs.rs:91
+#: apps/files/src/ui/dialogs.rs:93
 msgid "A folder with that name already exists."
 msgstr "같은 이름의 폴더가 이미 있습니다."
 
-#: apps/files/src/ui/dialogs.rs:93
+#: apps/files/src/ui/dialogs.rs:95 apps/files/src/ui/dialogs.rs:230
 msgid "A file with that name already exists."
 msgstr "같은 이름의 파일이 이미 있습니다."
 
-#: apps/files/src/ui/dialogs.rs:111
+#: apps/files/src/ui/dialogs.rs:113
 msgid "Names starting with “.” are hidden."
 msgstr "“.”으로 시작하는 이름은 숨겨집니다."
 
-#: apps/files/src/ui/dialogs.rs:164
+#: apps/files/src/ui/dialogs.rs:167
+msgid "Archive _Name"
+msgstr "아카이브 이름(_N)"
+
+#: apps/files/src/ui/dialogs.rs:175 apps/files/src/ui/dialogs.rs:176
+msgid "Archive Format"
+msgstr "아카이브 형식"
+
+#: apps/files/src/ui/dialogs.rs:194
+msgid "Create Archive"
+msgstr "아카이브 만들기"
+
+#: apps/files/src/ui/dialogs.rs:199 apps/files/src/ui/window.rs:1613
+#: apps/music/src/pages.rs:2133
+msgid "_Create"
+msgstr "만들기(_C)"
+
+#: apps/files/src/ui/dialogs.rs:274
 msgid "{size}, last modified {date}"
 msgstr "{size}, 마지막 수정 {date}"
 
-#: apps/files/src/ui/dialogs.rs:165
+#: apps/files/src/ui/dialogs.rs:275
 msgid "Last modified {date}"
 msgstr "마지막 수정 {date}"
 
-#: apps/files/src/ui/dialogs.rs:193
+#: apps/files/src/ui/dialogs.rs:303
 msgid "Merge Folder “{name}”?"
 msgstr "“{name}” 폴더를 병합하시겠습니까?"
 
-#: apps/files/src/ui/dialogs.rs:195
+#: apps/files/src/ui/dialogs.rs:305
 msgid "Replace “{name}”?"
 msgstr "“{name}”을(를) 바꾸시겠습니까?"
 
-#: apps/files/src/ui/dialogs.rs:198
+#: apps/files/src/ui/dialogs.rs:308
 msgid ""
 "A folder with the same name already exists in “{folder}”. Merging will ask "
 "before replacing any files in the folder that conflict with the files being "
@@ -7049,7 +7182,7 @@ msgstr ""
 "“{folder}”에 같은 이름의 폴더가 이미 있습니다. 병합하면 복사하는 파일과 충돌"
 "하는 폴더 안의 파일을 바꾸기 전에 물어봅니다."
 
-#: apps/files/src/ui/dialogs.rs:200
+#: apps/files/src/ui/dialogs.rs:310
 msgid ""
 "Another file with the same name already exists in “{folder}”. Replacing it "
 "will overwrite its content."
@@ -7057,179 +7190,179 @@ msgstr ""
 "“{folder}”에 같은 이름의 다른 파일이 이미 있습니다. 바꾸면 그 내용을 덮어씁니"
 "다."
 
-#: apps/files/src/ui/dialogs.rs:205
+#: apps/files/src/ui/dialogs.rs:315
 msgid "Original: {description}"
 msgstr "원본: {description}"
 
-#: apps/files/src/ui/dialogs.rs:209
+#: apps/files/src/ui/dialogs.rs:319
 msgid "Replace with: {description}"
 msgstr "바꿀 파일: {description}"
 
-#: apps/files/src/ui/dialogs.rs:211
+#: apps/files/src/ui/dialogs.rs:321
 msgid "Apply this action to all conflicts"
 msgstr "모든 충돌에 이 동작 적용"
 
-#: apps/files/src/ui/dialogs.rs:221
+#: apps/files/src/ui/dialogs.rs:331
 msgid "_Skip"
 msgstr "건너뛰기(_S)"
 
-#: apps/files/src/ui/dialogs.rs:222
+#: apps/files/src/ui/dialogs.rs:332
 msgid "Keep _Both"
 msgstr "둘 다 유지(_B)"
 
-#: apps/files/src/ui/dialogs.rs:223
+#: apps/files/src/ui/dialogs.rs:333
 msgid "_Merge"
 msgstr "병합(_M)"
 
-#: apps/files/src/ui/dialogs.rs:223 apps/text-editor/src/doc.rs:209
+#: apps/files/src/ui/dialogs.rs:333 apps/text-editor/src/doc.rs:209
 msgid "_Replace"
 msgstr "바꾸기(_R)"
 
-#: apps/files/src/ui/dialogs.rs:269
+#: apps/files/src/ui/dialogs.rs:379
 msgid "Recommended Applications"
 msgstr "추천 프로그램"
 
-#: apps/files/src/ui/dialogs.rs:270
+#: apps/files/src/ui/dialogs.rs:380
 msgid "Other Applications"
 msgstr "기타 프로그램"
 
-#: apps/files/src/ui/dialogs.rs:271
+#: apps/files/src/ui/dialogs.rs:381
 msgid "All Applications"
 msgstr "모든 프로그램"
 
-#: apps/files/src/ui/dialogs.rs:349 apps/logs/src/category.rs:30
+#: apps/files/src/ui/dialogs.rs:459 apps/logs/src/category.rs:30
 msgid "Applications"
 msgstr "프로그램"
 
-#: apps/files/src/ui/dialogs.rs:364 apps/settings/src/ui/appearance.rs:107
+#: apps/files/src/ui/dialogs.rs:474 apps/settings/src/ui/appearance.rs:107
 #: apps/settings/src/ui/printers.rs:237 apps/settings/src/ui/printers.rs:433
 #: apps/settings/src/ui/sound.rs:928 apps/settings/src/values.rs:204
 msgid "Default"
 msgstr "기본값"
 
-#: apps/files/src/ui/dialogs.rs:402
+#: apps/files/src/ui/dialogs.rs:512
 msgid "Search applications"
 msgstr "프로그램 검색"
 
-#: apps/files/src/ui/dialogs.rs:404
+#: apps/files/src/ui/dialogs.rs:514
 msgid "Search Applications"
 msgstr "프로그램 검색"
 
-#: apps/files/src/ui/dialogs.rs:427
+#: apps/files/src/ui/dialogs.rs:537
 msgid "No Applications Found"
 msgstr "프로그램을 찾을 수 없습니다"
 
-#: apps/files/src/ui/dialogs.rs:432
+#: apps/files/src/ui/dialogs.rs:542
 msgid "No installed application can open this file"
 msgstr "이 파일을 열 수 있는 설치된 프로그램이 없습니다"
 
-#: apps/files/src/ui/dialogs.rs:444
+#: apps/files/src/ui/dialogs.rs:554
 msgid "Always use for “{desc}” files"
 msgstr "“{desc}” 파일에 항상 사용"
 
-#: apps/files/src/ui/dialogs.rs:463 apps/image-viewer/src/shortcuts.rs:16
+#: apps/files/src/ui/dialogs.rs:573 apps/image-viewer/src/shortcuts.rs:16
 msgid "Open With"
 msgstr "다른 프로그램으로 열기"
 
-#: apps/files/src/ui/dialogs.rs:488
+#: apps/files/src/ui/dialogs.rs:598
 msgid "No applications found"
 msgstr "프로그램을 찾을 수 없습니다"
 
-#: apps/files/src/ui/dialogs.rs:489
+#: apps/files/src/ui/dialogs.rs:599
 msgid "{n} application"
 msgid_plural "{n} applications"
 msgstr[0] "프로그램 {n}개"
 
-#: apps/files/src/ui/dialogs.rs:514 apps/image-viewer/src/ui.rs:1608
+#: apps/files/src/ui/dialogs.rs:624 apps/image-viewer/src/ui.rs:1614
 msgid "Could not open: {}"
 msgstr "열 수 없습니다: {}"
 
-#: apps/files/src/ui/dialogs.rs:620
+#: apps/files/src/ui/dialogs.rs:730
 msgid "Sort Folders Before Files"
 msgstr "폴더를 파일보다 먼저 정렬"
 
-#: apps/files/src/ui/dialogs.rs:626
+#: apps/files/src/ui/dialogs.rs:736
 msgid "Open Action"
 msgstr "열기 동작"
 
-#: apps/files/src/ui/dialogs.rs:629
+#: apps/files/src/ui/dialogs.rs:739
 msgid "Double Click"
 msgstr "두 번 누르기"
 
-#: apps/files/src/ui/dialogs.rs:630
+#: apps/files/src/ui/dialogs.rs:740
 msgid "Single Click"
 msgstr "한 번 누르기"
 
-#: apps/files/src/ui/dialogs.rs:636 apps/files/src/ui/shortcuts.rs:49
+#: apps/files/src/ui/dialogs.rs:746 apps/files/src/ui/shortcuts.rs:49
 msgid "Show Hidden Files"
 msgstr "숨김 파일 표시"
 
-#: apps/files/src/ui/dialogs.rs:642
+#: apps/files/src/ui/dialogs.rs:752
 msgid "Always Show the Location Entry"
 msgstr "항상 위치 입력란 표시"
 
-#: apps/files/src/ui/dialogs.rs:643
+#: apps/files/src/ui/dialogs.rs:753
 msgid "Instead of the path bar"
 msgstr "경로 표시줄 대신"
 
-#: apps/files/src/ui/dialogs.rs:649
+#: apps/files/src/ui/dialogs.rs:759
 msgid "Views"
 msgstr "보기"
 
-#: apps/files/src/ui/dialogs.rs:651
+#: apps/files/src/ui/dialogs.rs:761
 msgid "Default View"
 msgstr "기본 보기"
 
-#: apps/files/src/ui/dialogs.rs:653
+#: apps/files/src/ui/dialogs.rs:763
 msgid "Grid"
 msgstr "격자"
 
-#: apps/files/src/ui/dialogs.rs:653
+#: apps/files/src/ui/dialogs.rs:763
 msgid "List"
 msgstr "목록"
 
-#: apps/files/src/ui/dialogs.rs:658 apps/image-viewer/src/shortcuts.rs:55
+#: apps/files/src/ui/dialogs.rs:768 apps/image-viewer/src/shortcuts.rs:55
 #: apps/image-viewer/src/ui.rs:457
 msgid "Show Thumbnails"
 msgstr "미리 보기 표시"
 
-#: apps/files/src/ui/dialogs.rs:661 apps/files/src/ui/dialogs.rs:699
+#: apps/files/src/ui/dialogs.rs:771 apps/files/src/ui/dialogs.rs:809
 msgid "On This Computer Only"
 msgstr "이 컴퓨터에서만"
 
-#: apps/files/src/ui/dialogs.rs:669
+#: apps/files/src/ui/dialogs.rs:779
 msgid "Date and Time Format"
 msgstr "날짜 및 시각 형식"
 
-#: apps/files/src/ui/dialogs.rs:671
+#: apps/files/src/ui/dialogs.rs:781
 msgid "Detailed"
 msgstr "자세히"
 
-#: apps/files/src/ui/dialogs.rs:671
+#: apps/files/src/ui/dialogs.rs:781
 msgid "Simple"
 msgstr "간단히"
 
-#: apps/files/src/ui/dialogs.rs:681
+#: apps/files/src/ui/dialogs.rs:791
 msgid "Create Link"
 msgstr "링크 만들기"
 
-#: apps/files/src/ui/dialogs.rs:682
+#: apps/files/src/ui/dialogs.rs:792
 msgid "Show an action to create symbolic links"
 msgstr "심볼릭 링크를 만드는 동작 표시"
 
-#: apps/files/src/ui/dialogs.rs:687 apps/files/src/ui/shortcuts.rs:61
+#: apps/files/src/ui/dialogs.rs:797 apps/files/src/ui/shortcuts.rs:61
 msgid "Delete Permanently"
 msgstr "완전히 삭제"
 
-#: apps/files/src/ui/dialogs.rs:688
+#: apps/files/src/ui/dialogs.rs:798
 msgid "Show an action to bypass the Trash"
 msgstr "휴지통을 거치지 않는 동작 표시"
 
-#: apps/files/src/ui/dialogs.rs:696
+#: apps/files/src/ui/dialogs.rs:806
 msgid "Search in Subfolders"
 msgstr "하위 폴더에서 검색"
 
-#: apps/files/src/ui/dialogs.rs:700
+#: apps/files/src/ui/dialogs.rs:810
 msgid "All Locations"
 msgstr "모든 위치"
 
@@ -7250,8 +7383,8 @@ msgstr "준비하는 중…"
 msgid "File Operations — {} % done"
 msgstr "파일 작업 — {}% 완료"
 
-#: apps/files/src/ui/jobs.rs:100 apps/files/src/ui/window.rs:304
-#: apps/files/src/ui/window.rs:307
+#: apps/files/src/ui/jobs.rs:100 apps/files/src/ui/window.rs:305
+#: apps/files/src/ui/window.rs:308
 msgid "File Operations"
 msgstr "파일 작업"
 
@@ -7287,8 +7420,8 @@ msgstr "실행 중인 인스턴스 끝내기"
 msgid "Access and organize files"
 msgstr "파일에 접근하고 정리합니다"
 
-#: apps/files/src/ui/mod.rs:388 apps/files/src/ui/window.rs:156
-#: apps/files/src/ui/window.rs:456
+#: apps/files/src/ui/mod.rs:388 apps/files/src/ui/window.rs:157
+#: apps/files/src/ui/window.rs:457
 msgid "Files"
 msgstr "파일"
 
@@ -7456,11 +7589,11 @@ msgstr "뒤로 또는 앞으로"
 msgid "Extra mouse buttons"
 msgstr "추가 마우스 단추"
 
-#: apps/files/src/ui/shortcuts.rs:41 apps/files/src/ui/window.rs:829
+#: apps/files/src/ui/shortcuts.rs:41 apps/files/src/ui/window.rs:840
 msgid "Grid View"
 msgstr "격자 보기"
 
-#: apps/files/src/ui/shortcuts.rs:42 apps/files/src/ui/window.rs:831
+#: apps/files/src/ui/shortcuts.rs:42 apps/files/src/ui/window.rs:842
 msgid "List View"
 msgstr "목록 보기"
 
@@ -7476,7 +7609,7 @@ msgstr "파일 및 폴더"
 msgid "Open in New Tab"
 msgstr "새 탭에서 열기"
 
-#: apps/files/src/ui/shortcuts.rs:58 apps/files/src/ui/window.rs:1596
+#: apps/files/src/ui/shortcuts.rs:58 apps/files/src/ui/window.rs:1612
 msgid "New Folder"
 msgstr "새 폴더"
 
@@ -7496,7 +7629,7 @@ msgstr "편집"
 msgid "Invert Selection"
 msgstr "선택 반전"
 
-#: apps/files/src/ui/shortcuts.rs:71 apps/files/src/ui/tab.rs:147
+#: apps/files/src/ui/shortcuts.rs:71 apps/files/src/ui/tab.rs:169
 msgid "Cut"
 msgstr "잘라내기"
 
@@ -7504,8 +7637,8 @@ msgstr "잘라내기"
 msgid "Paste"
 msgstr "붙여넣기"
 
-#: apps/files/src/ui/sidebar.rs:75 apps/files/src/ui/window.rs:136
-#: apps/files/src/ui/window.rs:858
+#: apps/files/src/ui/sidebar.rs:75 apps/files/src/ui/window.rs:137
+#: apps/files/src/ui/window.rs:869
 msgctxt "home folder"
 msgid "Home"
 msgstr "홈"
@@ -7518,15 +7651,15 @@ msgstr "{name} 꺼내기"
 msgid "Unmount {name}"
 msgstr "{name} 마운트 해제"
 
-#: apps/files/src/ui/sidebar.rs:565 apps/files/src/ui/window.rs:1667
+#: apps/files/src/ui/sidebar.rs:565 apps/files/src/ui/window.rs:1762
 msgid "Open in New _Tab"
 msgstr "새 탭에서 열기(_T)"
 
-#: apps/files/src/ui/sidebar.rs:566 apps/files/src/ui/window.rs:1668
+#: apps/files/src/ui/sidebar.rs:566 apps/files/src/ui/window.rs:1763
 msgid "Open in New _Window"
 msgstr "새 창에서 열기(_W)"
 
-#: apps/files/src/ui/sidebar.rs:571 apps/files/src/ui/window.rs:1697
+#: apps/files/src/ui/sidebar.rs:571 apps/files/src/ui/window.rs:1792
 msgid "Rena_me…"
 msgstr "이름 바꾸기(_M)…"
 
@@ -7542,18 +7675,18 @@ msgstr "꺼내기(_E)"
 msgid "_Unmount"
 msgstr "마운트 해제(_U)"
 
-#: apps/files/src/ui/sidebar.rs:581 apps/files/src/ui/window.rs:1723
+#: apps/files/src/ui/sidebar.rs:581 apps/files/src/ui/window.rs:1825
 msgid "_Empty Trash…"
 msgstr "휴지통 비우기(_E)…"
 
-#: apps/files/src/ui/sidebar.rs:586 apps/files/src/ui/window.rs:1660
-#: apps/files/src/ui/window.rs:1708 apps/files/src/ui/window.rs:1738
+#: apps/files/src/ui/sidebar.rs:586 apps/files/src/ui/window.rs:1755
+#: apps/files/src/ui/window.rs:1810 apps/files/src/ui/window.rs:1840
 #: apps/system-monitor/src/proc_view.rs:156
 msgid "_Properties"
 msgstr "속성(_P)"
 
 #: apps/files/src/ui/sidebar.rs:650 apps/files/src/ui/sidebar.rs:695
-#: apps/files/src/ui/window.rs:1635
+#: apps/files/src/ui/window.rs:1730
 msgid "Could not save bookmarks: {e}"
 msgstr "책갈피를 저장할 수 없습니다: {e}"
 
@@ -7565,7 +7698,7 @@ msgstr "책갈피 이름(_N)"
 msgid "Rename Bookmark"
 msgstr "책갈피 이름 바꾸기"
 
-#: apps/files/src/ui/sidebar.rs:684 apps/files/src/ui/window.rs:1552
+#: apps/files/src/ui/sidebar.rs:684 apps/files/src/ui/window.rs:1568
 #: apps/music/src/pages.rs:2131
 msgid "_Rename"
 msgstr "이름 바꾸기(_R)"
@@ -7578,207 +7711,207 @@ msgstr "별표를 변경할 수 없습니다: {}"
 msgid "Folder"
 msgstr "폴더"
 
-#: apps/files/src/ui/tab.rs:288
+#: apps/files/src/ui/tab.rs:312
 msgid "_Try Again"
 msgstr "다시 시도(_T)"
 
-#: apps/files/src/ui/tab.rs:298
+#: apps/files/src/ui/tab.rs:322
 msgid "Loading folder"
 msgstr "폴더 불러오는 중"
 
-#: apps/files/src/ui/tab.rs:1069
+#: apps/files/src/ui/tab.rs:1114
 msgid "Unable to access location: {}"
 msgstr "위치에 접근할 수 없습니다: {}"
 
-#: apps/files/src/ui/tab.rs:1102
+#: apps/files/src/ui/tab.rs:1147
 msgid "Unable to Open Folder"
 msgstr "폴더를 열 수 없습니다"
 
-#: apps/files/src/ui/tab.rs:1110
+#: apps/files/src/ui/tab.rs:1155
 msgid "Unable to open folder: {}"
 msgstr "폴더를 열 수 없습니다: {}"
 
-#: apps/files/src/ui/tab.rs:1127
+#: apps/files/src/ui/tab.rs:1172
 msgid "Try a different search."
 msgstr "다른 검색어를 사용해 보십시오."
 
-#: apps/files/src/ui/tab.rs:1130
+#: apps/files/src/ui/tab.rs:1175
 msgid "Starred Files Unavailable"
 msgstr "별표 파일을 사용할 수 없음"
 
-#: apps/files/src/ui/tab.rs:1132
+#: apps/files/src/ui/tab.rs:1177
 msgid "The stars GNOME Files keeps could not be read."
 msgstr "그놈 파일이 저장한 별표를 읽을 수 없습니다."
 
-#: apps/files/src/ui/tab.rs:1135
+#: apps/files/src/ui/tab.rs:1180
 msgid "No Starred Files"
 msgstr "별표 파일 없음"
 
-#: apps/files/src/ui/tab.rs:1137
+#: apps/files/src/ui/tab.rs:1182
 msgid "Files and folders you star appear here."
 msgstr "별표 표시한 파일과 폴더가 여기에 나타납니다."
 
-#: apps/files/src/ui/tab.rs:1140
+#: apps/files/src/ui/tab.rs:1185
 msgid "Trash is Empty"
 msgstr "휴지통이 비어 있습니다"
 
-#: apps/files/src/ui/tab.rs:1144
+#: apps/files/src/ui/tab.rs:1189
 msgid "Folder is Empty"
 msgstr "폴더가 비어 있습니다"
 
-#: apps/files/src/ui/tab.rs:1372
+#: apps/files/src/ui/tab.rs:1417
 msgid "Search finished: {n} item found"
 msgid_plural "Search finished: {n} items found"
 msgstr[0] "검색 완료: 항목 {n}개를 찾았습니다"
 
-#: apps/files/src/ui/tab.rs:1398
+#: apps/files/src/ui/tab.rs:1443
 msgid "On This Computer"
 msgstr "이 컴퓨터"
 
-#: apps/files/src/ui/tab.rs:1430
+#: apps/files/src/ui/tab.rs:1475
 msgid "Networks"
 msgstr "네트워크"
 
-#: apps/files/src/ui/tab.rs:1435
+#: apps/files/src/ui/tab.rs:1480
 msgid "Browse the local network"
 msgstr "로컬 네트워크 찾아보기"
 
-#: apps/files/src/ui/tab.rs:1460
+#: apps/files/src/ui/tab.rs:1505
 msgid "Not mounted"
 msgstr "마운트 안 됨"
 
-#: apps/files/src/ui/tab.rs:1473
+#: apps/files/src/ui/tab.rs:1518
 msgid "Connect to Server"
 msgstr "서버에 연결"
 
-#: apps/files/src/ui/tab.rs:1477
+#: apps/files/src/ui/tab.rs:1522
 msgid "Server Address"
 msgstr "서버 주소"
 
-#: apps/files/src/ui/window.rs:209
+#: apps/files/src/ui/window.rs:210
 msgid "Enter a location"
 msgstr "위치를 입력하십시오"
 
-#: apps/files/src/ui/window.rs:225 apps/terminal/src/window.rs:744
+#: apps/files/src/ui/window.rs:226 apps/terminal/src/window.rs:744
 #: apps/text-editor/src/window.rs:47
 msgid "New _Tab"
 msgstr "새 탭(_T)"
 
-#: apps/files/src/ui/window.rs:233
+#: apps/files/src/ui/window.rs:234
 msgid "_About Files"
 msgstr "파일 정보(_A)"
 
-#: apps/files/src/ui/window.rs:251
+#: apps/files/src/ui/window.rs:252
 msgid "_Reversed Order"
 msgstr "역순(_R)"
 
-#: apps/files/src/ui/window.rs:252 apps/logs/src/ui.rs:294
+#: apps/files/src/ui/window.rs:253 apps/logs/src/ui.rs:294
 #: apps/music/src/ui.rs:510 apps/music/src/ui.rs:513
 msgid "Sort"
 msgstr "정렬"
 
-#: apps/files/src/ui/window.rs:254 apps/image-viewer/src/ui.rs:310
+#: apps/files/src/ui/window.rs:255 apps/image-viewer/src/ui.rs:310
 msgid "Zoom _In"
 msgstr "확대(_I)"
 
-#: apps/files/src/ui/window.rs:255
+#: apps/files/src/ui/window.rs:256
 msgid "Zoom _Out"
 msgstr "축소(_O)"
 
-#: apps/files/src/ui/window.rs:256
+#: apps/files/src/ui/window.rs:257
 msgid "_Reset Size"
 msgstr "크기 초기화(_R)"
 
-#: apps/files/src/ui/window.rs:259 apps/files/src/ui/window.rs:1737
+#: apps/files/src/ui/window.rs:260 apps/files/src/ui/window.rs:1839
 msgid "Show _Hidden Files"
 msgstr "숨김 파일 표시(_H)"
 
-#: apps/files/src/ui/window.rs:264 apps/files/src/ui/window.rs:266
-#: apps/files/src/ui/window.rs:388
+#: apps/files/src/ui/window.rs:265 apps/files/src/ui/window.rs:267
+#: apps/files/src/ui/window.rs:389
 msgid "View Options"
 msgstr "보기 옵션"
 
-#: apps/files/src/ui/window.rs:312
+#: apps/files/src/ui/window.rs:313
 msgid "Search current folder"
 msgstr "현재 폴더 검색"
 
-#: apps/files/src/ui/window.rs:315
+#: apps/files/src/ui/window.rs:316
 msgid "Search Current Folder"
 msgstr "현재 폴더 검색"
 
-#: apps/files/src/ui/window.rs:341
+#: apps/files/src/ui/window.rs:342
 msgid "_Empty…"
 msgstr "비우기(_E)…"
 
-#: apps/files/src/ui/window.rs:631
+#: apps/files/src/ui/window.rs:632
 msgid "Search: {}"
 msgstr "검색: {}"
 
-#: apps/files/src/ui/window.rs:748
+#: apps/files/src/ui/window.rs:759
 msgid "Unstarred"
 msgstr "별표 해제됨"
 
-#: apps/files/src/ui/window.rs:765
+#: apps/files/src/ui/window.rs:776
 msgid "{base} — Searching…"
 msgstr "{base} — 검색 중…"
 
-#: apps/files/src/ui/window.rs:767
+#: apps/files/src/ui/window.rs:778
 msgid "{base} — Loading…"
 msgstr "{base} — 불러오는 중…"
 
-#: apps/files/src/ui/window.rs:776
+#: apps/files/src/ui/window.rs:787
 msgid "“{}” selected"
 msgstr "“{}” 선택함"
 
-#: apps/files/src/ui/window.rs:778
+#: apps/files/src/ui/window.rs:789
 msgid "“{}” selected ({})"
 msgstr "“{}” 선택함({})"
 
-#: apps/files/src/ui/window.rs:793
+#: apps/files/src/ui/window.rs:804
 msgid "{n} folder selected"
 msgid_plural "{n} folders selected"
 msgstr[0] "폴더 {n}개 선택함"
 
-#: apps/files/src/ui/window.rs:795
+#: apps/files/src/ui/window.rs:806
 msgid "{n} item selected ({bytes})"
 msgid_plural "{n} items selected ({bytes})"
 msgstr[0] "항목 {n}개 선택함({bytes})"
 
-#: apps/files/src/ui/window.rs:1115
+#: apps/files/src/ui/window.rs:1126
 msgid "Could not open file: {}"
 msgstr "파일을 열 수 없습니다: {}"
 
-#: apps/files/src/ui/window.rs:1143
+#: apps/files/src/ui/window.rs:1154
 msgid "Unable to mount “{}”: {}"
 msgstr "“{}”을(를) 마운트할 수 없습니다: {}"
 
-#: apps/files/src/ui/window.rs:1168
+#: apps/files/src/ui/window.rs:1179
 msgid "Unable to eject “{name}”: {error}"
 msgstr "“{name}”을(를) 꺼낼 수 없습니다: {error}"
 
-#: apps/files/src/ui/window.rs:1283
+#: apps/files/src/ui/window.rs:1298
 msgid "Nothing to paste"
 msgstr "붙여넣을 항목이 없습니다"
 
-#: apps/files/src/ui/window.rs:1348
+#: apps/files/src/ui/window.rs:1364
 msgid "“{}” moved to Trash"
 msgstr "“{}”을(를) 휴지통에 버렸습니다"
 
-#: apps/files/src/ui/window.rs:1353
+#: apps/files/src/ui/window.rs:1369
 msgid "{n} item moved to Trash"
 msgid_plural "{n} items moved to Trash"
 msgstr[0] "항목 {n}개를 휴지통에 버렸습니다"
 
-#: apps/files/src/ui/window.rs:1378
+#: apps/files/src/ui/window.rs:1394
 msgid "“{}” Can’t Be Put in the Trash"
 msgstr "“{}”을(를) 휴지통으로 옮길 수 없습니다"
 
-#: apps/files/src/ui/window.rs:1383
+#: apps/files/src/ui/window.rs:1399
 msgid "{n} Item Can’t Be Put in the Trash"
 msgid_plural "{n} Items Can’t Be Put in the Trash"
 msgstr[0] "항목 {n}개를 휴지통으로 옮길 수 없습니다"
 
-#: apps/files/src/ui/window.rs:1392
+#: apps/files/src/ui/window.rs:1408
 msgid ""
 "This location has no Trash. Delete permanently instead? Deleted items will "
 "be permanently lost."
@@ -7786,128 +7919,148 @@ msgstr ""
 "이 위치에는 휴지통이 없습니다. 대신 영구적으로 삭제할까요? 삭제한 항목은 영구"
 "적으로 사라집니다."
 
-#: apps/files/src/ui/window.rs:1463
+#: apps/files/src/ui/window.rs:1479
 msgid "Permanently Delete “{}”?"
 msgstr "“{}”을(를) 완전히 삭제하시겠습니까?"
 
-#: apps/files/src/ui/window.rs:1468
+#: apps/files/src/ui/window.rs:1484
 msgid "Permanently Delete {n} Item?"
 msgid_plural "Permanently Delete {n} Items?"
 msgstr[0] "항목 {n}개를 완전히 삭제하시겠습니까?"
 
-#: apps/files/src/ui/window.rs:1477
+#: apps/files/src/ui/window.rs:1493
 msgid "If you delete an item, it will be permanently lost."
 msgstr "항목을 삭제하면 영구히 사라집니다."
 
-#: apps/files/src/ui/window.rs:1491
+#: apps/files/src/ui/window.rs:1507
 msgid "Empty Trash?"
 msgstr "휴지통을 비우시겠습니까?"
 
-#: apps/files/src/ui/window.rs:1492
+#: apps/files/src/ui/window.rs:1508
 msgid "All items in the Trash will be permanently deleted."
 msgstr "휴지통의 모든 항목을 완전히 삭제합니다."
 
-#: apps/files/src/ui/window.rs:1493
+#: apps/files/src/ui/window.rs:1509
 msgid "_Empty Trash"
 msgstr "휴지통 비우기(_E)"
 
-#: apps/files/src/ui/window.rs:1504
+#: apps/files/src/ui/window.rs:1520
 msgid "Nothing to undo"
 msgstr "실행 취소할 작업이 없습니다"
 
-#: apps/files/src/ui/window.rs:1521
+#: apps/files/src/ui/window.rs:1537
 msgid "Could not undo rename: {}"
 msgstr "이름 바꾸기를 실행 취소할 수 없습니다: {}"
 
-#: apps/files/src/ui/window.rs:1548
+#: apps/files/src/ui/window.rs:1564
 msgid "Rename Folder"
 msgstr "폴더 이름 바꾸기"
 
-#: apps/files/src/ui/window.rs:1550
+#: apps/files/src/ui/window.rs:1566
 msgid "Rename File"
 msgstr "파일 이름 바꾸기"
 
-#: apps/files/src/ui/window.rs:1577
+#: apps/files/src/ui/window.rs:1593
 msgid "Could not rename: {}"
 msgstr "이름을 바꿀 수 없습니다: {}"
 
-#: apps/files/src/ui/window.rs:1597 apps/music/src/pages.rs:2133
-msgid "_Create"
-msgstr "만들기(_C)"
-
-#: apps/files/src/ui/window.rs:1608
+#: apps/files/src/ui/window.rs:1624
 msgid "Could not create folder: {}"
 msgstr "폴더를 만들 수 없습니다: {}"
 
-#: apps/files/src/ui/window.rs:1629
+#: apps/files/src/ui/window.rs:1689
+msgid "Extract To"
+msgstr "풀 위치"
+
+#: apps/files/src/ui/window.rs:1690
+msgid "_Extract"
+msgstr "풀기(_E)"
+
+#: apps/files/src/ui/window.rs:1724
 msgid "Location is already bookmarked"
 msgstr "이미 책갈피에 있는 위치입니다"
 
-#: apps/files/src/ui/window.rs:1634
+#: apps/files/src/ui/window.rs:1729
 msgid "“{}” added to bookmarks"
 msgstr "“{}”을(를) 책갈피에 추가했습니다"
 
-#: apps/files/src/ui/window.rs:1656
+#: apps/files/src/ui/window.rs:1751
 msgid "_Restore From Trash"
 msgstr "휴지통에서 복원(_R)"
 
-#: apps/files/src/ui/window.rs:1657
+#: apps/files/src/ui/window.rs:1752
 msgid "_Delete From Trash…"
 msgstr "휴지통에서 삭제(_D)…"
 
-#: apps/files/src/ui/window.rs:1670 apps/image-viewer/src/ui.rs:301
-#: apps/image-viewer/src/ui.rs:787
+#: apps/files/src/ui/window.rs:1765 apps/image-viewer/src/ui.rs:301
+#: apps/image-viewer/src/ui.rs:793
 msgid "Open _With…"
 msgstr "다른 프로그램으로 열기(_W)…"
 
-#: apps/files/src/ui/window.rs:1676
+#: apps/files/src/ui/window.rs:1771
 msgid "Open Item _Location"
 msgstr "항목 위치 열기(_L)"
 
-#: apps/files/src/ui/window.rs:1683
+#: apps/files/src/ui/window.rs:1778
 msgid "_Star"
 msgstr "별표 표시(_S)"
 
-#: apps/files/src/ui/window.rs:1685
+#: apps/files/src/ui/window.rs:1780
 msgid "_Unstar"
 msgstr "별표 해제(_U)"
 
-#: apps/files/src/ui/window.rs:1690
+#: apps/files/src/ui/window.rs:1785
 msgid "Cu_t"
 msgstr "잘라내기(_T)"
 
-#: apps/files/src/ui/window.rs:1693
+#: apps/files/src/ui/window.rs:1788
 msgid "Paste Into Folder"
 msgstr "폴더 안에 붙여넣기"
 
-#: apps/files/src/ui/window.rs:1699
+#: apps/files/src/ui/window.rs:1794
 msgid "Create _Link"
 msgstr "링크 만들기(_L)"
 
-#: apps/files/src/ui/window.rs:1701
+#: apps/files/src/ui/window.rs:1796
 msgid "Mo_ve to Trash"
 msgstr "휴지통에 버리기(_V)"
 
-#: apps/files/src/ui/window.rs:1703
+#: apps/files/src/ui/window.rs:1798
 msgid "_Delete Permanently…"
 msgstr "완전히 삭제(_D)…"
 
-#: apps/files/src/ui/window.rs:1707 apps/maps/src/ui.rs:440
+#: apps/files/src/ui/window.rs:1803
+msgid "E_xtract Here"
+msgstr "여기에 풀기(_X)"
+
+#: apps/files/src/ui/window.rs:1804
+msgid "Extract _To…"
+msgstr "다른 위치에 풀기(_T)…"
+
+#: apps/files/src/ui/window.rs:1806
+msgid "Create _Archive…"
+msgstr "아카이브 만들기(_A)…"
+
+#: apps/files/src/ui/window.rs:1809 apps/maps/src/ui.rs:440
 #: apps/maps/src/ui.rs:2271
 msgid "Copy Location"
 msgstr "위치 복사"
 
-#: apps/files/src/ui/window.rs:1729
+#: apps/files/src/ui/window.rs:1831
 msgid "New _Folder…"
 msgstr "새 폴더(_F)…"
 
-#: apps/files/src/ui/window.rs:1732 apps/terminal/src/window.rs:739
+#: apps/files/src/ui/window.rs:1834 apps/terminal/src/window.rs:739
 msgid "_Paste"
 msgstr "붙여넣기(_P)"
 
-#: apps/files/src/ui/window.rs:1736
+#: apps/files/src/ui/window.rs:1838
 msgid "Add to _Bookmarks"
 msgstr "책갈피에 추가(_B)"
+
+#: apps/files/src/ui/window.rs:2207
+msgid "Archive"
+msgstr "아카이브"
 
 #: apps/fonts/data/org.helixdesktop.Fonts.desktop
 msgid "fonts;fontface;typeface;install;preview;"
@@ -8611,7 +8764,7 @@ msgstr "이미지 보기"
 msgid "View images"
 msgstr "이미지를 봅니다"
 
-#: apps/image-viewer/src/ui.rs:295 apps/image-viewer/src/ui.rs:1085
+#: apps/image-viewer/src/ui.rs:295 apps/image-viewer/src/ui.rs:1091
 msgid "Open Images"
 msgstr "이미지 열기"
 
@@ -8619,11 +8772,11 @@ msgstr "이미지 열기"
 msgid "_New Window"
 msgstr "새 창(_N)"
 
-#: apps/image-viewer/src/ui.rs:306 apps/image-viewer/src/ui.rs:788
+#: apps/image-viewer/src/ui.rs:306 apps/image-viewer/src/ui.rs:794
 msgid "Set as _Background…"
 msgstr "배경으로 설정(_B)…"
 
-#: apps/image-viewer/src/ui.rs:307 apps/image-viewer/src/ui.rs:791
+#: apps/image-viewer/src/ui.rs:307 apps/image-viewer/src/ui.rs:797
 msgid "Move to _Trash"
 msgstr "휴지통에 버리기(_T)"
 
@@ -8704,81 +8857,81 @@ msgstr "초점 거리"
 msgid "Open Folder"
 msgstr "폴더 열기"
 
-#: apps/image-viewer/src/ui.rs:1032
+#: apps/image-viewer/src/ui.rs:1038
 msgid "Could not open map: {}"
 msgstr "지도를 열 수 없습니다: {}"
 
-#: apps/image-viewer/src/ui.rs:1075
+#: apps/image-viewer/src/ui.rs:1081
 msgid "Supported Images"
 msgstr "지원하는 이미지"
 
-#: apps/image-viewer/src/ui.rs:1162
+#: apps/image-viewer/src/ui.rs:1168
 msgid "The decoder crashed"
 msgstr "디코더가 비정상 종료했습니다"
 
 #. Translators: an image that could not be shown: its file name, then why.
-#: apps/image-viewer/src/ui.rs:1231
+#: apps/image-viewer/src/ui.rs:1237
 msgid "{name}: {error}"
 msgstr "{name}: {error}"
 
-#: apps/image-viewer/src/ui.rs:1333
+#: apps/image-viewer/src/ui.rs:1339
 msgid "No Image"
 msgstr "이미지 없음"
 
 #. Translators: window title: file name, then the app name.
-#: apps/image-viewer/src/ui.rs:1357
+#: apps/image-viewer/src/ui.rs:1363
 msgid "{name} — {app}"
 msgstr "{name} — {app}"
 
-#: apps/image-viewer/src/ui.rs:1553
+#: apps/image-viewer/src/ui.rs:1559
 msgid "{} (animated)"
 msgstr "{}(애니메이션)"
 
-#: apps/image-viewer/src/ui.rs:1620
+#: apps/image-viewer/src/ui.rs:1626
 msgid "Image copied to clipboard"
 msgstr "이미지를 클립보드에 복사했습니다"
 
-#: apps/image-viewer/src/ui.rs:1631
+#: apps/image-viewer/src/ui.rs:1637
 msgid "Background set"
 msgstr "배경을 설정했습니다"
 
-#: apps/image-viewer/src/ui.rs:1634 apps/image-viewer/src/ui.rs:1637
+#: apps/image-viewer/src/ui.rs:1640 apps/image-viewer/src/ui.rs:1643
 msgid "Could not set the background"
 msgstr "배경을 설정할 수 없습니다"
 
-#: apps/image-viewer/src/ui.rs:1636
+#: apps/image-viewer/src/ui.rs:1642
 msgid "Could not set the background: {e}"
 msgstr "배경을 설정할 수 없습니다: {e}"
 
-#: apps/image-viewer/src/ui.rs:1661
+#: apps/image-viewer/src/ui.rs:1667
 msgid "Image moved to trash"
 msgstr "이미지를 휴지통에 버렸습니다"
 
-#: apps/image-viewer/src/ui.rs:1673
+#: apps/image-viewer/src/ui.rs:1679
 msgid "Could not move to trash: {e}"
 msgstr "휴지통에 버릴 수 없습니다: {e}"
 
-#: apps/image-viewer/src/ui.rs:1674
+#: apps/image-viewer/src/ui.rs:1680
 msgid "Could not move to trash"
 msgstr "휴지통에 버릴 수 없습니다"
 
-#: apps/image-viewer/src/ui.rs:1698
+#: apps/image-viewer/src/ui.rs:1704
 msgid "Could not restore: {e}"
 msgstr "복원할 수 없습니다: {e}"
 
-#: apps/image-viewer/src/ui.rs:1699
+#: apps/image-viewer/src/ui.rs:1705
 msgid "Could not restore"
 msgstr "복원할 수 없습니다"
 
-#: apps/image-viewer/src/ui.rs:1723
+#: apps/image-viewer/src/ui.rs:1729
 msgid "Image saved"
 msgstr "이미지를 저장했습니다"
 
-#: apps/image-viewer/src/ui.rs:1732
+#: apps/image-viewer/src/ui.rs:1738
 msgid "Could not save image: {e}"
 msgstr "이미지를 저장할 수 없습니다: {e}"
 
-#: apps/image-viewer/src/ui.rs:1736
+#: apps/image-viewer/src/ui.rs:1742
 msgid "Could not save image"
 msgstr "이미지를 저장할 수 없습니다"
 
@@ -19376,15 +19529,15 @@ msgstr ""
 "이 링크는 웹 페이지가 아닌 아래 위치를 가리킵니다. 열면 파일이나 네트워크 공"
 "유에 접근하거나 다른 응용 프로그램이 실행될 수 있습니다."
 
-#: crates/helix-eds/src/client.rs:58
+#: crates/helix-eds/src/client.rs:66
 msgid "“{name}” is read-only"
 msgstr "“{name}”은(는) 읽기 전용입니다"
 
-#: crates/helix-eds/src/client.rs:60
+#: crates/helix-eds/src/client.rs:68
 msgid "“{name}” cannot be removed"
 msgstr "“{name}”은(는) 제거할 수 없습니다"
 
-#: crates/helix-eds/src/client.rs:62
+#: crates/helix-eds/src/client.rs:70
 msgid "The contact could not be read"
 msgstr "연락처를 읽을 수 없습니다"
 

@@ -219,8 +219,8 @@ msgstr "静音或取消静音"
 #: apps/calculator/src/ui.rs:523 apps/calendar/src/shortcuts.rs:51
 #: apps/clocks/src/shortcuts.rs:18 apps/contacts/src/shortcuts.rs:24
 #: apps/disk-usage/src/shortcuts.rs:47
-#: apps/document-scanner/src/shortcuts.rs:48 apps/files/src/ui/dialogs.rs:563
-#: apps/files/src/ui/dialogs.rs:617 apps/files/src/ui/shortcuts.rs:78
+#: apps/document-scanner/src/shortcuts.rs:48 apps/files/src/ui/dialogs.rs:673
+#: apps/files/src/ui/dialogs.rs:727 apps/files/src/ui/shortcuts.rs:78
 #: apps/help/src/shortcuts.rs:49 apps/maps/src/shortcuts.rs:11
 #: apps/maps/src/ui.rs:1863 apps/music/src/shortcuts.rs:37
 #: apps/settings/src/ui/access.rs:62 apps/settings/src/ui/extensions.rs:99
@@ -310,7 +310,7 @@ msgstr "关于音频播放器(_A)"
 #: apps/disks/src/ui.rs:273 apps/disks/src/ui.rs:275
 #: apps/document-scanner/src/ui.rs:317 apps/document-scanner/src/ui.rs:319
 #: apps/document-viewer/src/ui.rs:312 apps/document-viewer/src/ui.rs:315
-#: apps/files/src/ui/window.rs:238 apps/files/src/ui/window.rs:241
+#: apps/files/src/ui/window.rs:239 apps/files/src/ui/window.rs:242
 #: apps/fonts/src/ui.rs:123 apps/fonts/src/ui.rs:126 apps/help/src/ui.rs:403
 #: apps/help/src/ui.rs:405 apps/image-viewer/src/ui.rs:337
 #: apps/image-viewer/src/ui.rs:339 apps/logs/src/ui.rs:308
@@ -393,7 +393,7 @@ msgid "Audio Files"
 msgstr "音频文件"
 
 #: apps/audio-player/src/ui.rs:755 apps/disks/src/ui.rs:1988
-#: apps/document-viewer/src/ui.rs:1484 apps/files/src/ui/dialogs.rs:662
+#: apps/document-viewer/src/ui.rs:1484 apps/files/src/ui/dialogs.rs:772
 #: apps/video-player/src/ui.rs:1056
 msgid "All Files"
 msgstr "所有文件"
@@ -950,7 +950,7 @@ msgstr "百分比"
 #: apps/calculator/src/ui.rs:450 apps/calculator/src/ui.rs:455
 #: apps/calculator/src/ui.rs:457 apps/calculator/src/ui.rs:463
 #: apps/calculator/src/ui.rs:469 apps/calculator/src/ui.rs:475
-#: apps/calculator/src/ui.rs:1627
+#: apps/calculator/src/ui.rs:1639
 msgid "Calculation"
 msgstr "计算"
 
@@ -1020,7 +1020,7 @@ msgstr "财务模式"
 msgid "Programming mode"
 msgstr "编程模式"
 
-#: apps/calculator/src/ui.rs:506 apps/calculator/src/ui.rs:1587
+#: apps/calculator/src/ui.rs:506 apps/calculator/src/ui.rs:1599
 #: apps/disk-usage/src/shortcuts.rs:49 apps/disk-usage/src/ui.rs:1773
 #: apps/document-scanner/src/shortcuts.rs:50 apps/files/src/ui/shortcuts.rs:80
 #: apps/maps/src/shortcuts.rs:13 apps/maps/src/ui.rs:1804
@@ -1058,7 +1058,7 @@ msgstr "清除历史记录(_C)"
 
 #: apps/calculator/src/ui.rs:699 apps/disk-usage/src/ui.rs:186
 #: apps/document-scanner/src/ui.rs:174 apps/document-scanner/src/ui.rs:190
-#: apps/files/src/ui/window.rs:231 apps/maps/src/ui.rs:485
+#: apps/files/src/ui/window.rs:232 apps/maps/src/ui.rs:485
 #: apps/music/src/ui.rs:467 apps/system-monitor/src/ui.rs:247
 #: apps/terminal/src/window.rs:295 apps/text-editor/src/window.rs:63
 #: apps/web/src/window.rs:263
@@ -1073,47 +1073,47 @@ msgstr "关于计算器(_A)"
 msgid "Expression"
 msgstr "表达式"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Binary"
 msgstr "二进制"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Decimal"
 msgstr "十进制"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Hexadecimal"
 msgstr "十六进制"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Octal"
 msgstr "八进制"
 
-#: apps/calculator/src/ui.rs:755 apps/calculator/src/ui.rs:756
+#: apps/calculator/src/ui.rs:757 apps/calculator/src/ui.rs:758
 msgid "Number base"
 msgstr "进制"
 
-#: apps/calculator/src/ui.rs:765 apps/calculator/src/ui.rs:766
+#: apps/calculator/src/ui.rs:767 apps/calculator/src/ui.rs:768
 msgid "Word size"
 msgstr "字长"
 
-#: apps/calculator/src/ui.rs:1311
+#: apps/calculator/src/ui.rs:1323
 msgid "Insert expression"
 msgstr "插入表达式"
 
-#: apps/calculator/src/ui.rs:1317
+#: apps/calculator/src/ui.rs:1329
 msgid "Insert result"
 msgstr "插入结果"
 
-#: apps/calculator/src/ui.rs:1487 apps/calculator/src/ui.rs:1491
+#: apps/calculator/src/ui.rs:1499 apps/calculator/src/ui.rs:1503
 msgid "Bit {bit}"
 msgstr "第 {bit} 位"
 
-#: apps/calculator/src/ui.rs:1558
+#: apps/calculator/src/ui.rs:1570
 msgid "C_alculate"
 msgstr "计算(_A)"
 
-#: apps/calculator/src/ui.rs:1558 apps/calendar/src/editor.rs:1039
+#: apps/calculator/src/ui.rs:1570 apps/calendar/src/editor.rs:1039
 #: apps/calendar/src/manage.rs:374 apps/calendar/src/ui.rs:2470
 #: apps/clocks/src/ui.rs:410 apps/clocks/src/ui.rs:1352
 #: apps/clocks/src/ui.rs:1907 apps/disk-usage/src/ui.rs:320
@@ -1124,11 +1124,11 @@ msgstr "计算(_A)"
 #: apps/disks/src/ui.rs:2022 apps/disks/src/ui.rs:2230
 #: apps/document-scanner/src/ui.rs:1264 apps/document-scanner/src/ui.rs:1379
 #: apps/document-scanner/src/ui.rs:1417 apps/document-viewer/src/dialogs.rs:169
-#: apps/files/src/ui/dialogs.rs:28 apps/files/src/ui/dialogs.rs:74
-#: apps/files/src/ui/dialogs.rs:220 apps/files/src/ui/sidebar.rs:684
-#: apps/help/src/ui.rs:196 apps/music/src/pages.rs:2129
-#: apps/music/src/pages.rs:2232 apps/music/src/pages.rs:2317
-#: apps/settings/src/ui/agent_access.rs:280
+#: apps/files/src/ui/dialogs.rs:30 apps/files/src/ui/dialogs.rs:76
+#: apps/files/src/ui/dialogs.rs:199 apps/files/src/ui/dialogs.rs:330
+#: apps/files/src/ui/sidebar.rs:684 apps/help/src/ui.rs:196
+#: apps/music/src/pages.rs:2129 apps/music/src/pages.rs:2232
+#: apps/music/src/pages.rs:2317 apps/settings/src/ui/agent_access.rs:280
 #: apps/settings/src/ui/agent_access.rs:996 apps/settings/src/ui/apps.rs:553
 #: apps/settings/src/ui/bluetooth.rs:647 apps/settings/src/ui/netedit.rs:389
 #: apps/settings/src/ui/printers.rs:606 apps/settings/src/ui/users.rs:642
@@ -1142,43 +1142,43 @@ msgstr "计算(_A)"
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: apps/calculator/src/ui.rs:1591 apps/disk-usage/src/ui.rs:441
+#: apps/calculator/src/ui.rs:1603 apps/disk-usage/src/ui.rs:441
 msgid "Results"
 msgstr "结果"
 
-#: apps/calculator/src/ui.rs:1597
+#: apps/calculator/src/ui.rs:1609
 msgid "Number _Format"
 msgstr "数字格式(_F)"
 
-#: apps/calculator/src/ui.rs:1608
+#: apps/calculator/src/ui.rs:1620
 msgid "_Decimal Places"
 msgstr "小数位数(_D)"
 
-#: apps/calculator/src/ui.rs:1612
+#: apps/calculator/src/ui.rs:1624
 msgid "_Thousands Separators"
 msgstr "千位分隔符(_T)"
 
-#: apps/calculator/src/ui.rs:1617
+#: apps/calculator/src/ui.rs:1629
 msgid "_Trailing Zeroes"
 msgstr "末尾的零(_T)"
 
-#: apps/calculator/src/ui.rs:1631
+#: apps/calculator/src/ui.rs:1643
 msgid "_Angle Units"
 msgstr "角度单位(_A)"
 
-#: apps/calculator/src/ui.rs:1634
+#: apps/calculator/src/ui.rs:1646
 msgid "Degrees"
 msgstr "角度"
 
-#: apps/calculator/src/ui.rs:1635
+#: apps/calculator/src/ui.rs:1647
 msgid "Radians"
 msgstr "弧度"
 
-#: apps/calculator/src/ui.rs:1636
+#: apps/calculator/src/ui.rs:1648
 msgid "Gradians"
 msgstr "百分度"
 
-#: apps/calculator/src/ui.rs:1696
+#: apps/calculator/src/ui.rs:1708
 msgid "{} equals {}"
 msgstr "{} 等于 {}"
 
@@ -1407,7 +1407,7 @@ msgid "Calendar"
 msgstr "日历"
 
 #: apps/calendar/src/editor.rs:504 apps/document-viewer/src/dialogs.rs:112
-#: apps/files/src/ui/window.rs:211 apps/image-viewer/src/ui.rs:592
+#: apps/files/src/ui/window.rs:212 apps/image-viewer/src/ui.rs:592
 #: apps/settings/src/permissions.rs:45 apps/settings/src/ui/printers.rs:269
 #: apps/settings/src/ui/privacy.rs:155 apps/web/src/permissions.rs:24
 msgid "Location"
@@ -1446,7 +1446,7 @@ msgid "Ends"
 msgstr "结束"
 
 #: apps/calendar/src/editor.rs:558 apps/disks/src/ui.rs:1863
-#: apps/files/src/ui/dialogs.rs:663 apps/files/src/ui/dialogs.rs:701
+#: apps/files/src/ui/dialogs.rs:773 apps/files/src/ui/dialogs.rs:811
 #: apps/settings/src/values.rs:61 apps/settings/src/values.rs:84
 #: apps/web/src/dialogs.rs:75
 msgid "Never"
@@ -1643,7 +1643,7 @@ msgstr "显示 {display}"
 #: apps/calendar/src/manage.rs:297 apps/clocks/src/ui.rs:1460
 #: apps/contacts/src/editor.rs:302 apps/disk-usage/src/ui.rs:1005
 #: apps/disks/src/ui.rs:1640 apps/files/src/sorting.rs:43
-#: apps/files/src/ui/tab.rs:245 apps/settings/src/ui/netedit.rs:235
+#: apps/files/src/ui/tab.rs:269 apps/settings/src/ui/netedit.rs:235
 #: apps/settings/src/ui/users.rs:81
 msgid "Name"
 msgstr "名称"
@@ -1805,8 +1805,8 @@ msgstr "导入"
 #: apps/characters/src/ui.rs:170 apps/characters/src/ui.rs:362
 #: apps/characters/src/ui.rs:364 apps/contacts/src/shortcuts.rs:19
 #: apps/document-viewer/src/ui.rs:372 apps/document-viewer/src/ui.rs:543
-#: apps/files/src/ui/dialogs.rs:694 apps/files/src/ui/shortcuts.rs:28
-#: apps/files/src/ui/window.rs:274 apps/files/src/ui/window.rs:276
+#: apps/files/src/ui/dialogs.rs:804 apps/files/src/ui/shortcuts.rs:28
+#: apps/files/src/ui/window.rs:275 apps/files/src/ui/window.rs:277
 #: apps/fonts/src/shortcuts.rs:17 apps/fonts/src/ui.rs:290
 #: apps/fonts/src/ui.rs:292 apps/help/src/shortcuts.rs:32
 #: apps/help/src/ui.rs:377 apps/help/src/ui.rs:379
@@ -1849,8 +1849,8 @@ msgid "Month View"
 msgstr "月视图"
 
 #: apps/calendar/src/shortcuts.rs:23 apps/document-viewer/src/shortcuts.rs:14
-#: apps/files/src/ui/shortcuts.rs:50 apps/files/src/ui/window.rs:180
-#: apps/files/src/ui/window.rs:182 apps/help/src/shortcuts.rs:33
+#: apps/files/src/ui/shortcuts.rs:50 apps/files/src/ui/window.rs:181
+#: apps/files/src/ui/window.rs:183 apps/help/src/shortcuts.rs:33
 #: apps/help/src/ui.rs:371 apps/help/src/ui.rs:374
 msgid "Show Sidebar"
 msgstr "显示侧边栏"
@@ -1966,7 +1966,7 @@ msgid "_Import…"
 msgstr "导入(_I)…"
 
 #: apps/calendar/src/ui.rs:291 apps/contacts/src/ui.rs:206
-#: apps/files/src/ui/window.rs:232 apps/maps/src/ui.rs:486
+#: apps/files/src/ui/window.rs:233 apps/maps/src/ui.rs:486
 #: apps/settings/src/ui/mod.rs:214 apps/terminal/src/window.rs:296
 #: apps/text-editor/src/window.rs:65 apps/web/src/window.rs:222
 #: apps/web/src/window.rs:265 crates/helix-app-common/src/shortcuts.rs:25
@@ -1985,15 +1985,15 @@ msgstr "搜索事件"
 msgid "Search Events"
 msgstr "搜索事件"
 
-#: apps/calendar/src/ui.rs:371 apps/files/src/ui/dialogs.rs:429
-#: apps/files/src/ui/tab.rs:1125 apps/settings/src/ui/mod.rs:246
+#: apps/calendar/src/ui.rs:371 apps/files/src/ui/dialogs.rs:539
+#: apps/files/src/ui/tab.rs:1170 apps/settings/src/ui/mod.rs:246
 #: apps/settings/src/ui/picker.rs:115 apps/web/src/dialogs.rs:752
 #: apps/web/src/window.rs:2378
 msgid "No Results Found"
 msgstr "未找到结果"
 
 #: apps/calendar/src/ui.rs:372 apps/characters/src/ui.rs:456
-#: apps/files/src/ui/dialogs.rs:434 apps/fonts/src/ui.rs:436
+#: apps/files/src/ui/dialogs.rs:544 apps/fonts/src/ui.rs:436
 #: apps/music/src/pages.rs:1687 apps/settings/src/ui/mod.rs:247
 #: apps/settings/src/ui/picker.rs:116 apps/web/src/dialogs.rs:753
 #: apps/web/src/window.rs:2379
@@ -2367,8 +2367,8 @@ msgstr "不支持拍照：缺少 JPEG 编码器"
 msgid "Countdown cancelled"
 msgstr "倒计时已取消"
 
-#: apps/camera/src/ui.rs:859 apps/files/src/ui/dialogs.rs:455
-#: apps/files/src/ui/sidebar.rs:564 apps/files/src/ui/window.rs:1665
+#: apps/camera/src/ui.rs:859 apps/files/src/ui/dialogs.rs:565
+#: apps/files/src/ui/sidebar.rs:564 apps/files/src/ui/window.rs:1760
 #: apps/help/src/ui.rs:197 apps/text-editor/src/window.rs:131
 msgid "_Open"
 msgstr "打开(_O)"
@@ -2568,7 +2568,7 @@ msgid "Character map and emoji picker"
 msgstr "字符映射表和表情符号选择器"
 
 #: apps/characters/src/ui.rs:199 apps/contacts/src/ui.rs:1102
-#: apps/files/src/ui/tab.rs:1370 apps/logs/src/ui.rs:719
+#: apps/files/src/ui/tab.rs:1415 apps/logs/src/ui.rs:719
 #: apps/text-editor/src/doc.rs:866
 msgid "No results"
 msgstr "没有结果"
@@ -2951,8 +2951,8 @@ msgstr "夜晚"
 #: apps/clocks/src/ui.rs:310 apps/clocks/src/ui.rs:311
 #: apps/document-scanner/src/ui.rs:1780
 #: apps/document-viewer/src/shortcuts.rs:33 apps/files/src/ui/shortcuts.rs:22
-#: apps/files/src/ui/window.rs:185 apps/files/src/ui/window.rs:188
-#: apps/files/src/ui/window.rs:379 apps/help/src/shortcuts.rs:29
+#: apps/files/src/ui/window.rs:186 apps/files/src/ui/window.rs:189
+#: apps/files/src/ui/window.rs:380 apps/help/src/shortcuts.rs:29
 #: apps/help/src/ui.rs:353 apps/help/src/ui.rs:356 apps/web/src/shortcuts.rs:37
 #: apps/web/src/window.rs:338
 msgid "Back"
@@ -3193,8 +3193,8 @@ msgstr "开始(_S)"
 msgid "{label} deleted"
 msgstr "已删除 {label}"
 
-#: apps/clocks/src/ui.rs:1871 apps/files/src/ui/window.rs:228
-#: apps/files/src/ui/window.rs:1361 apps/image-viewer/src/ui.rs:1662
+#: apps/clocks/src/ui.rs:1871 apps/files/src/ui/window.rs:229
+#: apps/files/src/ui/window.rs:1377 apps/image-viewer/src/ui.rs:1668
 msgid "_Undo"
 msgstr "撤销(_U)"
 
@@ -3947,8 +3947,8 @@ msgid "storage"
 msgstr "存储"
 
 #: apps/disk-usage/src/mounts.rs:155 apps/files/src/pathbar.rs:25
-#: apps/files/src/pathbar.rs:112 apps/files/src/ui/tab.rs:1424
-#: apps/files/src/ui/window.rs:139 apps/settings/src/bluez.rs:229
+#: apps/files/src/pathbar.rs:112 apps/files/src/ui/tab.rs:1469
+#: apps/files/src/ui/window.rs:140 apps/settings/src/bluez.rs:229
 msgid "Computer"
 msgstr "计算机"
 
@@ -4144,7 +4144,7 @@ msgstr[0] "{n} 个项目"
 
 #: apps/disk-usage/src/ui.rs:1006 apps/disks/src/ui.rs:358
 #: apps/disks/src/ui.rs:453 apps/files/src/sorting.rs:44
-#: apps/files/src/ui/properties.rs:185 apps/files/src/ui/tab.rs:246
+#: apps/files/src/ui/properties.rs:185 apps/files/src/ui/tab.rs:270
 #: apps/fonts/src/fontinfo.rs:314 apps/music/src/details.rs:137
 msgid "Size"
 msgstr "大小"
@@ -4157,7 +4157,7 @@ msgstr "内容"
 
 #: apps/disk-usage/src/ui.rs:1008 apps/document-viewer/src/dialogs.rs:104
 #: apps/files/src/sorting.rs:46 apps/files/src/ui/properties.rs:234
-#: apps/files/src/ui/tab.rs:248 apps/image-viewer/src/ui.rs:585
+#: apps/files/src/ui/tab.rs:272 apps/image-viewer/src/ui.rs:585
 msgid "Modified"
 msgstr "修改时间"
 
@@ -4223,7 +4223,7 @@ msgstr "选择要扫描的文件夹"
 msgid "Only local folders can be scanned"
 msgstr "只能扫描本地文件夹"
 
-#: apps/disk-usage/src/ui.rs:1642 apps/image-viewer/src/ui.rs:1019
+#: apps/disk-usage/src/ui.rs:1642 apps/image-viewer/src/ui.rs:1025
 msgid "Could not open folder: {}"
 msgstr "无法打开文件夹：{}"
 
@@ -5256,7 +5256,7 @@ msgstr "卷名称"
 
 #: apps/disks/src/ui.rs:1365 apps/disks/src/ui.rs:1634
 #: apps/disks/src/ui.rs:1906 apps/files/src/sorting.rs:45
-#: apps/files/src/ui/properties.rs:177 apps/files/src/ui/tab.rs:247
+#: apps/files/src/ui/properties.rs:177 apps/files/src/ui/tab.rs:271
 #: apps/settings/src/ui/bluetooth.rs:513 apps/settings/src/ui/network.rs:529
 #: apps/system-monitor/src/fs_view.rs:25
 msgid "Type"
@@ -5339,7 +5339,7 @@ msgid "Delete Partition?"
 msgstr "删除分区？"
 
 #: apps/disks/src/ui.rs:1594 apps/document-scanner/src/ui.rs:228
-#: apps/files/src/ui/window.rs:1393 apps/files/src/ui/window.rs:1478
+#: apps/files/src/ui/window.rs:1409 apps/files/src/ui/window.rs:1494
 #: apps/music/src/pages.rs:2318
 msgid "_Delete"
 msgstr "删除(_D)"
@@ -5964,8 +5964,8 @@ msgid "_Crop"
 msgstr "裁剪(_C)"
 
 #: apps/document-scanner/src/ui.rs:227 apps/document-viewer/src/ui.rs:920
-#: apps/files/src/ui/window.rs:1691 apps/image-viewer/src/ui.rs:305
-#: apps/image-viewer/src/ui.rs:784 apps/terminal/src/window.rs:738
+#: apps/files/src/ui/window.rs:1786 apps/image-viewer/src/ui.rs:305
+#: apps/image-viewer/src/ui.rs:790 apps/terminal/src/window.rs:738
 msgid "_Copy"
 msgstr "复制(_C)"
 
@@ -6514,7 +6514,7 @@ msgstr "全选"
 msgid "Caret Navigation"
 msgstr "光标浏览"
 
-#: apps/document-viewer/src/shortcuts.rs:26 apps/files/src/ui/dialogs.rs:678
+#: apps/document-viewer/src/shortcuts.rs:26 apps/files/src/ui/dialogs.rs:788
 #: apps/system-monitor/src/shortcuts.rs:42 apps/terminal/src/shortcuts.rs:32
 msgid "Context Menu"
 msgstr "上下文菜单"
@@ -6524,8 +6524,8 @@ msgid "Go to Page"
 msgstr "转到页面"
 
 #: apps/document-viewer/src/shortcuts.rs:34 apps/files/src/ui/shortcuts.rs:23
-#: apps/files/src/ui/window.rs:191 apps/files/src/ui/window.rs:194
-#: apps/files/src/ui/window.rs:381 apps/help/src/shortcuts.rs:30
+#: apps/files/src/ui/window.rs:192 apps/files/src/ui/window.rs:195
+#: apps/files/src/ui/window.rs:382 apps/help/src/shortcuts.rs:30
 #: apps/help/src/ui.rs:359 apps/help/src/ui.rs:362 apps/web/src/shortcuts.rs:38
 #: apps/web/src/window.rs:339
 msgid "Forward"
@@ -6579,7 +6579,7 @@ msgstr "转到页面"
 msgid "Current Page"
 msgstr "当前页"
 
-#: apps/document-viewer/src/ui.rs:283 apps/files/src/ui/window.rs:224
+#: apps/document-viewer/src/ui.rs:283 apps/files/src/ui/window.rs:225
 #: apps/text-editor/src/window.rs:48 apps/web/src/window.rs:234
 msgid "New _Window"
 msgstr "新建窗口(_W)"
@@ -6679,8 +6679,8 @@ msgstr "光标浏览已开启：方向键移动光标，Shift+方向键进行选
 msgid "Caret navigation off"
 msgstr "光标浏览已关闭"
 
-#: apps/document-viewer/src/ui.rs:921 apps/files/src/ui/window.rs:1717
-#: apps/files/src/ui/window.rs:1724 apps/files/src/ui/window.rs:1733
+#: apps/document-viewer/src/ui.rs:921 apps/files/src/ui/window.rs:1819
+#: apps/files/src/ui/window.rs:1826 apps/files/src/ui/window.rs:1835
 #: apps/terminal/src/window.rs:740
 msgid "Select _All"
 msgstr "全选(_A)"
@@ -6761,6 +6761,78 @@ msgstr "文件夹"
 msgid "manager"
 msgstr "管理器"
 
+#: apps/files/src/archive.rs:184 apps/files/src/ops.rs:397
+#: apps/screenshot/src/shell.rs:79 apps/settings/src/agents.rs:1202
+#: apps/web/src/window.rs:2341
+msgid "Cancelled"
+msgstr "已取消"
+
+#: apps/files/src/archive.rs:185
+msgid "“{file}”: {error}"
+msgstr "“{file}”：{error}"
+
+#: apps/files/src/archive.rs:193
+msgid "The archive is damaged or in an unsupported format ({detail})."
+msgstr "归档文件已损坏或格式不受支持（{detail}）。"
+
+#: apps/files/src/archive.rs:197
+msgid "This is not an archive Files can extract."
+msgstr "这不是文件可以解压的归档文件。"
+
+#: apps/files/src/archive.rs:198
+msgid "Encrypted archives are not supported."
+msgstr "不支持加密的归档文件。"
+
+#: apps/files/src/archive.rs:200
+msgid "“{entry}” has an absolute path, so the archive is unsafe to extract."
+msgstr "“{entry}”使用绝对路径，因此解压此归档文件不安全。"
+
+#: apps/files/src/archive.rs:204
+msgid ""
+"“{entry}” points outside the destination folder, so the archive is unsafe to "
+"extract."
+msgstr "“{entry}”指向目标文件夹之外，因此解压此归档文件不安全。"
+
+#: apps/files/src/archive.rs:208
+msgid ""
+"The link “{entry}” points outside the destination folder, so the archive is "
+"unsafe to extract."
+msgstr "链接“{entry}”指向目标文件夹之外，因此解压此归档文件不安全。"
+
+#: apps/files/src/archive.rs:212
+msgid ""
+"The hard link “{entry}” does not point to a file in the archive, so the "
+"archive is unsafe to extract."
+msgstr "硬链接“{entry}”没有指向归档中的文件，因此解压此归档文件不安全。"
+
+#: apps/files/src/archive.rs:216
+msgid ""
+"“{entry}” would be written through a link, so the archive is unsafe to "
+"extract."
+msgstr "“{entry}”会通过链接写入，因此解压此归档文件不安全。"
+
+#: apps/files/src/archive.rs:221
+msgid "“{entry}” clashes with another item in the archive."
+msgstr "“{entry}”与归档中的另一个项目冲突。"
+
+#: apps/files/src/archive.rs:225
+msgid "There is not enough free space: {needed} needed, {available} available."
+msgstr "可用空间不足：需要 {needed}，可用 {available}。"
+
+#: apps/files/src/archive.rs:230
+msgid ""
+"The archive expands to far more data than it holds, as a decompression bomb "
+"would, so it was not extracted."
+msgstr "此归档文件解压后的数据远超其自身大小，就像解压炸弹一样，因此未解压。"
+
+#: apps/files/src/archive.rs:848
+msgid "“{entry}” is larger than it says"
+msgstr "“{entry}”比其声明的更大"
+
+#: apps/files/src/archive.rs:1140
+msgid "The file changed while it was being archived."
+msgstr "文件在归档过程中发生了变化。"
+
 #: apps/files/src/cli.rs:37
 msgid "Unknown option {arg}"
 msgstr "未知选项 {arg}"
@@ -6781,182 +6853,215 @@ msgstr "指向 {name} 的链接"
 msgid "Link to {stem} ({n}){ext}"
 msgstr "指向 {stem}（{n}）{ext} 的链接"
 
-#: apps/files/src/naming.rs:100
+#: apps/files/src/naming.rs:107
+msgid "{stem} ({n}){ext}"
+msgstr "{stem} ({n}){ext}"
+
+#: apps/files/src/naming.rs:118
 msgid "The name cannot be empty."
 msgstr "名称不能为空。"
 
-#: apps/files/src/naming.rs:103
+#: apps/files/src/naming.rs:121
 msgid "File names cannot contain “/”."
 msgstr "文件名不能包含“/”。"
 
-#: apps/files/src/naming.rs:106
+#: apps/files/src/naming.rs:124
 msgid "A file cannot be called “.”."
 msgstr "文件不能命名为“.”。"
 
-#: apps/files/src/naming.rs:109
+#: apps/files/src/naming.rs:127
 msgid "A file cannot be called “..”."
 msgstr "文件不能命名为“..”。"
 
-#: apps/files/src/naming.rs:112
+#: apps/files/src/naming.rs:130
 msgid "The name is too long."
 msgstr "名称过长。"
 
-#: apps/files/src/ops.rs:44
+#: apps/files/src/ops.rs:56
 msgid "Copying {n} item to “{folder}”"
 msgid_plural "Copying {n} items to “{folder}”"
 msgstr[0] "正在复制 {n} 个项目到“{folder}”"
 
-#: apps/files/src/ops.rs:50
+#: apps/files/src/ops.rs:62
 msgid "Moving {n} item to “{folder}”"
 msgid_plural "Moving {n} items to “{folder}”"
 msgstr[0] "正在移动 {n} 个项目到“{folder}”"
 
-#: apps/files/src/ops.rs:56
+#: apps/files/src/ops.rs:68
 msgid "Creating links to {n} item"
 msgid_plural "Creating links to {n} items"
 msgstr[0] "正在为 {n} 个项目创建链接"
 
-#: apps/files/src/ops.rs:61
+#: apps/files/src/ops.rs:73
 msgid "Moving {n} item to Trash"
 msgid_plural "Moving {n} items to Trash"
 msgstr[0] "正在将 {n} 个项目移到回收站"
 
-#: apps/files/src/ops.rs:66
+#: apps/files/src/ops.rs:78
 msgid "Deleting {n} item"
 msgid_plural "Deleting {n} items"
 msgstr[0] "正在删除 {n} 个项目"
 
-#: apps/files/src/ops.rs:68
+#: apps/files/src/ops.rs:80
 msgid "Restoring {n} item"
 msgid_plural "Restoring {n} items"
 msgstr[0] "正在恢复 {n} 个项目"
 
-#: apps/files/src/ops.rs:70
+#: apps/files/src/ops.rs:82
 msgid "Emptying Trash"
 msgstr "正在清空回收站"
 
-#: apps/files/src/ops.rs:82
+#: apps/files/src/ops.rs:84
+msgid "Creating “{archive}”"
+msgstr "正在创建“{archive}”"
+
+#: apps/files/src/ops.rs:87
+msgid "Extracting “{archive}”"
+msgstr "正在解压“{archive}”"
+
+#: apps/files/src/ops.rs:88
+msgid "Extracting {n} archive"
+msgid_plural "Extracting {n} archives"
+msgstr[0] "正在解压 {n} 个归档文件"
+
+#: apps/files/src/ops.rs:101
 msgid "Copied {n} item to “{folder}”"
 msgid_plural "Copied {n} items to “{folder}”"
 msgstr[0] "已复制 {n} 个项目到“{folder}”"
 
-#: apps/files/src/ops.rs:88
+#: apps/files/src/ops.rs:107
 msgid "Moved {n} item to “{folder}”"
 msgid_plural "Moved {n} items to “{folder}”"
 msgstr[0] "已移动 {n} 个项目到“{folder}”"
 
-#: apps/files/src/ops.rs:95
+#: apps/files/src/ops.rs:114
 msgid "Created {n} link"
 msgid_plural "Created {n} links"
 msgstr[0] "已创建 {n} 个链接"
 
-#: apps/files/src/ops.rs:98
+#: apps/files/src/ops.rs:117
 msgid "Restored {n} item"
 msgid_plural "Restored {n} items"
 msgstr[0] "已恢复 {n} 个项目"
 
-#: apps/files/src/ops.rs:100
+#: apps/files/src/ops.rs:119
 msgid "Deleted {n} item"
 msgid_plural "Deleted {n} items"
 msgstr[0] "已删除 {n} 个项目"
 
-#: apps/files/src/ops.rs:101
+#: apps/files/src/ops.rs:120
 msgid "Trash emptied"
 msgstr "回收站已清空"
 
-#: apps/files/src/ops.rs:119 apps/files/src/pathbar.rs:108
-#: apps/files/src/ui/sidebar.rs:93 apps/files/src/ui/window.rs:340
+#: apps/files/src/ops.rs:123
+msgid "Created “{archive}”"
+msgstr "已创建“{archive}”"
+
+#: apps/files/src/ops.rs:125
+msgid "Extracted {n} archive"
+msgid_plural "Extracted {n} archives"
+msgstr[0] "已解压 {n} 个归档文件"
+
+#: apps/files/src/ops.rs:146 apps/files/src/pathbar.rs:108
+#: apps/files/src/ui/sidebar.rs:93 apps/files/src/ui/window.rs:341
 msgid "Trash"
 msgstr "回收站"
 
-#: apps/files/src/ops.rs:268
+#: apps/files/src/ops.rs:295
 msgid "Could not replace “{file}”: {error}"
 msgstr "无法替换“{file}”：{error}"
 
-#: apps/files/src/ops.rs:273
+#: apps/files/src/ops.rs:300
 msgid "Could not move “{file}”: {error}"
 msgstr "无法移动“{file}”：{error}"
 
-#: apps/files/src/ops.rs:278
+#: apps/files/src/ops.rs:305
 msgid "Could not read “{file}”: {error}"
 msgstr "无法读取“{file}”：{error}"
 
-#: apps/files/src/ops.rs:283
+#: apps/files/src/ops.rs:310
 msgid "Could not remove “{file}”: {error}"
 msgstr "无法移除“{file}”：{error}"
 
-#: apps/files/src/ops.rs:288
+#: apps/files/src/ops.rs:315
 msgid "Could not link to “{file}”: {error}"
 msgstr "无法链接到“{file}”：{error}"
 
-#: apps/files/src/ops.rs:293
+#: apps/files/src/ops.rs:320
 msgid "Could not move “{file}” to the Trash: {error}"
 msgstr "无法将“{file}”移到回收站：{error}"
 
-#: apps/files/src/ops.rs:298
+#: apps/files/src/ops.rs:325
 msgid "Could not delete “{file}”: {error}"
 msgstr "无法删除“{file}”：{error}"
 
-#: apps/files/src/ops.rs:303
+#: apps/files/src/ops.rs:330
 msgid "Could not restore “{file}”: {error}"
 msgstr "无法恢复“{file}”：{error}"
 
-#: apps/files/src/ops.rs:308
+#: apps/files/src/ops.rs:335
 msgid "Could not empty “{file}”: {error}"
 msgstr "无法清空“{file}”：{error}"
 
-#: apps/files/src/ops.rs:313
+#: apps/files/src/ops.rs:340
 msgid "Could not process “{file}”: {error}"
 msgstr "无法处理“{file}”：{error}"
 
-#: apps/files/src/ops.rs:370 apps/screenshot/src/shell.rs:79
-#: apps/settings/src/agents.rs:1202 apps/web/src/window.rs:2341
-msgid "Cancelled"
-msgstr "已取消"
-
-#: apps/files/src/ops.rs:392
+#: apps/files/src/ops.rs:419
 msgid "“{}” no longer exists"
 msgstr "“{}”已不存在"
 
-#: apps/files/src/ops.rs:398
+#: apps/files/src/ops.rs:425
 msgid "Cannot move “{}” into itself"
 msgstr "无法将“{}”移动到其自身中"
 
-#: apps/files/src/ops.rs:400
+#: apps/files/src/ops.rs:427
 msgid "Cannot copy “{}” into itself"
 msgstr "无法将“{}”复制到其自身中"
 
-#: apps/files/src/ops.rs:590
+#: apps/files/src/ops.rs:617
 msgid "Cannot create a link to “{}”: not a local file"
 msgstr "无法创建指向“{}”的链接：不是本地文件"
 
-#: apps/files/src/ops.rs:669
+#: apps/files/src/ops.rs:696
 msgid "“{}” has no original location"
 msgstr "“{}”没有原始位置"
 
-#: apps/files/src/ops.rs:728
+#: apps/files/src/ops.rs:755
 msgid "{n} item could not be found in the Trash"
 msgid_plural "{n} items could not be found in the Trash"
 msgstr[0] "回收站中找不到 {n} 个项目"
+
+#: apps/files/src/ops.rs:801
+msgid "“{file}” is not on this computer, so it can’t be archived or extracted"
+msgstr "“{file}”不在这台计算机上，因此无法归档或解压"
+
+#: apps/files/src/ops.rs:832
+msgid "Could not create “{file}”: {error}"
+msgstr "无法创建“{file}”：{error}"
+
+#: apps/files/src/ops.rs:875
+msgid "Could not extract “{file}”: {error}"
+msgstr "无法解压“{file}”：{error}"
 
 #: apps/files/src/pathbar.rs:109 apps/files/src/ui/sidebar.rs:81
 msgid "Recent"
 msgstr "最近使用"
 
 #: apps/files/src/pathbar.rs:110 apps/files/src/ui/sidebar.rs:122
-#: apps/files/src/ui/tab.rs:1434 apps/settings/src/bluez.rs:235
+#: apps/files/src/ui/tab.rs:1479 apps/settings/src/bluez.rs:235
 #: apps/settings/src/panels.rs:64 apps/system-monitor/src/res_view.rs:385
 msgid "Network"
 msgstr "网络"
 
 #: apps/files/src/pathbar.rs:111 apps/files/src/ui/properties.rs:95
 #: apps/files/src/ui/sidebar.rs:87 apps/files/src/ui/tab.rs:135
-#: apps/files/src/ui/window.rs:748
+#: apps/files/src/ui/window.rs:759
 msgid "Starred"
 msgstr "已星标"
 
 #: apps/files/src/pathbar.rs:113 apps/files/src/ui/sidebar.rs:128
-#: apps/files/src/ui/window.rs:132
+#: apps/files/src/ui/window.rs:133
 msgid "Other Locations"
 msgstr "其他位置"
 
@@ -6972,43 +7077,60 @@ msgstr "应为 (as, s)"
 msgid "Unknown method"
 msgstr "未知方法"
 
-#: apps/files/src/ui/dialogs.rs:51
+#: apps/files/src/ui/dialogs.rs:53
 msgid "Folder _Name"
 msgstr "文件夹名(_N)"
 
-#: apps/files/src/ui/dialogs.rs:53
+#: apps/files/src/ui/dialogs.rs:55
 msgid "File _Name"
 msgstr "文件名(_N)"
 
-#: apps/files/src/ui/dialogs.rs:91
+#: apps/files/src/ui/dialogs.rs:93
 msgid "A folder with that name already exists."
 msgstr "已存在同名文件夹。"
 
-#: apps/files/src/ui/dialogs.rs:93
+#: apps/files/src/ui/dialogs.rs:95 apps/files/src/ui/dialogs.rs:230
 msgid "A file with that name already exists."
 msgstr "已存在同名文件。"
 
-#: apps/files/src/ui/dialogs.rs:111
+#: apps/files/src/ui/dialogs.rs:113
 msgid "Names starting with “.” are hidden."
 msgstr "以“.”开头的名称会被隐藏。"
 
-#: apps/files/src/ui/dialogs.rs:164
+#: apps/files/src/ui/dialogs.rs:167
+msgid "Archive _Name"
+msgstr "归档名称(_N)"
+
+#: apps/files/src/ui/dialogs.rs:175 apps/files/src/ui/dialogs.rs:176
+msgid "Archive Format"
+msgstr "归档格式"
+
+#: apps/files/src/ui/dialogs.rs:194
+msgid "Create Archive"
+msgstr "创建归档"
+
+#: apps/files/src/ui/dialogs.rs:199 apps/files/src/ui/window.rs:1613
+#: apps/music/src/pages.rs:2133
+msgid "_Create"
+msgstr "创建(_C)"
+
+#: apps/files/src/ui/dialogs.rs:274
 msgid "{size}, last modified {date}"
 msgstr "{size}，最后修改于 {date}"
 
-#: apps/files/src/ui/dialogs.rs:165
+#: apps/files/src/ui/dialogs.rs:275
 msgid "Last modified {date}"
 msgstr "最后修改于 {date}"
 
-#: apps/files/src/ui/dialogs.rs:193
+#: apps/files/src/ui/dialogs.rs:303
 msgid "Merge Folder “{name}”?"
 msgstr "合并文件夹“{name}”？"
 
-#: apps/files/src/ui/dialogs.rs:195
+#: apps/files/src/ui/dialogs.rs:305
 msgid "Replace “{name}”?"
 msgstr "替换“{name}”？"
 
-#: apps/files/src/ui/dialogs.rs:198
+#: apps/files/src/ui/dialogs.rs:308
 msgid ""
 "A folder with the same name already exists in “{folder}”. Merging will ask "
 "before replacing any files in the folder that conflict with the files being "
@@ -7017,185 +7139,185 @@ msgstr ""
 "“{folder}”中已存在同名文件夹。合并时，若文件夹中有文件与正在复制的文件冲突，"
 "将在替换前询问您。"
 
-#: apps/files/src/ui/dialogs.rs:200
+#: apps/files/src/ui/dialogs.rs:310
 msgid ""
 "Another file with the same name already exists in “{folder}”. Replacing it "
 "will overwrite its content."
 msgstr "“{folder}”中已存在同名文件。替换将覆盖其内容。"
 
-#: apps/files/src/ui/dialogs.rs:205
+#: apps/files/src/ui/dialogs.rs:315
 msgid "Original: {description}"
 msgstr "原文件：{description}"
 
-#: apps/files/src/ui/dialogs.rs:209
+#: apps/files/src/ui/dialogs.rs:319
 msgid "Replace with: {description}"
 msgstr "替换为：{description}"
 
-#: apps/files/src/ui/dialogs.rs:211
+#: apps/files/src/ui/dialogs.rs:321
 msgid "Apply this action to all conflicts"
 msgstr "对所有冲突应用此操作"
 
-#: apps/files/src/ui/dialogs.rs:221
+#: apps/files/src/ui/dialogs.rs:331
 msgid "_Skip"
 msgstr "跳过(_S)"
 
-#: apps/files/src/ui/dialogs.rs:222
+#: apps/files/src/ui/dialogs.rs:332
 msgid "Keep _Both"
 msgstr "全部保留(_B)"
 
-#: apps/files/src/ui/dialogs.rs:223
+#: apps/files/src/ui/dialogs.rs:333
 msgid "_Merge"
 msgstr "合并(_M)"
 
-#: apps/files/src/ui/dialogs.rs:223 apps/text-editor/src/doc.rs:209
+#: apps/files/src/ui/dialogs.rs:333 apps/text-editor/src/doc.rs:209
 msgid "_Replace"
 msgstr "替换(_R)"
 
-#: apps/files/src/ui/dialogs.rs:269
+#: apps/files/src/ui/dialogs.rs:379
 msgid "Recommended Applications"
 msgstr "推荐的应用"
 
-#: apps/files/src/ui/dialogs.rs:270
+#: apps/files/src/ui/dialogs.rs:380
 msgid "Other Applications"
 msgstr "其他应用"
 
-#: apps/files/src/ui/dialogs.rs:271
+#: apps/files/src/ui/dialogs.rs:381
 msgid "All Applications"
 msgstr "所有应用"
 
-#: apps/files/src/ui/dialogs.rs:349 apps/logs/src/category.rs:30
+#: apps/files/src/ui/dialogs.rs:459 apps/logs/src/category.rs:30
 msgid "Applications"
 msgstr "应用"
 
-#: apps/files/src/ui/dialogs.rs:364 apps/settings/src/ui/appearance.rs:107
+#: apps/files/src/ui/dialogs.rs:474 apps/settings/src/ui/appearance.rs:107
 #: apps/settings/src/ui/printers.rs:237 apps/settings/src/ui/printers.rs:433
 #: apps/settings/src/ui/sound.rs:928 apps/settings/src/values.rs:204
 msgid "Default"
 msgstr "默认"
 
-#: apps/files/src/ui/dialogs.rs:402
+#: apps/files/src/ui/dialogs.rs:512
 msgid "Search applications"
 msgstr "搜索应用"
 
-#: apps/files/src/ui/dialogs.rs:404
+#: apps/files/src/ui/dialogs.rs:514
 msgid "Search Applications"
 msgstr "搜索应用"
 
-#: apps/files/src/ui/dialogs.rs:427
+#: apps/files/src/ui/dialogs.rs:537
 msgid "No Applications Found"
 msgstr "未找到应用"
 
-#: apps/files/src/ui/dialogs.rs:432
+#: apps/files/src/ui/dialogs.rs:542
 msgid "No installed application can open this file"
 msgstr "没有已安装的应用可以打开此文件"
 
-#: apps/files/src/ui/dialogs.rs:444
+#: apps/files/src/ui/dialogs.rs:554
 msgid "Always use for “{desc}” files"
 msgstr "始终用于“{desc}”文件"
 
-#: apps/files/src/ui/dialogs.rs:463 apps/image-viewer/src/shortcuts.rs:16
+#: apps/files/src/ui/dialogs.rs:573 apps/image-viewer/src/shortcuts.rs:16
 msgid "Open With"
 msgstr "打开方式"
 
-#: apps/files/src/ui/dialogs.rs:488
+#: apps/files/src/ui/dialogs.rs:598
 msgid "No applications found"
 msgstr "未找到应用"
 
-#: apps/files/src/ui/dialogs.rs:489
+#: apps/files/src/ui/dialogs.rs:599
 msgid "{n} application"
 msgid_plural "{n} applications"
 msgstr[0] "{n} 个应用"
 
-#: apps/files/src/ui/dialogs.rs:514 apps/image-viewer/src/ui.rs:1608
+#: apps/files/src/ui/dialogs.rs:624 apps/image-viewer/src/ui.rs:1614
 msgid "Could not open: {}"
 msgstr "无法打开：{}"
 
-#: apps/files/src/ui/dialogs.rs:620
+#: apps/files/src/ui/dialogs.rs:730
 msgid "Sort Folders Before Files"
 msgstr "文件夹排在文件之前"
 
-#: apps/files/src/ui/dialogs.rs:626
+#: apps/files/src/ui/dialogs.rs:736
 msgid "Open Action"
 msgstr "打开操作"
 
-#: apps/files/src/ui/dialogs.rs:629
+#: apps/files/src/ui/dialogs.rs:739
 msgid "Double Click"
 msgstr "双击"
 
-#: apps/files/src/ui/dialogs.rs:630
+#: apps/files/src/ui/dialogs.rs:740
 msgid "Single Click"
 msgstr "单击"
 
-#: apps/files/src/ui/dialogs.rs:636 apps/files/src/ui/shortcuts.rs:49
+#: apps/files/src/ui/dialogs.rs:746 apps/files/src/ui/shortcuts.rs:49
 msgid "Show Hidden Files"
 msgstr "显示隐藏文件"
 
-#: apps/files/src/ui/dialogs.rs:642
+#: apps/files/src/ui/dialogs.rs:752
 msgid "Always Show the Location Entry"
 msgstr "始终显示位置输入框"
 
-#: apps/files/src/ui/dialogs.rs:643
+#: apps/files/src/ui/dialogs.rs:753
 msgid "Instead of the path bar"
 msgstr "代替路径栏"
 
-#: apps/files/src/ui/dialogs.rs:649
+#: apps/files/src/ui/dialogs.rs:759
 msgid "Views"
 msgstr "视图"
 
-#: apps/files/src/ui/dialogs.rs:651
+#: apps/files/src/ui/dialogs.rs:761
 msgid "Default View"
 msgstr "默认视图"
 
-#: apps/files/src/ui/dialogs.rs:653
+#: apps/files/src/ui/dialogs.rs:763
 msgid "Grid"
 msgstr "网格"
 
-#: apps/files/src/ui/dialogs.rs:653
+#: apps/files/src/ui/dialogs.rs:763
 msgid "List"
 msgstr "列表"
 
-#: apps/files/src/ui/dialogs.rs:658 apps/image-viewer/src/shortcuts.rs:55
+#: apps/files/src/ui/dialogs.rs:768 apps/image-viewer/src/shortcuts.rs:55
 #: apps/image-viewer/src/ui.rs:457
 msgid "Show Thumbnails"
 msgstr "显示缩略图"
 
-#: apps/files/src/ui/dialogs.rs:661 apps/files/src/ui/dialogs.rs:699
+#: apps/files/src/ui/dialogs.rs:771 apps/files/src/ui/dialogs.rs:809
 msgid "On This Computer Only"
 msgstr "仅限本计算机"
 
-#: apps/files/src/ui/dialogs.rs:669
+#: apps/files/src/ui/dialogs.rs:779
 msgid "Date and Time Format"
 msgstr "日期和时间格式"
 
-#: apps/files/src/ui/dialogs.rs:671
+#: apps/files/src/ui/dialogs.rs:781
 msgid "Detailed"
 msgstr "详细"
 
-#: apps/files/src/ui/dialogs.rs:671
+#: apps/files/src/ui/dialogs.rs:781
 msgid "Simple"
 msgstr "简单"
 
-#: apps/files/src/ui/dialogs.rs:681
+#: apps/files/src/ui/dialogs.rs:791
 msgid "Create Link"
 msgstr "创建链接"
 
-#: apps/files/src/ui/dialogs.rs:682
+#: apps/files/src/ui/dialogs.rs:792
 msgid "Show an action to create symbolic links"
 msgstr "显示用于创建符号链接的操作"
 
-#: apps/files/src/ui/dialogs.rs:687 apps/files/src/ui/shortcuts.rs:61
+#: apps/files/src/ui/dialogs.rs:797 apps/files/src/ui/shortcuts.rs:61
 msgid "Delete Permanently"
 msgstr "永久删除"
 
-#: apps/files/src/ui/dialogs.rs:688
+#: apps/files/src/ui/dialogs.rs:798
 msgid "Show an action to bypass the Trash"
 msgstr "显示绕过回收站的操作"
 
-#: apps/files/src/ui/dialogs.rs:696
+#: apps/files/src/ui/dialogs.rs:806
 msgid "Search in Subfolders"
 msgstr "在子文件夹中搜索"
 
-#: apps/files/src/ui/dialogs.rs:700
+#: apps/files/src/ui/dialogs.rs:810
 msgid "All Locations"
 msgstr "所有位置"
 
@@ -7216,8 +7338,8 @@ msgstr "正在准备…"
 msgid "File Operations — {} % done"
 msgstr "文件操作 — 已完成 {}%"
 
-#: apps/files/src/ui/jobs.rs:100 apps/files/src/ui/window.rs:304
-#: apps/files/src/ui/window.rs:307
+#: apps/files/src/ui/jobs.rs:100 apps/files/src/ui/window.rs:305
+#: apps/files/src/ui/window.rs:308
 msgid "File Operations"
 msgstr "文件操作"
 
@@ -7253,8 +7375,8 @@ msgstr "退出正在运行的实例"
 msgid "Access and organize files"
 msgstr "访问和整理文件"
 
-#: apps/files/src/ui/mod.rs:388 apps/files/src/ui/window.rs:156
-#: apps/files/src/ui/window.rs:456
+#: apps/files/src/ui/mod.rs:388 apps/files/src/ui/window.rs:157
+#: apps/files/src/ui/window.rs:457
 msgid "Files"
 msgstr "文件"
 
@@ -7422,11 +7544,11 @@ msgstr "后退或前进"
 msgid "Extra mouse buttons"
 msgstr "鼠标额外按键"
 
-#: apps/files/src/ui/shortcuts.rs:41 apps/files/src/ui/window.rs:829
+#: apps/files/src/ui/shortcuts.rs:41 apps/files/src/ui/window.rs:840
 msgid "Grid View"
 msgstr "网格视图"
 
-#: apps/files/src/ui/shortcuts.rs:42 apps/files/src/ui/window.rs:831
+#: apps/files/src/ui/shortcuts.rs:42 apps/files/src/ui/window.rs:842
 msgid "List View"
 msgstr "列表视图"
 
@@ -7442,7 +7564,7 @@ msgstr "文件和文件夹"
 msgid "Open in New Tab"
 msgstr "在新标签页中打开"
 
-#: apps/files/src/ui/shortcuts.rs:58 apps/files/src/ui/window.rs:1596
+#: apps/files/src/ui/shortcuts.rs:58 apps/files/src/ui/window.rs:1612
 msgid "New Folder"
 msgstr "新建文件夹"
 
@@ -7462,7 +7584,7 @@ msgstr "编辑"
 msgid "Invert Selection"
 msgstr "反向选择"
 
-#: apps/files/src/ui/shortcuts.rs:71 apps/files/src/ui/tab.rs:147
+#: apps/files/src/ui/shortcuts.rs:71 apps/files/src/ui/tab.rs:169
 msgid "Cut"
 msgstr "剪切"
 
@@ -7470,8 +7592,8 @@ msgstr "剪切"
 msgid "Paste"
 msgstr "粘贴"
 
-#: apps/files/src/ui/sidebar.rs:75 apps/files/src/ui/window.rs:136
-#: apps/files/src/ui/window.rs:858
+#: apps/files/src/ui/sidebar.rs:75 apps/files/src/ui/window.rs:137
+#: apps/files/src/ui/window.rs:869
 msgctxt "home folder"
 msgid "Home"
 msgstr "主文件夹"
@@ -7484,15 +7606,15 @@ msgstr "弹出 {name}"
 msgid "Unmount {name}"
 msgstr "卸载 {name}"
 
-#: apps/files/src/ui/sidebar.rs:565 apps/files/src/ui/window.rs:1667
+#: apps/files/src/ui/sidebar.rs:565 apps/files/src/ui/window.rs:1762
 msgid "Open in New _Tab"
 msgstr "在新标签页中打开(_T)"
 
-#: apps/files/src/ui/sidebar.rs:566 apps/files/src/ui/window.rs:1668
+#: apps/files/src/ui/sidebar.rs:566 apps/files/src/ui/window.rs:1763
 msgid "Open in New _Window"
 msgstr "在新窗口中打开(_W)"
 
-#: apps/files/src/ui/sidebar.rs:571 apps/files/src/ui/window.rs:1697
+#: apps/files/src/ui/sidebar.rs:571 apps/files/src/ui/window.rs:1792
 msgid "Rena_me…"
 msgstr "重命名(_M)…"
 
@@ -7508,18 +7630,18 @@ msgstr "弹出(_E)"
 msgid "_Unmount"
 msgstr "卸载(_U)"
 
-#: apps/files/src/ui/sidebar.rs:581 apps/files/src/ui/window.rs:1723
+#: apps/files/src/ui/sidebar.rs:581 apps/files/src/ui/window.rs:1825
 msgid "_Empty Trash…"
 msgstr "清空回收站(_E)…"
 
-#: apps/files/src/ui/sidebar.rs:586 apps/files/src/ui/window.rs:1660
-#: apps/files/src/ui/window.rs:1708 apps/files/src/ui/window.rs:1738
+#: apps/files/src/ui/sidebar.rs:586 apps/files/src/ui/window.rs:1755
+#: apps/files/src/ui/window.rs:1810 apps/files/src/ui/window.rs:1840
 #: apps/system-monitor/src/proc_view.rs:156
 msgid "_Properties"
 msgstr "属性(_P)"
 
 #: apps/files/src/ui/sidebar.rs:650 apps/files/src/ui/sidebar.rs:695
-#: apps/files/src/ui/window.rs:1635
+#: apps/files/src/ui/window.rs:1730
 msgid "Could not save bookmarks: {e}"
 msgstr "无法保存书签：{e}"
 
@@ -7531,7 +7653,7 @@ msgstr "书签名称(_N)"
 msgid "Rename Bookmark"
 msgstr "重命名书签"
 
-#: apps/files/src/ui/sidebar.rs:684 apps/files/src/ui/window.rs:1552
+#: apps/files/src/ui/sidebar.rs:684 apps/files/src/ui/window.rs:1568
 #: apps/music/src/pages.rs:2131
 msgid "_Rename"
 msgstr "重命名(_R)"
@@ -7544,334 +7666,354 @@ msgstr "无法更改星标：{}"
 msgid "Folder"
 msgstr "文件夹"
 
-#: apps/files/src/ui/tab.rs:288
+#: apps/files/src/ui/tab.rs:312
 msgid "_Try Again"
 msgstr "重试(_T)"
 
-#: apps/files/src/ui/tab.rs:298
+#: apps/files/src/ui/tab.rs:322
 msgid "Loading folder"
 msgstr "正在加载文件夹"
 
-#: apps/files/src/ui/tab.rs:1069
+#: apps/files/src/ui/tab.rs:1114
 msgid "Unable to access location: {}"
 msgstr "无法访问位置：{}"
 
-#: apps/files/src/ui/tab.rs:1102
+#: apps/files/src/ui/tab.rs:1147
 msgid "Unable to Open Folder"
 msgstr "无法打开文件夹"
 
-#: apps/files/src/ui/tab.rs:1110
+#: apps/files/src/ui/tab.rs:1155
 msgid "Unable to open folder: {}"
 msgstr "无法打开文件夹：{}"
 
-#: apps/files/src/ui/tab.rs:1127
+#: apps/files/src/ui/tab.rs:1172
 msgid "Try a different search."
 msgstr "请尝试其他搜索。"
 
-#: apps/files/src/ui/tab.rs:1130
+#: apps/files/src/ui/tab.rs:1175
 msgid "Starred Files Unavailable"
 msgstr "星标文件不可用"
 
-#: apps/files/src/ui/tab.rs:1132
+#: apps/files/src/ui/tab.rs:1177
 msgid "The stars GNOME Files keeps could not be read."
 msgstr "无法读取 GNOME 文件保存的星标。"
 
-#: apps/files/src/ui/tab.rs:1135
+#: apps/files/src/ui/tab.rs:1180
 msgid "No Starred Files"
 msgstr "没有星标文件"
 
-#: apps/files/src/ui/tab.rs:1137
+#: apps/files/src/ui/tab.rs:1182
 msgid "Files and folders you star appear here."
 msgstr "您星标的文件和文件夹会显示在这里。"
 
-#: apps/files/src/ui/tab.rs:1140
+#: apps/files/src/ui/tab.rs:1185
 msgid "Trash is Empty"
 msgstr "回收站为空"
 
-#: apps/files/src/ui/tab.rs:1144
+#: apps/files/src/ui/tab.rs:1189
 msgid "Folder is Empty"
 msgstr "文件夹为空"
 
-#: apps/files/src/ui/tab.rs:1372
+#: apps/files/src/ui/tab.rs:1417
 msgid "Search finished: {n} item found"
 msgid_plural "Search finished: {n} items found"
 msgstr[0] "搜索完成：找到 {n} 个项目"
 
-#: apps/files/src/ui/tab.rs:1398
+#: apps/files/src/ui/tab.rs:1443
 msgid "On This Computer"
 msgstr "在本计算机上"
 
-#: apps/files/src/ui/tab.rs:1430
+#: apps/files/src/ui/tab.rs:1475
 msgid "Networks"
 msgstr "网络"
 
-#: apps/files/src/ui/tab.rs:1435
+#: apps/files/src/ui/tab.rs:1480
 msgid "Browse the local network"
 msgstr "浏览本地网络"
 
-#: apps/files/src/ui/tab.rs:1460
+#: apps/files/src/ui/tab.rs:1505
 msgid "Not mounted"
 msgstr "未挂载"
 
-#: apps/files/src/ui/tab.rs:1473
+#: apps/files/src/ui/tab.rs:1518
 msgid "Connect to Server"
 msgstr "连接到服务器"
 
-#: apps/files/src/ui/tab.rs:1477
+#: apps/files/src/ui/tab.rs:1522
 msgid "Server Address"
 msgstr "服务器地址"
 
-#: apps/files/src/ui/window.rs:209
+#: apps/files/src/ui/window.rs:210
 msgid "Enter a location"
 msgstr "输入位置"
 
-#: apps/files/src/ui/window.rs:225 apps/terminal/src/window.rs:744
+#: apps/files/src/ui/window.rs:226 apps/terminal/src/window.rs:744
 #: apps/text-editor/src/window.rs:47
 msgid "New _Tab"
 msgstr "新建标签页(_T)"
 
-#: apps/files/src/ui/window.rs:233
+#: apps/files/src/ui/window.rs:234
 msgid "_About Files"
 msgstr "关于文件(_A)"
 
-#: apps/files/src/ui/window.rs:251
+#: apps/files/src/ui/window.rs:252
 msgid "_Reversed Order"
 msgstr "倒序(_R)"
 
-#: apps/files/src/ui/window.rs:252 apps/logs/src/ui.rs:294
+#: apps/files/src/ui/window.rs:253 apps/logs/src/ui.rs:294
 #: apps/music/src/ui.rs:510 apps/music/src/ui.rs:513
 msgid "Sort"
 msgstr "排序"
 
-#: apps/files/src/ui/window.rs:254 apps/image-viewer/src/ui.rs:310
+#: apps/files/src/ui/window.rs:255 apps/image-viewer/src/ui.rs:310
 msgid "Zoom _In"
 msgstr "放大(_I)"
 
-#: apps/files/src/ui/window.rs:255
+#: apps/files/src/ui/window.rs:256
 msgid "Zoom _Out"
 msgstr "缩小(_O)"
 
-#: apps/files/src/ui/window.rs:256
+#: apps/files/src/ui/window.rs:257
 msgid "_Reset Size"
 msgstr "重置大小(_R)"
 
-#: apps/files/src/ui/window.rs:259 apps/files/src/ui/window.rs:1737
+#: apps/files/src/ui/window.rs:260 apps/files/src/ui/window.rs:1839
 msgid "Show _Hidden Files"
 msgstr "显示隐藏文件(_H)"
 
-#: apps/files/src/ui/window.rs:264 apps/files/src/ui/window.rs:266
-#: apps/files/src/ui/window.rs:388
+#: apps/files/src/ui/window.rs:265 apps/files/src/ui/window.rs:267
+#: apps/files/src/ui/window.rs:389
 msgid "View Options"
 msgstr "视图选项"
 
-#: apps/files/src/ui/window.rs:312
+#: apps/files/src/ui/window.rs:313
 msgid "Search current folder"
 msgstr "搜索当前文件夹"
 
-#: apps/files/src/ui/window.rs:315
+#: apps/files/src/ui/window.rs:316
 msgid "Search Current Folder"
 msgstr "搜索当前文件夹"
 
-#: apps/files/src/ui/window.rs:341
+#: apps/files/src/ui/window.rs:342
 msgid "_Empty…"
 msgstr "清空(_E)…"
 
-#: apps/files/src/ui/window.rs:631
+#: apps/files/src/ui/window.rs:632
 msgid "Search: {}"
 msgstr "搜索：{}"
 
-#: apps/files/src/ui/window.rs:748
+#: apps/files/src/ui/window.rs:759
 msgid "Unstarred"
 msgstr "已取消星标"
 
-#: apps/files/src/ui/window.rs:765
+#: apps/files/src/ui/window.rs:776
 msgid "{base} — Searching…"
 msgstr "{base} — 正在搜索…"
 
-#: apps/files/src/ui/window.rs:767
+#: apps/files/src/ui/window.rs:778
 msgid "{base} — Loading…"
 msgstr "{base} — 正在加载…"
 
-#: apps/files/src/ui/window.rs:776
+#: apps/files/src/ui/window.rs:787
 msgid "“{}” selected"
 msgstr "已选中“{}”"
 
-#: apps/files/src/ui/window.rs:778
+#: apps/files/src/ui/window.rs:789
 msgid "“{}” selected ({})"
 msgstr "已选中“{}”（{}）"
 
-#: apps/files/src/ui/window.rs:793
+#: apps/files/src/ui/window.rs:804
 msgid "{n} folder selected"
 msgid_plural "{n} folders selected"
 msgstr[0] "已选中 {n} 个文件夹"
 
-#: apps/files/src/ui/window.rs:795
+#: apps/files/src/ui/window.rs:806
 msgid "{n} item selected ({bytes})"
 msgid_plural "{n} items selected ({bytes})"
 msgstr[0] "已选中 {n} 个项目（{bytes}）"
 
-#: apps/files/src/ui/window.rs:1115
+#: apps/files/src/ui/window.rs:1126
 msgid "Could not open file: {}"
 msgstr "无法打开文件：{}"
 
-#: apps/files/src/ui/window.rs:1143
+#: apps/files/src/ui/window.rs:1154
 msgid "Unable to mount “{}”: {}"
 msgstr "无法挂载“{}”：{}"
 
-#: apps/files/src/ui/window.rs:1168
+#: apps/files/src/ui/window.rs:1179
 msgid "Unable to eject “{name}”: {error}"
 msgstr "无法弹出“{name}”：{error}"
 
-#: apps/files/src/ui/window.rs:1283
+#: apps/files/src/ui/window.rs:1298
 msgid "Nothing to paste"
 msgstr "没有可粘贴的内容"
 
-#: apps/files/src/ui/window.rs:1348
+#: apps/files/src/ui/window.rs:1364
 msgid "“{}” moved to Trash"
 msgstr "“{}”已移到回收站"
 
-#: apps/files/src/ui/window.rs:1353
+#: apps/files/src/ui/window.rs:1369
 msgid "{n} item moved to Trash"
 msgid_plural "{n} items moved to Trash"
 msgstr[0] "{n} 个项目已移到回收站"
 
-#: apps/files/src/ui/window.rs:1378
+#: apps/files/src/ui/window.rs:1394
 msgid "“{}” Can’t Be Put in the Trash"
 msgstr "无法将“{}”移到回收站"
 
-#: apps/files/src/ui/window.rs:1383
+#: apps/files/src/ui/window.rs:1399
 msgid "{n} Item Can’t Be Put in the Trash"
 msgid_plural "{n} Items Can’t Be Put in the Trash"
 msgstr[0] "无法将 {n} 个项目移到回收站"
 
-#: apps/files/src/ui/window.rs:1392
+#: apps/files/src/ui/window.rs:1408
 msgid ""
 "This location has no Trash. Delete permanently instead? Deleted items will "
 "be permanently lost."
 msgstr "此位置没有回收站。要改为永久删除吗？删除的项目将永久丢失。"
 
-#: apps/files/src/ui/window.rs:1463
+#: apps/files/src/ui/window.rs:1479
 msgid "Permanently Delete “{}”?"
 msgstr "永久删除“{}”？"
 
-#: apps/files/src/ui/window.rs:1468
+#: apps/files/src/ui/window.rs:1484
 msgid "Permanently Delete {n} Item?"
 msgid_plural "Permanently Delete {n} Items?"
 msgstr[0] "永久删除 {n} 个项目？"
 
-#: apps/files/src/ui/window.rs:1477
+#: apps/files/src/ui/window.rs:1493
 msgid "If you delete an item, it will be permanently lost."
 msgstr "如果删除项目，它将永久丢失。"
 
-#: apps/files/src/ui/window.rs:1491
+#: apps/files/src/ui/window.rs:1507
 msgid "Empty Trash?"
 msgstr "清空回收站？"
 
-#: apps/files/src/ui/window.rs:1492
+#: apps/files/src/ui/window.rs:1508
 msgid "All items in the Trash will be permanently deleted."
 msgstr "回收站中的所有项目都将被永久删除。"
 
-#: apps/files/src/ui/window.rs:1493
+#: apps/files/src/ui/window.rs:1509
 msgid "_Empty Trash"
 msgstr "清空回收站(_E)"
 
-#: apps/files/src/ui/window.rs:1504
+#: apps/files/src/ui/window.rs:1520
 msgid "Nothing to undo"
 msgstr "没有可撤销的操作"
 
-#: apps/files/src/ui/window.rs:1521
+#: apps/files/src/ui/window.rs:1537
 msgid "Could not undo rename: {}"
 msgstr "无法撤销重命名：{}"
 
-#: apps/files/src/ui/window.rs:1548
+#: apps/files/src/ui/window.rs:1564
 msgid "Rename Folder"
 msgstr "重命名文件夹"
 
-#: apps/files/src/ui/window.rs:1550
+#: apps/files/src/ui/window.rs:1566
 msgid "Rename File"
 msgstr "重命名文件"
 
-#: apps/files/src/ui/window.rs:1577
+#: apps/files/src/ui/window.rs:1593
 msgid "Could not rename: {}"
 msgstr "无法重命名：{}"
 
-#: apps/files/src/ui/window.rs:1597 apps/music/src/pages.rs:2133
-msgid "_Create"
-msgstr "创建(_C)"
-
-#: apps/files/src/ui/window.rs:1608
+#: apps/files/src/ui/window.rs:1624
 msgid "Could not create folder: {}"
 msgstr "无法创建文件夹：{}"
 
-#: apps/files/src/ui/window.rs:1629
+#: apps/files/src/ui/window.rs:1689
+msgid "Extract To"
+msgstr "解压到"
+
+#: apps/files/src/ui/window.rs:1690
+msgid "_Extract"
+msgstr "解压(_E)"
+
+#: apps/files/src/ui/window.rs:1724
 msgid "Location is already bookmarked"
 msgstr "该位置已添加为书签"
 
-#: apps/files/src/ui/window.rs:1634
+#: apps/files/src/ui/window.rs:1729
 msgid "“{}” added to bookmarks"
 msgstr "已将“{}”添加到书签"
 
-#: apps/files/src/ui/window.rs:1656
+#: apps/files/src/ui/window.rs:1751
 msgid "_Restore From Trash"
 msgstr "从回收站恢复(_R)"
 
-#: apps/files/src/ui/window.rs:1657
+#: apps/files/src/ui/window.rs:1752
 msgid "_Delete From Trash…"
 msgstr "从回收站删除(_D)…"
 
-#: apps/files/src/ui/window.rs:1670 apps/image-viewer/src/ui.rs:301
-#: apps/image-viewer/src/ui.rs:787
+#: apps/files/src/ui/window.rs:1765 apps/image-viewer/src/ui.rs:301
+#: apps/image-viewer/src/ui.rs:793
 msgid "Open _With…"
 msgstr "打开方式(_W)…"
 
-#: apps/files/src/ui/window.rs:1676
+#: apps/files/src/ui/window.rs:1771
 msgid "Open Item _Location"
 msgstr "打开项目位置(_L)"
 
-#: apps/files/src/ui/window.rs:1683
+#: apps/files/src/ui/window.rs:1778
 msgid "_Star"
 msgstr "星标(_S)"
 
-#: apps/files/src/ui/window.rs:1685
+#: apps/files/src/ui/window.rs:1780
 msgid "_Unstar"
 msgstr "取消星标(_U)"
 
-#: apps/files/src/ui/window.rs:1690
+#: apps/files/src/ui/window.rs:1785
 msgid "Cu_t"
 msgstr "剪切(_T)"
 
-#: apps/files/src/ui/window.rs:1693
+#: apps/files/src/ui/window.rs:1788
 msgid "Paste Into Folder"
 msgstr "粘贴到文件夹"
 
-#: apps/files/src/ui/window.rs:1699
+#: apps/files/src/ui/window.rs:1794
 msgid "Create _Link"
 msgstr "创建链接(_L)"
 
-#: apps/files/src/ui/window.rs:1701
+#: apps/files/src/ui/window.rs:1796
 msgid "Mo_ve to Trash"
 msgstr "移到回收站(_V)"
 
-#: apps/files/src/ui/window.rs:1703
+#: apps/files/src/ui/window.rs:1798
 msgid "_Delete Permanently…"
 msgstr "永久删除(_D)…"
 
-#: apps/files/src/ui/window.rs:1707 apps/maps/src/ui.rs:440
+#: apps/files/src/ui/window.rs:1803
+msgid "E_xtract Here"
+msgstr "解压到此处(_X)"
+
+#: apps/files/src/ui/window.rs:1804
+msgid "Extract _To…"
+msgstr "解压到(_T)…"
+
+#: apps/files/src/ui/window.rs:1806
+msgid "Create _Archive…"
+msgstr "创建归档(_A)…"
+
+#: apps/files/src/ui/window.rs:1809 apps/maps/src/ui.rs:440
 #: apps/maps/src/ui.rs:2271
 msgid "Copy Location"
 msgstr "复制位置"
 
-#: apps/files/src/ui/window.rs:1729
+#: apps/files/src/ui/window.rs:1831
 msgid "New _Folder…"
 msgstr "新建文件夹(_F)…"
 
-#: apps/files/src/ui/window.rs:1732 apps/terminal/src/window.rs:739
+#: apps/files/src/ui/window.rs:1834 apps/terminal/src/window.rs:739
 msgid "_Paste"
 msgstr "粘贴(_P)"
 
-#: apps/files/src/ui/window.rs:1736
+#: apps/files/src/ui/window.rs:1838
 msgid "Add to _Bookmarks"
 msgstr "添加到书签(_B)"
+
+#: apps/files/src/ui/window.rs:2207
+msgid "Archive"
+msgstr "归档"
 
 #: apps/fonts/data/org.helixdesktop.Fonts.desktop
 msgid "fonts;fontface;typeface;install;preview;"
@@ -8571,7 +8713,7 @@ msgstr "图像查看器"
 msgid "View images"
 msgstr "查看图像"
 
-#: apps/image-viewer/src/ui.rs:295 apps/image-viewer/src/ui.rs:1085
+#: apps/image-viewer/src/ui.rs:295 apps/image-viewer/src/ui.rs:1091
 msgid "Open Images"
 msgstr "打开图像"
 
@@ -8579,11 +8721,11 @@ msgstr "打开图像"
 msgid "_New Window"
 msgstr "新建窗口(_N)"
 
-#: apps/image-viewer/src/ui.rs:306 apps/image-viewer/src/ui.rs:788
+#: apps/image-viewer/src/ui.rs:306 apps/image-viewer/src/ui.rs:794
 msgid "Set as _Background…"
 msgstr "设为背景(_B)…"
 
-#: apps/image-viewer/src/ui.rs:307 apps/image-viewer/src/ui.rs:791
+#: apps/image-viewer/src/ui.rs:307 apps/image-viewer/src/ui.rs:797
 msgid "Move to _Trash"
 msgstr "移到回收站(_T)"
 
@@ -8664,81 +8806,81 @@ msgstr "焦距"
 msgid "Open Folder"
 msgstr "打开文件夹"
 
-#: apps/image-viewer/src/ui.rs:1032
+#: apps/image-viewer/src/ui.rs:1038
 msgid "Could not open map: {}"
 msgstr "无法打开地图：{}"
 
-#: apps/image-viewer/src/ui.rs:1075
+#: apps/image-viewer/src/ui.rs:1081
 msgid "Supported Images"
 msgstr "支持的图像"
 
-#: apps/image-viewer/src/ui.rs:1162
+#: apps/image-viewer/src/ui.rs:1168
 msgid "The decoder crashed"
 msgstr "解码器崩溃"
 
 #. Translators: an image that could not be shown: its file name, then why.
-#: apps/image-viewer/src/ui.rs:1231
+#: apps/image-viewer/src/ui.rs:1237
 msgid "{name}: {error}"
 msgstr "{name}：{error}"
 
-#: apps/image-viewer/src/ui.rs:1333
+#: apps/image-viewer/src/ui.rs:1339
 msgid "No Image"
 msgstr "没有图像"
 
 #. Translators: window title: file name, then the app name.
-#: apps/image-viewer/src/ui.rs:1357
+#: apps/image-viewer/src/ui.rs:1363
 msgid "{name} — {app}"
 msgstr "{name} — {app}"
 
-#: apps/image-viewer/src/ui.rs:1553
+#: apps/image-viewer/src/ui.rs:1559
 msgid "{} (animated)"
 msgstr "{}（动画）"
 
-#: apps/image-viewer/src/ui.rs:1620
+#: apps/image-viewer/src/ui.rs:1626
 msgid "Image copied to clipboard"
 msgstr "图像已复制到剪贴板"
 
-#: apps/image-viewer/src/ui.rs:1631
+#: apps/image-viewer/src/ui.rs:1637
 msgid "Background set"
 msgstr "背景已设置"
 
-#: apps/image-viewer/src/ui.rs:1634 apps/image-viewer/src/ui.rs:1637
+#: apps/image-viewer/src/ui.rs:1640 apps/image-viewer/src/ui.rs:1643
 msgid "Could not set the background"
 msgstr "无法设置背景"
 
-#: apps/image-viewer/src/ui.rs:1636
+#: apps/image-viewer/src/ui.rs:1642
 msgid "Could not set the background: {e}"
 msgstr "无法设置背景：{e}"
 
-#: apps/image-viewer/src/ui.rs:1661
+#: apps/image-viewer/src/ui.rs:1667
 msgid "Image moved to trash"
 msgstr "图像已移到回收站"
 
-#: apps/image-viewer/src/ui.rs:1673
+#: apps/image-viewer/src/ui.rs:1679
 msgid "Could not move to trash: {e}"
 msgstr "无法移到回收站：{e}"
 
-#: apps/image-viewer/src/ui.rs:1674
+#: apps/image-viewer/src/ui.rs:1680
 msgid "Could not move to trash"
 msgstr "无法移到回收站"
 
-#: apps/image-viewer/src/ui.rs:1698
+#: apps/image-viewer/src/ui.rs:1704
 msgid "Could not restore: {e}"
 msgstr "无法恢复：{e}"
 
-#: apps/image-viewer/src/ui.rs:1699
+#: apps/image-viewer/src/ui.rs:1705
 msgid "Could not restore"
 msgstr "无法恢复"
 
-#: apps/image-viewer/src/ui.rs:1723
+#: apps/image-viewer/src/ui.rs:1729
 msgid "Image saved"
 msgstr "图像已保存"
 
-#: apps/image-viewer/src/ui.rs:1732
+#: apps/image-viewer/src/ui.rs:1738
 msgid "Could not save image: {e}"
 msgstr "无法保存图像：{e}"
 
-#: apps/image-viewer/src/ui.rs:1736
+#: apps/image-viewer/src/ui.rs:1742
 msgid "Could not save image"
 msgstr "无法保存图像"
 
@@ -19219,15 +19361,15 @@ msgstr ""
 "此链接指向下方的位置,它不是网页。打开它可能会访问文件或网络共享,或启动其他应"
 "用程序。"
 
-#: crates/helix-eds/src/client.rs:58
+#: crates/helix-eds/src/client.rs:66
 msgid "“{name}” is read-only"
 msgstr "“{name}”是只读的"
 
-#: crates/helix-eds/src/client.rs:60
+#: crates/helix-eds/src/client.rs:68
 msgid "“{name}” cannot be removed"
 msgstr "无法移除“{name}”"
 
-#: crates/helix-eds/src/client.rs:62
+#: crates/helix-eds/src/client.rs:70
 msgid "The contact could not be read"
 msgstr "无法读取联系人"
 

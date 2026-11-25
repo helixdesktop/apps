@@ -1,5 +1,6 @@
 //! Helix Files.
 
+mod archive;
 mod bookmarks;
 mod cli;
 mod clipformat;
