@@ -226,8 +226,8 @@ msgstr "Wyciszenie lub cofnięcie wyciszenia"
 #: apps/calculator/src/ui.rs:523 apps/calendar/src/shortcuts.rs:51
 #: apps/clocks/src/shortcuts.rs:18 apps/contacts/src/shortcuts.rs:24
 #: apps/disk-usage/src/shortcuts.rs:47
-#: apps/document-scanner/src/shortcuts.rs:48 apps/files/src/ui/dialogs.rs:563
-#: apps/files/src/ui/dialogs.rs:617 apps/files/src/ui/shortcuts.rs:78
+#: apps/document-scanner/src/shortcuts.rs:48 apps/files/src/ui/dialogs.rs:673
+#: apps/files/src/ui/dialogs.rs:727 apps/files/src/ui/shortcuts.rs:78
 #: apps/help/src/shortcuts.rs:49 apps/maps/src/shortcuts.rs:11
 #: apps/maps/src/ui.rs:1863 apps/music/src/shortcuts.rs:37
 #: apps/settings/src/ui/access.rs:62 apps/settings/src/ui/extensions.rs:99
@@ -317,7 +317,7 @@ msgstr "_O programie"
 #: apps/disks/src/ui.rs:273 apps/disks/src/ui.rs:275
 #: apps/document-scanner/src/ui.rs:317 apps/document-scanner/src/ui.rs:319
 #: apps/document-viewer/src/ui.rs:312 apps/document-viewer/src/ui.rs:315
-#: apps/files/src/ui/window.rs:238 apps/files/src/ui/window.rs:241
+#: apps/files/src/ui/window.rs:239 apps/files/src/ui/window.rs:242
 #: apps/fonts/src/ui.rs:123 apps/fonts/src/ui.rs:126 apps/help/src/ui.rs:403
 #: apps/help/src/ui.rs:405 apps/image-viewer/src/ui.rs:337
 #: apps/image-viewer/src/ui.rs:339 apps/logs/src/ui.rs:308
@@ -400,7 +400,7 @@ msgid "Audio Files"
 msgstr "Pliki dźwiękowe"
 
 #: apps/audio-player/src/ui.rs:755 apps/disks/src/ui.rs:1988
-#: apps/document-viewer/src/ui.rs:1484 apps/files/src/ui/dialogs.rs:662
+#: apps/document-viewer/src/ui.rs:1484 apps/files/src/ui/dialogs.rs:772
 #: apps/video-player/src/ui.rs:1056
 msgid "All Files"
 msgstr "Wszystkie pliki"
@@ -966,7 +966,7 @@ msgstr "Procent"
 #: apps/calculator/src/ui.rs:450 apps/calculator/src/ui.rs:455
 #: apps/calculator/src/ui.rs:457 apps/calculator/src/ui.rs:463
 #: apps/calculator/src/ui.rs:469 apps/calculator/src/ui.rs:475
-#: apps/calculator/src/ui.rs:1627
+#: apps/calculator/src/ui.rs:1639
 msgid "Calculation"
 msgstr "Obliczenie"
 
@@ -1036,7 +1036,7 @@ msgstr "Tryb finansowy"
 msgid "Programming mode"
 msgstr "Tryb programisty"
 
-#: apps/calculator/src/ui.rs:506 apps/calculator/src/ui.rs:1587
+#: apps/calculator/src/ui.rs:506 apps/calculator/src/ui.rs:1599
 #: apps/disk-usage/src/shortcuts.rs:49 apps/disk-usage/src/ui.rs:1773
 #: apps/document-scanner/src/shortcuts.rs:50 apps/files/src/ui/shortcuts.rs:80
 #: apps/maps/src/shortcuts.rs:13 apps/maps/src/ui.rs:1804
@@ -1076,7 +1076,7 @@ msgstr "Wyczyść _historię"
 
 #: apps/calculator/src/ui.rs:699 apps/disk-usage/src/ui.rs:186
 #: apps/document-scanner/src/ui.rs:174 apps/document-scanner/src/ui.rs:190
-#: apps/files/src/ui/window.rs:231 apps/maps/src/ui.rs:485
+#: apps/files/src/ui/window.rs:232 apps/maps/src/ui.rs:485
 #: apps/music/src/ui.rs:467 apps/system-monitor/src/ui.rs:247
 #: apps/terminal/src/window.rs:295 apps/text-editor/src/window.rs:63
 #: apps/web/src/window.rs:263
@@ -1091,47 +1091,47 @@ msgstr "_O programie"
 msgid "Expression"
 msgstr "Wyrażenie"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Binary"
 msgstr "Dwójkowy"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Decimal"
 msgstr "Dziesiętny"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Hexadecimal"
 msgstr "Szesnastkowy"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Octal"
 msgstr "Ósemkowy"
 
-#: apps/calculator/src/ui.rs:755 apps/calculator/src/ui.rs:756
+#: apps/calculator/src/ui.rs:757 apps/calculator/src/ui.rs:758
 msgid "Number base"
 msgstr "Podstawa systemu liczbowego"
 
-#: apps/calculator/src/ui.rs:765 apps/calculator/src/ui.rs:766
+#: apps/calculator/src/ui.rs:767 apps/calculator/src/ui.rs:768
 msgid "Word size"
 msgstr "Rozmiar słowa"
 
-#: apps/calculator/src/ui.rs:1311
+#: apps/calculator/src/ui.rs:1323
 msgid "Insert expression"
 msgstr "Wstaw wyrażenie"
 
-#: apps/calculator/src/ui.rs:1317
+#: apps/calculator/src/ui.rs:1329
 msgid "Insert result"
 msgstr "Wstaw wynik"
 
-#: apps/calculator/src/ui.rs:1487 apps/calculator/src/ui.rs:1491
+#: apps/calculator/src/ui.rs:1499 apps/calculator/src/ui.rs:1503
 msgid "Bit {bit}"
 msgstr "Bit {bit}"
 
-#: apps/calculator/src/ui.rs:1558
+#: apps/calculator/src/ui.rs:1570
 msgid "C_alculate"
 msgstr "_Oblicz"
 
-#: apps/calculator/src/ui.rs:1558 apps/calendar/src/editor.rs:1039
+#: apps/calculator/src/ui.rs:1570 apps/calendar/src/editor.rs:1039
 #: apps/calendar/src/manage.rs:374 apps/calendar/src/ui.rs:2470
 #: apps/clocks/src/ui.rs:410 apps/clocks/src/ui.rs:1352
 #: apps/clocks/src/ui.rs:1907 apps/disk-usage/src/ui.rs:320
@@ -1142,11 +1142,11 @@ msgstr "_Oblicz"
 #: apps/disks/src/ui.rs:2022 apps/disks/src/ui.rs:2230
 #: apps/document-scanner/src/ui.rs:1264 apps/document-scanner/src/ui.rs:1379
 #: apps/document-scanner/src/ui.rs:1417 apps/document-viewer/src/dialogs.rs:169
-#: apps/files/src/ui/dialogs.rs:28 apps/files/src/ui/dialogs.rs:74
-#: apps/files/src/ui/dialogs.rs:220 apps/files/src/ui/sidebar.rs:684
-#: apps/help/src/ui.rs:196 apps/music/src/pages.rs:2129
-#: apps/music/src/pages.rs:2232 apps/music/src/pages.rs:2317
-#: apps/settings/src/ui/agent_access.rs:280
+#: apps/files/src/ui/dialogs.rs:30 apps/files/src/ui/dialogs.rs:76
+#: apps/files/src/ui/dialogs.rs:199 apps/files/src/ui/dialogs.rs:330
+#: apps/files/src/ui/sidebar.rs:684 apps/help/src/ui.rs:196
+#: apps/music/src/pages.rs:2129 apps/music/src/pages.rs:2232
+#: apps/music/src/pages.rs:2317 apps/settings/src/ui/agent_access.rs:280
 #: apps/settings/src/ui/agent_access.rs:996 apps/settings/src/ui/apps.rs:553
 #: apps/settings/src/ui/bluetooth.rs:647 apps/settings/src/ui/netedit.rs:389
 #: apps/settings/src/ui/printers.rs:606 apps/settings/src/ui/users.rs:642
@@ -1160,43 +1160,43 @@ msgstr "_Oblicz"
 msgid "_Cancel"
 msgstr "_Anuluj"
 
-#: apps/calculator/src/ui.rs:1591 apps/disk-usage/src/ui.rs:441
+#: apps/calculator/src/ui.rs:1603 apps/disk-usage/src/ui.rs:441
 msgid "Results"
 msgstr "Wyniki"
 
-#: apps/calculator/src/ui.rs:1597
+#: apps/calculator/src/ui.rs:1609
 msgid "Number _Format"
 msgstr "_Format liczb"
 
-#: apps/calculator/src/ui.rs:1608
+#: apps/calculator/src/ui.rs:1620
 msgid "_Decimal Places"
 msgstr "_Miejsca dziesiętne"
 
-#: apps/calculator/src/ui.rs:1612
+#: apps/calculator/src/ui.rs:1624
 msgid "_Thousands Separators"
 msgstr "_Separatory tysięcy"
 
-#: apps/calculator/src/ui.rs:1617
+#: apps/calculator/src/ui.rs:1629
 msgid "_Trailing Zeroes"
 msgstr "_Końcowe zera"
 
-#: apps/calculator/src/ui.rs:1631
+#: apps/calculator/src/ui.rs:1643
 msgid "_Angle Units"
 msgstr "_Jednostki kątów"
 
-#: apps/calculator/src/ui.rs:1634
+#: apps/calculator/src/ui.rs:1646
 msgid "Degrees"
 msgstr "Stopnie"
 
-#: apps/calculator/src/ui.rs:1635
+#: apps/calculator/src/ui.rs:1647
 msgid "Radians"
 msgstr "Radiany"
 
-#: apps/calculator/src/ui.rs:1636
+#: apps/calculator/src/ui.rs:1648
 msgid "Gradians"
 msgstr "Gradusy"
 
-#: apps/calculator/src/ui.rs:1696
+#: apps/calculator/src/ui.rs:1708
 msgid "{} equals {}"
 msgstr "{} równa się {}"
 
@@ -1429,7 +1429,7 @@ msgid "Calendar"
 msgstr "Kalendarz"
 
 #: apps/calendar/src/editor.rs:504 apps/document-viewer/src/dialogs.rs:112
-#: apps/files/src/ui/window.rs:211 apps/image-viewer/src/ui.rs:592
+#: apps/files/src/ui/window.rs:212 apps/image-viewer/src/ui.rs:592
 #: apps/settings/src/permissions.rs:45 apps/settings/src/ui/printers.rs:269
 #: apps/settings/src/ui/privacy.rs:155 apps/web/src/permissions.rs:24
 msgid "Location"
@@ -1468,7 +1468,7 @@ msgid "Ends"
 msgstr "Zakończenie"
 
 #: apps/calendar/src/editor.rs:558 apps/disks/src/ui.rs:1863
-#: apps/files/src/ui/dialogs.rs:663 apps/files/src/ui/dialogs.rs:701
+#: apps/files/src/ui/dialogs.rs:773 apps/files/src/ui/dialogs.rs:811
 #: apps/settings/src/values.rs:61 apps/settings/src/values.rs:84
 #: apps/web/src/dialogs.rs:75
 msgid "Never"
@@ -1669,7 +1669,7 @@ msgstr "Pokaż {display}"
 #: apps/calendar/src/manage.rs:297 apps/clocks/src/ui.rs:1460
 #: apps/contacts/src/editor.rs:302 apps/disk-usage/src/ui.rs:1005
 #: apps/disks/src/ui.rs:1640 apps/files/src/sorting.rs:43
-#: apps/files/src/ui/tab.rs:245 apps/settings/src/ui/netedit.rs:235
+#: apps/files/src/ui/tab.rs:269 apps/settings/src/ui/netedit.rs:235
 #: apps/settings/src/ui/users.rs:81
 msgid "Name"
 msgstr "Nazwa"
@@ -1841,8 +1841,8 @@ msgstr "Import"
 #: apps/characters/src/ui.rs:170 apps/characters/src/ui.rs:362
 #: apps/characters/src/ui.rs:364 apps/contacts/src/shortcuts.rs:19
 #: apps/document-viewer/src/ui.rs:372 apps/document-viewer/src/ui.rs:543
-#: apps/files/src/ui/dialogs.rs:694 apps/files/src/ui/shortcuts.rs:28
-#: apps/files/src/ui/window.rs:274 apps/files/src/ui/window.rs:276
+#: apps/files/src/ui/dialogs.rs:804 apps/files/src/ui/shortcuts.rs:28
+#: apps/files/src/ui/window.rs:275 apps/files/src/ui/window.rs:277
 #: apps/fonts/src/shortcuts.rs:17 apps/fonts/src/ui.rs:290
 #: apps/fonts/src/ui.rs:292 apps/help/src/shortcuts.rs:32
 #: apps/help/src/ui.rs:377 apps/help/src/ui.rs:379
@@ -1885,8 +1885,8 @@ msgid "Month View"
 msgstr "Widok miesiąca"
 
 #: apps/calendar/src/shortcuts.rs:23 apps/document-viewer/src/shortcuts.rs:14
-#: apps/files/src/ui/shortcuts.rs:50 apps/files/src/ui/window.rs:180
-#: apps/files/src/ui/window.rs:182 apps/help/src/shortcuts.rs:33
+#: apps/files/src/ui/shortcuts.rs:50 apps/files/src/ui/window.rs:181
+#: apps/files/src/ui/window.rs:183 apps/help/src/shortcuts.rs:33
 #: apps/help/src/ui.rs:371 apps/help/src/ui.rs:374
 msgid "Show Sidebar"
 msgstr "Wyświetlenie panelu bocznego"
@@ -2002,7 +2002,7 @@ msgid "_Import…"
 msgstr "_Importuj…"
 
 #: apps/calendar/src/ui.rs:291 apps/contacts/src/ui.rs:206
-#: apps/files/src/ui/window.rs:232 apps/maps/src/ui.rs:486
+#: apps/files/src/ui/window.rs:233 apps/maps/src/ui.rs:486
 #: apps/settings/src/ui/mod.rs:214 apps/terminal/src/window.rs:296
 #: apps/text-editor/src/window.rs:65 apps/web/src/window.rs:222
 #: apps/web/src/window.rs:265 crates/helix-app-common/src/shortcuts.rs:25
@@ -2021,15 +2021,15 @@ msgstr "Wyszukiwanie wydarzeń"
 msgid "Search Events"
 msgstr "Wyszukiwanie wydarzeń"
 
-#: apps/calendar/src/ui.rs:371 apps/files/src/ui/dialogs.rs:429
-#: apps/files/src/ui/tab.rs:1125 apps/settings/src/ui/mod.rs:246
+#: apps/calendar/src/ui.rs:371 apps/files/src/ui/dialogs.rs:539
+#: apps/files/src/ui/tab.rs:1170 apps/settings/src/ui/mod.rs:246
 #: apps/settings/src/ui/picker.rs:115 apps/web/src/dialogs.rs:752
 #: apps/web/src/window.rs:2378
 msgid "No Results Found"
 msgstr "Brak wyników"
 
 #: apps/calendar/src/ui.rs:372 apps/characters/src/ui.rs:456
-#: apps/files/src/ui/dialogs.rs:434 apps/fonts/src/ui.rs:436
+#: apps/files/src/ui/dialogs.rs:544 apps/fonts/src/ui.rs:436
 #: apps/music/src/pages.rs:1687 apps/settings/src/ui/mod.rs:247
 #: apps/settings/src/ui/picker.rs:116 apps/web/src/dialogs.rs:753
 #: apps/web/src/window.rs:2379
@@ -2417,8 +2417,8 @@ msgstr "Robienie zdjęć nie jest obsługiwane: brak kodera JPEG"
 msgid "Countdown cancelled"
 msgstr "Anulowano odliczanie"
 
-#: apps/camera/src/ui.rs:859 apps/files/src/ui/dialogs.rs:455
-#: apps/files/src/ui/sidebar.rs:564 apps/files/src/ui/window.rs:1665
+#: apps/camera/src/ui.rs:859 apps/files/src/ui/dialogs.rs:565
+#: apps/files/src/ui/sidebar.rs:564 apps/files/src/ui/window.rs:1760
 #: apps/help/src/ui.rs:197 apps/text-editor/src/window.rs:131
 msgid "_Open"
 msgstr "_Otwórz"
@@ -2621,7 +2621,7 @@ msgid "Character map and emoji picker"
 msgstr "Tablica znaków i wybór emoji"
 
 #: apps/characters/src/ui.rs:199 apps/contacts/src/ui.rs:1102
-#: apps/files/src/ui/tab.rs:1370 apps/logs/src/ui.rs:719
+#: apps/files/src/ui/tab.rs:1415 apps/logs/src/ui.rs:719
 #: apps/text-editor/src/doc.rs:866
 msgid "No results"
 msgstr "Brak wyników"
@@ -3017,8 +3017,8 @@ msgstr "Noc"
 #: apps/clocks/src/ui.rs:310 apps/clocks/src/ui.rs:311
 #: apps/document-scanner/src/ui.rs:1780
 #: apps/document-viewer/src/shortcuts.rs:33 apps/files/src/ui/shortcuts.rs:22
-#: apps/files/src/ui/window.rs:185 apps/files/src/ui/window.rs:188
-#: apps/files/src/ui/window.rs:379 apps/help/src/shortcuts.rs:29
+#: apps/files/src/ui/window.rs:186 apps/files/src/ui/window.rs:189
+#: apps/files/src/ui/window.rs:380 apps/help/src/shortcuts.rs:29
 #: apps/help/src/ui.rs:353 apps/help/src/ui.rs:356 apps/web/src/shortcuts.rs:37
 #: apps/web/src/window.rs:338
 msgid "Back"
@@ -3259,8 +3259,8 @@ msgstr "_Uruchom"
 msgid "{label} deleted"
 msgstr "Usunięto: {label}"
 
-#: apps/clocks/src/ui.rs:1871 apps/files/src/ui/window.rs:228
-#: apps/files/src/ui/window.rs:1361 apps/image-viewer/src/ui.rs:1662
+#: apps/clocks/src/ui.rs:1871 apps/files/src/ui/window.rs:229
+#: apps/files/src/ui/window.rs:1377 apps/image-viewer/src/ui.rs:1668
 msgid "_Undo"
 msgstr "_Cofnij"
 
@@ -4033,8 +4033,8 @@ msgid "storage"
 msgstr "pamięć masowa"
 
 #: apps/disk-usage/src/mounts.rs:155 apps/files/src/pathbar.rs:25
-#: apps/files/src/pathbar.rs:112 apps/files/src/ui/tab.rs:1424
-#: apps/files/src/ui/window.rs:139 apps/settings/src/bluez.rs:229
+#: apps/files/src/pathbar.rs:112 apps/files/src/ui/tab.rs:1469
+#: apps/files/src/ui/window.rs:140 apps/settings/src/bluez.rs:229
 msgid "Computer"
 msgstr "Komputer"
 
@@ -4238,7 +4238,7 @@ msgstr[2] "{n} elementów"
 
 #: apps/disk-usage/src/ui.rs:1006 apps/disks/src/ui.rs:358
 #: apps/disks/src/ui.rs:453 apps/files/src/sorting.rs:44
-#: apps/files/src/ui/properties.rs:185 apps/files/src/ui/tab.rs:246
+#: apps/files/src/ui/properties.rs:185 apps/files/src/ui/tab.rs:270
 #: apps/fonts/src/fontinfo.rs:314 apps/music/src/details.rs:137
 msgid "Size"
 msgstr "Rozmiar"
@@ -4251,7 +4251,7 @@ msgstr "Zawartość"
 
 #: apps/disk-usage/src/ui.rs:1008 apps/document-viewer/src/dialogs.rs:104
 #: apps/files/src/sorting.rs:46 apps/files/src/ui/properties.rs:234
-#: apps/files/src/ui/tab.rs:248 apps/image-viewer/src/ui.rs:585
+#: apps/files/src/ui/tab.rs:272 apps/image-viewer/src/ui.rs:585
 msgid "Modified"
 msgstr "Modyfikacja"
 
@@ -4318,7 +4318,7 @@ msgstr "Wybór katalogu do przeskanowania"
 msgid "Only local folders can be scanned"
 msgstr "Można skanować tylko lokalne katalogi"
 
-#: apps/disk-usage/src/ui.rs:1642 apps/image-viewer/src/ui.rs:1019
+#: apps/disk-usage/src/ui.rs:1642 apps/image-viewer/src/ui.rs:1025
 msgid "Could not open folder: {}"
 msgstr "Nie można otworzyć katalogu: {}"
 
@@ -5370,7 +5370,7 @@ msgstr "Nazwa woluminu"
 
 #: apps/disks/src/ui.rs:1365 apps/disks/src/ui.rs:1634
 #: apps/disks/src/ui.rs:1906 apps/files/src/sorting.rs:45
-#: apps/files/src/ui/properties.rs:177 apps/files/src/ui/tab.rs:247
+#: apps/files/src/ui/properties.rs:177 apps/files/src/ui/tab.rs:271
 #: apps/settings/src/ui/bluetooth.rs:513 apps/settings/src/ui/network.rs:529
 #: apps/system-monitor/src/fs_view.rs:25
 msgid "Type"
@@ -5458,7 +5458,7 @@ msgid "Delete Partition?"
 msgstr "Usunąć partycję?"
 
 #: apps/disks/src/ui.rs:1594 apps/document-scanner/src/ui.rs:228
-#: apps/files/src/ui/window.rs:1393 apps/files/src/ui/window.rs:1478
+#: apps/files/src/ui/window.rs:1409 apps/files/src/ui/window.rs:1494
 #: apps/music/src/pages.rs:2318
 msgid "_Delete"
 msgstr "_Usuń"
@@ -6089,8 +6089,8 @@ msgid "_Crop"
 msgstr "_Przytnij"
 
 #: apps/document-scanner/src/ui.rs:227 apps/document-viewer/src/ui.rs:920
-#: apps/files/src/ui/window.rs:1691 apps/image-viewer/src/ui.rs:305
-#: apps/image-viewer/src/ui.rs:784 apps/terminal/src/window.rs:738
+#: apps/files/src/ui/window.rs:1786 apps/image-viewer/src/ui.rs:305
+#: apps/image-viewer/src/ui.rs:790 apps/terminal/src/window.rs:738
 msgid "_Copy"
 msgstr "_Skopiuj"
 
@@ -6651,7 +6651,7 @@ msgstr "Zaznacz wszystko"
 msgid "Caret Navigation"
 msgstr "Nawigacja kursorem"
 
-#: apps/document-viewer/src/shortcuts.rs:26 apps/files/src/ui/dialogs.rs:678
+#: apps/document-viewer/src/shortcuts.rs:26 apps/files/src/ui/dialogs.rs:788
 #: apps/system-monitor/src/shortcuts.rs:42 apps/terminal/src/shortcuts.rs:32
 msgid "Context Menu"
 msgstr "Menu kontekstowe"
@@ -6661,8 +6661,8 @@ msgid "Go to Page"
 msgstr "Przejście do strony"
 
 #: apps/document-viewer/src/shortcuts.rs:34 apps/files/src/ui/shortcuts.rs:23
-#: apps/files/src/ui/window.rs:191 apps/files/src/ui/window.rs:194
-#: apps/files/src/ui/window.rs:381 apps/help/src/shortcuts.rs:30
+#: apps/files/src/ui/window.rs:192 apps/files/src/ui/window.rs:195
+#: apps/files/src/ui/window.rs:382 apps/help/src/shortcuts.rs:30
 #: apps/help/src/ui.rs:359 apps/help/src/ui.rs:362 apps/web/src/shortcuts.rs:38
 #: apps/web/src/window.rs:339
 msgid "Forward"
@@ -6716,7 +6716,7 @@ msgstr "Przejdź do strony"
 msgid "Current Page"
 msgstr "Bieżąca strona"
 
-#: apps/document-viewer/src/ui.rs:283 apps/files/src/ui/window.rs:224
+#: apps/document-viewer/src/ui.rs:283 apps/files/src/ui/window.rs:225
 #: apps/text-editor/src/window.rs:48 apps/web/src/window.rs:234
 msgid "New _Window"
 msgstr "Nowe _okno"
@@ -6818,8 +6818,8 @@ msgstr ""
 msgid "Caret navigation off"
 msgstr "Wyłączono nawigację kursorem"
 
-#: apps/document-viewer/src/ui.rs:921 apps/files/src/ui/window.rs:1717
-#: apps/files/src/ui/window.rs:1724 apps/files/src/ui/window.rs:1733
+#: apps/document-viewer/src/ui.rs:921 apps/files/src/ui/window.rs:1819
+#: apps/files/src/ui/window.rs:1826 apps/files/src/ui/window.rs:1835
 #: apps/terminal/src/window.rs:740
 msgid "Select _All"
 msgstr "Zaznacz _wszystko"
@@ -6904,6 +6904,90 @@ msgstr "katalog"
 msgid "manager"
 msgstr "menedżer"
 
+#: apps/files/src/archive.rs:184 apps/files/src/ops.rs:397
+#: apps/screenshot/src/shell.rs:79 apps/settings/src/agents.rs:1202
+#: apps/web/src/window.rs:2341
+msgid "Cancelled"
+msgstr "Anulowano"
+
+#: apps/files/src/archive.rs:185
+msgid "“{file}”: {error}"
+msgstr "„{file}”: {error}"
+
+#: apps/files/src/archive.rs:193
+msgid "The archive is damaged or in an unsupported format ({detail})."
+msgstr "Archiwum jest uszkodzone lub ma nieobsługiwany format ({detail})."
+
+#: apps/files/src/archive.rs:197
+msgid "This is not an archive Files can extract."
+msgstr "To nie jest archiwum, które Pliki mogą rozpakować."
+
+#: apps/files/src/archive.rs:198
+msgid "Encrypted archives are not supported."
+msgstr "Zaszyfrowane archiwa nie są obsługiwane."
+
+#: apps/files/src/archive.rs:200
+msgid "“{entry}” has an absolute path, so the archive is unsafe to extract."
+msgstr ""
+"„{entry}” ma ścieżkę bezwzględną, więc rozpakowanie archiwum jest "
+"niebezpieczne."
+
+#: apps/files/src/archive.rs:204
+msgid ""
+"“{entry}” points outside the destination folder, so the archive is unsafe to "
+"extract."
+msgstr ""
+"„{entry}” wskazuje poza katalog docelowy, więc rozpakowanie archiwum jest "
+"niebezpieczne."
+
+#: apps/files/src/archive.rs:208
+msgid ""
+"The link “{entry}” points outside the destination folder, so the archive is "
+"unsafe to extract."
+msgstr ""
+"Dowiązanie „{entry}” wskazuje poza katalog docelowy, więc rozpakowanie "
+"archiwum jest niebezpieczne."
+
+#: apps/files/src/archive.rs:212
+msgid ""
+"The hard link “{entry}” does not point to a file in the archive, so the "
+"archive is unsafe to extract."
+msgstr ""
+"Dowiązanie twarde „{entry}” nie wskazuje na plik w archiwum, więc "
+"rozpakowanie archiwum jest niebezpieczne."
+
+#: apps/files/src/archive.rs:216
+msgid ""
+"“{entry}” would be written through a link, so the archive is unsafe to "
+"extract."
+msgstr ""
+"„{entry}” zostałby zapisany przez dowiązanie, więc rozpakowanie archiwum "
+"jest niebezpieczne."
+
+#: apps/files/src/archive.rs:221
+msgid "“{entry}” clashes with another item in the archive."
+msgstr "„{entry}” koliduje z innym elementem archiwum."
+
+#: apps/files/src/archive.rs:225
+msgid "There is not enough free space: {needed} needed, {available} available."
+msgstr "Za mało wolnego miejsca: potrzeba {needed}, dostępne {available}."
+
+#: apps/files/src/archive.rs:230
+msgid ""
+"The archive expands to far more data than it holds, as a decompression bomb "
+"would, so it was not extracted."
+msgstr ""
+"Archiwum rozpakowuje się do znacznie większej ilości danych, niż zawiera, "
+"jak bomba dekompresyjna, więc nie zostało rozpakowane."
+
+#: apps/files/src/archive.rs:848
+msgid "“{entry}” is larger than it says"
+msgstr "„{entry}” jest większy, niż deklaruje"
+
+#: apps/files/src/archive.rs:1140
+msgid "The file changed while it was being archived."
+msgstr "Plik zmienił się podczas archiwizowania."
+
 #: apps/files/src/cli.rs:37
 msgid "Unknown option {arg}"
 msgstr "Nieznana opcja {arg}"
@@ -6924,206 +7008,245 @@ msgstr "Dowiązanie do {name}"
 msgid "Link to {stem} ({n}){ext}"
 msgstr "Dowiązanie do {stem} ({n}){ext}"
 
-#: apps/files/src/naming.rs:100
+#: apps/files/src/naming.rs:107
+msgid "{stem} ({n}){ext}"
+msgstr "{stem} ({n}){ext}"
+
+#: apps/files/src/naming.rs:118
 msgid "The name cannot be empty."
 msgstr "Nazwa nie może być pusta."
 
-#: apps/files/src/naming.rs:103
+#: apps/files/src/naming.rs:121
 msgid "File names cannot contain “/”."
 msgstr "Nazwy plików nie mogą zawierać „/”."
 
-#: apps/files/src/naming.rs:106
+#: apps/files/src/naming.rs:124
 msgid "A file cannot be called “.”."
 msgstr "Plik nie może mieć nazwy „.”."
 
-#: apps/files/src/naming.rs:109
+#: apps/files/src/naming.rs:127
 msgid "A file cannot be called “..”."
 msgstr "Plik nie może mieć nazwy „..”."
 
-#: apps/files/src/naming.rs:112
+#: apps/files/src/naming.rs:130
 msgid "The name is too long."
 msgstr "Nazwa jest za długa."
 
-#: apps/files/src/ops.rs:44
+#: apps/files/src/ops.rs:56
 msgid "Copying {n} item to “{folder}”"
 msgid_plural "Copying {n} items to “{folder}”"
 msgstr[0] "Kopiowanie {n} elementu do „{folder}”"
 msgstr[1] "Kopiowanie {n} elementów do „{folder}”"
 msgstr[2] "Kopiowanie {n} elementów do „{folder}”"
 
-#: apps/files/src/ops.rs:50
+#: apps/files/src/ops.rs:62
 msgid "Moving {n} item to “{folder}”"
 msgid_plural "Moving {n} items to “{folder}”"
 msgstr[0] "Przenoszenie {n} elementu do „{folder}”"
 msgstr[1] "Przenoszenie {n} elementów do „{folder}”"
 msgstr[2] "Przenoszenie {n} elementów do „{folder}”"
 
-#: apps/files/src/ops.rs:56
+#: apps/files/src/ops.rs:68
 msgid "Creating links to {n} item"
 msgid_plural "Creating links to {n} items"
 msgstr[0] "Tworzenie dowiązań do {n} elementu"
 msgstr[1] "Tworzenie dowiązań do {n} elementów"
 msgstr[2] "Tworzenie dowiązań do {n} elementów"
 
-#: apps/files/src/ops.rs:61
+#: apps/files/src/ops.rs:73
 msgid "Moving {n} item to Trash"
 msgid_plural "Moving {n} items to Trash"
 msgstr[0] "Przenoszenie {n} elementu do kosza"
 msgstr[1] "Przenoszenie {n} elementów do kosza"
 msgstr[2] "Przenoszenie {n} elementów do kosza"
 
-#: apps/files/src/ops.rs:66
+#: apps/files/src/ops.rs:78
 msgid "Deleting {n} item"
 msgid_plural "Deleting {n} items"
 msgstr[0] "Usuwanie {n} elementu"
 msgstr[1] "Usuwanie {n} elementów"
 msgstr[2] "Usuwanie {n} elementów"
 
-#: apps/files/src/ops.rs:68
+#: apps/files/src/ops.rs:80
 msgid "Restoring {n} item"
 msgid_plural "Restoring {n} items"
 msgstr[0] "Przywracanie {n} elementu"
 msgstr[1] "Przywracanie {n} elementów"
 msgstr[2] "Przywracanie {n} elementów"
 
-#: apps/files/src/ops.rs:70
+#: apps/files/src/ops.rs:82
 msgid "Emptying Trash"
 msgstr "Opróżnianie kosza"
 
-#: apps/files/src/ops.rs:82
+#: apps/files/src/ops.rs:84
+msgid "Creating “{archive}”"
+msgstr "Tworzenie „{archive}”"
+
+#: apps/files/src/ops.rs:87
+msgid "Extracting “{archive}”"
+msgstr "Rozpakowywanie „{archive}”"
+
+#: apps/files/src/ops.rs:88
+msgid "Extracting {n} archive"
+msgid_plural "Extracting {n} archives"
+msgstr[0] "Rozpakowywanie {n} archiwum"
+msgstr[1] "Rozpakowywanie {n} archiwów"
+msgstr[2] "Rozpakowywanie {n} archiwów"
+
+#: apps/files/src/ops.rs:101
 msgid "Copied {n} item to “{folder}”"
 msgid_plural "Copied {n} items to “{folder}”"
 msgstr[0] "Skopiowano {n} element do „{folder}”"
 msgstr[1] "Skopiowano {n} elementy do „{folder}”"
 msgstr[2] "Skopiowano {n} elementów do „{folder}”"
 
-#: apps/files/src/ops.rs:88
+#: apps/files/src/ops.rs:107
 msgid "Moved {n} item to “{folder}”"
 msgid_plural "Moved {n} items to “{folder}”"
 msgstr[0] "Przeniesiono {n} element do „{folder}”"
 msgstr[1] "Przeniesiono {n} elementy do „{folder}”"
 msgstr[2] "Przeniesiono {n} elementów do „{folder}”"
 
-#: apps/files/src/ops.rs:95
+#: apps/files/src/ops.rs:114
 msgid "Created {n} link"
 msgid_plural "Created {n} links"
 msgstr[0] "Utworzono {n} dowiązanie"
 msgstr[1] "Utworzono {n} dowiązania"
 msgstr[2] "Utworzono {n} dowiązań"
 
-#: apps/files/src/ops.rs:98
+#: apps/files/src/ops.rs:117
 msgid "Restored {n} item"
 msgid_plural "Restored {n} items"
 msgstr[0] "Przywrócono {n} element"
 msgstr[1] "Przywrócono {n} elementy"
 msgstr[2] "Przywrócono {n} elementów"
 
-#: apps/files/src/ops.rs:100
+#: apps/files/src/ops.rs:119
 msgid "Deleted {n} item"
 msgid_plural "Deleted {n} items"
 msgstr[0] "Usunięto {n} element"
 msgstr[1] "Usunięto {n} elementy"
 msgstr[2] "Usunięto {n} elementów"
 
-#: apps/files/src/ops.rs:101
+#: apps/files/src/ops.rs:120
 msgid "Trash emptied"
 msgstr "Opróżniono kosz"
 
-#: apps/files/src/ops.rs:119 apps/files/src/pathbar.rs:108
-#: apps/files/src/ui/sidebar.rs:93 apps/files/src/ui/window.rs:340
+#: apps/files/src/ops.rs:123
+msgid "Created “{archive}”"
+msgstr "Utworzono „{archive}”"
+
+#: apps/files/src/ops.rs:125
+msgid "Extracted {n} archive"
+msgid_plural "Extracted {n} archives"
+msgstr[0] "Rozpakowano {n} archiwum"
+msgstr[1] "Rozpakowano {n} archiwa"
+msgstr[2] "Rozpakowano {n} archiwów"
+
+#: apps/files/src/ops.rs:146 apps/files/src/pathbar.rs:108
+#: apps/files/src/ui/sidebar.rs:93 apps/files/src/ui/window.rs:341
 msgid "Trash"
 msgstr "Kosz"
 
-#: apps/files/src/ops.rs:268
+#: apps/files/src/ops.rs:295
 msgid "Could not replace “{file}”: {error}"
 msgstr "Nie można zastąpić „{file}”: {error}"
 
-#: apps/files/src/ops.rs:273
+#: apps/files/src/ops.rs:300
 msgid "Could not move “{file}”: {error}"
 msgstr "Nie można przenieść „{file}”: {error}"
 
-#: apps/files/src/ops.rs:278
+#: apps/files/src/ops.rs:305
 msgid "Could not read “{file}”: {error}"
 msgstr "Nie można odczytać „{file}”: {error}"
 
-#: apps/files/src/ops.rs:283
+#: apps/files/src/ops.rs:310
 msgid "Could not remove “{file}”: {error}"
 msgstr "Nie można usunąć „{file}”: {error}"
 
-#: apps/files/src/ops.rs:288
+#: apps/files/src/ops.rs:315
 msgid "Could not link to “{file}”: {error}"
 msgstr "Nie można utworzyć dowiązania do „{file}”: {error}"
 
-#: apps/files/src/ops.rs:293
+#: apps/files/src/ops.rs:320
 msgid "Could not move “{file}” to the Trash: {error}"
 msgstr "Nie można przenieść „{file}” do kosza: {error}"
 
-#: apps/files/src/ops.rs:298
+#: apps/files/src/ops.rs:325
 msgid "Could not delete “{file}”: {error}"
 msgstr "Nie można usunąć „{file}”: {error}"
 
-#: apps/files/src/ops.rs:303
+#: apps/files/src/ops.rs:330
 msgid "Could not restore “{file}”: {error}"
 msgstr "Nie można przywrócić „{file}”: {error}"
 
-#: apps/files/src/ops.rs:308
+#: apps/files/src/ops.rs:335
 msgid "Could not empty “{file}”: {error}"
 msgstr "Nie można opróżnić „{file}”: {error}"
 
-#: apps/files/src/ops.rs:313
+#: apps/files/src/ops.rs:340
 msgid "Could not process “{file}”: {error}"
 msgstr "Nie można przetworzyć „{file}”: {error}"
 
-#: apps/files/src/ops.rs:370 apps/screenshot/src/shell.rs:79
-#: apps/settings/src/agents.rs:1202 apps/web/src/window.rs:2341
-msgid "Cancelled"
-msgstr "Anulowano"
-
-#: apps/files/src/ops.rs:392
+#: apps/files/src/ops.rs:419
 msgid "“{}” no longer exists"
 msgstr "„{}” już nie istnieje"
 
-#: apps/files/src/ops.rs:398
+#: apps/files/src/ops.rs:425
 msgid "Cannot move “{}” into itself"
 msgstr "Nie można przenieść „{}” do niego samego"
 
-#: apps/files/src/ops.rs:400
+#: apps/files/src/ops.rs:427
 msgid "Cannot copy “{}” into itself"
 msgstr "Nie można skopiować „{}” do niego samego"
 
-#: apps/files/src/ops.rs:590
+#: apps/files/src/ops.rs:617
 msgid "Cannot create a link to “{}”: not a local file"
 msgstr "Nie można utworzyć dowiązania do „{}”: to nie jest lokalny plik"
 
-#: apps/files/src/ops.rs:669
+#: apps/files/src/ops.rs:696
 msgid "“{}” has no original location"
 msgstr "„{}” nie ma pierwotnego położenia"
 
-#: apps/files/src/ops.rs:728
+#: apps/files/src/ops.rs:755
 msgid "{n} item could not be found in the Trash"
 msgid_plural "{n} items could not be found in the Trash"
 msgstr[0] "Nie można odnaleźć {n} elementu w koszu"
 msgstr[1] "Nie można odnaleźć {n} elementów w koszu"
 msgstr[2] "Nie można odnaleźć {n} elementów w koszu"
 
+#: apps/files/src/ops.rs:801
+msgid "“{file}” is not on this computer, so it can’t be archived or extracted"
+msgstr ""
+"„{file}” nie znajduje się na tym komputerze, więc nie można go zarchiwizować "
+"ani rozpakować"
+
+#: apps/files/src/ops.rs:832
+msgid "Could not create “{file}”: {error}"
+msgstr "Nie można utworzyć „{file}”: {error}"
+
+#: apps/files/src/ops.rs:875
+msgid "Could not extract “{file}”: {error}"
+msgstr "Nie można rozpakować „{file}”: {error}"
+
 #: apps/files/src/pathbar.rs:109 apps/files/src/ui/sidebar.rs:81
 msgid "Recent"
 msgstr "Ostatnio używane"
 
 #: apps/files/src/pathbar.rs:110 apps/files/src/ui/sidebar.rs:122
-#: apps/files/src/ui/tab.rs:1434 apps/settings/src/bluez.rs:235
+#: apps/files/src/ui/tab.rs:1479 apps/settings/src/bluez.rs:235
 #: apps/settings/src/panels.rs:64 apps/system-monitor/src/res_view.rs:385
 msgid "Network"
 msgstr "Sieć"
 
 #: apps/files/src/pathbar.rs:111 apps/files/src/ui/properties.rs:95
 #: apps/files/src/ui/sidebar.rs:87 apps/files/src/ui/tab.rs:135
-#: apps/files/src/ui/window.rs:748
+#: apps/files/src/ui/window.rs:759
 msgid "Starred"
 msgstr "Ulubione"
 
 #: apps/files/src/pathbar.rs:113 apps/files/src/ui/sidebar.rs:128
-#: apps/files/src/ui/window.rs:132
+#: apps/files/src/ui/window.rs:133
 msgid "Other Locations"
 msgstr "Inne położenia"
 
@@ -7139,43 +7262,60 @@ msgstr "Oczekiwano (as, s)"
 msgid "Unknown method"
 msgstr "Nieznana metoda"
 
-#: apps/files/src/ui/dialogs.rs:51
+#: apps/files/src/ui/dialogs.rs:53
 msgid "Folder _Name"
 msgstr "_Nazwa katalogu"
 
-#: apps/files/src/ui/dialogs.rs:53
+#: apps/files/src/ui/dialogs.rs:55
 msgid "File _Name"
 msgstr "_Nazwa pliku"
 
-#: apps/files/src/ui/dialogs.rs:91
+#: apps/files/src/ui/dialogs.rs:93
 msgid "A folder with that name already exists."
 msgstr "Katalog o tej nazwie już istnieje."
 
-#: apps/files/src/ui/dialogs.rs:93
+#: apps/files/src/ui/dialogs.rs:95 apps/files/src/ui/dialogs.rs:230
 msgid "A file with that name already exists."
 msgstr "Plik o tej nazwie już istnieje."
 
-#: apps/files/src/ui/dialogs.rs:111
+#: apps/files/src/ui/dialogs.rs:113
 msgid "Names starting with “.” are hidden."
 msgstr "Nazwy zaczynające się od „.” są ukryte."
 
-#: apps/files/src/ui/dialogs.rs:164
+#: apps/files/src/ui/dialogs.rs:167
+msgid "Archive _Name"
+msgstr "_Nazwa archiwum"
+
+#: apps/files/src/ui/dialogs.rs:175 apps/files/src/ui/dialogs.rs:176
+msgid "Archive Format"
+msgstr "Format archiwum"
+
+#: apps/files/src/ui/dialogs.rs:194
+msgid "Create Archive"
+msgstr "Utwórz archiwum"
+
+#: apps/files/src/ui/dialogs.rs:199 apps/files/src/ui/window.rs:1613
+#: apps/music/src/pages.rs:2133
+msgid "_Create"
+msgstr "U_twórz"
+
+#: apps/files/src/ui/dialogs.rs:274
 msgid "{size}, last modified {date}"
 msgstr "{size}, ostatnia modyfikacja: {date}"
 
-#: apps/files/src/ui/dialogs.rs:165
+#: apps/files/src/ui/dialogs.rs:275
 msgid "Last modified {date}"
 msgstr "Ostatnia modyfikacja: {date}"
 
-#: apps/files/src/ui/dialogs.rs:193
+#: apps/files/src/ui/dialogs.rs:303
 msgid "Merge Folder “{name}”?"
 msgstr "Scalić katalog „{name}”?"
 
-#: apps/files/src/ui/dialogs.rs:195
+#: apps/files/src/ui/dialogs.rs:305
 msgid "Replace “{name}”?"
 msgstr "Zastąpić „{name}”?"
 
-#: apps/files/src/ui/dialogs.rs:198
+#: apps/files/src/ui/dialogs.rs:308
 msgid ""
 "A folder with the same name already exists in “{folder}”. Merging will ask "
 "before replacing any files in the folder that conflict with the files being "
@@ -7185,7 +7325,7 @@ msgstr ""
 "wyświetlenie pytania przed zastąpieniem plików w katalogu, które są w "
 "konflikcie z kopiowanymi plikami."
 
-#: apps/files/src/ui/dialogs.rs:200
+#: apps/files/src/ui/dialogs.rs:310
 msgid ""
 "Another file with the same name already exists in “{folder}”. Replacing it "
 "will overwrite its content."
@@ -7193,181 +7333,181 @@ msgstr ""
 "Inny plik o tej samej nazwie już istnieje w „{folder}”. Zastąpienie go "
 "spowoduje nadpisanie jego zawartości."
 
-#: apps/files/src/ui/dialogs.rs:205
+#: apps/files/src/ui/dialogs.rs:315
 msgid "Original: {description}"
 msgstr "Oryginał: {description}"
 
-#: apps/files/src/ui/dialogs.rs:209
+#: apps/files/src/ui/dialogs.rs:319
 msgid "Replace with: {description}"
 msgstr "Zastąpienie przez: {description}"
 
-#: apps/files/src/ui/dialogs.rs:211
+#: apps/files/src/ui/dialogs.rs:321
 msgid "Apply this action to all conflicts"
 msgstr "Zastosowanie tego działania do wszystkich konfliktów"
 
-#: apps/files/src/ui/dialogs.rs:221
+#: apps/files/src/ui/dialogs.rs:331
 msgid "_Skip"
 msgstr "_Pomiń"
 
-#: apps/files/src/ui/dialogs.rs:222
+#: apps/files/src/ui/dialogs.rs:332
 msgid "Keep _Both"
 msgstr "Zachowaj _oba"
 
-#: apps/files/src/ui/dialogs.rs:223
+#: apps/files/src/ui/dialogs.rs:333
 msgid "_Merge"
 msgstr "_Scal"
 
-#: apps/files/src/ui/dialogs.rs:223 apps/text-editor/src/doc.rs:209
+#: apps/files/src/ui/dialogs.rs:333 apps/text-editor/src/doc.rs:209
 msgid "_Replace"
 msgstr "Z_astąp"
 
-#: apps/files/src/ui/dialogs.rs:269
+#: apps/files/src/ui/dialogs.rs:379
 msgid "Recommended Applications"
 msgstr "Zalecane programy"
 
-#: apps/files/src/ui/dialogs.rs:270
+#: apps/files/src/ui/dialogs.rs:380
 msgid "Other Applications"
 msgstr "Inne programy"
 
-#: apps/files/src/ui/dialogs.rs:271
+#: apps/files/src/ui/dialogs.rs:381
 msgid "All Applications"
 msgstr "Wszystkie programy"
 
-#: apps/files/src/ui/dialogs.rs:349 apps/logs/src/category.rs:30
+#: apps/files/src/ui/dialogs.rs:459 apps/logs/src/category.rs:30
 msgid "Applications"
 msgstr "Programy"
 
-#: apps/files/src/ui/dialogs.rs:364 apps/settings/src/ui/appearance.rs:107
+#: apps/files/src/ui/dialogs.rs:474 apps/settings/src/ui/appearance.rs:107
 #: apps/settings/src/ui/printers.rs:237 apps/settings/src/ui/printers.rs:433
 #: apps/settings/src/ui/sound.rs:928 apps/settings/src/values.rs:204
 msgid "Default"
 msgstr "Domyślne"
 
-#: apps/files/src/ui/dialogs.rs:402
+#: apps/files/src/ui/dialogs.rs:512
 msgid "Search applications"
 msgstr "Wyszukiwanie programów"
 
-#: apps/files/src/ui/dialogs.rs:404
+#: apps/files/src/ui/dialogs.rs:514
 msgid "Search Applications"
 msgstr "Wyszukiwanie programów"
 
-#: apps/files/src/ui/dialogs.rs:427
+#: apps/files/src/ui/dialogs.rs:537
 msgid "No Applications Found"
 msgstr "Nie odnaleziono programów"
 
-#: apps/files/src/ui/dialogs.rs:432
+#: apps/files/src/ui/dialogs.rs:542
 msgid "No installed application can open this file"
 msgstr "Żaden zainstalowany program nie może otworzyć tego pliku"
 
-#: apps/files/src/ui/dialogs.rs:444
+#: apps/files/src/ui/dialogs.rs:554
 msgid "Always use for “{desc}” files"
 msgstr "Zawsze używanie dla plików typu „{desc}”"
 
-#: apps/files/src/ui/dialogs.rs:463 apps/image-viewer/src/shortcuts.rs:16
+#: apps/files/src/ui/dialogs.rs:573 apps/image-viewer/src/shortcuts.rs:16
 msgid "Open With"
 msgstr "Otwórz za pomocą"
 
-#: apps/files/src/ui/dialogs.rs:488
+#: apps/files/src/ui/dialogs.rs:598
 msgid "No applications found"
 msgstr "Nie odnaleziono programów"
 
-#: apps/files/src/ui/dialogs.rs:489
+#: apps/files/src/ui/dialogs.rs:599
 msgid "{n} application"
 msgid_plural "{n} applications"
 msgstr[0] "{n} program"
 msgstr[1] "{n} programy"
 msgstr[2] "{n} programów"
 
-#: apps/files/src/ui/dialogs.rs:514 apps/image-viewer/src/ui.rs:1608
+#: apps/files/src/ui/dialogs.rs:624 apps/image-viewer/src/ui.rs:1614
 msgid "Could not open: {}"
 msgstr "Nie można otworzyć: {}"
 
-#: apps/files/src/ui/dialogs.rs:620
+#: apps/files/src/ui/dialogs.rs:730
 msgid "Sort Folders Before Files"
 msgstr "Katalogi przed plikami"
 
-#: apps/files/src/ui/dialogs.rs:626
+#: apps/files/src/ui/dialogs.rs:736
 msgid "Open Action"
 msgstr "Działanie otwierania"
 
-#: apps/files/src/ui/dialogs.rs:629
+#: apps/files/src/ui/dialogs.rs:739
 msgid "Double Click"
 msgstr "Podwójne kliknięcie"
 
-#: apps/files/src/ui/dialogs.rs:630
+#: apps/files/src/ui/dialogs.rs:740
 msgid "Single Click"
 msgstr "Pojedyncze kliknięcie"
 
-#: apps/files/src/ui/dialogs.rs:636 apps/files/src/ui/shortcuts.rs:49
+#: apps/files/src/ui/dialogs.rs:746 apps/files/src/ui/shortcuts.rs:49
 msgid "Show Hidden Files"
 msgstr "Wyświetlanie ukrytych plików"
 
-#: apps/files/src/ui/dialogs.rs:642
+#: apps/files/src/ui/dialogs.rs:752
 msgid "Always Show the Location Entry"
 msgstr "Zawsze wyświetlanie pola położenia"
 
-#: apps/files/src/ui/dialogs.rs:643
+#: apps/files/src/ui/dialogs.rs:753
 msgid "Instead of the path bar"
 msgstr "Zamiast paska ścieżki"
 
-#: apps/files/src/ui/dialogs.rs:649
+#: apps/files/src/ui/dialogs.rs:759
 msgid "Views"
 msgstr "Widoki"
 
-#: apps/files/src/ui/dialogs.rs:651
+#: apps/files/src/ui/dialogs.rs:761
 msgid "Default View"
 msgstr "Domyślny widok"
 
-#: apps/files/src/ui/dialogs.rs:653
+#: apps/files/src/ui/dialogs.rs:763
 msgid "Grid"
 msgstr "Siatka"
 
-#: apps/files/src/ui/dialogs.rs:653
+#: apps/files/src/ui/dialogs.rs:763
 msgid "List"
 msgstr "Lista"
 
-#: apps/files/src/ui/dialogs.rs:658 apps/image-viewer/src/shortcuts.rs:55
+#: apps/files/src/ui/dialogs.rs:768 apps/image-viewer/src/shortcuts.rs:55
 #: apps/image-viewer/src/ui.rs:457
 msgid "Show Thumbnails"
 msgstr "Wyświetlanie miniatur"
 
-#: apps/files/src/ui/dialogs.rs:661 apps/files/src/ui/dialogs.rs:699
+#: apps/files/src/ui/dialogs.rs:771 apps/files/src/ui/dialogs.rs:809
 msgid "On This Computer Only"
 msgstr "Tylko na tym komputerze"
 
-#: apps/files/src/ui/dialogs.rs:669
+#: apps/files/src/ui/dialogs.rs:779
 msgid "Date and Time Format"
 msgstr "Format daty i czasu"
 
-#: apps/files/src/ui/dialogs.rs:671
+#: apps/files/src/ui/dialogs.rs:781
 msgid "Detailed"
 msgstr "Szczegółowy"
 
-#: apps/files/src/ui/dialogs.rs:671
+#: apps/files/src/ui/dialogs.rs:781
 msgid "Simple"
 msgstr "Prosty"
 
-#: apps/files/src/ui/dialogs.rs:681
+#: apps/files/src/ui/dialogs.rs:791
 msgid "Create Link"
 msgstr "Tworzenie dowiązań"
 
-#: apps/files/src/ui/dialogs.rs:682
+#: apps/files/src/ui/dialogs.rs:792
 msgid "Show an action to create symbolic links"
 msgstr "Wyświetlanie działania tworzącego dowiązania symboliczne"
 
-#: apps/files/src/ui/dialogs.rs:687 apps/files/src/ui/shortcuts.rs:61
+#: apps/files/src/ui/dialogs.rs:797 apps/files/src/ui/shortcuts.rs:61
 msgid "Delete Permanently"
 msgstr "Trwałe usuwanie"
 
-#: apps/files/src/ui/dialogs.rs:688
+#: apps/files/src/ui/dialogs.rs:798
 msgid "Show an action to bypass the Trash"
 msgstr "Wyświetlanie działania pomijającego kosz"
 
-#: apps/files/src/ui/dialogs.rs:696
+#: apps/files/src/ui/dialogs.rs:806
 msgid "Search in Subfolders"
 msgstr "Wyszukiwanie w podkatalogach"
 
-#: apps/files/src/ui/dialogs.rs:700
+#: apps/files/src/ui/dialogs.rs:810
 msgid "All Locations"
 msgstr "Wszystkie położenia"
 
@@ -7390,8 +7530,8 @@ msgstr "Przygotowywanie…"
 msgid "File Operations — {} % done"
 msgstr "Działania na plikach — ukończono {} %"
 
-#: apps/files/src/ui/jobs.rs:100 apps/files/src/ui/window.rs:304
-#: apps/files/src/ui/window.rs:307
+#: apps/files/src/ui/jobs.rs:100 apps/files/src/ui/window.rs:305
+#: apps/files/src/ui/window.rs:308
 msgid "File Operations"
 msgstr "Działania na plikach"
 
@@ -7427,8 +7567,8 @@ msgstr "Kończy działanie uruchomionego wystąpienia"
 msgid "Access and organize files"
 msgstr "Dostęp do plików i ich organizowanie"
 
-#: apps/files/src/ui/mod.rs:388 apps/files/src/ui/window.rs:156
-#: apps/files/src/ui/window.rs:456
+#: apps/files/src/ui/mod.rs:388 apps/files/src/ui/window.rs:157
+#: apps/files/src/ui/window.rs:457
 msgid "Files"
 msgstr "Pliki"
 
@@ -7598,11 +7738,11 @@ msgstr "Wstecz lub dalej"
 msgid "Extra mouse buttons"
 msgstr "Dodatkowe przyciski myszy"
 
-#: apps/files/src/ui/shortcuts.rs:41 apps/files/src/ui/window.rs:829
+#: apps/files/src/ui/shortcuts.rs:41 apps/files/src/ui/window.rs:840
 msgid "Grid View"
 msgstr "Widok siatki"
 
-#: apps/files/src/ui/shortcuts.rs:42 apps/files/src/ui/window.rs:831
+#: apps/files/src/ui/shortcuts.rs:42 apps/files/src/ui/window.rs:842
 msgid "List View"
 msgstr "Widok listy"
 
@@ -7618,7 +7758,7 @@ msgstr "Pliki i katalogi"
 msgid "Open in New Tab"
 msgstr "Otwarcie w nowej karcie"
 
-#: apps/files/src/ui/shortcuts.rs:58 apps/files/src/ui/window.rs:1596
+#: apps/files/src/ui/shortcuts.rs:58 apps/files/src/ui/window.rs:1612
 msgid "New Folder"
 msgstr "Nowy katalog"
 
@@ -7638,7 +7778,7 @@ msgstr "Edycja"
 msgid "Invert Selection"
 msgstr "Odwrócenie zaznaczenia"
 
-#: apps/files/src/ui/shortcuts.rs:71 apps/files/src/ui/tab.rs:147
+#: apps/files/src/ui/shortcuts.rs:71 apps/files/src/ui/tab.rs:169
 msgid "Cut"
 msgstr "Wytnij"
 
@@ -7646,8 +7786,8 @@ msgstr "Wytnij"
 msgid "Paste"
 msgstr "Wklej"
 
-#: apps/files/src/ui/sidebar.rs:75 apps/files/src/ui/window.rs:136
-#: apps/files/src/ui/window.rs:858
+#: apps/files/src/ui/sidebar.rs:75 apps/files/src/ui/window.rs:137
+#: apps/files/src/ui/window.rs:869
 msgctxt "home folder"
 msgid "Home"
 msgstr "Katalog domowy"
@@ -7660,15 +7800,15 @@ msgstr "Wysuń {name}"
 msgid "Unmount {name}"
 msgstr "Odmontuj {name}"
 
-#: apps/files/src/ui/sidebar.rs:565 apps/files/src/ui/window.rs:1667
+#: apps/files/src/ui/sidebar.rs:565 apps/files/src/ui/window.rs:1762
 msgid "Open in New _Tab"
 msgstr "Otwórz w nowej _karcie"
 
-#: apps/files/src/ui/sidebar.rs:566 apps/files/src/ui/window.rs:1668
+#: apps/files/src/ui/sidebar.rs:566 apps/files/src/ui/window.rs:1763
 msgid "Open in New _Window"
 msgstr "Otwórz w nowym _oknie"
 
-#: apps/files/src/ui/sidebar.rs:571 apps/files/src/ui/window.rs:1697
+#: apps/files/src/ui/sidebar.rs:571 apps/files/src/ui/window.rs:1792
 msgid "Rena_me…"
 msgstr "Zmień _nazwę…"
 
@@ -7684,18 +7824,18 @@ msgstr "_Wysuń"
 msgid "_Unmount"
 msgstr "_Odmontuj"
 
-#: apps/files/src/ui/sidebar.rs:581 apps/files/src/ui/window.rs:1723
+#: apps/files/src/ui/sidebar.rs:581 apps/files/src/ui/window.rs:1825
 msgid "_Empty Trash…"
 msgstr "_Opróżnij kosz…"
 
-#: apps/files/src/ui/sidebar.rs:586 apps/files/src/ui/window.rs:1660
-#: apps/files/src/ui/window.rs:1708 apps/files/src/ui/window.rs:1738
+#: apps/files/src/ui/sidebar.rs:586 apps/files/src/ui/window.rs:1755
+#: apps/files/src/ui/window.rs:1810 apps/files/src/ui/window.rs:1840
 #: apps/system-monitor/src/proc_view.rs:156
 msgid "_Properties"
 msgstr "_Właściwości"
 
 #: apps/files/src/ui/sidebar.rs:650 apps/files/src/ui/sidebar.rs:695
-#: apps/files/src/ui/window.rs:1635
+#: apps/files/src/ui/window.rs:1730
 msgid "Could not save bookmarks: {e}"
 msgstr "Nie można zapisać zakładek: {e}"
 
@@ -7707,7 +7847,7 @@ msgstr "_Nazwa zakładki"
 msgid "Rename Bookmark"
 msgstr "Zmiana nazwy zakładki"
 
-#: apps/files/src/ui/sidebar.rs:684 apps/files/src/ui/window.rs:1552
+#: apps/files/src/ui/sidebar.rs:684 apps/files/src/ui/window.rs:1568
 #: apps/music/src/pages.rs:2131
 msgid "_Rename"
 msgstr "Zmień _nazwę"
@@ -7720,217 +7860,217 @@ msgstr "Nie można zmienić ulubionych: {}"
 msgid "Folder"
 msgstr "Katalog"
 
-#: apps/files/src/ui/tab.rs:288
+#: apps/files/src/ui/tab.rs:312
 msgid "_Try Again"
 msgstr "_Spróbuj ponownie"
 
-#: apps/files/src/ui/tab.rs:298
+#: apps/files/src/ui/tab.rs:322
 msgid "Loading folder"
 msgstr "Wczytywanie katalogu"
 
-#: apps/files/src/ui/tab.rs:1069
+#: apps/files/src/ui/tab.rs:1114
 msgid "Unable to access location: {}"
 msgstr "Nie można uzyskać dostępu do położenia: {}"
 
-#: apps/files/src/ui/tab.rs:1102
+#: apps/files/src/ui/tab.rs:1147
 msgid "Unable to Open Folder"
 msgstr "Nie można otworzyć katalogu"
 
-#: apps/files/src/ui/tab.rs:1110
+#: apps/files/src/ui/tab.rs:1155
 msgid "Unable to open folder: {}"
 msgstr "Nie można otworzyć katalogu: {}"
 
-#: apps/files/src/ui/tab.rs:1127
+#: apps/files/src/ui/tab.rs:1172
 msgid "Try a different search."
 msgstr "Proszę spróbować innych słów."
 
-#: apps/files/src/ui/tab.rs:1130
+#: apps/files/src/ui/tab.rs:1175
 msgid "Starred Files Unavailable"
 msgstr "Ulubione są niedostępne"
 
-#: apps/files/src/ui/tab.rs:1132
+#: apps/files/src/ui/tab.rs:1177
 msgid "The stars GNOME Files keeps could not be read."
 msgstr "Nie można odczytać ulubionych zapisanych przez Pliki GNOME."
 
-#: apps/files/src/ui/tab.rs:1135
+#: apps/files/src/ui/tab.rs:1180
 msgid "No Starred Files"
 msgstr "Brak ulubionych plików"
 
-#: apps/files/src/ui/tab.rs:1137
+#: apps/files/src/ui/tab.rs:1182
 msgid "Files and folders you star appear here."
 msgstr "Tutaj pojawią się pliki i katalogi dodane do ulubionych."
 
-#: apps/files/src/ui/tab.rs:1140
+#: apps/files/src/ui/tab.rs:1185
 msgid "Trash is Empty"
 msgstr "Kosz jest pusty"
 
-#: apps/files/src/ui/tab.rs:1144
+#: apps/files/src/ui/tab.rs:1189
 msgid "Folder is Empty"
 msgstr "Katalog jest pusty"
 
-#: apps/files/src/ui/tab.rs:1372
+#: apps/files/src/ui/tab.rs:1417
 msgid "Search finished: {n} item found"
 msgid_plural "Search finished: {n} items found"
 msgstr[0] "Ukończono wyszukiwanie: odnaleziono {n} element"
 msgstr[1] "Ukończono wyszukiwanie: odnaleziono {n} elementy"
 msgstr[2] "Ukończono wyszukiwanie: odnaleziono {n} elementów"
 
-#: apps/files/src/ui/tab.rs:1398
+#: apps/files/src/ui/tab.rs:1443
 msgid "On This Computer"
 msgstr "Na tym komputerze"
 
-#: apps/files/src/ui/tab.rs:1430
+#: apps/files/src/ui/tab.rs:1475
 msgid "Networks"
 msgstr "Sieci"
 
-#: apps/files/src/ui/tab.rs:1435
+#: apps/files/src/ui/tab.rs:1480
 msgid "Browse the local network"
 msgstr "Przeglądanie sieci lokalnej"
 
-#: apps/files/src/ui/tab.rs:1460
+#: apps/files/src/ui/tab.rs:1505
 msgid "Not mounted"
 msgstr "Niezamontowane"
 
-#: apps/files/src/ui/tab.rs:1473
+#: apps/files/src/ui/tab.rs:1518
 msgid "Connect to Server"
 msgstr "Połącz z serwerem"
 
-#: apps/files/src/ui/tab.rs:1477
+#: apps/files/src/ui/tab.rs:1522
 msgid "Server Address"
 msgstr "Adres serwera"
 
-#: apps/files/src/ui/window.rs:209
+#: apps/files/src/ui/window.rs:210
 msgid "Enter a location"
 msgstr "Proszę wpisać położenie"
 
-#: apps/files/src/ui/window.rs:225 apps/terminal/src/window.rs:744
+#: apps/files/src/ui/window.rs:226 apps/terminal/src/window.rs:744
 #: apps/text-editor/src/window.rs:47
 msgid "New _Tab"
 msgstr "Nowa _karta"
 
-#: apps/files/src/ui/window.rs:233
+#: apps/files/src/ui/window.rs:234
 msgid "_About Files"
 msgstr "_O programie"
 
-#: apps/files/src/ui/window.rs:251
+#: apps/files/src/ui/window.rs:252
 msgid "_Reversed Order"
 msgstr "_Odwrotna kolejność"
 
-#: apps/files/src/ui/window.rs:252 apps/logs/src/ui.rs:294
+#: apps/files/src/ui/window.rs:253 apps/logs/src/ui.rs:294
 #: apps/music/src/ui.rs:510 apps/music/src/ui.rs:513
 msgid "Sort"
 msgstr "Porządkowanie"
 
-#: apps/files/src/ui/window.rs:254 apps/image-viewer/src/ui.rs:310
+#: apps/files/src/ui/window.rs:255 apps/image-viewer/src/ui.rs:310
 msgid "Zoom _In"
 msgstr "_Powiększ"
 
-#: apps/files/src/ui/window.rs:255
+#: apps/files/src/ui/window.rs:256
 msgid "Zoom _Out"
 msgstr "_Pomniejsz"
 
-#: apps/files/src/ui/window.rs:256
+#: apps/files/src/ui/window.rs:257
 msgid "_Reset Size"
 msgstr "P_rzywróć rozmiar"
 
-#: apps/files/src/ui/window.rs:259 apps/files/src/ui/window.rs:1737
+#: apps/files/src/ui/window.rs:260 apps/files/src/ui/window.rs:1839
 msgid "Show _Hidden Files"
 msgstr "_Ukryte pliki"
 
-#: apps/files/src/ui/window.rs:264 apps/files/src/ui/window.rs:266
-#: apps/files/src/ui/window.rs:388
+#: apps/files/src/ui/window.rs:265 apps/files/src/ui/window.rs:267
+#: apps/files/src/ui/window.rs:389
 msgid "View Options"
 msgstr "Opcje widoku"
 
-#: apps/files/src/ui/window.rs:312
+#: apps/files/src/ui/window.rs:313
 msgid "Search current folder"
 msgstr "Wyszukiwanie w bieżącym katalogu"
 
-#: apps/files/src/ui/window.rs:315
+#: apps/files/src/ui/window.rs:316
 msgid "Search Current Folder"
 msgstr "Wyszukiwanie w bieżącym katalogu"
 
-#: apps/files/src/ui/window.rs:341
+#: apps/files/src/ui/window.rs:342
 msgid "_Empty…"
 msgstr "_Opróżnij…"
 
-#: apps/files/src/ui/window.rs:631
+#: apps/files/src/ui/window.rs:632
 msgid "Search: {}"
 msgstr "Wyszukiwanie: {}"
 
-#: apps/files/src/ui/window.rs:748
+#: apps/files/src/ui/window.rs:759
 msgid "Unstarred"
 msgstr "Usunięto z ulubionych"
 
-#: apps/files/src/ui/window.rs:765
+#: apps/files/src/ui/window.rs:776
 msgid "{base} — Searching…"
 msgstr "{base} — wyszukiwanie…"
 
-#: apps/files/src/ui/window.rs:767
+#: apps/files/src/ui/window.rs:778
 msgid "{base} — Loading…"
 msgstr "{base} — wczytywanie…"
 
-#: apps/files/src/ui/window.rs:776
+#: apps/files/src/ui/window.rs:787
 msgid "“{}” selected"
 msgstr "Zaznaczono „{}”"
 
-#: apps/files/src/ui/window.rs:778
+#: apps/files/src/ui/window.rs:789
 msgid "“{}” selected ({})"
 msgstr "Zaznaczono „{}” ({})"
 
-#: apps/files/src/ui/window.rs:793
+#: apps/files/src/ui/window.rs:804
 msgid "{n} folder selected"
 msgid_plural "{n} folders selected"
 msgstr[0] "Zaznaczono {n} katalog"
 msgstr[1] "Zaznaczono {n} katalogi"
 msgstr[2] "Zaznaczono {n} katalogów"
 
-#: apps/files/src/ui/window.rs:795
+#: apps/files/src/ui/window.rs:806
 msgid "{n} item selected ({bytes})"
 msgid_plural "{n} items selected ({bytes})"
 msgstr[0] "Zaznaczono {n} element ({bytes})"
 msgstr[1] "Zaznaczono {n} elementy ({bytes})"
 msgstr[2] "Zaznaczono {n} elementów ({bytes})"
 
-#: apps/files/src/ui/window.rs:1115
+#: apps/files/src/ui/window.rs:1126
 msgid "Could not open file: {}"
 msgstr "Nie można otworzyć pliku: {}"
 
-#: apps/files/src/ui/window.rs:1143
+#: apps/files/src/ui/window.rs:1154
 msgid "Unable to mount “{}”: {}"
 msgstr "Nie można zamontować „{}”: {}"
 
-#: apps/files/src/ui/window.rs:1168
+#: apps/files/src/ui/window.rs:1179
 msgid "Unable to eject “{name}”: {error}"
 msgstr "Nie można wysunąć „{name}”: {error}"
 
-#: apps/files/src/ui/window.rs:1283
+#: apps/files/src/ui/window.rs:1298
 msgid "Nothing to paste"
 msgstr "Nie ma czego wkleić"
 
-#: apps/files/src/ui/window.rs:1348
+#: apps/files/src/ui/window.rs:1364
 msgid "“{}” moved to Trash"
 msgstr "Przeniesiono „{}” do kosza"
 
-#: apps/files/src/ui/window.rs:1353
+#: apps/files/src/ui/window.rs:1369
 msgid "{n} item moved to Trash"
 msgid_plural "{n} items moved to Trash"
 msgstr[0] "Przeniesiono {n} element do kosza"
 msgstr[1] "Przeniesiono {n} elementy do kosza"
 msgstr[2] "Przeniesiono {n} elementów do kosza"
 
-#: apps/files/src/ui/window.rs:1378
+#: apps/files/src/ui/window.rs:1394
 msgid "“{}” Can’t Be Put in the Trash"
 msgstr "Nie można przenieść „{}” do kosza"
 
-#: apps/files/src/ui/window.rs:1383
+#: apps/files/src/ui/window.rs:1399
 msgid "{n} Item Can’t Be Put in the Trash"
 msgid_plural "{n} Items Can’t Be Put in the Trash"
 msgstr[0] "Nie można przenieść {n} elementu do kosza"
 msgstr[1] "Nie można przenieść {n} elementów do kosza"
 msgstr[2] "Nie można przenieść {n} elementów do kosza"
 
-#: apps/files/src/ui/window.rs:1392
+#: apps/files/src/ui/window.rs:1408
 msgid ""
 "This location has no Trash. Delete permanently instead? Deleted items will "
 "be permanently lost."
@@ -7938,130 +8078,150 @@ msgstr ""
 "To położenie nie ma kosza. Usunąć trwale? Usunięte elementy zostaną "
 "bezpowrotnie utracone."
 
-#: apps/files/src/ui/window.rs:1463
+#: apps/files/src/ui/window.rs:1479
 msgid "Permanently Delete “{}”?"
 msgstr "Trwale usunąć „{}”?"
 
-#: apps/files/src/ui/window.rs:1468
+#: apps/files/src/ui/window.rs:1484
 msgid "Permanently Delete {n} Item?"
 msgid_plural "Permanently Delete {n} Items?"
 msgstr[0] "Trwale usunąć {n} element?"
 msgstr[1] "Trwale usunąć {n} elementy?"
 msgstr[2] "Trwale usunąć {n} elementów?"
 
-#: apps/files/src/ui/window.rs:1477
+#: apps/files/src/ui/window.rs:1493
 msgid "If you delete an item, it will be permanently lost."
 msgstr "Usunięty element zostanie bezpowrotnie utracony."
 
-#: apps/files/src/ui/window.rs:1491
+#: apps/files/src/ui/window.rs:1507
 msgid "Empty Trash?"
 msgstr "Opróżnić kosz?"
 
-#: apps/files/src/ui/window.rs:1492
+#: apps/files/src/ui/window.rs:1508
 msgid "All items in the Trash will be permanently deleted."
 msgstr "Wszystkie elementy w koszu zostaną trwale usunięte."
 
-#: apps/files/src/ui/window.rs:1493
+#: apps/files/src/ui/window.rs:1509
 msgid "_Empty Trash"
 msgstr "_Opróżnij kosz"
 
-#: apps/files/src/ui/window.rs:1504
+#: apps/files/src/ui/window.rs:1520
 msgid "Nothing to undo"
 msgstr "Nie ma czego cofnąć"
 
-#: apps/files/src/ui/window.rs:1521
+#: apps/files/src/ui/window.rs:1537
 msgid "Could not undo rename: {}"
 msgstr "Nie można cofnąć zmiany nazwy: {}"
 
-#: apps/files/src/ui/window.rs:1548
+#: apps/files/src/ui/window.rs:1564
 msgid "Rename Folder"
 msgstr "Zmiana nazwy katalogu"
 
-#: apps/files/src/ui/window.rs:1550
+#: apps/files/src/ui/window.rs:1566
 msgid "Rename File"
 msgstr "Zmiana nazwy pliku"
 
-#: apps/files/src/ui/window.rs:1577
+#: apps/files/src/ui/window.rs:1593
 msgid "Could not rename: {}"
 msgstr "Nie można zmienić nazwy: {}"
 
-#: apps/files/src/ui/window.rs:1597 apps/music/src/pages.rs:2133
-msgid "_Create"
-msgstr "U_twórz"
-
-#: apps/files/src/ui/window.rs:1608
+#: apps/files/src/ui/window.rs:1624
 msgid "Could not create folder: {}"
 msgstr "Nie można utworzyć katalogu: {}"
 
-#: apps/files/src/ui/window.rs:1629
+#: apps/files/src/ui/window.rs:1689
+msgid "Extract To"
+msgstr "Rozpakuj do"
+
+#: apps/files/src/ui/window.rs:1690
+msgid "_Extract"
+msgstr "_Rozpakuj"
+
+#: apps/files/src/ui/window.rs:1724
 msgid "Location is already bookmarked"
 msgstr "Położenie jest już w zakładkach"
 
-#: apps/files/src/ui/window.rs:1634
+#: apps/files/src/ui/window.rs:1729
 msgid "“{}” added to bookmarks"
 msgstr "Dodano „{}” do zakładek"
 
-#: apps/files/src/ui/window.rs:1656
+#: apps/files/src/ui/window.rs:1751
 msgid "_Restore From Trash"
 msgstr "_Przywróć z kosza"
 
-#: apps/files/src/ui/window.rs:1657
+#: apps/files/src/ui/window.rs:1752
 msgid "_Delete From Trash…"
 msgstr "_Usuń z kosza…"
 
-#: apps/files/src/ui/window.rs:1670 apps/image-viewer/src/ui.rs:301
-#: apps/image-viewer/src/ui.rs:787
+#: apps/files/src/ui/window.rs:1765 apps/image-viewer/src/ui.rs:301
+#: apps/image-viewer/src/ui.rs:793
 msgid "Open _With…"
 msgstr "Otwórz _za pomocą…"
 
-#: apps/files/src/ui/window.rs:1676
+#: apps/files/src/ui/window.rs:1771
 msgid "Open Item _Location"
 msgstr "Otwórz _położenie elementu"
 
-#: apps/files/src/ui/window.rs:1683
+#: apps/files/src/ui/window.rs:1778
 msgid "_Star"
 msgstr "Dodaj do _ulubionych"
 
-#: apps/files/src/ui/window.rs:1685
+#: apps/files/src/ui/window.rs:1780
 msgid "_Unstar"
 msgstr "Usuń z u_lubionych"
 
-#: apps/files/src/ui/window.rs:1690
+#: apps/files/src/ui/window.rs:1785
 msgid "Cu_t"
 msgstr "Wy_tnij"
 
-#: apps/files/src/ui/window.rs:1693
+#: apps/files/src/ui/window.rs:1788
 msgid "Paste Into Folder"
 msgstr "Wklej do katalogu"
 
-#: apps/files/src/ui/window.rs:1699
+#: apps/files/src/ui/window.rs:1794
 msgid "Create _Link"
 msgstr "Utwórz _dowiązanie"
 
-#: apps/files/src/ui/window.rs:1701
+#: apps/files/src/ui/window.rs:1796
 msgid "Mo_ve to Trash"
 msgstr "Prz_enieś do kosza"
 
-#: apps/files/src/ui/window.rs:1703
+#: apps/files/src/ui/window.rs:1798
 msgid "_Delete Permanently…"
 msgstr "Usuń _trwale…"
 
-#: apps/files/src/ui/window.rs:1707 apps/maps/src/ui.rs:440
+#: apps/files/src/ui/window.rs:1803
+msgid "E_xtract Here"
+msgstr "Rozpakuj _tutaj"
+
+#: apps/files/src/ui/window.rs:1804
+msgid "Extract _To…"
+msgstr "Rozpakuj _do…"
+
+#: apps/files/src/ui/window.rs:1806
+msgid "Create _Archive…"
+msgstr "Utwórz _archiwum…"
+
+#: apps/files/src/ui/window.rs:1809 apps/maps/src/ui.rs:440
 #: apps/maps/src/ui.rs:2271
 msgid "Copy Location"
 msgstr "Skopiuj położenie"
 
-#: apps/files/src/ui/window.rs:1729
+#: apps/files/src/ui/window.rs:1831
 msgid "New _Folder…"
 msgstr "Nowy _katalog…"
 
-#: apps/files/src/ui/window.rs:1732 apps/terminal/src/window.rs:739
+#: apps/files/src/ui/window.rs:1834 apps/terminal/src/window.rs:739
 msgid "_Paste"
 msgstr "_Wklej"
 
-#: apps/files/src/ui/window.rs:1736
+#: apps/files/src/ui/window.rs:1838
 msgid "Add to _Bookmarks"
 msgstr "Dodaj do _zakładek"
+
+#: apps/files/src/ui/window.rs:2207
+msgid "Archive"
+msgstr "Archiwum"
 
 #: apps/fonts/data/org.helixdesktop.Fonts.desktop
 msgid "fonts;fontface;typeface;install;preview;"
@@ -8777,7 +8937,7 @@ msgstr "Przeglądarka obrazów"
 msgid "View images"
 msgstr "Wyświetlanie obrazów"
 
-#: apps/image-viewer/src/ui.rs:295 apps/image-viewer/src/ui.rs:1085
+#: apps/image-viewer/src/ui.rs:295 apps/image-viewer/src/ui.rs:1091
 msgid "Open Images"
 msgstr "Otwarcie obrazów"
 
@@ -8785,11 +8945,11 @@ msgstr "Otwarcie obrazów"
 msgid "_New Window"
 msgstr "_Nowe okno"
 
-#: apps/image-viewer/src/ui.rs:306 apps/image-viewer/src/ui.rs:788
+#: apps/image-viewer/src/ui.rs:306 apps/image-viewer/src/ui.rs:794
 msgid "Set as _Background…"
 msgstr "Ustaw jako _tło…"
 
-#: apps/image-viewer/src/ui.rs:307 apps/image-viewer/src/ui.rs:791
+#: apps/image-viewer/src/ui.rs:307 apps/image-viewer/src/ui.rs:797
 msgid "Move to _Trash"
 msgstr "Przenieś do _kosza"
 
@@ -8870,81 +9030,81 @@ msgstr "Ogniskowa"
 msgid "Open Folder"
 msgstr "Otwórz katalog"
 
-#: apps/image-viewer/src/ui.rs:1032
+#: apps/image-viewer/src/ui.rs:1038
 msgid "Could not open map: {}"
 msgstr "Nie można otworzyć mapy: {}"
 
-#: apps/image-viewer/src/ui.rs:1075
+#: apps/image-viewer/src/ui.rs:1081
 msgid "Supported Images"
 msgstr "Obsługiwane obrazy"
 
-#: apps/image-viewer/src/ui.rs:1162
+#: apps/image-viewer/src/ui.rs:1168
 msgid "The decoder crashed"
 msgstr "Dekoder uległ awarii"
 
 #. Translators: an image that could not be shown: its file name, then why.
-#: apps/image-viewer/src/ui.rs:1231
+#: apps/image-viewer/src/ui.rs:1237
 msgid "{name}: {error}"
 msgstr "{name}: {error}"
 
-#: apps/image-viewer/src/ui.rs:1333
+#: apps/image-viewer/src/ui.rs:1339
 msgid "No Image"
 msgstr "Brak obrazu"
 
 #. Translators: window title: file name, then the app name.
-#: apps/image-viewer/src/ui.rs:1357
+#: apps/image-viewer/src/ui.rs:1363
 msgid "{name} — {app}"
 msgstr "{name} — {app}"
 
-#: apps/image-viewer/src/ui.rs:1553
+#: apps/image-viewer/src/ui.rs:1559
 msgid "{} (animated)"
 msgstr "{} (animowany)"
 
-#: apps/image-viewer/src/ui.rs:1620
+#: apps/image-viewer/src/ui.rs:1626
 msgid "Image copied to clipboard"
 msgstr "Skopiowano obraz do schowka"
 
-#: apps/image-viewer/src/ui.rs:1631
+#: apps/image-viewer/src/ui.rs:1637
 msgid "Background set"
 msgstr "Ustawiono tło"
 
-#: apps/image-viewer/src/ui.rs:1634 apps/image-viewer/src/ui.rs:1637
+#: apps/image-viewer/src/ui.rs:1640 apps/image-viewer/src/ui.rs:1643
 msgid "Could not set the background"
 msgstr "Nie można ustawić tła"
 
-#: apps/image-viewer/src/ui.rs:1636
+#: apps/image-viewer/src/ui.rs:1642
 msgid "Could not set the background: {e}"
 msgstr "Nie można ustawić tła: {e}"
 
-#: apps/image-viewer/src/ui.rs:1661
+#: apps/image-viewer/src/ui.rs:1667
 msgid "Image moved to trash"
 msgstr "Przeniesiono obraz do kosza"
 
-#: apps/image-viewer/src/ui.rs:1673
+#: apps/image-viewer/src/ui.rs:1679
 msgid "Could not move to trash: {e}"
 msgstr "Nie można przenieść do kosza: {e}"
 
-#: apps/image-viewer/src/ui.rs:1674
+#: apps/image-viewer/src/ui.rs:1680
 msgid "Could not move to trash"
 msgstr "Nie można przenieść do kosza"
 
-#: apps/image-viewer/src/ui.rs:1698
+#: apps/image-viewer/src/ui.rs:1704
 msgid "Could not restore: {e}"
 msgstr "Nie można przywrócić: {e}"
 
-#: apps/image-viewer/src/ui.rs:1699
+#: apps/image-viewer/src/ui.rs:1705
 msgid "Could not restore"
 msgstr "Nie można przywrócić"
 
-#: apps/image-viewer/src/ui.rs:1723
+#: apps/image-viewer/src/ui.rs:1729
 msgid "Image saved"
 msgstr "Zapisano obraz"
 
-#: apps/image-viewer/src/ui.rs:1732
+#: apps/image-viewer/src/ui.rs:1738
 msgid "Could not save image: {e}"
 msgstr "Nie można zapisać obrazu: {e}"
 
-#: apps/image-viewer/src/ui.rs:1736
+#: apps/image-viewer/src/ui.rs:1742
 msgid "Could not save image"
 msgstr "Nie można zapisać obrazu"
 
@@ -19662,15 +19822,15 @@ msgstr ""
 "internetową. Jego otwarcie może uzyskać dostęp do plików lub udziałów "
 "sieciowych albo uruchomić inny program."
 
-#: crates/helix-eds/src/client.rs:58
+#: crates/helix-eds/src/client.rs:66
 msgid "“{name}” is read-only"
 msgstr "„{name}” jest tylko do odczytu"
 
-#: crates/helix-eds/src/client.rs:60
+#: crates/helix-eds/src/client.rs:68
 msgid "“{name}” cannot be removed"
 msgstr "Nie można usunąć „{name}”"
 
-#: crates/helix-eds/src/client.rs:62
+#: crates/helix-eds/src/client.rs:70
 msgid "The contact could not be read"
 msgstr "Nie można odczytać kontaktu"
 

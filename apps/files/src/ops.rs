@@ -8,6 +8,7 @@ use gtk::gio;
 use gtk::gio::prelude::*;
 use gtk::glib;
 
+use crate::archive;
 use crate::naming;
 use helix_app_common::i18n::tr;
 use helix_app_common::trf;
@@ -35,6 +36,17 @@ pub enum Job {
     /// whose original location is one of these.
     Untrash(Vec<gio::File>),
     EmptyTrash,
+    /// Archive `sources` into the archive file `dest`.
+    Compress {
+        sources: Vec<gio::File>,
+        dest: gio::File,
+        format: archive::Format,
+    },
+    /// Extract archives into `dest`, or next to each archive when `None`.
+    Extract {
+        archives: Vec<gio::File>,
+        dest: Option<gio::File>,
+    },
 }
 
 impl Job {
@@ -68,6 +80,13 @@ impl Job {
                 trnf!("Restoring {n} item", "Restoring {n} items", v.len())
             }
             Job::EmptyTrash => tr("Emptying Trash").into(),
+            Job::Compress { dest, .. } => {
+                trf!("Creating “{archive}”", archive = display_name(dest))
+            }
+            Job::Extract { archives, .. } => match archives.as_slice() {
+                [one] => trf!("Extracting “{archive}”", archive = display_name(one)),
+                v => trnf!("Extracting {n} archive", "Extracting {n} archives", v.len()),
+            },
         }
     }
 }
@@ -100,6 +119,14 @@ impl Job {
             Job::Delete(v) => trnf!("Deleted {n} item", "Deleted {n} items", count(v)),
             Job::EmptyTrash => tr("Trash emptied").into(),
             Job::Trash(_) => return None,
+            Job::Compress { dest, .. } => {
+                trf!("Created “{archive}”", archive = display_name(dest))
+            }
+            Job::Extract { archives, .. } => trnf!(
+                "Extracted {n} archive",
+                "Extracted {n} archives",
+                count(archives)
+            ),
         })
     }
 }
@@ -762,6 +789,149 @@ impl Runner<'_> {
     }
 }
 
+impl Runner<'_> {
+    /// Local paths of `files`, or `None` after reporting the first one
+    /// that has none.
+    fn local_paths(&mut self, files: &[gio::File]) -> Option<Vec<std::path::PathBuf>> {
+        let mut paths = Vec::new();
+        for f in files {
+            match f.path() {
+                Some(p) => paths.push(p),
+                None => {
+                    self.out.errors.push(trf!(
+                        "“{file}” is not on this computer, so it can’t be archived or extracted",
+                        file = display_name(f)
+                    ));
+                    return None;
+                }
+            }
+        }
+        Some(paths)
+    }
+
+    fn compress(&mut self, sources: &[gio::File], dest: &gio::File, format: archive::Format) {
+        let Some(paths) = self.local_paths(sources) else {
+            return;
+        };
+        let Some(target) = self.local_paths(std::slice::from_ref(dest)) else {
+            return;
+        };
+        self.progress.total_items = 1;
+        let mut ctl = ArchiveControl {
+            runner: self,
+            base: 0,
+            size: None,
+        };
+        let work = archive_work_dir();
+        match archive::create(&paths, &target[0], format, Some(&work), &mut ctl) {
+            Ok(made) => {
+                self.out.created.push(gio::File::for_path(made));
+                self.progress.done_items = 1;
+            }
+            Err(archive::Error::Cancelled) => self.out.cancelled = true,
+            Err(e) => self.out.errors.push(trf!(
+                "Could not create “{file}”: {error}",
+                file = display_name(dest),
+                error = e.message()
+            )),
+        }
+    }
+
+    fn extract(&mut self, archives: &[gio::File], dest: Option<&gio::File>) {
+        let Some(paths) = self.local_paths(archives) else {
+            return;
+        };
+        let dest = match dest {
+            Some(d) => match self.local_paths(std::slice::from_ref(d)) {
+                Some(mut p) => p.pop(),
+                None => return,
+            },
+            None => None,
+        };
+        let sizes: Vec<u64> = paths
+            .iter()
+            .map(|p| std::fs::metadata(p).map(|m| m.len()).unwrap_or(0))
+            .collect();
+        self.progress.total_items = paths.len() as u64;
+        self.progress.total_bytes = sizes.iter().sum();
+        let work = archive_work_dir();
+        let mut base = 0;
+        for ((path, file), size) in paths.iter().zip(archives).zip(sizes) {
+            if self.stopped() {
+                break;
+            }
+            let folder = match &dest {
+                Some(d) => d.clone(),
+                None => path.parent().map(|p| p.to_path_buf()).unwrap_or_default(),
+            };
+            let mut ctl = ArchiveControl {
+                runner: self,
+                base,
+                size: Some(size),
+            };
+            match archive::extract(path, &folder, Some(&work), &mut ctl) {
+                Ok(made) => self.out.created.push(gio::File::for_path(made)),
+                Err(archive::Error::Cancelled) => self.out.cancelled = true,
+                Err(e) => self.out.errors.push(trf!(
+                    "Could not extract “{file}”: {error}",
+                    file = display_name(file),
+                    error = e.message()
+                )),
+            }
+            base += size;
+            self.progress.done_items += 1;
+            self.progress.done_bytes = base;
+            self.report(false);
+        }
+    }
+}
+
+/// Where archives are made and extracted before they are moved into
+/// place (see `archive`): a folder in the user's cache.
+pub(crate) fn archive_work_dir() -> std::path::PathBuf {
+    #[cfg(not(test))]
+    let base = glib::user_cache_dir();
+    // Tests never write to the real cache.
+    #[cfg(test)]
+    let base = std::env::temp_dir().join(format!("helix-files-test-cache-{}", std::process::id()));
+    base.join("helix-files").join("work")
+}
+
+/// Lets an archive operation see the job's cancellation and report its
+/// progress. Extraction reports its own scale; it is mapped onto the
+/// archive's `size` bytes after `base` of the whole job.
+struct ArchiveControl<'r, 'a> {
+    runner: &'r mut Runner<'a>,
+    base: u64,
+    size: Option<u64>,
+}
+
+impl archive::Control for ArchiveControl<'_, '_> {
+    fn cancelled(&self) -> bool {
+        self.runner.cancel.is_cancelled()
+    }
+
+    fn progress(&mut self, done: u64, total: u64, current: &str) {
+        let p = &mut self.runner.progress;
+        match self.size {
+            Some(size) => {
+                let part = if total > 0 {
+                    (done.min(total) as u128 * size as u128 / total as u128) as u64
+                } else {
+                    0
+                };
+                p.done_bytes = self.base + part;
+            }
+            None => {
+                p.total_bytes = total;
+                p.done_bytes = done;
+            }
+        }
+        p.current = current.to_string();
+        self.runner.report(false);
+    }
+}
+
 /// Runs `job` to completion (blocking).
 pub fn run(job: &Job, cancel: &gio::Cancellable, handler: &mut dyn Handler) -> Outcome {
     let mut r = Runner {
@@ -781,6 +951,12 @@ pub fn run(job: &Job, cancel: &gio::Cancellable, handler: &mut dyn Handler) -> O
         Job::Restore(items) => r.restore(items),
         Job::Untrash(orig) => r.untrash(orig),
         Job::EmptyTrash => r.empty_trash(),
+        Job::Compress {
+            sources,
+            dest,
+            format,
+        } => r.compress(sources, dest, *format),
+        Job::Extract { archives, dest } => r.extract(archives, dest.as_ref()),
     }
     r.progress.done_items = r.progress.total_items.max(r.progress.done_items);
     r.report(true);
@@ -1136,5 +1312,114 @@ pub(crate) mod tests {
         let (items, bytes) = measure(&t.file("d"), &gio::Cancellable::new(), &mut |_, _| true);
         assert_eq!(items, 4); // d, a, s, b
         assert!(bytes >= 8);
+    }
+
+    /// Compress and Extract run as jobs: the archive is made in the
+    /// folder, archives extract next to themselves or into a folder, and
+    /// a cancelled job leaves nothing.
+    #[test]
+    fn archive_jobs() {
+        let t = TempDir::new("archive");
+        t.write("docs/a.txt", "alpha");
+        t.write("docs/sub/b.txt", "beta");
+        t.write("c.txt", "gamma");
+        let mut h = Canned::new(Choice::Skip, false);
+        let job = Job::Compress {
+            sources: vec![t.file("docs"), t.file("c.txt")],
+            dest: t.file("Archive.tar.gz"),
+            format: archive::Format::TarGz,
+        };
+        assert_eq!(job.title(), "Creating “Archive.tar.gz”");
+        let out = go(job.clone(), &mut h);
+        assert!(out.errors.is_empty(), "{:?}", out.errors);
+        assert_eq!(out.created.len(), 1);
+        assert!(out.created[0].equal(&t.file("Archive.tar.gz")));
+        assert_eq!(job.finished(1).as_deref(), Some("Created “Archive.tar.gz”"));
+        assert_eq!(h.last_progress.total_bytes, 14);
+        // A single item: Extract To puts it straight into the folder.
+        go(
+            Job::Compress {
+                sources: vec![t.file("c.txt")],
+                dest: t.file("one.zip"),
+                format: archive::Format::Zip,
+            },
+            &mut h,
+        );
+
+        fs::create_dir(t.path("out")).unwrap();
+        let job = Job::Extract {
+            archives: vec![t.file("Archive.tar.gz"), t.file("one.zip")],
+            dest: Some(t.file("out")),
+        };
+        assert_eq!(job.title(), "Extracting 2 archives");
+        let out = go(job.clone(), &mut h);
+        assert!(out.errors.is_empty(), "{:?}", out.errors);
+        assert_eq!(
+            job.finished(out.created.len()).as_deref(),
+            Some("Extracted 2 archives")
+        );
+        assert_eq!(read(&t.path("out/Archive/docs/sub/b.txt")), "beta");
+        assert_eq!(read(&t.path("out/c.txt")), "gamma");
+        assert_eq!(h.last_progress.fraction(), 1.0);
+
+        // Extract Here: next to the archive, never over what is there.
+        let out = go(
+            Job::Extract {
+                archives: vec![t.file("one.zip")],
+                dest: None,
+            },
+            &mut h,
+        );
+        assert!(out.created[0].equal(&t.file("c (2).txt")));
+        assert_eq!(read(&t.path("c.txt")), "gamma");
+
+        // Errors name the archive.
+        t.write("bad.zip", "not really a zip");
+        let out = go(
+            Job::Extract {
+                archives: vec![t.file("bad.zip")],
+                dest: None,
+            },
+            &mut h,
+        );
+        assert_eq!(
+            out.errors,
+            vec!["Could not extract “bad.zip”: This is not an archive Files can extract."]
+        );
+
+        // Cancelled before it starts: nothing is made.
+        let cancel = gio::Cancellable::new();
+        cancel.cancel();
+        let before = fs::read_dir(&t.0).unwrap().count();
+        let out = run(
+            &Job::Compress {
+                sources: vec![t.file("docs")],
+                dest: t.file("never.zip"),
+                format: archive::Format::Zip,
+            },
+            &cancel,
+            &mut h,
+        );
+        assert!(out.cancelled && out.errors.is_empty());
+        let out = run(
+            &Job::Extract {
+                archives: vec![t.file("Archive.tar.gz")],
+                dest: None,
+            },
+            &cancel,
+            &mut h,
+        );
+        assert!(out.cancelled && out.errors.is_empty());
+        assert_eq!(fs::read_dir(&t.0).unwrap().count(), before);
+        assert!(fs::read_dir(archive_work_dir()).unwrap().next().is_none());
+        remove_test_cache();
+    }
+
+    /// Removes this process's stand-in for the user's cache.
+    pub fn remove_test_cache() {
+        let work = archive_work_dir();
+        let cache = work.parent().and_then(|p| p.parent()).unwrap();
+        assert!(cache.starts_with(std::env::temp_dir()));
+        let _ = fs::remove_dir_all(cache);
     }
 }

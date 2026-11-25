@@ -226,8 +226,8 @@ msgstr "ミュートまたはミュート解除"
 #: apps/calculator/src/ui.rs:523 apps/calendar/src/shortcuts.rs:51
 #: apps/clocks/src/shortcuts.rs:18 apps/contacts/src/shortcuts.rs:24
 #: apps/disk-usage/src/shortcuts.rs:47
-#: apps/document-scanner/src/shortcuts.rs:48 apps/files/src/ui/dialogs.rs:563
-#: apps/files/src/ui/dialogs.rs:617 apps/files/src/ui/shortcuts.rs:78
+#: apps/document-scanner/src/shortcuts.rs:48 apps/files/src/ui/dialogs.rs:673
+#: apps/files/src/ui/dialogs.rs:727 apps/files/src/ui/shortcuts.rs:78
 #: apps/help/src/shortcuts.rs:49 apps/maps/src/shortcuts.rs:11
 #: apps/maps/src/ui.rs:1863 apps/music/src/shortcuts.rs:37
 #: apps/settings/src/ui/access.rs:62 apps/settings/src/ui/extensions.rs:99
@@ -317,7 +317,7 @@ msgstr "オーディオプレーヤーについて(_A)"
 #: apps/disks/src/ui.rs:273 apps/disks/src/ui.rs:275
 #: apps/document-scanner/src/ui.rs:317 apps/document-scanner/src/ui.rs:319
 #: apps/document-viewer/src/ui.rs:312 apps/document-viewer/src/ui.rs:315
-#: apps/files/src/ui/window.rs:238 apps/files/src/ui/window.rs:241
+#: apps/files/src/ui/window.rs:239 apps/files/src/ui/window.rs:242
 #: apps/fonts/src/ui.rs:123 apps/fonts/src/ui.rs:126 apps/help/src/ui.rs:403
 #: apps/help/src/ui.rs:405 apps/image-viewer/src/ui.rs:337
 #: apps/image-viewer/src/ui.rs:339 apps/logs/src/ui.rs:308
@@ -400,7 +400,7 @@ msgid "Audio Files"
 msgstr "オーディオファイル"
 
 #: apps/audio-player/src/ui.rs:755 apps/disks/src/ui.rs:1988
-#: apps/document-viewer/src/ui.rs:1484 apps/files/src/ui/dialogs.rs:662
+#: apps/document-viewer/src/ui.rs:1484 apps/files/src/ui/dialogs.rs:772
 #: apps/video-player/src/ui.rs:1056
 msgid "All Files"
 msgstr "すべてのファイル"
@@ -960,7 +960,7 @@ msgstr "パーセント"
 #: apps/calculator/src/ui.rs:450 apps/calculator/src/ui.rs:455
 #: apps/calculator/src/ui.rs:457 apps/calculator/src/ui.rs:463
 #: apps/calculator/src/ui.rs:469 apps/calculator/src/ui.rs:475
-#: apps/calculator/src/ui.rs:1627
+#: apps/calculator/src/ui.rs:1639
 msgid "Calculation"
 msgstr "計算"
 
@@ -1030,7 +1030,7 @@ msgstr "財務モード"
 msgid "Programming mode"
 msgstr "プログラミングモード"
 
-#: apps/calculator/src/ui.rs:506 apps/calculator/src/ui.rs:1587
+#: apps/calculator/src/ui.rs:506 apps/calculator/src/ui.rs:1599
 #: apps/disk-usage/src/shortcuts.rs:49 apps/disk-usage/src/ui.rs:1773
 #: apps/document-scanner/src/shortcuts.rs:50 apps/files/src/ui/shortcuts.rs:80
 #: apps/maps/src/shortcuts.rs:13 apps/maps/src/ui.rs:1804
@@ -1068,7 +1068,7 @@ msgstr "履歴を消去(_C)"
 
 #: apps/calculator/src/ui.rs:699 apps/disk-usage/src/ui.rs:186
 #: apps/document-scanner/src/ui.rs:174 apps/document-scanner/src/ui.rs:190
-#: apps/files/src/ui/window.rs:231 apps/maps/src/ui.rs:485
+#: apps/files/src/ui/window.rs:232 apps/maps/src/ui.rs:485
 #: apps/music/src/ui.rs:467 apps/system-monitor/src/ui.rs:247
 #: apps/terminal/src/window.rs:295 apps/text-editor/src/window.rs:63
 #: apps/web/src/window.rs:263
@@ -1083,47 +1083,47 @@ msgstr "電卓について(_A)"
 msgid "Expression"
 msgstr "式"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Binary"
 msgstr "2 進数"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Decimal"
 msgstr "10 進数"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Hexadecimal"
 msgstr "16 進数"
 
-#: apps/calculator/src/ui.rs:747
+#: apps/calculator/src/ui.rs:749
 msgid "Octal"
 msgstr "8 進数"
 
-#: apps/calculator/src/ui.rs:755 apps/calculator/src/ui.rs:756
+#: apps/calculator/src/ui.rs:757 apps/calculator/src/ui.rs:758
 msgid "Number base"
 msgstr "基数"
 
-#: apps/calculator/src/ui.rs:765 apps/calculator/src/ui.rs:766
+#: apps/calculator/src/ui.rs:767 apps/calculator/src/ui.rs:768
 msgid "Word size"
 msgstr "ワードサイズ"
 
-#: apps/calculator/src/ui.rs:1311
+#: apps/calculator/src/ui.rs:1323
 msgid "Insert expression"
 msgstr "式を挿入"
 
-#: apps/calculator/src/ui.rs:1317
+#: apps/calculator/src/ui.rs:1329
 msgid "Insert result"
 msgstr "結果を挿入"
 
-#: apps/calculator/src/ui.rs:1487 apps/calculator/src/ui.rs:1491
+#: apps/calculator/src/ui.rs:1499 apps/calculator/src/ui.rs:1503
 msgid "Bit {bit}"
 msgstr "ビット {bit}"
 
-#: apps/calculator/src/ui.rs:1558
+#: apps/calculator/src/ui.rs:1570
 msgid "C_alculate"
 msgstr "計算(_A)"
 
-#: apps/calculator/src/ui.rs:1558 apps/calendar/src/editor.rs:1039
+#: apps/calculator/src/ui.rs:1570 apps/calendar/src/editor.rs:1039
 #: apps/calendar/src/manage.rs:374 apps/calendar/src/ui.rs:2470
 #: apps/clocks/src/ui.rs:410 apps/clocks/src/ui.rs:1352
 #: apps/clocks/src/ui.rs:1907 apps/disk-usage/src/ui.rs:320
@@ -1134,11 +1134,11 @@ msgstr "計算(_A)"
 #: apps/disks/src/ui.rs:2022 apps/disks/src/ui.rs:2230
 #: apps/document-scanner/src/ui.rs:1264 apps/document-scanner/src/ui.rs:1379
 #: apps/document-scanner/src/ui.rs:1417 apps/document-viewer/src/dialogs.rs:169
-#: apps/files/src/ui/dialogs.rs:28 apps/files/src/ui/dialogs.rs:74
-#: apps/files/src/ui/dialogs.rs:220 apps/files/src/ui/sidebar.rs:684
-#: apps/help/src/ui.rs:196 apps/music/src/pages.rs:2129
-#: apps/music/src/pages.rs:2232 apps/music/src/pages.rs:2317
-#: apps/settings/src/ui/agent_access.rs:280
+#: apps/files/src/ui/dialogs.rs:30 apps/files/src/ui/dialogs.rs:76
+#: apps/files/src/ui/dialogs.rs:199 apps/files/src/ui/dialogs.rs:330
+#: apps/files/src/ui/sidebar.rs:684 apps/help/src/ui.rs:196
+#: apps/music/src/pages.rs:2129 apps/music/src/pages.rs:2232
+#: apps/music/src/pages.rs:2317 apps/settings/src/ui/agent_access.rs:280
 #: apps/settings/src/ui/agent_access.rs:996 apps/settings/src/ui/apps.rs:553
 #: apps/settings/src/ui/bluetooth.rs:647 apps/settings/src/ui/netedit.rs:389
 #: apps/settings/src/ui/printers.rs:606 apps/settings/src/ui/users.rs:642
@@ -1152,43 +1152,43 @@ msgstr "計算(_A)"
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
-#: apps/calculator/src/ui.rs:1591 apps/disk-usage/src/ui.rs:441
+#: apps/calculator/src/ui.rs:1603 apps/disk-usage/src/ui.rs:441
 msgid "Results"
 msgstr "結果"
 
-#: apps/calculator/src/ui.rs:1597
+#: apps/calculator/src/ui.rs:1609
 msgid "Number _Format"
 msgstr "数値の書式(_F)"
 
-#: apps/calculator/src/ui.rs:1608
+#: apps/calculator/src/ui.rs:1620
 msgid "_Decimal Places"
 msgstr "小数点以下の桁数(_D)"
 
-#: apps/calculator/src/ui.rs:1612
+#: apps/calculator/src/ui.rs:1624
 msgid "_Thousands Separators"
 msgstr "桁区切り(_T)"
 
-#: apps/calculator/src/ui.rs:1617
+#: apps/calculator/src/ui.rs:1629
 msgid "_Trailing Zeroes"
 msgstr "末尾のゼロ(_T)"
 
-#: apps/calculator/src/ui.rs:1631
+#: apps/calculator/src/ui.rs:1643
 msgid "_Angle Units"
 msgstr "角度の単位(_A)"
 
-#: apps/calculator/src/ui.rs:1634
+#: apps/calculator/src/ui.rs:1646
 msgid "Degrees"
 msgstr "度"
 
-#: apps/calculator/src/ui.rs:1635
+#: apps/calculator/src/ui.rs:1647
 msgid "Radians"
 msgstr "ラジアン"
 
-#: apps/calculator/src/ui.rs:1636
+#: apps/calculator/src/ui.rs:1648
 msgid "Gradians"
 msgstr "グラード"
 
-#: apps/calculator/src/ui.rs:1696
+#: apps/calculator/src/ui.rs:1708
 msgid "{} equals {}"
 msgstr "{} は {}"
 
@@ -1420,7 +1420,7 @@ msgid "Calendar"
 msgstr "カレンダー"
 
 #: apps/calendar/src/editor.rs:504 apps/document-viewer/src/dialogs.rs:112
-#: apps/files/src/ui/window.rs:211 apps/image-viewer/src/ui.rs:592
+#: apps/files/src/ui/window.rs:212 apps/image-viewer/src/ui.rs:592
 #: apps/settings/src/permissions.rs:45 apps/settings/src/ui/printers.rs:269
 #: apps/settings/src/ui/privacy.rs:155 apps/web/src/permissions.rs:24
 msgid "Location"
@@ -1459,7 +1459,7 @@ msgid "Ends"
 msgstr "終了"
 
 #: apps/calendar/src/editor.rs:558 apps/disks/src/ui.rs:1863
-#: apps/files/src/ui/dialogs.rs:663 apps/files/src/ui/dialogs.rs:701
+#: apps/files/src/ui/dialogs.rs:773 apps/files/src/ui/dialogs.rs:811
 #: apps/settings/src/values.rs:61 apps/settings/src/values.rs:84
 #: apps/web/src/dialogs.rs:75
 msgid "Never"
@@ -1658,7 +1658,7 @@ msgstr "{display} を表示"
 #: apps/calendar/src/manage.rs:297 apps/clocks/src/ui.rs:1460
 #: apps/contacts/src/editor.rs:302 apps/disk-usage/src/ui.rs:1005
 #: apps/disks/src/ui.rs:1640 apps/files/src/sorting.rs:43
-#: apps/files/src/ui/tab.rs:245 apps/settings/src/ui/netedit.rs:235
+#: apps/files/src/ui/tab.rs:269 apps/settings/src/ui/netedit.rs:235
 #: apps/settings/src/ui/users.rs:81
 msgid "Name"
 msgstr "名前"
@@ -1820,8 +1820,8 @@ msgstr "インポート"
 #: apps/characters/src/ui.rs:170 apps/characters/src/ui.rs:362
 #: apps/characters/src/ui.rs:364 apps/contacts/src/shortcuts.rs:19
 #: apps/document-viewer/src/ui.rs:372 apps/document-viewer/src/ui.rs:543
-#: apps/files/src/ui/dialogs.rs:694 apps/files/src/ui/shortcuts.rs:28
-#: apps/files/src/ui/window.rs:274 apps/files/src/ui/window.rs:276
+#: apps/files/src/ui/dialogs.rs:804 apps/files/src/ui/shortcuts.rs:28
+#: apps/files/src/ui/window.rs:275 apps/files/src/ui/window.rs:277
 #: apps/fonts/src/shortcuts.rs:17 apps/fonts/src/ui.rs:290
 #: apps/fonts/src/ui.rs:292 apps/help/src/shortcuts.rs:32
 #: apps/help/src/ui.rs:377 apps/help/src/ui.rs:379
@@ -1864,8 +1864,8 @@ msgid "Month View"
 msgstr "月表示"
 
 #: apps/calendar/src/shortcuts.rs:23 apps/document-viewer/src/shortcuts.rs:14
-#: apps/files/src/ui/shortcuts.rs:50 apps/files/src/ui/window.rs:180
-#: apps/files/src/ui/window.rs:182 apps/help/src/shortcuts.rs:33
+#: apps/files/src/ui/shortcuts.rs:50 apps/files/src/ui/window.rs:181
+#: apps/files/src/ui/window.rs:183 apps/help/src/shortcuts.rs:33
 #: apps/help/src/ui.rs:371 apps/help/src/ui.rs:374
 msgid "Show Sidebar"
 msgstr "サイドバーを表示"
@@ -1981,7 +1981,7 @@ msgid "_Import…"
 msgstr "インポート(_I)…"
 
 #: apps/calendar/src/ui.rs:291 apps/contacts/src/ui.rs:206
-#: apps/files/src/ui/window.rs:232 apps/maps/src/ui.rs:486
+#: apps/files/src/ui/window.rs:233 apps/maps/src/ui.rs:486
 #: apps/settings/src/ui/mod.rs:214 apps/terminal/src/window.rs:296
 #: apps/text-editor/src/window.rs:65 apps/web/src/window.rs:222
 #: apps/web/src/window.rs:265 crates/helix-app-common/src/shortcuts.rs:25
@@ -2000,15 +2000,15 @@ msgstr "予定を検索"
 msgid "Search Events"
 msgstr "予定を検索"
 
-#: apps/calendar/src/ui.rs:371 apps/files/src/ui/dialogs.rs:429
-#: apps/files/src/ui/tab.rs:1125 apps/settings/src/ui/mod.rs:246
+#: apps/calendar/src/ui.rs:371 apps/files/src/ui/dialogs.rs:539
+#: apps/files/src/ui/tab.rs:1170 apps/settings/src/ui/mod.rs:246
 #: apps/settings/src/ui/picker.rs:115 apps/web/src/dialogs.rs:752
 #: apps/web/src/window.rs:2378
 msgid "No Results Found"
 msgstr "結果が見つかりません"
 
 #: apps/calendar/src/ui.rs:372 apps/characters/src/ui.rs:456
-#: apps/files/src/ui/dialogs.rs:434 apps/fonts/src/ui.rs:436
+#: apps/files/src/ui/dialogs.rs:544 apps/fonts/src/ui.rs:436
 #: apps/music/src/pages.rs:1687 apps/settings/src/ui/mod.rs:247
 #: apps/settings/src/ui/picker.rs:116 apps/web/src/dialogs.rs:753
 #: apps/web/src/window.rs:2379
@@ -2385,8 +2385,8 @@ msgstr "写真の撮影はサポートされていません: JPEG エンコー�
 msgid "Countdown cancelled"
 msgstr "カウントダウンをキャンセルしました"
 
-#: apps/camera/src/ui.rs:859 apps/files/src/ui/dialogs.rs:455
-#: apps/files/src/ui/sidebar.rs:564 apps/files/src/ui/window.rs:1665
+#: apps/camera/src/ui.rs:859 apps/files/src/ui/dialogs.rs:565
+#: apps/files/src/ui/sidebar.rs:564 apps/files/src/ui/window.rs:1760
 #: apps/help/src/ui.rs:197 apps/text-editor/src/window.rs:131
 msgid "_Open"
 msgstr "開く(_O)"
@@ -2591,7 +2591,7 @@ msgid "Character map and emoji picker"
 msgstr "文字マップと絵文字ピッカー"
 
 #: apps/characters/src/ui.rs:199 apps/contacts/src/ui.rs:1102
-#: apps/files/src/ui/tab.rs:1370 apps/logs/src/ui.rs:719
+#: apps/files/src/ui/tab.rs:1415 apps/logs/src/ui.rs:719
 #: apps/text-editor/src/doc.rs:866
 msgid "No results"
 msgstr "結果なし"
@@ -2976,8 +2976,8 @@ msgstr "夜"
 #: apps/clocks/src/ui.rs:310 apps/clocks/src/ui.rs:311
 #: apps/document-scanner/src/ui.rs:1780
 #: apps/document-viewer/src/shortcuts.rs:33 apps/files/src/ui/shortcuts.rs:22
-#: apps/files/src/ui/window.rs:185 apps/files/src/ui/window.rs:188
-#: apps/files/src/ui/window.rs:379 apps/help/src/shortcuts.rs:29
+#: apps/files/src/ui/window.rs:186 apps/files/src/ui/window.rs:189
+#: apps/files/src/ui/window.rs:380 apps/help/src/shortcuts.rs:29
 #: apps/help/src/ui.rs:353 apps/help/src/ui.rs:356 apps/web/src/shortcuts.rs:37
 #: apps/web/src/window.rs:338
 msgid "Back"
@@ -3218,8 +3218,8 @@ msgstr "開始(_S)"
 msgid "{label} deleted"
 msgstr "{label} を削除しました"
 
-#: apps/clocks/src/ui.rs:1871 apps/files/src/ui/window.rs:228
-#: apps/files/src/ui/window.rs:1361 apps/image-viewer/src/ui.rs:1662
+#: apps/clocks/src/ui.rs:1871 apps/files/src/ui/window.rs:229
+#: apps/files/src/ui/window.rs:1377 apps/image-viewer/src/ui.rs:1668
 msgid "_Undo"
 msgstr "元に戻す(_U)"
 
@@ -3978,8 +3978,8 @@ msgid "storage"
 msgstr "ストレージ"
 
 #: apps/disk-usage/src/mounts.rs:155 apps/files/src/pathbar.rs:25
-#: apps/files/src/pathbar.rs:112 apps/files/src/ui/tab.rs:1424
-#: apps/files/src/ui/window.rs:139 apps/settings/src/bluez.rs:229
+#: apps/files/src/pathbar.rs:112 apps/files/src/ui/tab.rs:1469
+#: apps/files/src/ui/window.rs:140 apps/settings/src/bluez.rs:229
 msgid "Computer"
 msgstr "コンピューター"
 
@@ -4175,7 +4175,7 @@ msgstr[0] "{n} 項目"
 
 #: apps/disk-usage/src/ui.rs:1006 apps/disks/src/ui.rs:358
 #: apps/disks/src/ui.rs:453 apps/files/src/sorting.rs:44
-#: apps/files/src/ui/properties.rs:185 apps/files/src/ui/tab.rs:246
+#: apps/files/src/ui/properties.rs:185 apps/files/src/ui/tab.rs:270
 #: apps/fonts/src/fontinfo.rs:314 apps/music/src/details.rs:137
 msgid "Size"
 msgstr "サイズ"
@@ -4188,7 +4188,7 @@ msgstr "内容"
 
 #: apps/disk-usage/src/ui.rs:1008 apps/document-viewer/src/dialogs.rs:104
 #: apps/files/src/sorting.rs:46 apps/files/src/ui/properties.rs:234
-#: apps/files/src/ui/tab.rs:248 apps/image-viewer/src/ui.rs:585
+#: apps/files/src/ui/tab.rs:272 apps/image-viewer/src/ui.rs:585
 msgid "Modified"
 msgstr "更新日時"
 
@@ -4254,7 +4254,7 @@ msgstr "スキャンするフォルダーを選択"
 msgid "Only local folders can be scanned"
 msgstr "スキャンできるのはローカルフォルダーのみです"
 
-#: apps/disk-usage/src/ui.rs:1642 apps/image-viewer/src/ui.rs:1019
+#: apps/disk-usage/src/ui.rs:1642 apps/image-viewer/src/ui.rs:1025
 msgid "Could not open folder: {}"
 msgstr "フォルダーを開けませんでした: {}"
 
@@ -5291,7 +5291,7 @@ msgstr "ボリューム名"
 
 #: apps/disks/src/ui.rs:1365 apps/disks/src/ui.rs:1634
 #: apps/disks/src/ui.rs:1906 apps/files/src/sorting.rs:45
-#: apps/files/src/ui/properties.rs:177 apps/files/src/ui/tab.rs:247
+#: apps/files/src/ui/properties.rs:177 apps/files/src/ui/tab.rs:271
 #: apps/settings/src/ui/bluetooth.rs:513 apps/settings/src/ui/network.rs:529
 #: apps/system-monitor/src/fs_view.rs:25
 msgid "Type"
@@ -5379,7 +5379,7 @@ msgid "Delete Partition?"
 msgstr "パーティションを削除しますか?"
 
 #: apps/disks/src/ui.rs:1594 apps/document-scanner/src/ui.rs:228
-#: apps/files/src/ui/window.rs:1393 apps/files/src/ui/window.rs:1478
+#: apps/files/src/ui/window.rs:1409 apps/files/src/ui/window.rs:1494
 #: apps/music/src/pages.rs:2318
 msgid "_Delete"
 msgstr "削除(_D)"
@@ -6011,8 +6011,8 @@ msgid "_Crop"
 msgstr "トリミング(_C)"
 
 #: apps/document-scanner/src/ui.rs:227 apps/document-viewer/src/ui.rs:920
-#: apps/files/src/ui/window.rs:1691 apps/image-viewer/src/ui.rs:305
-#: apps/image-viewer/src/ui.rs:784 apps/terminal/src/window.rs:738
+#: apps/files/src/ui/window.rs:1786 apps/image-viewer/src/ui.rs:305
+#: apps/image-viewer/src/ui.rs:790 apps/terminal/src/window.rs:738
 msgid "_Copy"
 msgstr "コピー(_C)"
 
@@ -6570,7 +6570,7 @@ msgstr "すべて選択"
 msgid "Caret Navigation"
 msgstr "キャレットナビゲーション"
 
-#: apps/document-viewer/src/shortcuts.rs:26 apps/files/src/ui/dialogs.rs:678
+#: apps/document-viewer/src/shortcuts.rs:26 apps/files/src/ui/dialogs.rs:788
 #: apps/system-monitor/src/shortcuts.rs:42 apps/terminal/src/shortcuts.rs:32
 msgid "Context Menu"
 msgstr "コンテキストメニュー"
@@ -6580,8 +6580,8 @@ msgid "Go to Page"
 msgstr "ページへ移動"
 
 #: apps/document-viewer/src/shortcuts.rs:34 apps/files/src/ui/shortcuts.rs:23
-#: apps/files/src/ui/window.rs:191 apps/files/src/ui/window.rs:194
-#: apps/files/src/ui/window.rs:381 apps/help/src/shortcuts.rs:30
+#: apps/files/src/ui/window.rs:192 apps/files/src/ui/window.rs:195
+#: apps/files/src/ui/window.rs:382 apps/help/src/shortcuts.rs:30
 #: apps/help/src/ui.rs:359 apps/help/src/ui.rs:362 apps/web/src/shortcuts.rs:38
 #: apps/web/src/window.rs:339
 msgid "Forward"
@@ -6635,7 +6635,7 @@ msgstr "ページへ移動"
 msgid "Current Page"
 msgstr "現在のページ"
 
-#: apps/document-viewer/src/ui.rs:283 apps/files/src/ui/window.rs:224
+#: apps/document-viewer/src/ui.rs:283 apps/files/src/ui/window.rs:225
 #: apps/text-editor/src/window.rs:48 apps/web/src/window.rs:234
 msgid "New _Window"
 msgstr "新しいウィンドウ(_W)"
@@ -6737,8 +6737,8 @@ msgstr ""
 msgid "Caret navigation off"
 msgstr "キャレットナビゲーション オフ"
 
-#: apps/document-viewer/src/ui.rs:921 apps/files/src/ui/window.rs:1717
-#: apps/files/src/ui/window.rs:1724 apps/files/src/ui/window.rs:1733
+#: apps/document-viewer/src/ui.rs:921 apps/files/src/ui/window.rs:1819
+#: apps/files/src/ui/window.rs:1826 apps/files/src/ui/window.rs:1835
 #: apps/terminal/src/window.rs:740
 msgid "Select _All"
 msgstr "すべて選択(_A)"
@@ -6823,6 +6823,90 @@ msgstr "フォルダー"
 msgid "manager"
 msgstr "マネージャー"
 
+#: apps/files/src/archive.rs:184 apps/files/src/ops.rs:397
+#: apps/screenshot/src/shell.rs:79 apps/settings/src/agents.rs:1202
+#: apps/web/src/window.rs:2341
+msgid "Cancelled"
+msgstr "キャンセルしました"
+
+#: apps/files/src/archive.rs:185
+msgid "“{file}”: {error}"
+msgstr "「{file}」: {error}"
+
+#: apps/files/src/archive.rs:193
+msgid "The archive is damaged or in an unsupported format ({detail})."
+msgstr "アーカイブが壊れているか、対応していない形式です ({detail})。"
+
+#: apps/files/src/archive.rs:197
+msgid "This is not an archive Files can extract."
+msgstr "これはファイルで展開できるアーカイブではありません。"
+
+#: apps/files/src/archive.rs:198
+msgid "Encrypted archives are not supported."
+msgstr "暗号化されたアーカイブには対応していません。"
+
+#: apps/files/src/archive.rs:200
+msgid "“{entry}” has an absolute path, so the archive is unsafe to extract."
+msgstr ""
+"「{entry}」は絶対パスのため、このアーカイブを展開するのは安全ではありません。"
+
+#: apps/files/src/archive.rs:204
+msgid ""
+"“{entry}” points outside the destination folder, so the archive is unsafe to "
+"extract."
+msgstr ""
+"「{entry}」は展開先フォルダーの外を指しているため、このアーカイブを展開するの"
+"は安全ではありません。"
+
+#: apps/files/src/archive.rs:208
+msgid ""
+"The link “{entry}” points outside the destination folder, so the archive is "
+"unsafe to extract."
+msgstr ""
+"リンク「{entry}」は展開先フォルダーの外を指しているため、このアーカイブを展開"
+"するのは安全ではありません。"
+
+#: apps/files/src/archive.rs:212
+msgid ""
+"The hard link “{entry}” does not point to a file in the archive, so the "
+"archive is unsafe to extract."
+msgstr ""
+"ハードリンク「{entry}」はアーカイブ内のファイルを指していないため、このアーカ"
+"イブを展開するのは安全ではありません。"
+
+#: apps/files/src/archive.rs:216
+msgid ""
+"“{entry}” would be written through a link, so the archive is unsafe to "
+"extract."
+msgstr ""
+"「{entry}」はリンクを経由して書き込まれるため、このアーカイブを展開するのは安"
+"全ではありません。"
+
+#: apps/files/src/archive.rs:221
+msgid "“{entry}” clashes with another item in the archive."
+msgstr "「{entry}」はアーカイブ内の別の項目と競合しています。"
+
+#: apps/files/src/archive.rs:225
+msgid "There is not enough free space: {needed} needed, {available} available."
+msgstr ""
+"空き容量が足りません: {needed} 必要ですが、利用可能なのは {available} です。"
+
+#: apps/files/src/archive.rs:230
+msgid ""
+"The archive expands to far more data than it holds, as a decompression bomb "
+"would, so it was not extracted."
+msgstr ""
+"このアーカイブは展開爆弾のように、含まれるデータよりはるかに大きく展開される"
+"ため、展開しませんでした。"
+
+#: apps/files/src/archive.rs:848
+msgid "“{entry}” is larger than it says"
+msgstr "「{entry}」は記載されたサイズより大きくなっています"
+
+#: apps/files/src/archive.rs:1140
+msgid "The file changed while it was being archived."
+msgstr "アーカイブ中にファイルが変更されました。"
+
 #: apps/files/src/cli.rs:37
 msgid "Unknown option {arg}"
 msgstr "不明なオプション {arg}"
@@ -6843,182 +6927,216 @@ msgstr "{name} へのリンク"
 msgid "Link to {stem} ({n}){ext}"
 msgstr "{stem} ({n}){ext} へのリンク"
 
-#: apps/files/src/naming.rs:100
+#: apps/files/src/naming.rs:107
+msgid "{stem} ({n}){ext}"
+msgstr "{stem} ({n}){ext}"
+
+#: apps/files/src/naming.rs:118
 msgid "The name cannot be empty."
 msgstr "名前を空にすることはできません。"
 
-#: apps/files/src/naming.rs:103
+#: apps/files/src/naming.rs:121
 msgid "File names cannot contain “/”."
 msgstr "ファイル名に「/」を含めることはできません。"
 
-#: apps/files/src/naming.rs:106
+#: apps/files/src/naming.rs:124
 msgid "A file cannot be called “.”."
 msgstr "ファイル名を「.」にすることはできません。"
 
-#: apps/files/src/naming.rs:109
+#: apps/files/src/naming.rs:127
 msgid "A file cannot be called “..”."
 msgstr "ファイル名を「..」にすることはできません。"
 
-#: apps/files/src/naming.rs:112
+#: apps/files/src/naming.rs:130
 msgid "The name is too long."
 msgstr "名前が長すぎます。"
 
-#: apps/files/src/ops.rs:44
+#: apps/files/src/ops.rs:56
 msgid "Copying {n} item to “{folder}”"
 msgid_plural "Copying {n} items to “{folder}”"
 msgstr[0] "{n} 個の項目を「{folder}」にコピー中"
 
-#: apps/files/src/ops.rs:50
+#: apps/files/src/ops.rs:62
 msgid "Moving {n} item to “{folder}”"
 msgid_plural "Moving {n} items to “{folder}”"
 msgstr[0] "{n} 個の項目を「{folder}」に移動中"
 
-#: apps/files/src/ops.rs:56
+#: apps/files/src/ops.rs:68
 msgid "Creating links to {n} item"
 msgid_plural "Creating links to {n} items"
 msgstr[0] "{n} 個の項目へのリンクを作成中"
 
-#: apps/files/src/ops.rs:61
+#: apps/files/src/ops.rs:73
 msgid "Moving {n} item to Trash"
 msgid_plural "Moving {n} items to Trash"
 msgstr[0] "{n} 個の項目をゴミ箱へ移動中"
 
-#: apps/files/src/ops.rs:66
+#: apps/files/src/ops.rs:78
 msgid "Deleting {n} item"
 msgid_plural "Deleting {n} items"
 msgstr[0] "{n} 個の項目を削除中"
 
-#: apps/files/src/ops.rs:68
+#: apps/files/src/ops.rs:80
 msgid "Restoring {n} item"
 msgid_plural "Restoring {n} items"
 msgstr[0] "{n} 個の項目を復元中"
 
-#: apps/files/src/ops.rs:70
+#: apps/files/src/ops.rs:82
 msgid "Emptying Trash"
 msgstr "ゴミ箱を空にしています"
 
-#: apps/files/src/ops.rs:82
+#: apps/files/src/ops.rs:84
+msgid "Creating “{archive}”"
+msgstr "「{archive}」を作成中"
+
+#: apps/files/src/ops.rs:87
+msgid "Extracting “{archive}”"
+msgstr "「{archive}」を展開中"
+
+#: apps/files/src/ops.rs:88
+msgid "Extracting {n} archive"
+msgid_plural "Extracting {n} archives"
+msgstr[0] "{n} 個のアーカイブを展開中"
+
+#: apps/files/src/ops.rs:101
 msgid "Copied {n} item to “{folder}”"
 msgid_plural "Copied {n} items to “{folder}”"
 msgstr[0] "{n} 個の項目を「{folder}」にコピーしました"
 
-#: apps/files/src/ops.rs:88
+#: apps/files/src/ops.rs:107
 msgid "Moved {n} item to “{folder}”"
 msgid_plural "Moved {n} items to “{folder}”"
 msgstr[0] "{n} 個の項目を「{folder}」に移動しました"
 
-#: apps/files/src/ops.rs:95
+#: apps/files/src/ops.rs:114
 msgid "Created {n} link"
 msgid_plural "Created {n} links"
 msgstr[0] "{n} 個のリンクを作成しました"
 
-#: apps/files/src/ops.rs:98
+#: apps/files/src/ops.rs:117
 msgid "Restored {n} item"
 msgid_plural "Restored {n} items"
 msgstr[0] "{n} 個の項目を復元しました"
 
-#: apps/files/src/ops.rs:100
+#: apps/files/src/ops.rs:119
 msgid "Deleted {n} item"
 msgid_plural "Deleted {n} items"
 msgstr[0] "{n} 個の項目を削除しました"
 
-#: apps/files/src/ops.rs:101
+#: apps/files/src/ops.rs:120
 msgid "Trash emptied"
 msgstr "ゴミ箱を空にしました"
 
-#: apps/files/src/ops.rs:119 apps/files/src/pathbar.rs:108
-#: apps/files/src/ui/sidebar.rs:93 apps/files/src/ui/window.rs:340
+#: apps/files/src/ops.rs:123
+msgid "Created “{archive}”"
+msgstr "「{archive}」を作成しました"
+
+#: apps/files/src/ops.rs:125
+msgid "Extracted {n} archive"
+msgid_plural "Extracted {n} archives"
+msgstr[0] "{n} 個のアーカイブを展開しました"
+
+#: apps/files/src/ops.rs:146 apps/files/src/pathbar.rs:108
+#: apps/files/src/ui/sidebar.rs:93 apps/files/src/ui/window.rs:341
 msgid "Trash"
 msgstr "ゴミ箱"
 
-#: apps/files/src/ops.rs:268
+#: apps/files/src/ops.rs:295
 msgid "Could not replace “{file}”: {error}"
 msgstr "「{file}」を置き換えられませんでした: {error}"
 
-#: apps/files/src/ops.rs:273
+#: apps/files/src/ops.rs:300
 msgid "Could not move “{file}”: {error}"
 msgstr "「{file}」を移動できませんでした: {error}"
 
-#: apps/files/src/ops.rs:278
+#: apps/files/src/ops.rs:305
 msgid "Could not read “{file}”: {error}"
 msgstr "「{file}」を読み取れませんでした: {error}"
 
-#: apps/files/src/ops.rs:283
+#: apps/files/src/ops.rs:310
 msgid "Could not remove “{file}”: {error}"
 msgstr "「{file}」を削除できませんでした: {error}"
 
-#: apps/files/src/ops.rs:288
+#: apps/files/src/ops.rs:315
 msgid "Could not link to “{file}”: {error}"
 msgstr "「{file}」へのリンクを作成できませんでした: {error}"
 
-#: apps/files/src/ops.rs:293
+#: apps/files/src/ops.rs:320
 msgid "Could not move “{file}” to the Trash: {error}"
 msgstr "「{file}」をゴミ箱へ移動できませんでした: {error}"
 
-#: apps/files/src/ops.rs:298
+#: apps/files/src/ops.rs:325
 msgid "Could not delete “{file}”: {error}"
 msgstr "「{file}」を削除できませんでした: {error}"
 
-#: apps/files/src/ops.rs:303
+#: apps/files/src/ops.rs:330
 msgid "Could not restore “{file}”: {error}"
 msgstr "「{file}」を復元できませんでした: {error}"
 
-#: apps/files/src/ops.rs:308
+#: apps/files/src/ops.rs:335
 msgid "Could not empty “{file}”: {error}"
 msgstr "「{file}」を空にできませんでした: {error}"
 
-#: apps/files/src/ops.rs:313
+#: apps/files/src/ops.rs:340
 msgid "Could not process “{file}”: {error}"
 msgstr "「{file}」を処理できませんでした: {error}"
 
-#: apps/files/src/ops.rs:370 apps/screenshot/src/shell.rs:79
-#: apps/settings/src/agents.rs:1202 apps/web/src/window.rs:2341
-msgid "Cancelled"
-msgstr "キャンセルしました"
-
-#: apps/files/src/ops.rs:392
+#: apps/files/src/ops.rs:419
 msgid "“{}” no longer exists"
 msgstr "「{}」はもう存在しません"
 
-#: apps/files/src/ops.rs:398
+#: apps/files/src/ops.rs:425
 msgid "Cannot move “{}” into itself"
 msgstr "「{}」をそれ自身の中に移動することはできません"
 
-#: apps/files/src/ops.rs:400
+#: apps/files/src/ops.rs:427
 msgid "Cannot copy “{}” into itself"
 msgstr "「{}」をそれ自身の中にコピーすることはできません"
 
-#: apps/files/src/ops.rs:590
+#: apps/files/src/ops.rs:617
 msgid "Cannot create a link to “{}”: not a local file"
 msgstr "「{}」へのリンクを作成できません: ローカルファイルではありません"
 
-#: apps/files/src/ops.rs:669
+#: apps/files/src/ops.rs:696
 msgid "“{}” has no original location"
 msgstr "「{}」には元の場所がありません"
 
-#: apps/files/src/ops.rs:728
+#: apps/files/src/ops.rs:755
 msgid "{n} item could not be found in the Trash"
 msgid_plural "{n} items could not be found in the Trash"
 msgstr[0] "{n} 個の項目がゴミ箱に見つかりませんでした"
+
+#: apps/files/src/ops.rs:801
+msgid "“{file}” is not on this computer, so it can’t be archived or extracted"
+msgstr ""
+"「{file}」はこのコンピューター上にないため、アーカイブも展開もできません"
+
+#: apps/files/src/ops.rs:832
+msgid "Could not create “{file}”: {error}"
+msgstr "「{file}」を作成できませんでした: {error}"
+
+#: apps/files/src/ops.rs:875
+msgid "Could not extract “{file}”: {error}"
+msgstr "「{file}」を展開できませんでした: {error}"
 
 #: apps/files/src/pathbar.rs:109 apps/files/src/ui/sidebar.rs:81
 msgid "Recent"
 msgstr "最近使用したもの"
 
 #: apps/files/src/pathbar.rs:110 apps/files/src/ui/sidebar.rs:122
-#: apps/files/src/ui/tab.rs:1434 apps/settings/src/bluez.rs:235
+#: apps/files/src/ui/tab.rs:1479 apps/settings/src/bluez.rs:235
 #: apps/settings/src/panels.rs:64 apps/system-monitor/src/res_view.rs:385
 msgid "Network"
 msgstr "ネットワーク"
 
 #: apps/files/src/pathbar.rs:111 apps/files/src/ui/properties.rs:95
 #: apps/files/src/ui/sidebar.rs:87 apps/files/src/ui/tab.rs:135
-#: apps/files/src/ui/window.rs:748
+#: apps/files/src/ui/window.rs:759
 msgid "Starred"
 msgstr "星付き"
 
 #: apps/files/src/pathbar.rs:113 apps/files/src/ui/sidebar.rs:128
-#: apps/files/src/ui/window.rs:132
+#: apps/files/src/ui/window.rs:133
 msgid "Other Locations"
 msgstr "他の場所"
 
@@ -7034,43 +7152,60 @@ msgstr "(as, s) が必要です"
 msgid "Unknown method"
 msgstr "不明なメソッド"
 
-#: apps/files/src/ui/dialogs.rs:51
+#: apps/files/src/ui/dialogs.rs:53
 msgid "Folder _Name"
 msgstr "フォルダー名(_N)"
 
-#: apps/files/src/ui/dialogs.rs:53
+#: apps/files/src/ui/dialogs.rs:55
 msgid "File _Name"
 msgstr "ファイル名(_N)"
 
-#: apps/files/src/ui/dialogs.rs:91
+#: apps/files/src/ui/dialogs.rs:93
 msgid "A folder with that name already exists."
 msgstr "その名前のフォルダーはすでに存在します。"
 
-#: apps/files/src/ui/dialogs.rs:93
+#: apps/files/src/ui/dialogs.rs:95 apps/files/src/ui/dialogs.rs:230
 msgid "A file with that name already exists."
 msgstr "その名前のファイルはすでに存在します。"
 
-#: apps/files/src/ui/dialogs.rs:111
+#: apps/files/src/ui/dialogs.rs:113
 msgid "Names starting with “.” are hidden."
 msgstr "「.」で始まる名前は隠しファイルになります。"
 
-#: apps/files/src/ui/dialogs.rs:164
+#: apps/files/src/ui/dialogs.rs:167
+msgid "Archive _Name"
+msgstr "アーカイブ名(_N)"
+
+#: apps/files/src/ui/dialogs.rs:175 apps/files/src/ui/dialogs.rs:176
+msgid "Archive Format"
+msgstr "アーカイブ形式"
+
+#: apps/files/src/ui/dialogs.rs:194
+msgid "Create Archive"
+msgstr "アーカイブを作成"
+
+#: apps/files/src/ui/dialogs.rs:199 apps/files/src/ui/window.rs:1613
+#: apps/music/src/pages.rs:2133
+msgid "_Create"
+msgstr "作成(_C)"
+
+#: apps/files/src/ui/dialogs.rs:274
 msgid "{size}, last modified {date}"
 msgstr "{size}、最終更新 {date}"
 
-#: apps/files/src/ui/dialogs.rs:165
+#: apps/files/src/ui/dialogs.rs:275
 msgid "Last modified {date}"
 msgstr "最終更新 {date}"
 
-#: apps/files/src/ui/dialogs.rs:193
+#: apps/files/src/ui/dialogs.rs:303
 msgid "Merge Folder “{name}”?"
 msgstr "フォルダー「{name}」を統合しますか?"
 
-#: apps/files/src/ui/dialogs.rs:195
+#: apps/files/src/ui/dialogs.rs:305
 msgid "Replace “{name}”?"
 msgstr "「{name}」を置き換えますか?"
 
-#: apps/files/src/ui/dialogs.rs:198
+#: apps/files/src/ui/dialogs.rs:308
 msgid ""
 "A folder with the same name already exists in “{folder}”. Merging will ask "
 "before replacing any files in the folder that conflict with the files being "
@@ -7079,7 +7214,7 @@ msgstr ""
 "「{folder}」には同じ名前のフォルダーがすでに存在します。統合する場合、コピー"
 "するファイルと競合するフォルダー内のファイルを置き換える前に確認します。"
 
-#: apps/files/src/ui/dialogs.rs:200
+#: apps/files/src/ui/dialogs.rs:310
 msgid ""
 "Another file with the same name already exists in “{folder}”. Replacing it "
 "will overwrite its content."
@@ -7087,179 +7222,179 @@ msgstr ""
 "「{folder}」には同じ名前のファイルがすでに存在します。置き換えると内容が上書"
 "きされます。"
 
-#: apps/files/src/ui/dialogs.rs:205
+#: apps/files/src/ui/dialogs.rs:315
 msgid "Original: {description}"
 msgstr "元のファイル: {description}"
 
-#: apps/files/src/ui/dialogs.rs:209
+#: apps/files/src/ui/dialogs.rs:319
 msgid "Replace with: {description}"
 msgstr "置き換えるファイル: {description}"
 
-#: apps/files/src/ui/dialogs.rs:211
+#: apps/files/src/ui/dialogs.rs:321
 msgid "Apply this action to all conflicts"
 msgstr "すべての競合にこの操作を適用する"
 
-#: apps/files/src/ui/dialogs.rs:221
+#: apps/files/src/ui/dialogs.rs:331
 msgid "_Skip"
 msgstr "スキップ(_S)"
 
-#: apps/files/src/ui/dialogs.rs:222
+#: apps/files/src/ui/dialogs.rs:332
 msgid "Keep _Both"
 msgstr "両方を残す(_B)"
 
-#: apps/files/src/ui/dialogs.rs:223
+#: apps/files/src/ui/dialogs.rs:333
 msgid "_Merge"
 msgstr "統合(_M)"
 
-#: apps/files/src/ui/dialogs.rs:223 apps/text-editor/src/doc.rs:209
+#: apps/files/src/ui/dialogs.rs:333 apps/text-editor/src/doc.rs:209
 msgid "_Replace"
 msgstr "置き換え(_R)"
 
-#: apps/files/src/ui/dialogs.rs:269
+#: apps/files/src/ui/dialogs.rs:379
 msgid "Recommended Applications"
 msgstr "推奨アプリケーション"
 
-#: apps/files/src/ui/dialogs.rs:270
+#: apps/files/src/ui/dialogs.rs:380
 msgid "Other Applications"
 msgstr "その他のアプリケーション"
 
-#: apps/files/src/ui/dialogs.rs:271
+#: apps/files/src/ui/dialogs.rs:381
 msgid "All Applications"
 msgstr "すべてのアプリケーション"
 
-#: apps/files/src/ui/dialogs.rs:349 apps/logs/src/category.rs:30
+#: apps/files/src/ui/dialogs.rs:459 apps/logs/src/category.rs:30
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: apps/files/src/ui/dialogs.rs:364 apps/settings/src/ui/appearance.rs:107
+#: apps/files/src/ui/dialogs.rs:474 apps/settings/src/ui/appearance.rs:107
 #: apps/settings/src/ui/printers.rs:237 apps/settings/src/ui/printers.rs:433
 #: apps/settings/src/ui/sound.rs:928 apps/settings/src/values.rs:204
 msgid "Default"
 msgstr "デフォルト"
 
-#: apps/files/src/ui/dialogs.rs:402
+#: apps/files/src/ui/dialogs.rs:512
 msgid "Search applications"
 msgstr "アプリケーションを検索"
 
-#: apps/files/src/ui/dialogs.rs:404
+#: apps/files/src/ui/dialogs.rs:514
 msgid "Search Applications"
 msgstr "アプリケーションを検索"
 
-#: apps/files/src/ui/dialogs.rs:427
+#: apps/files/src/ui/dialogs.rs:537
 msgid "No Applications Found"
 msgstr "アプリケーションが見つかりません"
 
-#: apps/files/src/ui/dialogs.rs:432
+#: apps/files/src/ui/dialogs.rs:542
 msgid "No installed application can open this file"
 msgstr "このファイルを開けるアプリケーションがインストールされていません"
 
-#: apps/files/src/ui/dialogs.rs:444
+#: apps/files/src/ui/dialogs.rs:554
 msgid "Always use for “{desc}” files"
 msgstr "「{desc}」ファイルに常に使用する"
 
-#: apps/files/src/ui/dialogs.rs:463 apps/image-viewer/src/shortcuts.rs:16
+#: apps/files/src/ui/dialogs.rs:573 apps/image-viewer/src/shortcuts.rs:16
 msgid "Open With"
 msgstr "アプリケーションで開く"
 
-#: apps/files/src/ui/dialogs.rs:488
+#: apps/files/src/ui/dialogs.rs:598
 msgid "No applications found"
 msgstr "アプリケーションが見つかりません"
 
-#: apps/files/src/ui/dialogs.rs:489
+#: apps/files/src/ui/dialogs.rs:599
 msgid "{n} application"
 msgid_plural "{n} applications"
 msgstr[0] "{n} 個のアプリケーション"
 
-#: apps/files/src/ui/dialogs.rs:514 apps/image-viewer/src/ui.rs:1608
+#: apps/files/src/ui/dialogs.rs:624 apps/image-viewer/src/ui.rs:1614
 msgid "Could not open: {}"
 msgstr "開けませんでした: {}"
 
-#: apps/files/src/ui/dialogs.rs:620
+#: apps/files/src/ui/dialogs.rs:730
 msgid "Sort Folders Before Files"
 msgstr "フォルダーをファイルより前に並べる"
 
-#: apps/files/src/ui/dialogs.rs:626
+#: apps/files/src/ui/dialogs.rs:736
 msgid "Open Action"
 msgstr "開く操作"
 
-#: apps/files/src/ui/dialogs.rs:629
+#: apps/files/src/ui/dialogs.rs:739
 msgid "Double Click"
 msgstr "ダブルクリック"
 
-#: apps/files/src/ui/dialogs.rs:630
+#: apps/files/src/ui/dialogs.rs:740
 msgid "Single Click"
 msgstr "シングルクリック"
 
-#: apps/files/src/ui/dialogs.rs:636 apps/files/src/ui/shortcuts.rs:49
+#: apps/files/src/ui/dialogs.rs:746 apps/files/src/ui/shortcuts.rs:49
 msgid "Show Hidden Files"
 msgstr "隠しファイルを表示"
 
-#: apps/files/src/ui/dialogs.rs:642
+#: apps/files/src/ui/dialogs.rs:752
 msgid "Always Show the Location Entry"
 msgstr "常に場所の入力欄を表示する"
 
-#: apps/files/src/ui/dialogs.rs:643
+#: apps/files/src/ui/dialogs.rs:753
 msgid "Instead of the path bar"
 msgstr "パスバーの代わりに"
 
-#: apps/files/src/ui/dialogs.rs:649
+#: apps/files/src/ui/dialogs.rs:759
 msgid "Views"
 msgstr "表示"
 
-#: apps/files/src/ui/dialogs.rs:651
+#: apps/files/src/ui/dialogs.rs:761
 msgid "Default View"
 msgstr "デフォルトの表示"
 
-#: apps/files/src/ui/dialogs.rs:653
+#: apps/files/src/ui/dialogs.rs:763
 msgid "Grid"
 msgstr "グリッド"
 
-#: apps/files/src/ui/dialogs.rs:653
+#: apps/files/src/ui/dialogs.rs:763
 msgid "List"
 msgstr "リスト"
 
-#: apps/files/src/ui/dialogs.rs:658 apps/image-viewer/src/shortcuts.rs:55
+#: apps/files/src/ui/dialogs.rs:768 apps/image-viewer/src/shortcuts.rs:55
 #: apps/image-viewer/src/ui.rs:457
 msgid "Show Thumbnails"
 msgstr "サムネイルを表示"
 
-#: apps/files/src/ui/dialogs.rs:661 apps/files/src/ui/dialogs.rs:699
+#: apps/files/src/ui/dialogs.rs:771 apps/files/src/ui/dialogs.rs:809
 msgid "On This Computer Only"
 msgstr "このコンピューターのみ"
 
-#: apps/files/src/ui/dialogs.rs:669
+#: apps/files/src/ui/dialogs.rs:779
 msgid "Date and Time Format"
 msgstr "日付と時刻の書式"
 
-#: apps/files/src/ui/dialogs.rs:671
+#: apps/files/src/ui/dialogs.rs:781
 msgid "Detailed"
 msgstr "詳細"
 
-#: apps/files/src/ui/dialogs.rs:671
+#: apps/files/src/ui/dialogs.rs:781
 msgid "Simple"
 msgstr "シンプル"
 
-#: apps/files/src/ui/dialogs.rs:681
+#: apps/files/src/ui/dialogs.rs:791
 msgid "Create Link"
 msgstr "リンクを作成"
 
-#: apps/files/src/ui/dialogs.rs:682
+#: apps/files/src/ui/dialogs.rs:792
 msgid "Show an action to create symbolic links"
 msgstr "シンボリックリンクを作成する操作を表示します"
 
-#: apps/files/src/ui/dialogs.rs:687 apps/files/src/ui/shortcuts.rs:61
+#: apps/files/src/ui/dialogs.rs:797 apps/files/src/ui/shortcuts.rs:61
 msgid "Delete Permanently"
 msgstr "完全に削除"
 
-#: apps/files/src/ui/dialogs.rs:688
+#: apps/files/src/ui/dialogs.rs:798
 msgid "Show an action to bypass the Trash"
 msgstr "ゴミ箱を経由しない操作を表示します"
 
-#: apps/files/src/ui/dialogs.rs:696
+#: apps/files/src/ui/dialogs.rs:806
 msgid "Search in Subfolders"
 msgstr "サブフォルダーも検索"
 
-#: apps/files/src/ui/dialogs.rs:700
+#: apps/files/src/ui/dialogs.rs:810
 msgid "All Locations"
 msgstr "すべての場所"
 
@@ -7280,8 +7415,8 @@ msgstr "準備中…"
 msgid "File Operations — {} % done"
 msgstr "ファイル操作 — {}% 完了"
 
-#: apps/files/src/ui/jobs.rs:100 apps/files/src/ui/window.rs:304
-#: apps/files/src/ui/window.rs:307
+#: apps/files/src/ui/jobs.rs:100 apps/files/src/ui/window.rs:305
+#: apps/files/src/ui/window.rs:308
 msgid "File Operations"
 msgstr "ファイル操作"
 
@@ -7317,8 +7452,8 @@ msgstr "実行中のインスタンスを終了する"
 msgid "Access and organize files"
 msgstr "ファイルにアクセスして整理します"
 
-#: apps/files/src/ui/mod.rs:388 apps/files/src/ui/window.rs:156
-#: apps/files/src/ui/window.rs:456
+#: apps/files/src/ui/mod.rs:388 apps/files/src/ui/window.rs:157
+#: apps/files/src/ui/window.rs:457
 msgid "Files"
 msgstr "ファイル"
 
@@ -7486,11 +7621,11 @@ msgstr "戻るまたは進む"
 msgid "Extra mouse buttons"
 msgstr "マウスの追加ボタン"
 
-#: apps/files/src/ui/shortcuts.rs:41 apps/files/src/ui/window.rs:829
+#: apps/files/src/ui/shortcuts.rs:41 apps/files/src/ui/window.rs:840
 msgid "Grid View"
 msgstr "グリッド表示"
 
-#: apps/files/src/ui/shortcuts.rs:42 apps/files/src/ui/window.rs:831
+#: apps/files/src/ui/shortcuts.rs:42 apps/files/src/ui/window.rs:842
 msgid "List View"
 msgstr "リスト表示"
 
@@ -7506,7 +7641,7 @@ msgstr "ファイルとフォルダー"
 msgid "Open in New Tab"
 msgstr "新しいタブで開く"
 
-#: apps/files/src/ui/shortcuts.rs:58 apps/files/src/ui/window.rs:1596
+#: apps/files/src/ui/shortcuts.rs:58 apps/files/src/ui/window.rs:1612
 msgid "New Folder"
 msgstr "新しいフォルダー"
 
@@ -7526,7 +7661,7 @@ msgstr "編集"
 msgid "Invert Selection"
 msgstr "選択の切り替え"
 
-#: apps/files/src/ui/shortcuts.rs:71 apps/files/src/ui/tab.rs:147
+#: apps/files/src/ui/shortcuts.rs:71 apps/files/src/ui/tab.rs:169
 msgid "Cut"
 msgstr "切り取り"
 
@@ -7534,8 +7669,8 @@ msgstr "切り取り"
 msgid "Paste"
 msgstr "貼り付け"
 
-#: apps/files/src/ui/sidebar.rs:75 apps/files/src/ui/window.rs:136
-#: apps/files/src/ui/window.rs:858
+#: apps/files/src/ui/sidebar.rs:75 apps/files/src/ui/window.rs:137
+#: apps/files/src/ui/window.rs:869
 msgctxt "home folder"
 msgid "Home"
 msgstr "ホーム"
@@ -7548,15 +7683,15 @@ msgstr "{name} を取り出す"
 msgid "Unmount {name}"
 msgstr "{name} をアンマウント"
 
-#: apps/files/src/ui/sidebar.rs:565 apps/files/src/ui/window.rs:1667
+#: apps/files/src/ui/sidebar.rs:565 apps/files/src/ui/window.rs:1762
 msgid "Open in New _Tab"
 msgstr "新しいタブで開く(_T)"
 
-#: apps/files/src/ui/sidebar.rs:566 apps/files/src/ui/window.rs:1668
+#: apps/files/src/ui/sidebar.rs:566 apps/files/src/ui/window.rs:1763
 msgid "Open in New _Window"
 msgstr "新しいウィンドウで開く(_W)"
 
-#: apps/files/src/ui/sidebar.rs:571 apps/files/src/ui/window.rs:1697
+#: apps/files/src/ui/sidebar.rs:571 apps/files/src/ui/window.rs:1792
 msgid "Rena_me…"
 msgstr "名前の変更(_M)…"
 
@@ -7572,18 +7707,18 @@ msgstr "取り出す(_E)"
 msgid "_Unmount"
 msgstr "アンマウント(_U)"
 
-#: apps/files/src/ui/sidebar.rs:581 apps/files/src/ui/window.rs:1723
+#: apps/files/src/ui/sidebar.rs:581 apps/files/src/ui/window.rs:1825
 msgid "_Empty Trash…"
 msgstr "ゴミ箱を空にする(_E)…"
 
-#: apps/files/src/ui/sidebar.rs:586 apps/files/src/ui/window.rs:1660
-#: apps/files/src/ui/window.rs:1708 apps/files/src/ui/window.rs:1738
+#: apps/files/src/ui/sidebar.rs:586 apps/files/src/ui/window.rs:1755
+#: apps/files/src/ui/window.rs:1810 apps/files/src/ui/window.rs:1840
 #: apps/system-monitor/src/proc_view.rs:156
 msgid "_Properties"
 msgstr "プロパティ(_P)"
 
 #: apps/files/src/ui/sidebar.rs:650 apps/files/src/ui/sidebar.rs:695
-#: apps/files/src/ui/window.rs:1635
+#: apps/files/src/ui/window.rs:1730
 msgid "Could not save bookmarks: {e}"
 msgstr "ブックマークを保存できませんでした: {e}"
 
@@ -7595,7 +7730,7 @@ msgstr "ブックマーク名(_N)"
 msgid "Rename Bookmark"
 msgstr "ブックマークの名前を変更"
 
-#: apps/files/src/ui/sidebar.rs:684 apps/files/src/ui/window.rs:1552
+#: apps/files/src/ui/sidebar.rs:684 apps/files/src/ui/window.rs:1568
 #: apps/music/src/pages.rs:2131
 msgid "_Rename"
 msgstr "名前を変更(_R)"
@@ -7608,207 +7743,207 @@ msgstr "星を変更できませんでした: {}"
 msgid "Folder"
 msgstr "フォルダー"
 
-#: apps/files/src/ui/tab.rs:288
+#: apps/files/src/ui/tab.rs:312
 msgid "_Try Again"
 msgstr "再試行(_T)"
 
-#: apps/files/src/ui/tab.rs:298
+#: apps/files/src/ui/tab.rs:322
 msgid "Loading folder"
 msgstr "フォルダーを読み込み中"
 
-#: apps/files/src/ui/tab.rs:1069
+#: apps/files/src/ui/tab.rs:1114
 msgid "Unable to access location: {}"
 msgstr "場所にアクセスできません: {}"
 
-#: apps/files/src/ui/tab.rs:1102
+#: apps/files/src/ui/tab.rs:1147
 msgid "Unable to Open Folder"
 msgstr "フォルダーを開けません"
 
-#: apps/files/src/ui/tab.rs:1110
+#: apps/files/src/ui/tab.rs:1155
 msgid "Unable to open folder: {}"
 msgstr "フォルダーを開けません: {}"
 
-#: apps/files/src/ui/tab.rs:1127
+#: apps/files/src/ui/tab.rs:1172
 msgid "Try a different search."
 msgstr "別の検索語を試してください。"
 
-#: apps/files/src/ui/tab.rs:1130
+#: apps/files/src/ui/tab.rs:1175
 msgid "Starred Files Unavailable"
 msgstr "星付きファイルを利用できません"
 
-#: apps/files/src/ui/tab.rs:1132
+#: apps/files/src/ui/tab.rs:1177
 msgid "The stars GNOME Files keeps could not be read."
 msgstr "GNOME ファイルが保存している星を読み込めませんでした。"
 
-#: apps/files/src/ui/tab.rs:1135
+#: apps/files/src/ui/tab.rs:1180
 msgid "No Starred Files"
 msgstr "星付きファイルはありません"
 
-#: apps/files/src/ui/tab.rs:1137
+#: apps/files/src/ui/tab.rs:1182
 msgid "Files and folders you star appear here."
 msgstr "星を付けたファイルとフォルダーがここに表示されます。"
 
-#: apps/files/src/ui/tab.rs:1140
+#: apps/files/src/ui/tab.rs:1185
 msgid "Trash is Empty"
 msgstr "ゴミ箱は空です"
 
-#: apps/files/src/ui/tab.rs:1144
+#: apps/files/src/ui/tab.rs:1189
 msgid "Folder is Empty"
 msgstr "フォルダーは空です"
 
-#: apps/files/src/ui/tab.rs:1372
+#: apps/files/src/ui/tab.rs:1417
 msgid "Search finished: {n} item found"
 msgid_plural "Search finished: {n} items found"
 msgstr[0] "検索終了: {n} 個の項目が見つかりました"
 
-#: apps/files/src/ui/tab.rs:1398
+#: apps/files/src/ui/tab.rs:1443
 msgid "On This Computer"
 msgstr "このコンピューター"
 
-#: apps/files/src/ui/tab.rs:1430
+#: apps/files/src/ui/tab.rs:1475
 msgid "Networks"
 msgstr "ネットワーク"
 
-#: apps/files/src/ui/tab.rs:1435
+#: apps/files/src/ui/tab.rs:1480
 msgid "Browse the local network"
 msgstr "ローカルネットワークを閲覧します"
 
-#: apps/files/src/ui/tab.rs:1460
+#: apps/files/src/ui/tab.rs:1505
 msgid "Not mounted"
 msgstr "未マウント"
 
-#: apps/files/src/ui/tab.rs:1473
+#: apps/files/src/ui/tab.rs:1518
 msgid "Connect to Server"
 msgstr "サーバーへ接続"
 
-#: apps/files/src/ui/tab.rs:1477
+#: apps/files/src/ui/tab.rs:1522
 msgid "Server Address"
 msgstr "サーバーアドレス"
 
-#: apps/files/src/ui/window.rs:209
+#: apps/files/src/ui/window.rs:210
 msgid "Enter a location"
 msgstr "場所を入力"
 
-#: apps/files/src/ui/window.rs:225 apps/terminal/src/window.rs:744
+#: apps/files/src/ui/window.rs:226 apps/terminal/src/window.rs:744
 #: apps/text-editor/src/window.rs:47
 msgid "New _Tab"
 msgstr "新しいタブ(_T)"
 
-#: apps/files/src/ui/window.rs:233
+#: apps/files/src/ui/window.rs:234
 msgid "_About Files"
 msgstr "ファイルについて(_A)"
 
-#: apps/files/src/ui/window.rs:251
+#: apps/files/src/ui/window.rs:252
 msgid "_Reversed Order"
 msgstr "逆順(_R)"
 
-#: apps/files/src/ui/window.rs:252 apps/logs/src/ui.rs:294
+#: apps/files/src/ui/window.rs:253 apps/logs/src/ui.rs:294
 #: apps/music/src/ui.rs:510 apps/music/src/ui.rs:513
 msgid "Sort"
 msgstr "並べ替え"
 
-#: apps/files/src/ui/window.rs:254 apps/image-viewer/src/ui.rs:310
+#: apps/files/src/ui/window.rs:255 apps/image-viewer/src/ui.rs:310
 msgid "Zoom _In"
 msgstr "拡大(_I)"
 
-#: apps/files/src/ui/window.rs:255
+#: apps/files/src/ui/window.rs:256
 msgid "Zoom _Out"
 msgstr "縮小(_O)"
 
-#: apps/files/src/ui/window.rs:256
+#: apps/files/src/ui/window.rs:257
 msgid "_Reset Size"
 msgstr "サイズをリセット(_R)"
 
-#: apps/files/src/ui/window.rs:259 apps/files/src/ui/window.rs:1737
+#: apps/files/src/ui/window.rs:260 apps/files/src/ui/window.rs:1839
 msgid "Show _Hidden Files"
 msgstr "隠しファイルを表示(_H)"
 
-#: apps/files/src/ui/window.rs:264 apps/files/src/ui/window.rs:266
-#: apps/files/src/ui/window.rs:388
+#: apps/files/src/ui/window.rs:265 apps/files/src/ui/window.rs:267
+#: apps/files/src/ui/window.rs:389
 msgid "View Options"
 msgstr "表示オプション"
 
-#: apps/files/src/ui/window.rs:312
+#: apps/files/src/ui/window.rs:313
 msgid "Search current folder"
 msgstr "現在のフォルダーを検索"
 
-#: apps/files/src/ui/window.rs:315
+#: apps/files/src/ui/window.rs:316
 msgid "Search Current Folder"
 msgstr "現在のフォルダーを検索"
 
-#: apps/files/src/ui/window.rs:341
+#: apps/files/src/ui/window.rs:342
 msgid "_Empty…"
 msgstr "空にする(_E)…"
 
-#: apps/files/src/ui/window.rs:631
+#: apps/files/src/ui/window.rs:632
 msgid "Search: {}"
 msgstr "検索: {}"
 
-#: apps/files/src/ui/window.rs:748
+#: apps/files/src/ui/window.rs:759
 msgid "Unstarred"
 msgstr "星を外しました"
 
-#: apps/files/src/ui/window.rs:765
+#: apps/files/src/ui/window.rs:776
 msgid "{base} — Searching…"
 msgstr "{base} — 検索中…"
 
-#: apps/files/src/ui/window.rs:767
+#: apps/files/src/ui/window.rs:778
 msgid "{base} — Loading…"
 msgstr "{base} — 読み込み中…"
 
-#: apps/files/src/ui/window.rs:776
+#: apps/files/src/ui/window.rs:787
 msgid "“{}” selected"
 msgstr "「{}」を選択中"
 
-#: apps/files/src/ui/window.rs:778
+#: apps/files/src/ui/window.rs:789
 msgid "“{}” selected ({})"
 msgstr "「{}」を選択中 ({})"
 
-#: apps/files/src/ui/window.rs:793
+#: apps/files/src/ui/window.rs:804
 msgid "{n} folder selected"
 msgid_plural "{n} folders selected"
 msgstr[0] "{n} 個のフォルダーを選択中"
 
-#: apps/files/src/ui/window.rs:795
+#: apps/files/src/ui/window.rs:806
 msgid "{n} item selected ({bytes})"
 msgid_plural "{n} items selected ({bytes})"
 msgstr[0] "{n} 個の項目を選択中 ({bytes})"
 
-#: apps/files/src/ui/window.rs:1115
+#: apps/files/src/ui/window.rs:1126
 msgid "Could not open file: {}"
 msgstr "ファイルを開けませんでした: {}"
 
-#: apps/files/src/ui/window.rs:1143
+#: apps/files/src/ui/window.rs:1154
 msgid "Unable to mount “{}”: {}"
 msgstr "「{}」をマウントできません: {}"
 
-#: apps/files/src/ui/window.rs:1168
+#: apps/files/src/ui/window.rs:1179
 msgid "Unable to eject “{name}”: {error}"
 msgstr "「{name}」を取り出せません: {error}"
 
-#: apps/files/src/ui/window.rs:1283
+#: apps/files/src/ui/window.rs:1298
 msgid "Nothing to paste"
 msgstr "貼り付けるものがありません"
 
-#: apps/files/src/ui/window.rs:1348
+#: apps/files/src/ui/window.rs:1364
 msgid "“{}” moved to Trash"
 msgstr "「{}」をゴミ箱へ移動しました"
 
-#: apps/files/src/ui/window.rs:1353
+#: apps/files/src/ui/window.rs:1369
 msgid "{n} item moved to Trash"
 msgid_plural "{n} items moved to Trash"
 msgstr[0] "{n} 個の項目をゴミ箱へ移動しました"
 
-#: apps/files/src/ui/window.rs:1378
+#: apps/files/src/ui/window.rs:1394
 msgid "“{}” Can’t Be Put in the Trash"
 msgstr "「{}」をゴミ箱に移動できません"
 
-#: apps/files/src/ui/window.rs:1383
+#: apps/files/src/ui/window.rs:1399
 msgid "{n} Item Can’t Be Put in the Trash"
 msgid_plural "{n} Items Can’t Be Put in the Trash"
 msgstr[0] "{n} 個の項目をゴミ箱に移動できません"
 
-#: apps/files/src/ui/window.rs:1392
+#: apps/files/src/ui/window.rs:1408
 msgid ""
 "This location has no Trash. Delete permanently instead? Deleted items will "
 "be permanently lost."
@@ -7816,128 +7951,148 @@ msgstr ""
 "この場所にはゴミ箱がありません。代わりに完全に削除しますか？削除した項目は完"
 "全に失われます。"
 
-#: apps/files/src/ui/window.rs:1463
+#: apps/files/src/ui/window.rs:1479
 msgid "Permanently Delete “{}”?"
 msgstr "「{}」を完全に削除しますか?"
 
-#: apps/files/src/ui/window.rs:1468
+#: apps/files/src/ui/window.rs:1484
 msgid "Permanently Delete {n} Item?"
 msgid_plural "Permanently Delete {n} Items?"
 msgstr[0] "{n} 個の項目を完全に削除しますか?"
 
-#: apps/files/src/ui/window.rs:1477
+#: apps/files/src/ui/window.rs:1493
 msgid "If you delete an item, it will be permanently lost."
 msgstr "項目を削除すると、完全に失われます。"
 
-#: apps/files/src/ui/window.rs:1491
+#: apps/files/src/ui/window.rs:1507
 msgid "Empty Trash?"
 msgstr "ゴミ箱を空にしますか?"
 
-#: apps/files/src/ui/window.rs:1492
+#: apps/files/src/ui/window.rs:1508
 msgid "All items in the Trash will be permanently deleted."
 msgstr "ゴミ箱内のすべての項目が完全に削除されます。"
 
-#: apps/files/src/ui/window.rs:1493
+#: apps/files/src/ui/window.rs:1509
 msgid "_Empty Trash"
 msgstr "ゴミ箱を空にする(_E)"
 
-#: apps/files/src/ui/window.rs:1504
+#: apps/files/src/ui/window.rs:1520
 msgid "Nothing to undo"
 msgstr "元に戻す操作がありません"
 
-#: apps/files/src/ui/window.rs:1521
+#: apps/files/src/ui/window.rs:1537
 msgid "Could not undo rename: {}"
 msgstr "名前の変更を元に戻せませんでした: {}"
 
-#: apps/files/src/ui/window.rs:1548
+#: apps/files/src/ui/window.rs:1564
 msgid "Rename Folder"
 msgstr "フォルダー名の変更"
 
-#: apps/files/src/ui/window.rs:1550
+#: apps/files/src/ui/window.rs:1566
 msgid "Rename File"
 msgstr "ファイル名の変更"
 
-#: apps/files/src/ui/window.rs:1577
+#: apps/files/src/ui/window.rs:1593
 msgid "Could not rename: {}"
 msgstr "名前を変更できませんでした: {}"
 
-#: apps/files/src/ui/window.rs:1597 apps/music/src/pages.rs:2133
-msgid "_Create"
-msgstr "作成(_C)"
-
-#: apps/files/src/ui/window.rs:1608
+#: apps/files/src/ui/window.rs:1624
 msgid "Could not create folder: {}"
 msgstr "フォルダーを作成できませんでした: {}"
 
-#: apps/files/src/ui/window.rs:1629
+#: apps/files/src/ui/window.rs:1689
+msgid "Extract To"
+msgstr "展開先"
+
+#: apps/files/src/ui/window.rs:1690
+msgid "_Extract"
+msgstr "展開(_E)"
+
+#: apps/files/src/ui/window.rs:1724
 msgid "Location is already bookmarked"
 msgstr "この場所はすでにブックマークされています"
 
-#: apps/files/src/ui/window.rs:1634
+#: apps/files/src/ui/window.rs:1729
 msgid "“{}” added to bookmarks"
 msgstr "「{}」をブックマークに追加しました"
 
-#: apps/files/src/ui/window.rs:1656
+#: apps/files/src/ui/window.rs:1751
 msgid "_Restore From Trash"
 msgstr "ゴミ箱から復元(_R)"
 
-#: apps/files/src/ui/window.rs:1657
+#: apps/files/src/ui/window.rs:1752
 msgid "_Delete From Trash…"
 msgstr "ゴミ箱から削除(_D)…"
 
-#: apps/files/src/ui/window.rs:1670 apps/image-viewer/src/ui.rs:301
-#: apps/image-viewer/src/ui.rs:787
+#: apps/files/src/ui/window.rs:1765 apps/image-viewer/src/ui.rs:301
+#: apps/image-viewer/src/ui.rs:793
 msgid "Open _With…"
 msgstr "アプリケーションで開く(_W)…"
 
-#: apps/files/src/ui/window.rs:1676
+#: apps/files/src/ui/window.rs:1771
 msgid "Open Item _Location"
 msgstr "項目の場所を開く(_L)"
 
-#: apps/files/src/ui/window.rs:1683
+#: apps/files/src/ui/window.rs:1778
 msgid "_Star"
 msgstr "星を付ける(_S)"
 
-#: apps/files/src/ui/window.rs:1685
+#: apps/files/src/ui/window.rs:1780
 msgid "_Unstar"
 msgstr "星を外す(_U)"
 
-#: apps/files/src/ui/window.rs:1690
+#: apps/files/src/ui/window.rs:1785
 msgid "Cu_t"
 msgstr "切り取り(_T)"
 
-#: apps/files/src/ui/window.rs:1693
+#: apps/files/src/ui/window.rs:1788
 msgid "Paste Into Folder"
 msgstr "フォルダーに貼り付け"
 
-#: apps/files/src/ui/window.rs:1699
+#: apps/files/src/ui/window.rs:1794
 msgid "Create _Link"
 msgstr "リンクを作成(_L)"
 
-#: apps/files/src/ui/window.rs:1701
+#: apps/files/src/ui/window.rs:1796
 msgid "Mo_ve to Trash"
 msgstr "ゴミ箱へ移動(_V)"
 
-#: apps/files/src/ui/window.rs:1703
+#: apps/files/src/ui/window.rs:1798
 msgid "_Delete Permanently…"
 msgstr "完全に削除(_D)…"
 
-#: apps/files/src/ui/window.rs:1707 apps/maps/src/ui.rs:440
+#: apps/files/src/ui/window.rs:1803
+msgid "E_xtract Here"
+msgstr "ここに展開(_X)"
+
+#: apps/files/src/ui/window.rs:1804
+msgid "Extract _To…"
+msgstr "展開先を指定(_T)…"
+
+#: apps/files/src/ui/window.rs:1806
+msgid "Create _Archive…"
+msgstr "アーカイブを作成(_A)…"
+
+#: apps/files/src/ui/window.rs:1809 apps/maps/src/ui.rs:440
 #: apps/maps/src/ui.rs:2271
 msgid "Copy Location"
 msgstr "場所をコピー"
 
-#: apps/files/src/ui/window.rs:1729
+#: apps/files/src/ui/window.rs:1831
 msgid "New _Folder…"
 msgstr "新しいフォルダー(_F)…"
 
-#: apps/files/src/ui/window.rs:1732 apps/terminal/src/window.rs:739
+#: apps/files/src/ui/window.rs:1834 apps/terminal/src/window.rs:739
 msgid "_Paste"
 msgstr "貼り付け(_P)"
 
-#: apps/files/src/ui/window.rs:1736
+#: apps/files/src/ui/window.rs:1838
 msgid "Add to _Bookmarks"
 msgstr "ブックマークに追加(_B)"
+
+#: apps/files/src/ui/window.rs:2207
+msgid "Archive"
+msgstr "アーカイブ"
 
 #: apps/fonts/data/org.helixdesktop.Fonts.desktop
 msgid "fonts;fontface;typeface;install;preview;"
@@ -8652,7 +8807,7 @@ msgstr "画像ビューアー"
 msgid "View images"
 msgstr "画像を表示します"
 
-#: apps/image-viewer/src/ui.rs:295 apps/image-viewer/src/ui.rs:1085
+#: apps/image-viewer/src/ui.rs:295 apps/image-viewer/src/ui.rs:1091
 msgid "Open Images"
 msgstr "画像を開く"
 
@@ -8660,11 +8815,11 @@ msgstr "画像を開く"
 msgid "_New Window"
 msgstr "新しいウィンドウ(_N)"
 
-#: apps/image-viewer/src/ui.rs:306 apps/image-viewer/src/ui.rs:788
+#: apps/image-viewer/src/ui.rs:306 apps/image-viewer/src/ui.rs:794
 msgid "Set as _Background…"
 msgstr "背景に設定(_B)…"
 
-#: apps/image-viewer/src/ui.rs:307 apps/image-viewer/src/ui.rs:791
+#: apps/image-viewer/src/ui.rs:307 apps/image-viewer/src/ui.rs:797
 msgid "Move to _Trash"
 msgstr "ゴミ箱へ移動(_T)"
 
@@ -8745,81 +8900,81 @@ msgstr "焦点距離"
 msgid "Open Folder"
 msgstr "フォルダーを開く"
 
-#: apps/image-viewer/src/ui.rs:1032
+#: apps/image-viewer/src/ui.rs:1038
 msgid "Could not open map: {}"
 msgstr "地図を開けませんでした: {}"
 
-#: apps/image-viewer/src/ui.rs:1075
+#: apps/image-viewer/src/ui.rs:1081
 msgid "Supported Images"
 msgstr "サポートされている画像"
 
-#: apps/image-viewer/src/ui.rs:1162
+#: apps/image-viewer/src/ui.rs:1168
 msgid "The decoder crashed"
 msgstr "デコーダーがクラッシュしました"
 
 #. Translators: an image that could not be shown: its file name, then why.
-#: apps/image-viewer/src/ui.rs:1231
+#: apps/image-viewer/src/ui.rs:1237
 msgid "{name}: {error}"
 msgstr "{name}: {error}"
 
-#: apps/image-viewer/src/ui.rs:1333
+#: apps/image-viewer/src/ui.rs:1339
 msgid "No Image"
 msgstr "画像がありません"
 
 #. Translators: window title: file name, then the app name.
-#: apps/image-viewer/src/ui.rs:1357
+#: apps/image-viewer/src/ui.rs:1363
 msgid "{name} — {app}"
 msgstr "{name} — {app}"
 
-#: apps/image-viewer/src/ui.rs:1553
+#: apps/image-viewer/src/ui.rs:1559
 msgid "{} (animated)"
 msgstr "{} (アニメーション)"
 
-#: apps/image-viewer/src/ui.rs:1620
+#: apps/image-viewer/src/ui.rs:1626
 msgid "Image copied to clipboard"
 msgstr "画像をクリップボードにコピーしました"
 
-#: apps/image-viewer/src/ui.rs:1631
+#: apps/image-viewer/src/ui.rs:1637
 msgid "Background set"
 msgstr "背景を設定しました"
 
-#: apps/image-viewer/src/ui.rs:1634 apps/image-viewer/src/ui.rs:1637
+#: apps/image-viewer/src/ui.rs:1640 apps/image-viewer/src/ui.rs:1643
 msgid "Could not set the background"
 msgstr "背景を設定できませんでした"
 
-#: apps/image-viewer/src/ui.rs:1636
+#: apps/image-viewer/src/ui.rs:1642
 msgid "Could not set the background: {e}"
 msgstr "背景を設定できませんでした: {e}"
 
-#: apps/image-viewer/src/ui.rs:1661
+#: apps/image-viewer/src/ui.rs:1667
 msgid "Image moved to trash"
 msgstr "画像をゴミ箱へ移動しました"
 
-#: apps/image-viewer/src/ui.rs:1673
+#: apps/image-viewer/src/ui.rs:1679
 msgid "Could not move to trash: {e}"
 msgstr "ゴミ箱へ移動できませんでした: {e}"
 
-#: apps/image-viewer/src/ui.rs:1674
+#: apps/image-viewer/src/ui.rs:1680
 msgid "Could not move to trash"
 msgstr "ゴミ箱へ移動できませんでした"
 
-#: apps/image-viewer/src/ui.rs:1698
+#: apps/image-viewer/src/ui.rs:1704
 msgid "Could not restore: {e}"
 msgstr "復元できませんでした: {e}"
 
-#: apps/image-viewer/src/ui.rs:1699
+#: apps/image-viewer/src/ui.rs:1705
 msgid "Could not restore"
 msgstr "復元できませんでした"
 
-#: apps/image-viewer/src/ui.rs:1723
+#: apps/image-viewer/src/ui.rs:1729
 msgid "Image saved"
 msgstr "画像を保存しました"
 
-#: apps/image-viewer/src/ui.rs:1732
+#: apps/image-viewer/src/ui.rs:1738
 msgid "Could not save image: {e}"
 msgstr "画像を保存できませんでした: {e}"
 
-#: apps/image-viewer/src/ui.rs:1736
+#: apps/image-viewer/src/ui.rs:1742
 msgid "Could not save image"
 msgstr "画像を保存できませんでした"
 
@@ -19472,15 +19627,15 @@ msgstr ""
 "ネットワーク共有にアクセスしたり、別のアプリケーションが起動したりする可能性"
 "があります。"
 
-#: crates/helix-eds/src/client.rs:58
+#: crates/helix-eds/src/client.rs:66
 msgid "“{name}” is read-only"
 msgstr "「{name}」は読み取り専用です"
 
-#: crates/helix-eds/src/client.rs:60
+#: crates/helix-eds/src/client.rs:68
 msgid "“{name}” cannot be removed"
 msgstr "「{name}」は削除できません"
 
-#: crates/helix-eds/src/client.rs:62
+#: crates/helix-eds/src/client.rs:70
 msgid "The contact could not be read"
 msgstr "連絡先を読み取れませんでした"
 

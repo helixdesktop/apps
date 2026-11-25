@@ -7,10 +7,11 @@ use std::cell::{Cell, RefCell};
 use std::rc::Rc;
 
 use super::sidebar::Sidebar;
-use super::tab::{info_file, info_is_dir, info_target, Tab};
+use super::tab::{content_type, info_file, info_is_dir, info_target, Tab};
 use super::{
     dialogs, jobs, properties, ClipState, Shared, Undo, GRID_ZOOM, LIST_ZOOM, OTHER_LOCATIONS,
 };
+use crate::archive;
 use crate::ops::Job;
 use crate::pathbar::{self, Target};
 use crate::sorting::SortKey;
@@ -709,6 +710,16 @@ impl Window {
         let dirs = any && infos.iter().all(info_is_dir);
         self.action_set_enabled("open-new-tab", dirs);
         self.action_set_enabled("open-new-window", dirs);
+        let listing = !in_trash && !other && !tab.is_searching();
+        let place = Place {
+            trash: in_trash,
+            listing: listing && tab.location().path().is_some(),
+            writable: listing && folder_writable(&tab.location()),
+        };
+        let (create, here, to) = archive_actions(&infos, place);
+        self.action_set_enabled("create-archive", create);
+        self.action_set_enabled("extract-here", here);
+        self.action_set_enabled("extract-to", to);
     }
 
     /// Whether `files` can be starred (some are not yet) and unstarred
@@ -1620,6 +1631,85 @@ impl Window {
         );
     }
 
+    /// Create Archive…: asks for a name and format, then archives the
+    /// selection into the current folder.
+    fn create_archive(self: &Rc<Self>) {
+        let Some(tab) = self.current_tab() else {
+            return;
+        };
+        let files = tab.selected_files();
+        if files.is_empty() {
+            return;
+        }
+        let initial = archive_name(&tab.selected_infos());
+        let dir = tab.location();
+        let weak = Rc::downgrade(self);
+        let d = dir.clone();
+        dialogs::archive_dialog(
+            &self.window,
+            &initial,
+            archive_format(),
+            dir,
+            move |name, format| {
+                let Some(w) = weak.upgrade() else { return };
+                set_archive_format(format);
+                w.start_job(
+                    Job::Compress {
+                        sources: files.clone(),
+                        dest: d.child(&name),
+                        format,
+                    },
+                    Some(tab.clone()),
+                );
+            },
+        );
+    }
+
+    /// Extract Here (next to each archive), or Extract To… a folder
+    /// chosen in the file chooser.
+    fn extract_selection(self: &Rc<Self>, choose: bool) {
+        let Some(tab) = self.current_tab() else {
+            return;
+        };
+        let archives = tab.selected_files();
+        if archives.is_empty() {
+            return;
+        }
+        if !choose {
+            self.start_job(
+                Job::Extract {
+                    archives,
+                    dest: None,
+                },
+                Some(tab),
+            );
+            return;
+        }
+        let dialog = gtk::FileDialog::builder()
+            .title(tr("Extract To"))
+            .accept_label(tr("_Extract"))
+            .modal(true)
+            .initial_folder(&tab.location())
+            .build();
+        let weak = Rc::downgrade(self);
+        dialog.select_folder(
+            Some(&self.window),
+            None::<&gio::Cancellable>,
+            move |result| {
+                let (Some(w), Ok(folder)) = (weak.upgrade(), result) else {
+                    return;
+                };
+                w.start_job(
+                    Job::Extract {
+                        archives,
+                        dest: Some(folder),
+                    },
+                    Some(tab),
+                );
+            },
+        );
+    }
+
     fn add_bookmark(self: &Rc<Self>) {
         let Some(tab) = self.current_tab() else {
             return;
@@ -1707,6 +1797,13 @@ impl Window {
         if s.show_delete {
             sec.append(Some(tr("_Delete Permanently…")), Some("win.delete"));
         }
+        menu.append_section(None, &sec);
+        let sec = gio::Menu::new();
+        if all_archives(&infos) {
+            sec.append(Some(tr("E_xtract Here")), Some("win.extract-here"));
+            sec.append(Some(tr("Extract _To…")), Some("win.extract-to"));
+        }
+        sec.append(Some(tr("Create _Archive…")), Some("win.create-archive"));
         menu.append_section(None, &sec);
         let sec = gio::Menu::new();
         sec.append(Some(tr("Copy Location")), Some("win.copy-location"));
@@ -1800,6 +1897,9 @@ impl Window {
         add("bookmark", |w| w.add_bookmark());
         add("new-folder", |w| w.new_folder());
         add("rename", |w| w.rename_selection());
+        add("create-archive", |w| w.create_archive());
+        add("extract-here", |w| w.extract_selection(false));
+        add("extract-to", |w| w.extract_selection(true));
         add("trash", |w| w.trash_selection());
         add("delete", |w| w.delete_selection());
         add("empty-trash", |w| w.empty_trash());
@@ -2041,6 +2141,117 @@ impl Window {
 /// GVfs daemon over D-Bus, synchronously, and the sidebar does this for
 /// every place while a window opens; it held a new window for seconds.
 /// Their FUSE path is no better to read than the URI either.)
+/// Where the selection is, for the archive actions.
+#[derive(Debug, Clone, Copy)]
+struct Place {
+    trash: bool,
+    /// A local folder's own listing (not search results, Starred, Recent
+    /// or Other Locations): the folder new archives go into.
+    listing: bool,
+    /// That folder can be written to.
+    writable: bool,
+}
+
+/// Whether every one of `infos` (at least one) is an archive Files can
+/// extract, judged by content type.
+fn all_archives(infos: &[gio::FileInfo]) -> bool {
+    !infos.is_empty()
+        && infos
+            .iter()
+            .all(|i| archive::is_archive_type(&content_type(i)))
+}
+
+/// Which archive actions apply to `infos` in `place`: Create Archive,
+/// Extract Here and Extract To. Extract Here in search results or
+/// Starred extracts next to each archive.
+fn archive_actions(infos: &[gio::FileInfo], place: Place) -> (bool, bool, bool) {
+    let local = !infos.is_empty()
+        && !place.trash
+        && infos
+            .iter()
+            .all(|i| info_file(i).is_some_and(|f| f.path().is_some()));
+    let create = local && place.listing && place.writable;
+    let extract = local && all_archives(infos);
+    (
+        create,
+        extract && (!place.listing || place.writable),
+        extract,
+    )
+}
+
+/// Whether the local folder `f` can be written to.
+fn folder_writable(f: &gio::File) -> bool {
+    use std::os::unix::ffi::OsStrExt;
+    let Some(path) = f.path() else {
+        return false;
+    };
+    let Ok(c) = std::ffi::CString::new(path.as_os_str().as_bytes()) else {
+        return false;
+    };
+    // SAFETY: a valid NUL-terminated path.
+    unsafe { libc::access(c.as_ptr(), libc::W_OK) == 0 }
+}
+
+/// The default name of an archive of `infos`: the item's name (without
+/// its extension for a file) for one item, else "Archive".
+fn archive_name(infos: &[gio::FileInfo]) -> String {
+    match infos {
+        [one] => {
+            let name = one.display_name().to_string();
+            if info_is_dir(one) {
+                name
+            } else {
+                crate::naming::split_extension(&name).0.to_string()
+            }
+        }
+        _ => tr("Archive").to_string(),
+    }
+}
+
+/// GNOME Files' schema holding the last archive format.
+const COMPRESSION: &str = "org.gnome.nautilus.compression";
+
+/// Helix's record of the last archive format, which also holds the
+/// formats GNOME Files' key has no value for (.tar.gz, .tar.zst).
+fn archive_format_file() -> std::path::PathBuf {
+    glib::user_config_dir()
+        .join("helix-files")
+        .join("archive-format")
+}
+
+/// The archive format chosen last: Helix's record, else GNOME Files'
+/// `default-compression-format`, else .zip.
+fn archive_format() -> archive::Format {
+    std::fs::read_to_string(archive_format_file())
+        .ok()
+        .and_then(|s| archive::Format::from_nick(s.trim()))
+        .or_else(|| {
+            let prefs = helix_app_common::Prefs::new(COMPRESSION);
+            archive::Format::from_nick(&prefs.get_enum_nick("default-compression-format", "zip"))
+        })
+        .unwrap_or(archive::Format::Zip)
+}
+
+/// Remembers `format` as the one chosen last, in GNOME Files' key too
+/// when it has a value for it.
+fn set_archive_format(format: archive::Format) {
+    let path = archive_format_file();
+    if let Some(dir) = path.parent() {
+        let _ = std::fs::create_dir_all(dir);
+    }
+    let _ = std::fs::write(&path, format.nick());
+    let prefs = helix_app_common::Prefs::new(COMPRESSION);
+    let key = "default-compression-format";
+    let in_range = prefs
+        .gsettings()
+        .and_then(|g| g.settings_schema())
+        .filter(|s| s.has_key(key))
+        .is_some_and(|s| s.key(key).range_check(&format.nick().to_variant()));
+    if in_range {
+        prefs.set_enum_nick(key, format.nick());
+    }
+}
+
 pub fn display_location(f: &gio::File) -> String {
     match local_path(f) {
         Some(p) => p.display().to_string(),
@@ -2066,5 +2277,316 @@ fn expand_tilde(text: &str) -> String {
         Some("") => home.display().to_string(),
         Some(rest) if rest.starts_with('/') => format!("{}{rest}", home.display()),
         _ => text.to_string(),
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::archive::Format;
+    use std::time::{Duration, Instant};
+
+    fn info(name: &str, content_type: &str, file: gio::File) -> gio::FileInfo {
+        let i = gio::FileInfo::new();
+        i.set_name(name);
+        i.set_display_name(name);
+        i.set_file_type(gio::FileType::Regular);
+        i.set_content_type(content_type);
+        i.set_attribute_object("standard::file", &file);
+        i
+    }
+
+    /// Extract is offered for archives only (by content type), Create
+    /// Archive for local items in a folder that can be written to, and
+    /// neither in the Trash.
+    #[test]
+    fn archive_actions_follow_the_selection() {
+        let local = |n: &str| gio::File::for_path(format!("/tmp/{n}"));
+        let zip = info("a.zip", "application/zip", local("a.zip"));
+        let tgz = info("b.tgz", "application/x-compressed-tar", local("b.tgz"));
+        let txt = info("c.txt", "text/plain", local("c.txt"));
+        // An .odt is a zip inside, but not an archive to extract.
+        let odt = info(
+            "d.odt",
+            "application/vnd.oasis.opendocument.text",
+            local("d.odt"),
+        );
+        let folder = Place {
+            trash: false,
+            listing: true,
+            writable: true,
+        };
+        let read_only = Place {
+            writable: false,
+            ..folder
+        };
+        let search = Place {
+            listing: false,
+            writable: false,
+            ..folder
+        };
+        let trash = Place {
+            trash: true,
+            listing: false,
+            writable: false,
+        };
+        let a = |infos: &[&gio::FileInfo], place| {
+            let v: Vec<gio::FileInfo> = infos.iter().map(|i| (*i).clone()).collect();
+            archive_actions(&v, place)
+        };
+        assert_eq!(a(&[&zip], folder), (true, true, true));
+        assert_eq!(a(&[&zip, &tgz], folder), (true, true, true));
+        assert_eq!(a(&[&zip, &txt], folder), (true, false, false));
+        assert_eq!(a(&[&txt], folder), (true, false, false));
+        assert_eq!(a(&[&odt], folder), (true, false, false));
+        assert_eq!(a(&[], folder), (false, false, false));
+        // Read-only folder: nothing can be made in it; Extract To can
+        // still go elsewhere.
+        assert_eq!(a(&[&zip], read_only), (false, false, true));
+        // Search results: archives extract next to themselves.
+        assert_eq!(a(&[&zip], search), (false, true, true));
+        assert_eq!(a(&[&zip], trash), (false, false, false));
+        let remote = info(
+            "r.zip",
+            "application/zip",
+            gio::File::for_uri("sftp://example.invalid/r.zip"),
+        );
+        assert_eq!(a(&[&remote], folder), (false, false, false));
+        assert!(all_archives(&[zip.clone(), tgz.clone()]));
+        assert!(!all_archives(&[]));
+    }
+
+    #[test]
+    fn default_archive_names() {
+        let f = gio::File::for_path("/tmp/x");
+        let photo = info("photo.jpeg", "image/jpeg", f.clone());
+        let tarball = info("src.tar.gz", "application/x-compressed-tar", f.clone());
+        let dir = info("My.Folder", "inode/directory", f.clone());
+        dir.set_file_type(gio::FileType::Directory);
+        assert_eq!(archive_name(std::slice::from_ref(&photo)), "photo");
+        assert_eq!(archive_name(std::slice::from_ref(&tarball)), "src");
+        assert_eq!(archive_name(std::slice::from_ref(&dir)), "My.Folder");
+        assert_eq!(archive_name(&[photo, dir]), "Archive");
+    }
+
+    /// Runs the default main context until `done` or 30 seconds passed.
+    fn wait_for(what: &str, done: impl Fn() -> bool) {
+        let deadline = Instant::now() + Duration::from_secs(30);
+        let ctx = glib::MainContext::default();
+        while !done() {
+            assert!(Instant::now() < deadline, "timed out waiting for {what}");
+            if !ctx.iteration(false) {
+                std::thread::sleep(Duration::from_millis(10));
+            }
+        }
+    }
+
+    fn menu_actions(menu: &gio::MenuModel) -> Vec<String> {
+        let mut out = Vec::new();
+        for i in 0..menu.n_items() {
+            if let Some(a) = menu
+                .item_attribute_value(i, "action", Some(glib::VariantTy::STRING))
+                .and_then(|v| v.get::<String>())
+            {
+                out.push(a);
+            }
+            if let Some(section) = menu.item_link(i, "section") {
+                out.extend(menu_actions(&section));
+            }
+        }
+        out
+    }
+
+    /// The item menu and the window's archive actions follow the
+    /// selection in a real window; Extract Here and Create Archive run as
+    /// jobs whose results appear (through the folder monitor) and are
+    /// selected. Runs [`archive_menu_and_jobs_child`] in a child process,
+    /// as GTK can be set up once per process.
+    #[test]
+    fn archive_menu_and_jobs() {
+        let scratch = crate::ops::tests::TempDir::new("archive-ui");
+        let mut cmd = std::process::Command::new(std::env::current_exe().unwrap());
+        cmd.args(["--exact", "ui::window::tests::archive_menu_and_jobs_child"])
+            .args(["--ignored", "--nocapture"])
+            .env("HELIX_FILES_ARCHIVE_CHILD", &scratch.0)
+            .env("GSETTINGS_BACKEND", "memory")
+            .env("GDK_DEBUG", "no-portals")
+            .env("GIO_USE_VOLUME_MONITOR", "unix");
+        for (var, dir) in [
+            ("XDG_CONFIG_HOME", "config"),
+            ("XDG_DATA_HOME", "data"),
+            ("XDG_CACHE_HOME", "cache"),
+            ("XDG_STATE_HOME", "state"),
+        ] {
+            std::fs::create_dir_all(scratch.path(dir)).unwrap();
+            cmd.env(var, scratch.path(dir));
+        }
+        assert!(cmd.status().unwrap().success());
+    }
+
+    #[test]
+    #[ignore = "run by archive_menu_and_jobs"]
+    fn archive_menu_and_jobs_child() {
+        let Some(root) = std::env::var_os("HELIX_FILES_ARCHIVE_CHILD") else {
+            return;
+        };
+        let root = std::path::PathBuf::from(root);
+        assert!(root.starts_with(std::env::temp_dir()));
+        let Some(_display) = helix_app_common::testing::headless_gtk() else {
+            return;
+        };
+        adw::init().unwrap();
+        let dir = root.join("folder");
+        std::fs::create_dir_all(dir.join("sub")).unwrap();
+        std::fs::write(dir.join("notes.txt"), "notes").unwrap();
+        std::fs::write(dir.join("sub/inner.txt"), "inner").unwrap();
+        crate::archive::create(
+            &[dir.join("sub")],
+            &dir.join("bundle.zip"),
+            Format::Zip,
+            None,
+            &mut NoControl,
+        )
+        .unwrap();
+        let shared = Rc::new(super::super::Shared {
+            app: adw::Application::builder()
+                .application_id("org.helixdesktop.Files.ArchiveTest")
+                .flags(gio::ApplicationFlags::NON_UNIQUE)
+                .build(),
+            prefs: helix_app_common::Prefs::new(super::super::PREFS),
+            window_state: helix_app_common::Prefs::new(super::super::WINDOW_STATE),
+            list_prefs: helix_app_common::Prefs::new(super::super::LIST_VIEW),
+            icon_prefs: helix_app_common::Prefs::new(super::super::ICON_VIEW),
+            chooser_prefs: helix_app_common::Prefs::new(super::super::CHOOSER),
+            clipboard: RefCell::default(),
+            undo: RefCell::default(),
+            windows: RefCell::default(),
+            stars: super::super::starred::Stars::new(),
+        });
+        shared.prefs.set_enum_nick("show-image-thumbnails", "never");
+        shared.app.register(None::<&gio::Cancellable>).unwrap();
+        let folder = gio::File::for_path(&dir);
+        let w = Window::new(&shared, Some(folder.clone()), vec![]);
+        w.window.present();
+        let tab = w.current_tab().unwrap();
+        wait_for("the folder", || tab.n_items() == 3);
+        let file = |n: &str| gio::File::for_path(dir.join(n));
+        let enabled = |name: &str| w.window.lookup_action(name).is_some_and(|a| a.is_enabled());
+        let select = |names: &[&str]| {
+            let files: Vec<gio::File> = names.iter().map(|n| file(n)).collect();
+            tab.select_when_listed(files.clone());
+            wait_for("the selection", || {
+                let sel = tab.selected_files();
+                sel.len() == files.len() && files.iter().all(|f| sel.iter().any(|s| s.equal(f)))
+            });
+        };
+        let actions = || menu_actions(w.item_menu(&tab).upcast_ref());
+        let extract = ["win.extract-here", "win.extract-to"];
+
+        select(&["bundle.zip"]);
+        let a = actions();
+        for x in extract.iter().chain(&["win.create-archive"]) {
+            assert!(a.iter().any(|y| y == x), "{x} in {a:?}");
+        }
+        assert!(enabled("extract-here") && enabled("extract-to") && enabled("create-archive"));
+
+        select(&["notes.txt"]);
+        let a = actions();
+        assert!(!a.iter().any(|y| extract.contains(&y.as_str())), "{a:?}");
+        assert!(a.iter().any(|y| y == "win.create-archive"));
+        assert!(!enabled("extract-here") && !enabled("extract-to"));
+        assert!(enabled("create-archive"));
+
+        select(&["notes.txt", "bundle.zip"]);
+        assert!(!actions().iter().any(|y| extract.contains(&y.as_str())));
+        assert!(!enabled("extract-here"));
+
+        // Extract Here: the archive's one folder lands next to it (as
+        // "sub (2)", since "sub" is taken), listed and selected.
+        select(&["bundle.zip"]);
+        gio::prelude::ActionGroupExt::activate_action(&w.window, "extract-here", None);
+        wait_for("the extracted folder", || {
+            tab.selected_files()
+                .iter()
+                .any(|f| f.equal(&file("sub (2)")))
+        });
+        assert_eq!(
+            std::fs::read_to_string(dir.join("sub (2)/inner.txt")).unwrap(),
+            "inner"
+        );
+        assert_eq!(tab.n_items(), 4);
+
+        // Create Archive: the dialog offers the item's name and the last
+        // format, refuses a taken name, and remembers the chosen format.
+        select(&["notes.txt"]);
+        gio::prelude::ActionGroupExt::activate_action(&w.window, "create-archive", None);
+        let dialog = w
+            .window
+            .visible_dialog()
+            .and_downcast::<adw::AlertDialog>()
+            .expect("the Create Archive dialog");
+        let content = dialog.extra_child().unwrap();
+        let entry = find::<gtk::Entry>(&content).unwrap();
+        let formats = find::<gtk::DropDown>(&content).unwrap();
+        assert_eq!(entry.text(), "notes");
+        assert_eq!(formats.selected(), 0, "zip first");
+        entry.set_text("bundle");
+        assert!(!dialog.is_response_enabled("accept"), "bundle.zip exists");
+        formats.set_selected(3);
+        assert!(
+            dialog.is_response_enabled("accept"),
+            "bundle.tar.zst is free"
+        );
+        entry.set_text("notes");
+        // As the Create button does.
+        dialog.emit_by_name_with_details::<()>(
+            "response",
+            glib::Quark::from_str("accept"),
+            &[&"accept"],
+        );
+        dialog.force_close();
+        wait_for("the new archive", || {
+            tab.selected_files()
+                .iter()
+                .any(|f| f.equal(&file("notes.tar.zst")))
+        });
+        assert_eq!(
+            crate::archive::detect(&dir.join("notes.tar.zst")).unwrap(),
+            crate::archive::Kind::Tar(crate::archive::Compression::Zstd)
+        );
+        assert_eq!(archive_format(), Format::TarZst);
+        let config = std::path::PathBuf::from(std::env::var_os("XDG_CONFIG_HOME").unwrap());
+        assert_eq!(
+            std::fs::read_to_string(config.join("helix-files/archive-format")).unwrap(),
+            "tar.zst"
+        );
+        // Nothing was left in the work folder either.
+        let work = crate::ops::archive_work_dir();
+        assert!(std::fs::read_dir(&work).unwrap().next().is_none());
+        w.window.destroy();
+        crate::ops::tests::remove_test_cache();
+    }
+
+    struct NoControl;
+    impl crate::archive::Control for NoControl {
+        fn cancelled(&self) -> bool {
+            false
+        }
+        fn progress(&mut self, _: u64, _: u64, _: &str) {}
+    }
+
+    /// The first descendant of `w` of type `T`.
+    fn find<T: IsA<gtk::Widget>>(w: &gtk::Widget) -> Option<T> {
+        if let Some(t) = w.downcast_ref::<T>() {
+            return Some(t.clone());
+        }
+        let mut child = w.first_child();
+        while let Some(c) = child {
+            if let Some(t) = find::<T>(&c) {
+                return Some(t);
+            }
+            child = c.next_sibling();
+        }
+        None
     }
 }

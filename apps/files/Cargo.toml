@@ -17,3 +17,9 @@ adw.workspace = true
 helix-app-common.workspace = true
 async-channel = "2"
 libc = "0.2"
+zip = { version = "9.8", default-features = false, features = ["deflate-flate2", "deflate64", "bzip2", "lzma", "xz"] }
+tar = { version = "0.4.46", default-features = false }
+flate2 = "1.1"
+lzma-rust2 = { version = "0.25", default-features = false, features = ["std", "encoder", "optimization", "xz"] }
+bzip2 = "0.6"
+zstd = { version = "0.13", default-features = false }

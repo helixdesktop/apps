@@ -69,6 +69,7 @@ apps/document-viewer/src/main.rs
 apps/document-viewer/src/presentation.rs
 apps/document-viewer/src/shortcuts.rs
 apps/document-viewer/src/ui.rs
+apps/files/src/archive.rs
 apps/files/src/cli.rs
 apps/files/src/fmt.rs
 apps/files/src/naming.rs

@@ -63,7 +63,7 @@ pub fn info_is_dir(info: &gio::FileInfo) -> bool {
     }
 }
 
-fn content_type(info: &gio::FileInfo) -> String {
+pub fn content_type(info: &gio::FileInfo) -> String {
     info.content_type()
         .or_else(|| info.attribute_string("standard::fast-content-type"))
         .map(|s| s.to_string())

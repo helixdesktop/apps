@@ -5,11 +5,13 @@ use gtk::{gio, glib};
 use std::rc::Rc;
 
 use super::Window;
+use crate::archive;
 use crate::naming;
 use crate::ops::{Choice, Conflict, Resolution};
 use helix_app_common::i18n::{n_, tr};
 use helix_app_common::trf;
 use helix_app_common::trnf;
+use helix_app_common::Labelled;
 
 /// Destructive confirmation; `on_confirm` runs if accepted.
 pub fn confirm(
@@ -143,6 +145,114 @@ pub fn name_dialog(
         entry.grab_focus();
         entry.select_region(start, end);
     });
+}
+
+/// The Create Archive dialog: a name (without extension) and a format,
+/// checked against the names taken in `dir`. `on_accept` gets the file
+/// name (with the format's extension) and the format.
+pub fn archive_dialog(
+    parent: &impl IsA<gtk::Widget>,
+    initial: &str,
+    format: archive::Format,
+    dir: gio::File,
+    on_accept: impl Fn(String, archive::Format) + 'static,
+) -> adw::AlertDialog {
+    let entry = gtk::Entry::builder()
+        .text(initial)
+        .activates_default(true)
+        .hexpand(true)
+        .width_chars(24)
+        .build();
+    let field = gtk::Label::builder()
+        .label(tr("Archive _Name"))
+        .use_underline(true)
+        .mnemonic_widget(&entry)
+        .xalign(0.0)
+        .build();
+    field.add_css_class("heading");
+    helix_app_common::a11y::label_widget(&entry, &field);
+    let extensions: Vec<&str> = archive::Format::ALL.iter().map(|f| f.extension()).collect();
+    let formats = gtk::DropDown::from_strings(&extensions).labelled(tr("Archive Format"));
+    formats.set_tooltip_text(Some(tr("Archive Format")));
+    let selected = archive::Format::ALL
+        .iter()
+        .position(|f| *f == format)
+        .unwrap_or(0);
+    formats.set_selected(selected as u32);
+    let row = gtk::Box::new(gtk::Orientation::Horizontal, 6);
+    row.append(&entry);
+    row.append(&formats);
+    let error = gtk::Label::builder().xalign(0.0).wrap(true).build();
+    error.add_css_class("error");
+    error.add_css_class("caption");
+    error.set_visible(false);
+    let b = gtk::Box::new(gtk::Orientation::Vertical, 6);
+    b.append(&field);
+    b.append(&row);
+    b.append(&error);
+    let dialog = adw::AlertDialog::builder()
+        .heading(tr("Create Archive"))
+        .extra_child(&b)
+        .default_response("accept")
+        .close_response("cancel")
+        .build();
+    dialog.add_responses(&[("cancel", tr("_Cancel")), ("accept", tr("_Create"))]);
+    dialog.set_response_appearance("accept", adw::ResponseAppearance::Suggested);
+
+    let chosen = {
+        let entry = entry.clone();
+        let formats = formats.clone();
+        move || {
+            let format = archive::Format::ALL
+                .get(formats.selected() as usize)
+                .copied()
+                .unwrap_or(archive::Format::Zip);
+            (
+                format!("{}{}", entry.text().trim_end(), format.extension()),
+                format,
+                entry.text().trim_end().is_empty(),
+            )
+        }
+    };
+    let validate = {
+        let dialog = dialog.clone();
+        let entry = entry.clone();
+        let error = error.clone();
+        let chosen = chosen.clone();
+        move || {
+            let (name, _, empty) = chosen();
+            let msg = if empty {
+                Some(String::new())
+            } else {
+                match naming::validate_name(&name) {
+                    Err(e) => Some(e.to_string()),
+                    Ok(()) if dir.child(&name).query_exists(None::<&gio::Cancellable>) => {
+                        Some(tr("A file with that name already exists.").to_string())
+                    }
+                    Ok(()) => None,
+                }
+            };
+            dialog.set_response_enabled("accept", msg.is_none());
+            let shown = msg.as_deref().filter(|m| !m.is_empty());
+            error.set_text(shown.unwrap_or(""));
+            error.set_visible(shown.is_some());
+            helix_app_common::a11y::set_input_error(&entry, Some(&error), shown);
+        }
+    };
+    validate();
+    let v = validate.clone();
+    entry.connect_changed(move |_| v());
+    formats.connect_selected_notify(move |_| validate());
+    dialog.connect_response(Some("accept"), move |_, _| {
+        let (name, format, _) = chosen();
+        on_accept(name, format)
+    });
+    dialog.present(Some(parent));
+    glib::idle_add_local_once(move || {
+        entry.grab_focus();
+        entry.select_region(0, -1);
+    });
+    dialog
 }
 
 fn describe(info: Option<&gio::FileInfo>) -> String {
